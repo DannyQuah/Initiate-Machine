@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init
-# Last-edited: Fri 2021.12.31.1350 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Sat 2022.01.01.0645 -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
@@ -9,13 +9,23 @@
 # ****************************************************************
 #
 ################################
+# One-time check on 0/ folders (for path and cleanliness generally)
+cd ~
+mkdir -p 0/Board/Ww 0/Floor/1/t 0/Light/1/j 0/Light/1/t 
+mkdir -p 0/Scene/1 0/Sound/Wp
+################################
 #
 DBPF=~/0/Scene/1/db0
 DBNF=~/0/Scene/1/db1
 
-rm -rf ~/.zshrc ~/.local/share/oh-my-zsh 
+################################
+# Zsh
+rm -rf ~/.zshrc
 ln -s "$DBPF"/machines/Zsh/Zshrc     ~/.zshrc
-ln -s "$DBPF"/machines/Zsh/oh-my-zsh ~/.local/share/oh-my-zsh
+# Each machine now has its own oh-my-zsh
+# rm -rf ~/.local/share/oh-my-zsh 
+# mkdir -p ~/.local/share/oh-my-zsh
+# ln -s "$DBPF"/machines/Zsh/oh-my-zsh ~/.local/share/oh-my-zsh
 #
 rm -rf ~/.bash_aliases
 ln -s "$DBPF"/machines/Bash/Bash-Linux ~/.bash_aliases
@@ -64,13 +74,18 @@ ln -s "$DBPF"/machines/Ssh/config ~/.ssh/config
 ################################
 # Fonts
 rm -rf ~/.fonts
+mkdir -p "$DBPF"/machines/Linux/fonts
 ln -s "$DBPF"/machines/Linux/fonts ~/.fonts
-fc-cache -f -v 
+if command -v fc-cache &> /dev/null; then
+  fc-cache -f -v
+fi
 #
 ################################
 # bin/
-rm -rf ~/bin/update-mydomain ~/bin/recents0
+rm -rf ~/bin/Shellsrc ~/bin/update-mydomain ~/bin/recents0
 rm -rf ~/bin/Archive.S1.External ~/bin/cleanAssetFolder ~/bin/bulk-heif
+mkdir -p ~/bin
+ln -s "$DBPF"/machines/Common/Shellsrc ~/bin/
 ln -s "$DBPF"/machines/Common/update-mydomain ~/bin/
 ln -s "$DBPF"/machines/Common/recents0 ~/bin/
 ln -s "$DBPF"/machines/Common/Archive.S1.External ~/bin/

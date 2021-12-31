@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
-# @(#) $HOME/0/Scene/1/db/machines/Zsh/Zshrc
-# Last-edited: Sun 2020.12.06.2043 -- Danny Quah (me@DannyQuah.com)
+# @(#) $HOME/0/Scene/1/db0/machines/Zsh/Zshrc
+# Last-edited: Sat 2022.01.01.0629 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # $
 ## Revision History:
@@ -147,7 +147,8 @@ source $ZSH/oh-my-zsh.sh
 # https://unix.stackexchange.com/questions/273529/shorten-path-in-zsh-prompt
 # export PROMPT='%(5~|…/%3~|%~)'
 
-source ${HOME}/0/Scene/1/db/machines/Common/Shellsrc
+#source ${HOME}/0/Scene/1/db0/machines/Common/Shellsrc
+source ${HOME}/bin/Shellsrc
 
 # Noticed these are here from somewhere and I'd prefer not to have them
 unalias md rd
