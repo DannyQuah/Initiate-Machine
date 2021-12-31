@@ -1,0 +1,41 @@
+#!/usr/bin/env sh
+# @(#) $HOME/0/Scene/1/db/machines/Common/cleanAssetFolder
+# Last-edited: Wed 2021.01.20.0736 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#    First draft: Sat 2020.12.26.1831 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+USAGE_MESSAGE="Usage: `basename $0` assetFolderBasename"
+
+if test $# -le 0 ; then
+  echo $USAGE_MESSAGE
+  exit 1
+fi
+
+if [ ! -f ./$1.md ] ; then
+  echo File $1.md doesn\'t exist
+  exit 1
+fi 
+
+if [ -f ./$1.assets/$1.md ] ; then
+  echo File $1.assets/$1.md exists
+  exit 1
+fi
+
+if [ -d ./$1 ] ; then
+  echo Folder $1 exists
+  exit 1
+fi
+
+if [ ! -d ./$1.assets ] ; then
+  mkdir $1.assets
+fi
+
+# echo Moving $1.md into $1.assets/
+mv $1.md $1.assets/
+#echo Renaming assets folder from $1.assets to just $1
+mv $1.assets $1
+
+# eof cleanAssetFolder
+

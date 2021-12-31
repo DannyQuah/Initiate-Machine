@@ -1,0 +1,116 @@
+#!/usr/bin/env bash
+# @(#) linux-baseapps-install
+# Last-edited: Sat 2021.10.16.0832-- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % Fri 2020.08.14.1928 -- Danny Quah (me@DannyQuah.com)
+#    Source Code Pro font
+#  % Fri 2018.09.28.0500 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+#
+installBaseApps() {
+# Base Apps
+#  sudo apt --fix-broken install
+  sudo apt -y install software-properties-common \
+    apt-file \ 
+    dos2unix \
+    snapd \
+    wget \
+    powerline \
+    fonts-powerline \
+    gnupg \
+    gconf2 gconf-service gvfs-bin libxkbfile1 \
+    compizconfig-settings-manager \
+    nemo \ 
+    thunar \
+    npm \
+#    vim-gnome \ 
+#    vifm \
+    zsh \
+    autojump \
+    zip \
+    bzip2 \
+    thunderbird \
+    qpdf \
+    qpdfview \
+#    okular \
+#    xournal \
+    jpegoptim \
+    libheif-examples \
+    variety \
+    pandoc
+#
+# nemo is my preferred File Manager but thunar has Bulk Rename
+# So I install both
+#
+# sudo apt-get -y install gnome-online-accounts
+# sudo apt-get -y install evolution evolution-plugins evolution-ews
+# sudo apt-get -y install evolution-plugins-experimental
+# sudo apt-get -y install calendar-google provider
+#
+################################
+# shotcut video editing
+  sudo snap install -y shotcut --classic
+################################
+# Touchpad management
+# https://github.com/atareao/Touchpad-Indicator
+  sudo add-apt-repository ppa:atareao/atareao
+  sudo apt update && sudo apt upgrade
+  sudo apt install -y touchpad-indicator
+################################
+# tilix
+  sudo add-apt-repository ppa:webupd8team/terminix
+  sudo apt-get update && sudo apt upgrade
+  sudo apt install -y tilix
+################################
+# termius
+#  sudo snap install termius
+#################################
+# jupyter, python 2020.02
+# https://askubuntu.com/questions/737094/jupyter-notebook-installation
+#  sudo apt install -y jupyter
+################################
+# onenote 2019.11
+  sudo snap install -y p3x-onenote
+################################
+# telegram-desktop 2020.02
+  sudo snap install -y telegram-desktop
+################################
+# wechat
+#  sudo snap install -y electronic-wechat
+################################
+# signal-desktop 2021.01
+#  sudo snap install -y signal-desktop
+################################
+# Internet radio
+#  sudo snap install -y odio
+###############################
+# Pulse Secure client // need to source deb from somewhere but then
+  sudo apt install -y lib32z1 libwebkitgtk-1.0 \
+    libproxy1v5 libproxy1-plugin-gsettings libproxy1-plugin-webkit \
+    libdconf1 dconf-gsettings-backend
+###############################
+# vim/gvim
+  sudo add-apt-repository ppa:jonathonf/vim
+  sudo apt -y install gvim
+###############################
+# Fonts
+# Remembering that linux-links-install will symlink
+# ~/0/Scene/1/db/machines/Linux/fonts to ~/.fonts
+# (https://gist.github.com/marcora/cb37b2432c072e8e9d77)
+  mkdir -p ~/0/Scene/1/db/machines/Linux/fonts/adobe-fonts/source-code-pro
+  git clone https://github.com/adobe-fonts/source-code-pro.git ~/0/Scene/1/db/machines/Linux/fonts/adobe-fonts/source-code-pro
+#  fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
+###############################
+# end installBaseApps()
+}
+
+## Begin execution here
+sudo apt update
+sudo apt upgrade -y
+
+installBaseApps
+
+sudo apt update
+
+# eof linux-baseapps-install

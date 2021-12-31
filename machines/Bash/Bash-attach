@@ -1,0 +1,28 @@
+#! /bin/bash
+# @(#) $HOMESCENE/1/db/machines/Bash/Bash-attach - ln -s to ~/bin
+# as this is needed to make all the long folder names aliased and linked
+# Although this isn't actually executed of course, the "ln -s"'s might
+# be performed by hand once.
+# Last edited: Tue Mar 01 07:37:15 2016 - Danny Quah (dq@CARTER-TQ-PC)
+# $
+# Revision History:
+#  % Mon Feb 29 07:26:57 2016 -  (dquah@localhost)
+#    First draft.
+#
+HOMEDIR=/home/dquah
+export DISKMOVABLE=/media/removable/DQS/Users/dquah/
+export DISKSCENE=$DISKMOVABLE/Scene
+export DISKBOARD=$DISKMOVABLE/Board
+export DISKSTAGE=$DISKMOVABLE/Stage
+export DISKFLOOR=$DISKMOVABLE/Floor
+cd $HOMEDIR
+ln -s $DISKBOARD $HOMEDIR/Board
+ln -s $DISKSCENE $HOMEDIR/Scene
+ln -s $DISKSTAGE $HOMEDIR/Stage
+ln -s $DISKFLOOR $HOMEDIR/Floor
+ln -s $DISKCENE/1/db/Writing/GNUEmacs-disk-removable $HOMEDIR/.emacs.d
+ln -s $DISKCENE/1/db/texmf $HOMEDIR/texmf
+# 
+# Local Variables:
+# end:
+# eof Bash-attach - ln -s to ~/bin

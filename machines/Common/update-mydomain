@@ -1,0 +1,66 @@
+#!/usr/bin/env sh
+# @(#) bin/update-mydomain -> 0/Scene/1/db/machines/Common/
+# Last-edited: Thu 2021.05.27.2038 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % Sun Oct 19 06:44:29 2014 - Danny Quah (DQUAH@GRAVITY) 
+#    First draft.
+# ----------------------------------------------------------------
+# update files on DannyQuah.com/www/
+# Modified from old update versions that handled many machines
+# but those are now managed just via the cloud
+# [Dropbox, Google Drive, OneDrive, iCloud, Box]
+# Even synkron is no longer needed.
+# But DannyQuah.com webdisk fails on W7
+# $
+  trap 'exit 0' 2 15
+# Global settings
+USAGE_MESSAGE='Usage: update-mydomain {-DQ -{l|a}}'
+HOME_BK=~
+HOME_DQ_WWW=$HOME_BK/0/Floor/1/db/mydomain-www
+#OLDRCP=rcp
+TARB="tar --use-compress-program=bzip2"
+ZIPP="zip -9 -@"
+#
+  if test $# -le 1 ; then
+    echo $USAGE_MESSAGE
+    exit 1
+  fi
+#
+ if test $1 = -DQ ; then
+  LOCAL_DIR=$HOME_DQ_WWW
+  UPLDD_DIR=$HOME_DQ_WWW
+  T_FILE=$HOME_DQ_WWW/.upddq
+  T_FILE_T=$HOME_DQ_WWW/.upddq~
+  T_FILE_O=$HOME_DQ_WWW/.upddq-o
+#  A_FILE=$UPLDD_DIR/upddq.tar.gz
+  A_FILE=$UPLDD_DIR/upddq
+  cd $LOCAL_DIR
+  case $2 in
+   -l) nice find -L . -type f -newer $T_FILE \
+         ! \( -name 'upddq.zip' -o -name '*~' -o -name '*.syncdb' \) -ls
+       ;;
+   -a) echo "Updating DQ webpages..."
+       nice find -L . -type f -newer $T_FILE \
+         ! \( -name 'upddq.zip' -o -name '*~' -o -name '*.syncdb' \) -print \
+        | $ZIPP $A_FILE
+#       | tar -c -v -T - -f - | gzip -q -c > $A_FILE
+       mv $T_FILE_O $T_FILE_T
+       mv $T_FILE   $T_FILE_O
+       touch $T_FILE
+       ;;
+    *) echo $USAGE_MESSAGE
+       ;;
+  esac
+ else
+#
+   echo "Invalid machine: $1"
+   echo $USAGE_MESSAGE
+ fi
+#
+
+#
+# Local Variables:
+# mode: sh
+# end:
+# eof bin/update-mydomain -> 0/Scene/1/db/machines/Common/

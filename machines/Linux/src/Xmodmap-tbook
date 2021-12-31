@@ -1,0 +1,16 @@
+!
+! Make Search key a Ctrl-key
+! https://askubuntu.com/questions/137172/how-to-remap-superleft-key-to-control-key
+!
+remove mod4 = Super_L
+add Control = Super_L
+!
+!
+! Swap Caps_Lock and Control_L (from man xmodmap)
+!
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L

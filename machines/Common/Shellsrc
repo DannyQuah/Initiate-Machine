@@ -1,0 +1,210 @@
+#!/usr/bin/env bash
+# @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
+# Last-edited: Fri 2021.12.31.1418 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
+#    VimWiki -> Wp, Ww
+#  % Sun 2020.07.19.1458 -- Danny Quah (me@DannyQuah.com)
+#    Added into Bash-dispatcher git use functions
+#    that were previously in Common/Shellsrc;
+#    zsh needs to run git plugin for those and others as certain
+#    themes such as gallois need a lot of git plugin
+# Have decided to leave ATOM_HOME at its default, so each machine
+# keeps something its own. Otherwise, the cloud server/syncthing on
+# Scene keeps having to move lots of atom customisation about, needlessly,
+# as a lot of what gets put there is just one-time from the atom.io/
+# anyway
+#  % Mon 2020.05.25.1142 -- Danny Quah (me@DannyQuah.com)
+#    First draft: Commands in common across .bashrc and .zshrc
+# ----------------------------------------------------------------
+
+#
+# Still need a way to separate when coming in on ssh, whereupon xmodmap
+# not needed anywhere.
+#
+# Branch on OS ---------------------------------------------------
+case "$OSTYPE" in
+  linux*)
+# WIN_DIRS for Ubuntu use under WSL; nothing on real Ubuntu machines
+    WIN_DIRS="/mnt/c/Users/sppdqlsh /mnt/d/dq"
+    BIN_DIRS="${HOME}/bin ${HOME}/local/bin"
+    DC_CONFIG_PATH="${HOME}/0/Scene/1/db0/Config/DoubleCmd-Linux"
+
+# Keyboard -------------------------------------------------------
+## setxkbmap -option "ctrl:nocaps"
+    if [[ -s ~/.Xmodmap && -n "${DISPLAY+x}" ]]; then
+     xmodmap ~/.Xmodmap
+    fi
+#  if [ -s ~/.Xmodmap-swapctrlcaps ]; then
+#    xmodmap ~/.Xmodmap-swapctrlcaps
+#  fi
+#
+#  alias xbook-biscroff='xrandr --output eDP-1 --off'
+  ;;
+  msys*)
+# Shell and GNU utilities, part of MinGW
+    BIN_DIRS="${HOME}/bin ${HOME}/local/bin /c/ProgramData/chocolatey/bin /c/texlive/2020/bin/win32" 
+     ;;
+  *)
+# Catch-all everything else
+#  export ATOM_HOME=~/0/Scene/1/db/machines/Editors/Atom.w
+    # do nothing, accept defaults
+    #   export ATOM_HOME="~/.atom"
+    ;;
+esac
+# ###############################
+#
+for bindir in $( echo "$BIN_DIRS" ) ; do
+  if [ -d "$bindir" ]; then
+   PATH="$bindir":$PATH
+  fi
+done
+export PATH=$PATH
+
+#
+# ###############################
+# Filesystems organisation
+TMPDIR=${HOME}/tmp
+FSROOT=${HOME}/0
+CDPATH=\
+${FSROOT}/Scene/1:\
+${FSROOT}/Sound/1/Wp:\
+${FSROOT}/Board/1/Ww:\
+${FSROOT}/Floor/1/t:\
+${FSROOT}/Light/1/j:\
+${FSROOT}/Light/1/t
+
+# ${FSROOT}/Scene/1/db # Previously in CDPATH
+
+for windir in $( echo "$WIN_DIRS" ) ; do
+  if [ -d "$windir" ]; then
+    CDPATH=$CDPATH:"$windir"
+  fi
+done
+export CDPATH=$CDPATH
+# source /usr/share/autojump/autojump.sh
+#
+# ###############################
+# https://gnunn1.github.io/tilix-web/manual/vteconfig/
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+  source /etc/profile.d/vte.sh
+fi
+# ###############################
+# Since 2021.08 update to "Backup and Sync",
+# Google Drive now defaults to no "w" permission
+# on folders in my setup.  So, reassert "w"
+# but also more generally to the sensible "755".
+# (Sat 2021.10.02.0830)
+case "$OSTYPE" in
+  linux*)
+    find -L ~/0/Floor -type d -exec chmod 755 {} \;
+    ;;
+  *)
+    # do nothing for now on others
+    ;;
+esac
+
+# ###############################
+#
+# Timezone
+export TZ='Asia/Singapore'
+# export TZ='Europe/London'
+# export TZ='America/New_York'
+
+# ###############################
+# What zsh calls normal aliases, and bash just aliases
+
+alias python='/usr/bin/python3'
+# apt use - took out ubuntu plugin
+APT=apt
+# APT=apt-get
+alias afs='apt-file search --regexp'
+alias agi='sudo $APT install'
+alias agp='sudo $APT purge'
+alias agr='sudo $APT remove'
+alias agu='sudo $APT update'
+alias agud='sudo $APT update && sudo $APT dist-upgrade'
+alias agug='sudo $APT upgrade'
+alias aguu='sudo $APT update && sudo $APT upgrade'
+
+alias ls='/bin/ls' # since many systems set this elsewhere to '/bin/ls --color=auto'
+alias ll='/bin/ls -lF'
+alias lt='/bin/ls -ltF'
+alias lf='/bin/ls -F'
+
+# largest files recursively from here
+# alias Largest='find -L . -type f -printf "%s %p\n" | sort -nr | head -20'
+
+alias trash='zip -m9or ${TMPDIR}/dq-trash $@'
+alias notabs-dq='sed -ie "s/\t//g" $@'
+alias tabscomma='sed "s/\t/,/g" $@'
+# grep md files recursively from current directory
+alias grepmdr='find -L . -type f -name "*.md" -print0 | xargs -0 grep $@ '
+# grep personal wiki recursively
+alias greppwr='grep --include=\*.md --colour=never -rnw ~/0/Sound/1/Wp -e $@'
+# grep work wiki recursively
+alias grepwwr='grep --include=\*.md --colour=never -rnw ~/0/Board/1/Ww -e $@'
+# alias grep1n='find -L ~/0/Board/1/1-Notes -type f -name "*.md" -exec grep -EH $@ {} ";"'
+# alias dollmd-dq="sed -ie 's/ \$/ \\$/g' $@"
+# alias starmd-dq="sed -ie 's/ \*/ \\*/g' $@"
+alias syncconf-find='find -L ~/0 -type f -name "*sync-conflict*"'
+alias syncconf-trash='find -L ~/0 -type f -name "*sync-conflict*" | zip -m9@ ${TMPDIR}/dq-trash'
+alias texcln='zip -m9o ${TMPDIR}/dq-trash *.log *.aux *.nav *.out *.snm *.synctex.gz *.toc *.tex~'
+
+# Below just archive; all commented out --------------------------
+# Aliases for scaling on Pixelbook - also through .desktop in
+# ~/.local/share/applications/
+# alias atomqpb="atom --force-device-scale-factor=1.8"
+# alias extterm="sommelier -X -scale0.6 -dpi=140 /usr/bin/extraterm"
+# alias tbqpb="sommelier -X --scale=0.6 --dpi=140 /usr/bin/thunderbird"
+# alias loqpb="sommelier -X --scale=0.6 --dpi=120 /usr/bin/libreoffice6.1"
+# alias fotext="sommelier -X --scale=0.6 --dpi=140 /usr/bin/textmaker18free"
+# alias foplan="sommelier -X --scale=0.6 --dpi=140 /usr/bin/planmaker18free"
+# alias fopres="sommelier -X --scale=0.6 --dpi=140 /usr/bin/presentations18free"
+
+# But I prefer not to have colors --- too distracting
+# askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console
+# LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
+
+## Filesystems pre-2019.05
+# export GGDDIR=${HOME}/0/Floor # Google Docs will only save to Google Drive
+# export DRPDIR=${HOME}/0/Scene/1 # Legacy Dropbox, but no gain from Google Drive
+# export BRDDIR=${HOME}/0/Board #
+# export SCNDIR=${HOME}/0/Scene
+# export STGDIR=${HOME}/0/Stage #
+# export CDPATH=${GGDDIR}/1/t:${BRDDIR}/1/1-Notes:${BRDDIR}/1/t:${SCNDIR}/1/t/Writings/Notes-Events:${GGDDIR}/1/t/Writings:${GGDDIR}/1/j:${DRPDIR}/db:${DRPDIR}/i:${STGDIR}/Photos:
+
+# Tue Jan 21 13:26:16 2014 - Danny Quah (dquah@spartan)
+# With texlive 2012 on, there is no longer need for all this.  Just
+# put everything in ~/texmf/
+# TEXINPUTS discouraged
+# TeX (extra colon allows texmf.cnf [or compiled default]
+# export TEXINPUTS=.:$SHAREDIR/t/dbs/tex/:$LOCALDIR/db/machines/[Linux,Windows]:
+# TEXINPUTS has a Linux/Windows dependency and so is set in Bash-Linux
+# or Bash-Windows instead
+# export BSTINPUTS=.:$GGDDIR/t/dbs/tex:
+# export BIBINPUTS=.:$GGDDIR/t/dbs/tex:
+
+# alias mountfloor='google-drive-ocamlfuse ${HOMEFLOOR}'
+# alias umountfloor='fusermount -u ${HOMEFLOOR}'
+
+# alias dvitmp='/usr/bin/dvips -Ppdf -D600 $@ -o ~/tmp/0.ps'
+# alias econbash='ssh -i ~/.ssh/id_rsa dquah@econ.lse.ac.uk "/bin/bash --login"'
+
+# LSE vpn needs to be connected for this mount
+# alias lsepwp-mount='sudo mount.cifs //pwp.lse.ac.uk/webs/dquah ${HOME}/Documents/mnt/lsepwp -o user=dquah,domain=lse,uid=dquah'
+# alias lsepwp-umount='sudo umount -t cifs $HOME/Documents/mnt/lsepwp'
+# DannyQuah.com/www/ - Still trying on this
+
+# Have never quite gotten the below to work but would still like to, one day
+# alias mydom-mount='sudo mount -t davfs p3plcpnl0680.prod.phx3.secureserver.net:2078/ ~/Documents/mnt/mydomain'
+# Back up my entire blogsite
+# Mon Jan 19 15:41:44 2015 - Danny Quah (dquah@spartan)
+# http://darcynorman.net/2011/12/24/archiving-a-wordpress-website-with-wget/
+# http://www.leancrew.com/all-this/2013/01/local-archive-of-wordpress-posts/
+
+# This below is yet the most hopeful but it's still not working
+# alias backup-DQ='wget --mirror -p --html-extension --convert-links -e robots=off -P . http://www.DannyQuah.com/writings/'
+
+# eof Shellsrc

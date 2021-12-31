@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+# @(#) linux-specialapps-install
+# Last-edited: Fri 2021.12.24.1149 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % Tue 2018.09.18.1200 -- Danny Quah (me@DannyQuah.com)
+#    First draft:
+#    Install Linux special apps, those needing special repositories
+# ----------------------------------------------------------------
+#
+installSpecialApps() {
+	# Special Apps that need other things (wget, curl, etc.) for
+	# their installation. These will be merged into InstallBaseApps()
+	# as deb repositories add them
+################################
+# atom-old-version - doesn't update; updated 2020.05.23.1247h
+#  cd ~
+#  sudo wget -O atom-amd64.deb "https://atom.io/download/deb"
+#  sudo dpkg -i atom-amd64.deb
+#  rm -rf atom-amd64.deb
+################################
+## atom 2020.05
+## Add official repository,so apt updates now possible
+## https://flight-manual.atom.io/getting-started/sections/installing-atom/##platform-linux
+#wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
+#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+#sudo apt update
+#sudo apt install -y atom
+################################
+# zsh 2020.05
+sudo apt install -y zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+################################
+# typora 2019.05
+#  wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add
+# add Typora's repository
+#  sudo add-apt-repository 'deb https://typora.io/linux ./'
+#  sudo apt update
+#  sudo apt install -y typora
+# Set the below in linux-links-init
+#  mkdir -p ~/.config/Typora/themes
+#  cd ~/.config/Typora/themes
+#  ln -s ~/0/Scene/1/db/machines/Editors/Typora.base.user.css ./base.user.css
+################################
+# panwriter 2021.11
+# sudo snap install panwriter
+################################
+# joplin 2019.10.13 1400h
+##  wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
+################################
+# mendeley
+  cd ~
+  sudo wget -O mendeley.deb "https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest"
+  sudo dpkg -i mendeley.deb
+  rm -rf mendeley.deb
+################################
+# spotify
+  cd ~
+# 1. Add the Spotify repository signing keys to be able to verify downloaded packages
+  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+
+# 2. Add the Spotify repository
+  echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+
+# 3. Update list of available packages
+  sudo apt update
+
+# 4. Install Spotify
+  sudo apt install -y spotify-client
+################################
+## Telegram // now can use snap instead, so take out
+#  cd ~
+#  wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
+#  sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
+################################
+## youtube-dl
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+################################
+## firefox
+#  cd ~
+#  wget -O - "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US" | sudo tar xJ -C /opt/
+#  sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
+################################
+
+# installSpecialApps()
+}
+
+# Execution begins here
+sudo apt update
+sudo apt upgrade -y
+
+installSpecialApps
+
+sudo apt update
+
+# eof linux-specialapps-install

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Extraterm
+Version=0.38.1
+Comment=The swiss army chainsaw of terminal emulators
+# Exec=/usr/bin/extraterm
+Exec=sommelier -X --scale=0.60 --dpi=140 /usr/bin/extraterm
+Icon=/usr/share/extraterm-0.38.1-linux-x64/resources/app/extraterm/resources/logo/extraterm_small_logo_256x256.png
+Type=Application

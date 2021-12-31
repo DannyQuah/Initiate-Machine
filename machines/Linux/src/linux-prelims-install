@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# (@) linux-prelims-install
+# Last-edited: Sun 2020.07.05.1301 -- Danny Quah (me@DannyQuah.com)
+# Created:     Mon 2020.05.25.2250 -- Danny Quah (dq@pbook)
+# ****************************************************************
+# Revision History:
+#  % Fri 2018.09.28.0500 -- Danny Quah (dq@pbook)
+#    First draft
+# ****************************************************************
+#
+installPrelimsApps() {
+	# Synchronise my files ahead of running other scripts
+  sudo apt -y install git curl
+# syncthing
+  curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+  echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+  sudo apt update
+  sudo apt install syncthing
+# installPrelimApps()
+}
+
+# Execution begins here
+sudo apt update
+sudo apt upgrade -y
+#
+installPrelimsApps
+#
+sudo apt update
+# eof linux-prelims-install

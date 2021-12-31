@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+# @(#) Dropbox/1/db/machines/Bash/Bash-Windows
+# Last-edited: Sat 2020.10.24.2315 -- Danny Quah
+# ----------------------------------------------------------------
+# Revision History:
+#  % Tue 2013.01.29.1220 -- Danny Quah (dquah@LSE016404)
+#    First draft
+# ----------------------------------------------------------------
+#
+# export USER=dquah # Set in linux on login but not in Windows
+# ################################
+# export HOMEUSE=$HOME
+# export HOMESCENE=$HOMEUSE/Scene # Dropbox
+# export HOMEBOARD=$HOMEUSE/Board # OneDrive
+# These are common across Linux and Windows
+source $HOME/0/Scene/1/db/machines/Bash/Bash-dispatcher
+# Tue Jan 21 13:26:16 2014 - Danny Quah (dquah@spartan)
+# With texlive 2012 on, there is no longer need for all this.  Just
+# put everything in ~/texmf/
+## TeX (extra colon allows texmf.cnf [or compiled default]
+# Doubled // for recursive search
+# export TEXINPUTS=.:$HOME/texmf//:$ONEDIR/db/machines/Windows:
+# However, on Cygwin the instruction kpsewhich -var-value=TEXMFHOME
+# shows ~/.local/share/texmf, not ~/texmf (on Linux or W7/TeXworks
+# editor, say).  Rather than set TEXINPUTS (which seems now to be
+# deprecated,
+# http://tex.stackexchange.com/questions/93712/definition-of-the-texinputs-variable )
+## export TEXINPUTS=.:$HOME/texmf//:~/../../usr/share/texlive//
+# I had previously set 
+# export TEXMFHOME=~/texmf
+# Thu Jul 23 16:13:50 2015 - Danny Quah (dquah@LSE039102)
+# I commented out all the above as when they're set, Cygwin/pdflatex
+# wasn't finding texmf/ properly
+# Sat Aug 01 20:59:56 2015 - Danny Quah (dq@CARTER-TQ-PC)
+# Activating this below as otherwise cygwin pdflatex won't work on
+# CARTER-TQ-PC
+###
+# Fri Jan 15 11:31:36 2016 - Danny Quah (dquah@LSE039102)
+#  The following form doesn't work on LSE039102 Cygwin/pdflatex
+# export TEXMFHOME=~/0/Scene/1/db/texmf/
+#  This works on all my Windows machines (provided I'm dquah)
+# export TEXMFHOME="C:/Users/dquah/0/Scene/1/db/texmf"
+#
+# 
+# Local Variables:
+# end:
+# eof Bash-Windows

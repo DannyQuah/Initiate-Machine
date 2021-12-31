@@ -1,0 +1,19 @@
+[Desktop Entry]
+Version=1.0
+Name=Chromium-My
+# Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
+# From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
+GenericName=Web Browser
+# Gnome and KDE 3 uses Comment.
+Comment=Access the Internet
+# Exec=chromium %U
+# Exec=chromium --force-device-scale-factor=1.5 %U
+Exec=sommelier -X --scale=0.9 --dpi=160 chromium %U
+Terminal=false
+# Icon=~/0/Light/1/db/Commons/Icons/if_chromium-browser_79386.png
+Icon=chromium
+Type=Application
+Categories=GTK;Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/mailto;x-scheme-handler/webcal;
+
+StartupWMClass=chromium-browser

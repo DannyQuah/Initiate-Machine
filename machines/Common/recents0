@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+# @(#) recents0
+# Last-edited: Sat 2020.10.17.1234 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % Sat 2020.10.17.1118 -- Danny Quah (me@DannyQuah.com)
+#    First draft: Most recent files across file systems in ~/0
+# ----------------------------------------------------------------
+
+# Be sure to start where you need to
+cd ~/0
+
+# Names of folders to look into
+# theFolders="./Board ./Drape ./Floor ./Light ./Scene ./Sound ./Stage"
+
+# for thisFolder in $theFolders ; do
+#	echo $thisFolder
+#	find -L ./$thisFolder -type f -mtime -1 -ls | sort -nr
+# done
+
+find -L . -type f -mtime -1 -ls | sort -nr
+
+#
+# eof bin/recents -> 0/Scene/1/db/machines/Commons/recents

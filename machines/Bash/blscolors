@@ -1,0 +1,59 @@
+#! /bin/bash
+# @(#) $HOME/0/Scene/1/db/machines/Bash/blscolors
+# Last edited: Sat Apr 14 10:52 2018 - Danny Quah (dq@PBOOK)
+# $
+# Revision History:
+#  % Mon Sep 10 20:54 2018 - Danny Quah (@pbook)
+#    First draft. From 
+#    https://askubuntu.com/questions/17299/what-do-the-different-colors-mean-in-ls but
+#    the more readable version in 
+#    https://github.com/gkotian/gautam_linux/blob/master/scripts/colours.sh 
+#    OR just the below from the bottom of the askubuntu above.
+#
+# For LS_COLORS, print type and description in the relevant color.
+
+IFS=:
+for ls_color in $LS_COLORS; do
+    color="${ls_color#*=}"
+    type="${ls_color%=*}"
+
+    # Add descriptions for named types.
+    case "$type" in
+    bd) type+=" (block device)" ;;
+    ca) type+=" (file with capability)" ;;
+    cd) type+=" (character device)" ;;
+    di) type+=" (directory)" ;;
+    do) type+=" (door)" ;;
+    ex) type+=" (executable file)" ;;
+    fi) type+=" (regular file)" ;;
+    ln) type+=" (symbolic link)" ;;
+    mh) type+=" (multi-hardlink)" ;;
+    mi) type+=" (missing file)" ;;
+    no) type+=" (normal non-filename text)" ;;
+    or) type+=" (orphan symlink)" ;;
+    ow) type+=" (other-writable directory)" ;;
+    pi) type+=" (named pipe, AKA FIFO)" ;;
+    rs) type+=" (reset to no color)" ;;
+    sg) type+=" (set-group-ID)" ;;
+    so) type+=" (socket)" ;;
+    st) type+=" (sticky directory)" ;;
+    su) type+=" (set-user-ID)" ;;
+    tw) type+=" (sticky and other-writable directory)" ;;
+    esac
+
+    # Separate each color with a newline.
+    if [[ $color_prev ]] && [[ $color != $color_prev ]]; then
+        echo
+    fi
+
+    printf "\e[%sm%s\e[m " "$color" "$type"
+
+    # For next loop
+    color_prev="$color"
+done
+echo 
+
+#
+# Local Variables:
+# end:
+# eof Bash-dispatcher

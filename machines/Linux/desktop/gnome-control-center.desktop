@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Gnome Control Center
+Terminal=False
+Comment=Gnome Control Center
+Icon=/usr/share/icons/gnome/48x48/apps/gnome-windows-manager.png
+Exec=/usr/bin/gnome-control-center
+Type=Application
+Categories=Network;Email;

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Firefox-Linux-QPB
+Comment=Browse the World Wide Web
+# Icon=/usr/share/icons/Moka/96x96/apps/firefox-4.0.png # DQ changed this
+Icon=/opt/firefox/browser/chrome/icons/default/default128.png
+# Exec=/opt/firefox/firefox %u
+Exec=sommelier -X --scale=0.6 --dpi=160 /opt/firefox/firefox
+Type=Application
+Categories=Network;WebBrowser;

@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+# (@) linux-new-setup
+# Last-edited: Fri 2021.12.24.1146 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------  
+# Revision History:
+#  % Sun 2018.09.28.0500 - Danny Quah (me@DannyQuah.com)
+#    First draft
+# ---------------------------------------------------------------- 
+install_one() {
+# This to install just one, mostly for experimentaiton
+  sudo apt -y install \
+    curl git
+# change the line above as needed
+  sudo apt update
+# end install_one()
+}
+
+## Begin execution here
+sudo apt update
+sudo apt upgrade -y
+
+## Run function to try out just one thing
+# install_one
+
+## If there is time, uncomment the below to install those scripts
+## that will take a while
+## This assumes the filesystem has already initialised, following syncthing
+# Initialise links
+source ./linux-links-init
+
+# Initial apps (previously Dropbox, but no longer needed)
+# source ./linux-initapps-install
+
+# installBaseApps
+source ./linux-baseapps-install
+# installSpecialApps
+source ./linux-specialapps-install
+# install AppImageFiles
+source ./linux-appimage-install
+# installLargeApps
+source ./linux-largeapps-install
+sudo apt-get update
+# initialise Desktop
+source ./linux-desktop-init
+# EOF linux-new-setup

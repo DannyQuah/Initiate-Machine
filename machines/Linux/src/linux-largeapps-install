@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# (@) linux-largeapps-install
+# Last-edited: Sun 2020.07.05.1306  -- Danny Quah (me@DannyQuah.com)
+# Created:     Sat 2018.07.21 1200h -- Danny Quah (dq@pbook)
+# ****************************************************************
+# Revision History:
+#  % Fri 2018.09.28.0500 -- Danny Quah (dq@pbook)
+# ****************************************************************
+#
+################################
+#
+installLargeApps() {
+# These Large Apps take a long time to install so take care when
+# you choose to run this
+##############################
+# LibreOffice
+  sudo add-apt-repository ppa:libreoffice/ppa
+  sudo apt update && sudo apt upgrade
+  sudo apt install -y libreoffice
+# R
+  sudo apt -y install r-base
+# TeX with IDE
+  sudo apt -y install texlive-full texworks
+### end installLargeApps()
+}
+
+# Execution begins here
+sudo apt update
+sudo apt upgrade -y
+
+installLargeApps
+
+sudo apt update

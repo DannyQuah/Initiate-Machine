@@ -1,0 +1,136 @@
+" @(#) Vim/Gvimrc <- ~/.gvimrc
+" Last-edited: Mon 2021.08.16.2057 -- Danny Quah (me@DannyQuah.com)
+" ----------------------------------------------------------------
+" Revision History:
+"  % Sun 2020.07.19.0745 -- Danny Quah (me@DannyQuah.com)
+"    Appearances.vim has non-GUI version, except that Gvim doesn't
+"    have transparency on non-Mac systems.
+"  % Sat 2020.06.13.1027 -- Danny Quah (me@DannyQuah.com)
+"    First draft: init file for Gvim
+" ----------------------------------------------------------------
+" https://superuser.com/questions/419372/how-do-i-set-the-default-window-size-in-vim
+" https://alvinalexander.com/blog/post/linux-unix/how-set-vim-gvim-default-color-scheme/
+" 
+"The entire script below is enclosed in 'gui_running' 
+"Might well be redundant given this is .gvimrc, but keep for now.
+if has('gui_running')
+                                "GUI running or about to start
+" Vim screenflashes or beeps even when commands run as they should
+" (like executing a macro @@). So disable the visual bell. Must be
+" done here in gvimrc
+" https://stackoverflow.com/questions/5933568/disable-blinking-at-the-first-last-line-of-the-file
+set t_vb=
+
+"  Bars menu, tool, scroll ---------------------------------------
+
+" https://gist.github.com/darribas/895abb8e5dcff2f27714 // for convention
+  let &guioptions = substitute(&guioptions, "t", "", "g")
+                              " remove tearoff
+" https://vim.fandom.com/wiki/Hide_toolbar_or_menus_to_see_more_text
+" Restore with += in place of -=
+  set guioptions-=m "remove menubar
+  set guioptions-=T "remove toolbar
+  set guioptions-=r "remove right-hand scrollbar
+  set guioptions-=L "remove left-hand scrollbar
+                               "Also Thematic base, but keep splashscreen
+
+" Fonts ----------------------------------------------------------
+" Input fontspec with :put =&guifont
+   if has('win32') || has('win64')
+    set guifont=Consolas:h9:cANSI:qDRAFT
+    "set guifont=Noto_Mono:h9:cANSI:qDRAFT
+    "set guifont=Liberation_Mono:h9:cANSI:qDRAFT
+    "set guifont=DejaVu_Sans_Mono:h9:cANSI:qDRAFT
+    "set guifont=Source_Code_Pro:h9:cANSI:qDRAFT
+  else
+    set guifont=Inconsolata\ 10
+    "set guifont=Liberation\ Mono\ 9
+    "set guifont=DejaVu\ Sans\ Mono\ 9
+    "set guifont=Source\ Code\ Pro\ 9
+  endif
+
+" Favorites
+  "colorscheme torte           "this came with GVim, but I like as well
+  "colorscheme koehler
+  "colorscheme industry
+"
+  colorscheme ron
+  "colorscheme monokai         "vim-monokai
+  "colorscheme papaya          "vim-theme-papaya
+  "let g:papaya_gui_color='blue'
+
+  "let g:dracula_colorterm=0 
+  "highlight normal guibg=none ctermbg=none
+  "colorscheme dracula 
+
+
+" Themes ---------------------------------------------------------
+"Transparency doesn't work on Gvim, at least not on non-Mac systems
+  let g:thematic#themes = {
+  \ 'plain'       : { 'colorscheme': 'koehler',
+  \                  'typeface': 'Consolas',
+  \                  'font-size': 9,
+  \                  'linespace': 0,
+  \                },
+  \ 'fira'       : { 'colorscheme': 'torte',
+  \                  'typeface': 'Fira Code',
+  \                  'font-size': 9,
+  \                  'linespace': 0,
+  \                },
+  \ 'dejavu'       : { 'colorscheme': 'dracula',
+  \                  'typeface': 'DejaVu Sans Mono',
+  \                  'font-size': 9,
+  \                  'linespace': 0,
+  \                },
+  \ 'liberation'       : { 'colorscheme': 'koehler',
+  \                  'typeface': 'Liberation Mono',
+  \                  'font-size': 9,
+  \                  'linespace': 0,
+  \                },
+  \ 'base'       : { 'colorscheme': 'desert',
+  \                  'typeface': 'Consolas',
+  \                  'font-size': 9,
+  \                  'transparency': 20,
+  \                  'linespace': 0,
+  \                },
+  \ 'bubblegum'  : { 'typeface': 'Consolas',
+  \                  'font-size': 9,
+  \                  'transparency': 30,
+  \                  'linespace': 0,
+  \                },
+  \ 'pencil_dark' :{ 'colorscheme': 'pencil',
+  \                  'background': 'dark',
+  \                  'ruler': 1,
+  \                  'laststatus': 0,
+  \                  'typeface': 'Source Code Pro Light',
+  \                  'font-size': 9,
+  \                  'transparency': 40,
+  \                  'linespace': 0,
+  \                },
+  \ 'pencil_lite' :{ 'colorscheme': 'pencil',
+  \                  'background': 'light',
+  \                  'laststatus': 0,
+  \                  'ruler': 1,
+  \                  'typeface': 'Source Code Pro',
+  \                  'transparency': 50,
+  \                  'font-size': 9,
+  \                  'linespace': 0,
+  \                },
+  \ }
+  " Fonts changed:
+  "  Menlo to 'Consolas Regular'
+  "  Source Code Pro Light to 'Cousine Regular'
+  "  Source Code Pro to 'Monospace Regular'
+  "  bubblegum // 'transparency': 10 (disabled)
+  "  pencil_dark // 'airline-theme': 'badwolf' (disabled)
+  "  pencil_lite // 'airline-theme': 'light' (disabled)
+  "  pencil_lite // 'fullscreen': 1 (disabled)
+  " Choose
+  " :Thematic {theme_name} " load a theme by name (with tab completion)
+  " :ThematicFirst         " switch to the first theme, ordered by name
+  " :ThematicNext          " switch to the next theme, ordered by name
+  " :ThematicPrevious      " switch to the previous theme, ordered by name
+  " :ThematicRandom        " switch to a random theme
+
+endif
+" eof Vim/Gvimrc <- ~/.gvimrc

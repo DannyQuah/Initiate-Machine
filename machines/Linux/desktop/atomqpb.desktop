@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Atom-Linux-QPB
+Comment=A hackable text editor for the 21st Century -- DQ Pixelbook.
+GenericName=Text Editor
+# Exec=/usr/share/atom/atom --force-device-scale-factor=1.8 %F
+Exec=sommelier -X --scale=0.6 --dpi=160 /usr/share/atom/atom %F 
+Icon=atom
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Utility;TextEditor;Development;IDE; 
+MimeType=text/plain;
+StartupWMClass=Atom

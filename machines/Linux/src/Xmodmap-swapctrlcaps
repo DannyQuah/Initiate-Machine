@@ -1,0 +1,14 @@
+! @(#) Xmodmap-swapctrlcaps
+! Last-edited: Sun 2020.07.05.1748 -- Danny Quah (me@DannyQuah.com)
+! ----------------------------------------------------------------
+! Revision History:
+!  % Sun 2019.04.28.1200 -- Danny Quah (me@DannyQuah.com)
+!    First draft: Swap Caps_Lock and Control_L (from man xmodmap)
+! ----------------------------------------------------------------
+!
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L

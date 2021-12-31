@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+# @(#) bin/bulk-heif -> 0/Scene/1/db/machines/Common/
+# Last-edited: Sat 2021.06.19.0634 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Created: Sat 2021.06.19.0554 -- Danny Quah (me@DannyQuah.com)
+# Ubuntu // sudo apt install libheif-examples, if needed
+# W10 management without conversion
+# https://www.howtogeek.com/345504/how-to-open-heic-files-on-windows-or-convert-them-to-jpeg/
+# Revision History:
+#  % Sat 2021.06.19.0555 -- Danny Quah (me@DannyQuah.com)
+#    https://gist.github.com/bittercoder/f6601784ebe4f63e9b9e037e3344b960
+#    changed from tifig to heif-convert
+#    https://tavenier.org/convert-heic-files-on-ubuntu/
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15
+USAGE_MESSAGE='Usage: `basename $0`'
+
+for f in *.HEIC; do
+  mv "$f" "`echo $f | sed s/.HEIC/.heic/`"
+done
+#
+for file in *.heic; do
+  echo $file | xargs heif-convert $file ${file%.heic}.jpg
+done
+

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# (@) barebones-new-setup
+# Last-edited: Fri 2021.12.31.1655 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------  
+# wget -O - https://raw.githubusercontent.com/DannyQuah/Configure-Machine/master/machines/Linux/src/barebones-new-setup | sudo bash
+# This is set up for any skeleton initialization of a new machine,
+# and so can be a platform for iSH on iOS or Termux on Android.
+# Revision History:
+#  % Fri 2021.12.31.1623 -- Danny Quah (me@DannyQuah.com)
+#    First draft. Clone from linux-new-setup.  On new machine 
+# ---------------------------------------------------------------- 
+cd ~
+mkdir -p 0/Scene/1
+cd 0/Scene/1
+git clone https://github.com/DannyQuah/Configure-Machine.git db0
+source ./machines/Linux/src/linux-links-init
+
+# EOF barebones-new-setup
+

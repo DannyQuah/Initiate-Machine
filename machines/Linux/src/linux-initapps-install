@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# (@) linux-initapps-install
+# Last-edited: Wed 2020.07.15.1513 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % Fri 2018.09.28.0500 -- Danny Quah (dq@pbook)
+# ----------------------------------------------------------------
+#
+installInitApps() {
+	# Initial Apps
+  sudo apt -y install wget
+  #  sudo apt-get -y install nautilus-dropbox
+# end of installInitApps()
+}
+
+# Execution begins
+sudo apt update -y
+sudo apt upgrade
+installInitApps
+sudo apt update -y

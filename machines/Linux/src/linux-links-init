@@ -1,0 +1,115 @@
+#!/usr/bin/env sh
+# @(#) linux-links-init
+# Last-edited: Fri 2021.12.31.1350 -- Danny Quah (me@DannyQuah.com)
+# ****************************************************************
+# Revision History:
+#  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
+#    First draft: Initialise with symbolic links to $HOME/
+#    This assumes the filesystem is already in place
+# ****************************************************************
+#
+################################
+#
+DBPF=~/0/Scene/1/db0
+DBNF=~/0/Scene/1/db1
+
+rm -rf ~/.zshrc ~/.local/share/oh-my-zsh 
+ln -s "$DBPF"/machines/Zsh/Zshrc     ~/.zshrc
+ln -s "$DBPF"/machines/Zsh/oh-my-zsh ~/.local/share/oh-my-zsh
+#
+rm -rf ~/.bash_aliases
+ln -s "$DBPF"/machines/Bash/Bash-Linux ~/.bash_aliases
+rm -rf ~/.Xmodmap-swapctrlcaps
+ln -s "$DBPF"/machines/Linux/src/Xmodmap-swapctrlcaps ~/.Xmodmap-swapctrlcaps
+################################
+# For R I will take libraries specific to each machine, so
+# need to link just these dotfiles
+if [ -d "$DBNF" ]; then
+  rm -rf ~/.Renviron ~/.Rprofile
+  ln -s "$DBNF"/R/Renviron-Linux ~/.Renviron
+  ln -s "$DBNF"/R/Rprofile-Linux ~/.Rprofile
+fi
+################################
+#
+rm -rf ~/.vim ~/.vimrc ~/.gvimrc
+ln -s "$DBPF"/Vim        ~/.vim
+ln -s "$DBPF"/Vim/Vimrc  ~/.vimrc
+ln -s "$DBPF"/Vim/Gvimrc ~/.gvimrc
+################################
+# Pandoc
+# Is this needed? I can find no Windows counterpart
+if [ -d "$DBNF" ]; then
+  ln -s "$DBNF"/Pandoc ~/.pandoc
+fi
+################################
+# texmf
+if [ -d "$DBNF" ]; then
+  rm -rf ~/texmf
+  ln -s "$DBNF"/texmf ~/texmf
+fi
+MAKEF=~/0/Light/1/t/Writings/Makefile
+if [ -f "$MAKEF" ]; then 
+  rm -f ~/0/Makefile
+  ln -s "$MAKEF" ~/0/
+fi
+################################
+# Ssh
+rm -rf ~/.ssh/config
+ln -s "$DBPF"/machines/Ssh/config ~/.ssh/config
+
+################################
+# gtk
+# v ~/.config/gtk-3.0/bookmarks ~/.config/gtk-3.0/bookmarks-hold
+# ln -s "$DBPF"/machines/Linux/Config/gtk-3.0/bookmarks ~/.config/gtk-3.0/bookmarks
+################################
+# Fonts
+rm -rf ~/.fonts
+ln -s "$DBPF"/machines/Linux/fonts ~/.fonts
+fc-cache -f -v 
+#
+################################
+# bin/
+rm -rf ~/bin/update-mydomain ~/bin/recents0
+rm -rf ~/bin/Archive.S1.External ~/bin/cleanAssetFolder ~/bin/bulk-heif
+ln -s "$DBPF"/machines/Common/update-mydomain ~/bin/
+ln -s "$DBPF"/machines/Common/recents0 ~/bin/
+ln -s "$DBPF"/machines/Common/Archive.S1.External ~/bin/
+ln -s "$DBPF"/machines/Common/cleanAssetFolder ~/bin/
+ln -s "$DBPF"/machines/Common/bulk-heif ~/bin/
+# cd ~
+# rm -rf ~/bin ~/tmp
+# mkdir ~/bin
+# mkdir ~/tmp
+# ln -s ~/0/Scene/1/db/machines/Bash/packup ~/bin/packup
+# ln -s ~/Dropbox ~/0/Scene # I don't use Dropbox any more on linux
+#
+################################
+# Newer linux installations use .config subdirectory for dotfiles
+# .config/
+if [ -d "$DBNF" ]; then
+  mkdir -p ~/.config
+  ln -s "$DBNF"/Config/DoubleCmd-Linux ~/.config/doublecmd
+# Obsidian has a lot of cache baggage; just leave everything local
+# to .config or %LOCALAPPDATA% in each machine
+# ln -s "$DBNF"/Config/Obsidian-Linux ~/.config/obsidian
+fi
+
+################################
+# Below no longer in use
+################################
+# Typora
+# No longer using Typora
+# mkdir -p ~/.config/Typora/themes
+# cd ~/.config/Typora/themes
+# rm -rf ./base.user.css
+# ln -s ~/0/Scene/1/db//Typora/base.user.css ./base.user.css
+################################
+# Atom should just use ~/.atom specific to each machine
+# So we don't need this any more (also, no longer using atom)
+# rm -rf ~/.atom
+# ln -s ~/0/Scene/1/db/machines/Editors/Atom ~/.atom
+# cd .atom
+# ln -s ~/0/Scene/1/db/Atom/keymap.cson .
+################################
+
+# eof linux-links-init

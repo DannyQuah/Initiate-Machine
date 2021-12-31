@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=TeXworks-Linux-QPB
+GenericName=(La)TeX Editor
+Comment=A simple environment for editing, typesetting, and previewing TeX documents
+Icon=TeXworks
+Exec=texworks %F
+# Trying these two but can't get them to work
+# Exec=texworks --force-device-scale-factor=1.5 %F
+# Exec=sommelier -X --scale=0.8 --dpi=160 texworks %F
+# This ends up freezing
+MimeType=text/x-tex;application/pdf;
+Categories=Office;Qt;
+

@@ -1,0 +1,35 @@
+#! /bin/bash
+# @(#) $HOMESCENE/1/db/machines/Bash/Bash-Linux -> .bash_aliases
+# Last edited: Sat Oct 20 04:50 2018 - Danny Quah (dq@PBOOK)
+# $
+# Revision History:
+#  % Fri Feb 26 14:57:05 2016 - Danny Quah (dquah@LSE039102)
+#    $HOMEUSE, $HOMESCENE, $HOMEBOARD
+#  % Tue Jan 29 12:15:01 2013 - Danny Quah (dquah@LSE016404)
+#    First draft
+# This is called ~/.bash_aliases as that is what ~/.bashrc calls.
+# Actually, it is more a bash dispatcher and contains more than just aliases
+#
+# For now, on Chrome OS/Crostini, I used to need this to get dropbox going
+# and I don't know where X gets initialized, so I need an xrdb as well
+# python ~/bin/dropbox.py start (but since July 2018 I have switched to
+# syncthing, and dropbox is no longer active on my Linux and ChromeOS machines).
+xrdb ~/.Xresources
+#
+export HOMEUSE=~
+export HOMESCENE=${HOMEUSE}/0/Scene # Dropbox
+## export HOMEFLOOR=${HOMEUSE}/0/Floor # Google-Drive
+# export HOMEBOARD=$HOMEUSE/Board # OneDrive
+## These are common across ChromeOS, Linux, Windows
+## However, for ChromeOS/removable disk use, I want Bash-dispatcher to
+## be available even before Dropbox comes online, so...
+if [ -f ${HOMESCENE}/1/db/machines/Bash/Bash-dispatcher ]; then
+  source ${HOMESCENE}/1/db/machines/Bash/Bash-dispatcher
+elif [ -f ~/.bash-dispatcher ]; then
+  source ~/.bash-dispatcher
+fi
+
+#
+# Local Variables:
+# end:
+# eof Bash-Linux

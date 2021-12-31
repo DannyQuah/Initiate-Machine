@@ -1,0 +1,21 @@
+! scarygliders.net/2011/12/01/customize-xterm-the-original-and-best-terminal/
+! wiki.archlinux.org/index.php/Xterm
+! www.in-ulm.de/~mascheck/X11/XTerm
+xterm*termName: xterm
+xterm.vt100.metaSendsEcape: true
+XTerm*selectToClipboard: true
+xterm*eightBitInput: false
+xterm*faceName: DejaVu Sans Mono
+xterm*faceSize: 12
+xterm.vt100.geometry: 80x48
+xterm*background: gray90
+xterm*foreground: black
+xterm*title: xterm
+xterm*highlightColor: yellow
+xterm*pointerShape: left_ptr
+xterm*pointerSize: 32
+xterm*pointerColor: blue
+xterm*pointerColorBackground: white
+xterm*cursorColor: navy
+xterm*borderColor: black
+xterm*savelines: 256

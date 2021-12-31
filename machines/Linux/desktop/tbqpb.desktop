@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Tbird-Linux-QPB
+Comment=Read/Write Mail/News with Thunderbird
+GenericName=Mail Client
+# Exec=/usr/bin/thunderbird %u
+# Exec=/usr/bin/thunderbird --force=device-scale-factor=1.8 %u
+Exec=sommelier -X --scale=0.6 --dpi=140 /usr/bin/thunderbird -c thunderbird %u
+StartupWMCLass=thunderbird
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Version=1.0
+Icon=thunderbird
+Categories=Network;Email;News;GTK;
+MimeType=message/rfc822;x-scheme-handler/mailto;text/calendar;text/x-vcard;
+StartupWMClass=Thunderbird
+StartupNotify=true
+Keywords=EMail;E-mail;Contact;Addressbook;News;

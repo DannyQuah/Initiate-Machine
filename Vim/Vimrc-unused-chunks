@@ -1,0 +1,65 @@
+" @(#) db/Vim/Vimrc-unused-chunks
+" Last-edited: Sat 2020.09.26.1638 -- Danny Quah (me@DannyQuah.com)
+" ----------------------------------------------------------------
+" Revision History:
+"  % Sat 2020.09.26.1625 -- Danny Quah (me@DannyQuah.com)
+"    First draft: Previously used in .vimsrc when trying out
+"    Plugins, but since taken out. Save for reference.
+" ----------------------------------------------------------------
+" Session management ---------------------------------------------
+"   For xolox/vim-session: Use OpenSession, SaveSession
+"let g:session_autosave='no'
+"let g:session_directory='~/0/Scene/1/db/Vim/sessions'
+"let g:session_autoload='prompt'
+"let g+session_autosave_periodic=15
+"set sessionoptions-=help
+
+"Don't save hidden or unloaded buffers in sessions 
+"set sessionoptions-=buffers
+"Don't persist options and mappings
+"set sessionoptions-=options
+
+"    ZoomWin <c-w>o toggles between just one window and session
+"    However, far as I can tell, it uses :mksession's Session.vim
+"
+
+"                              "vim-markdown-preview -------------
+"let vim_markdown_preview_toggle=0
+"                              |"0 - generate preview w/o images
+"                              |"1 - display images in preview
+"let vim_markdown_preview_hotkey='<C-S-p>'
+"                              |"vim keymap doesn't distinguish C-S and C-
+"                              " but it's with the shift in Atom
+"let vim_markdown_preview_browser='Google Chrome'
+"let vim_markdown_preview_temp_file=0
+"                              |"1 - remove rendered HTML (used for preview)
+"let vim_markdown_preview_pandoc=1
+
+"                              "MBE minibufexpl
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1 
+
+"                              "vim-notes ------------------------
+"let g:notes_suffix = '.md'
+"let g:notes_directories = ['~/0/Board/1/1-Notes/Notes', '~/0/Board/1/1-Notes/tmp']
+"let g:notes_smart_quotes = 0
+"let g:notes_unicode_enabled = 1
+"let g:notes_conceal_bold = 0
+"let g:notes_conceal_italic = 0
+
+"                              "spellcheck ------------------------
+" Set this as needed per buffer with :setlocal spell; it's too distracting
+" when it's on for all buffers
+"set spell
+" Tue 2020.09.22.1937 -- Danny Quah (me@DannyQuah.com) 
+" Removing spelunker as I can't get it to highlight misspelled words
+"" Otherwise doubled-up with vim's own spell
+"set nospell 
+"let g:enable_spelunker_vim = 1
+" 1 - spellcheck when open/save 
+" 2 - spellcheck words in buffer
+"let g:spelunker_check_type = 1
+
+" eof db/Vim/Vimrc-unused-chunks

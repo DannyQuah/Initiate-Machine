@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# (@) linux-appimage-install
+# Last-edited: Fri 2021.12.24.1152 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------  
+# Revision History:
+#  % Fri 2021.12.24.1147 -- Danny Quah (me@DannyQuah.com)
+#    First draft.  This is just a no-op listing for now as AppImage
+#    files don't seem to have a clean command-line grab and install
+# ---------------------------------------------------------------- 
+installAppImageFiles() {
+################################
+# Obsidian-2021.12
+################################
+# installAppImageFiles()
+}
+
+# Execution begins here
+
+installAppImageFiles
+
+# EOF linux-appimage-install

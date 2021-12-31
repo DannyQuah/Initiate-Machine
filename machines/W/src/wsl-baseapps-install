@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# @(#) wsl-baseapps-install
+# Last-edited: Wed 2020.10.21.2043 -- Danny Quah (me@DannyQuah.com)
+# ---------------------------------------------------------------- 
+# Revision History:
+#  % Sat 2020.10.17.1118 -- Danny Quah (me@DannyQuah.com)
+#    First draft: Most recent files across file systems in ~/0
+# ----------------------------------------------------------------
+#
+installBaseApps() {
+#
+  sudo apt -y install \
+	  make \
+	  zip \
+	  zsh 
+}
+
+sudo apt update
+sudo apt upgrade -y
+installBaseApps
+sudo apt update
+
+# EOF
+

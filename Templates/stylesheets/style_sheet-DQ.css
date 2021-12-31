@@ -1,0 +1,134 @@
+/*
+ * @(#) style_sheet-DQ.css:
+ * Last edited: Fri Jan 10 14:05:48 2014 - Danny Quah (dquah@LSE016404)
+ * $
+ * Revision History:
+ *  % Mon Jul 23 06:43:51 2012 - Danny Quah (DQUAH@GRAVITY)
+ *    First draft
+ */
+
+/* **********************************************************************
+ * Redefine standard tags 
+ * **********************************************************************/
+p {
+ margin-top: 10px;
+ margin-bottom:0px;
+ max-width:600px
+}
+
+caption {
+ font-size: large;
+ font-weight: bold;
+ line-height: 100%; 
+ text-align: left;
+}
+
+table {
+ padding: 8em;
+ margin-top: 10px;
+ border-collapse: collapse;
+ width: 600px;
+}
+
+th {
+ border:1px solid #CDCDCD; TEXT-ALIGN:left;
+ vertical-align: top; scope: col; padding:8px;
+ FONT-WEIGHT:bold; font-size:medium;
+}
+
+td {
+ vertical-align:top; padding:8px; font-size:medium;
+}
+
+hr {
+ MARGIN-TOP:10px; MARGIN-BOTTOM:0px; margin-left:0px;
+ height:2px; width:67%; color #AECBD9;
+ background-color:#AECBD9;
+}
+
+/* **********************************************************************
+ * Additional variations:
+ * body { font-family: 'Cantarell', sans-serif; }
+ * body { font-family: Cambria; }
+ * **********************************************************************/
+/* body { font-family: 'Cantarell', sans-serif; } */
+body { font-family: Cambria; }
+
+body {
+ max-width: 600px;
+ font-size:medium; font-style:normal;
+ font-variant:normal; font-weight:normal; 
+ border-collapse:separate; color:rgb(0, 0, 0);
+ letter-spacing:normal; line-height:normal; orphans:2;
+ text-indent:0px; text-transform:none; white-space:normal;
+ widows:2; word-spacing:0px;
+}
+
+/* **********************************************************************
+ * My own variant tags
+ * **********************************************************************/
+
+/* **********************************************************************
+ * Preferred List properties
+ * **********************************************************************/
+ ol { list-style: decimal; max-width: 550px }
+ ul { list-style: disc; max-width: 550px }
+ ol ol { list-style: lower-alpha; max-width: 550px  }
+ ul ul { list-style: circle; max-width: 550px  }
+ ol ol ol { list-style: lower-roman; max-width: 500px  }
+ ul ul ul { list-style: square; max-width: 500px  }
+
+/* **********************************************************************
+ * Classes
+ * **********************************************************************/
+
+/*
+ * Having only text-align: in a class is a bit overkill since
+ * one might as code in text-align into each <td...>.  But for future
+ * augmentation.  Problem and specification error described in
+ * http://stackoverflow.com/questions/3658693/html-table-colgroup-tag-not-working
+ */
+
+.homepageTable {
+ width: 800px;
+}
+
+.tblBordered {
+ padding: 8em;
+ margin-top: 10px;
+ border-collapse: collapse;
+ width: 75%;
+ border:1px solid #CDCDCD;
+ borderColor: #CDCDCD;
+}
+.tdBordered {
+ vertical-align: top;
+ padding: 8px;
+ font-size: medium;
+ border:1px solid #CDCDCD;
+ borderColor: #CDCDCD;
+}
+.hrBordered {
+ MARGIN-TOP: 10px;
+ MARGIN-BOTTOM: 0px;
+ margin-left: 0px;
+ height: 2px;
+ width: 67%;
+ color: #AECBD9;
+ background-color: #AECBD9;
+ border:1px solid #CDCDCD;
+}
+
+.bookRef { font-style:italic; } 
+.refsLeadTblCell { width: 67%; }
+.bottomalign { vertical-align: bottom; }
+.leftAlign { text-align: left }
+.pagebreak { page-break-before: always }
+
+/*
+ * 
+ * Local Variables:
+ * mode: CSS
+ * end:
+ * eof style_sheet-DQ.css
+ */

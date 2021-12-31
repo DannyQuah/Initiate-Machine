@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# (@) linux-crostini-desktop
+# -- Danny Quah 2018.09.28 0500h
+# System wide is in /usr/share/applications/ ; mine, I put in
+cd ~/.local/share/applications
+#
+ln -s ~/0/Scene/1/db/machines/Linux/src/atomqpb.desktop .
+ln -s ~/0/Scene/1/db/machines/Linux/src/chromium-my.desktop .
+ln -s ~/0/Scene/1/db/machines/Linux/src/extterm.desktop .
+ln -s ~/0/Scene/1/db/machines/Linux/src/firefoxqpb.desktop .
+ln -s ~/0/Scene/1/db/machines/Linux/src/mendeley.desktop .
+ln -s ~/0/Scene/1/db/machines/Linux/src/tbqpb.desktop .
+ln -s ~/0/Scene/1/db/machines/Linux/src/texworksqpb.desktop .
+# ln -s ~/Scene/1/db/machines/Linux/src/gnome-control-center.desktop .
+# EOF

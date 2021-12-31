@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Evolution-Linux
+Comment=Email-Messaging
+Icon=/usr/share/icons/Moka/96x96/apps/evolution.png
+Exec=/usr/bin/evolution
+Type=Application
+Categories=Network;Email;

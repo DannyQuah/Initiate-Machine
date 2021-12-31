@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+# @(#) $HOME/0/Scene/1/db/machines/Bash/Bash-dispatcher
+# Last-edited: Sat 2020.10.24.2239 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % Sun 2020.07.19.1458 -- Danny Quah (me@DannyQuah.com)
+#    Added into Bash-dispatcher git use functions
+#    that were previously in Common/Shellsrc;
+#    zsh needs to run git plugin for those and others as certain
+#    themes such as gallois need a lot of git plugin
+#  % Tue 2013.01.22.1622 -- Danny Quah (dquah@spartan)
+#    First draft.  Code common to both Linux and Windows
+# ----------------------------------------------------------------
+#
+# If this gets too complicated, break it into different files that
+# can then be called with "." or source.
+# $
+# ################################
+## vi mode in command line
+set -o vi
+#
+# ################################
+#
+# Shorten the prompt
+# Can also instead use PROMPT_DIRTRIM option, e.g, set PROMPT_DIRTRIM=3
+# http://www.linuxselfhelp.com/howtos/Bash-Prompt/Bash-Prompt-HOWTO-2.html
+# export PS1="[\@ \W]$ "
+export PS1='[\@ `hostname` `eval dqTruncFolder`]$ '
+dqTruncFolder() {
+  echo "$PWD" | sed 's/.*\(......\)/\.\.\.\1/'
+}
+#
+# ################################
+#
+# enable color support of ls and also add aliases
+if [ -x /usr/bin/dircolors ]; then
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias lc='/bin/ls --color=auto'
+  #alias dir='dir --color=auto'
+  #alias vdir='vdir --color=auto'
+
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+fi
+# git use - extract from oh-my-zsh git plugin
+alias gitcred="git config --global credential.helper 'cache --timeout=3600'"
+alias ga="git add"
+alias gaa="git add --all"
+alias gcam="git commit -a -m"
+alias gcmsg="git commit -m"
+alias gp='git push'
+alias gpd='git push --dry-run'
+alias grmc="git rm --cached"
+alias gss="git status -s"
+#
+# export HISTIGNORE="&:ls:ls *:mutt:[bf]g:exit" # no repeats in shell history
+
+# Aliases - general
+# unalias ls
+# unalias l
+#
+source ${HOME}/0/Scene/1/db/machines/Common/Shellsrc
+
+function acs {
+  apt-cache search $1 | grep $2
+}
+
+#
+# Local Variables:
+# end:
+# eof Bash-dispatcher

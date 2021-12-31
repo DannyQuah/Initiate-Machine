@@ -1,0 +1,533 @@
+" @(#) db/Vim/Vimrc <- .vimrc
+" Last-edited: Mon 2021.12.27.0608 -- Danny Quah (me@DannyQuah.com)
+" ----------------------------------------------------------------
+" Revision History:
+"  % Sat 2021.12.11.1701 -- Danny Quah (me@DannyQuah.com)
+"    VimWiki -> Wp, Ww (personal, work)
+"  % Sun 2021.05.16.0722 -- Danny Quah (me@DannyQuah.com)
+"    To execute .py files, W10 has to use python as their default
+"    "Open with"
+"  % Thu 2020.10.22.2247 -- Danny Quah (me@DannyQuah.com)
+"    Moved personal VimWiki to Floor; previously at Sound 
+"    but pCloud takes a bit too long to sync up
+"  % Tue 2020.09.15.1612 -- Danny Quah (me@DannyQuah.com)
+"    ftplugin/vimwiki.vim
+"  % Mon 2020.09.14.0907 -- Danny Quah (me@DannyQuah.com)
+"    Moved personal vimwiki to Sound (Scene Dropbox now only
+"    allowing 3 devices)
+"  % Sat 2020.09.05.0942 -- Danny Quah (me@DannyQuah.com) 
+"    VimWiki, Calendar
+"  % Fri 2020.09.04.2116 -- Danny Quah (me@DannyQuah.com) 
+"    Under W10, cannot get VimWiki links to activate in Board (OneDrive).
+"    Keeping my personal vimwiki on Scene/1/db/Vim/Vimwiki/
+"  % Tue 2020.08.11.2318 -- Danny Quah (me@DannyQuah.com)
+"    GVim on W10 doesn't like strftime formats that have numbers;
+"    so just %Y, not %4Y; just %m, not %2m.
+"  % Mon 2020.05.25.2108 -- Danny Quah (me@DannyQuah.com)
+"    Plugins
+"  % Tue 2020.03.02.1030 -- Danny Quah (me@DannyQuah.com)
+"    First draft
+" ----------------------------------------------------------------
+"
+"  Preliminaries -------------------------------------------------
+"
+if has('win32') || has('win64')
+  set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+endif
+
+execute pathogen#infect()
+
+"                              "VimWiki
+set nocompatible 
+
+if has("syntax")
+  syntax on                    "Syntax highlighting
+endif
+
+if has("autocmd")
+  filetype indent on
+  filetype plugin on
+endif
+"
+"  General configuration -----------------------------------------
+"
+"fileformats including dos allow DOS-ending files to be read cleanly,
+"stripping ^M as needed. However, fileformat set to unix will then 
+"only write out the file in unix format, similarly creating new files.
+"If needed ':e ++ff=dos' will re-read (and strip) a DOS textfile.
+set fileformats=unix,dos
+set fileformat=unix
+
+set encoding=utf8              "Standard file encoding
+set autoread                   "Reload files changed externally
+set conceallevel=1             "Don't hide characters
+set visualbell                 "No sounds
+"set noerrorbells              "Don't make noises
+"set cursorline                 "Highlight current line
+"Adjust color https://codeyarns.com/tech/2011-07-29-vim-chart-of-color-names.html
+"highlight CursorLine term=none cterm=none ctermbg=3 guifg=gray0 guibg=azure
+set confirm
+
+" https://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+"                              "space is your <LEADER> (prev ',')
+let mapleader=' '
+"nnoremap <Leader>sov :source $MYVIMRC"
+"                              "copy/delete/paste system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+"                              "easy-motion 
+"beginning withi https://vimawesome.com/plugin/easymotion suggestions
+"let g:EasyMotion_do_mapping=0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes,
+" with just one key binding
+" `f{char}{label}`
+nmap <Leader><Leader>f <Plug>(easymotion-overwin-f)
+map  <Leader><Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
+
+" Turn on case-insensitive feature
+let g:EasyMotion_smartcase=1
+
+" JK motions: Line motions
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <Leader><Leader>l <Plug>(easymotion-bd-jk)
+
+"                              "cycle through a, b registers
+nnoremap <Leader>Rr :let @x=@" \| let @"=@a \| let @a=@b \| let @b=@x<CR>
+"                              "copy filename into register a
+" Problem with using just @% is that that can sometimes add the
+" entire path (as all of that is, legitimately, the filename too).
+" It depends on how that file is opened (command line, Explorer, etc.)
+" The form expand("%:t") yields just the tail part of the contents
+" of register %, which is what I want in almost all cases.
+"nnoremap <Leader>Fn :let @+=@%<CR>
+nnoremap <Leader>Fn :let @+=expand("%:t")<CR>
+"                              "visual line mode - discouraged
+"nmap <Leader><Leader> V
+"
+"  Swap, undo, backup directories and files ----------------------
+"  https://medium.com/@Aenon/vim-swap-backup-undo-git-2bf353caa02f
+"
+"                              "Out of the way so they don't get synced
+set backupdir-=.
+set backupdir^=~/tmp,/tmp
+" set backupdir=~/tmp//
+set directory=~/tmp//
+set undodir=~/tmp//
+set noswapfile                "No need for swapfile
+"set nobackup                 "No backup
+"set noundofile               "No undofile
+"
+"  Layout --------------------------------------------------------
+"
+set wrap
+set linebreak                  |"Wrap lines where apt
+set autoindent
+set smartindent
+"set showmatch
+"set hidden                     |"Allow buffer change even unsaved"
+"set matchtime=10               |"in tenths of a second
+"  alternative, with markdown exception; inactive ----------------
+" set nowrap
+" autocmd FileType markdown setlocal wrap   " Except Markdown
+let g:loaded_matchparen=1      |"Don't load matchparen.vim
+"
+"                              "Show spaces as dots, plus other usefuls
+if has('gui_running')
+  set list listchars+=space:·,tab:»·,trail:_,extends:>,precedes:<,nbsp:~
+else
+  set list listchars+=space:_,tab:>·,trail:_,extends:>,precedes:<,nbsp:~
+endif
+"https://stackoverflow.com/questions/15904758/how-can-i-make-vim-show-spaces/49656087
+"set list listchars+=space:·
+"Alternatively
+"set list listchars=trail:·,tab:»·
+"https://www.reddit.com/r/vim/comments/4hoa6e/what_do_you_use_for_your_listchars/
+
+"  Fancy line numbers --------------------------------------------
+set number norelativenumber
+" set number relativenumber
+"toggle relative line numbers
+nnoremap <Leader>Qr :set number relativenumber!<CR>
+"following https://jeffkreeftmeijer.com/vim-number/
+
+"                              "Tab best practice ---------------- 
+" https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces 
+set smarttab
+set tabstop=2                  "Width of TAB
+set softtabstop=2              "Number columns for a TAB
+"set expandtab                 |"Tabs to spaces //
+"                               "Makefile and ssheet paste fail 
+set noexpandtab
+set shiftwidth=2               "Indents have this width
+"
+
+"  Appearance ----------------------------------------------------
+if !has('gui_running')
+                               "fuller Themes in .gvimrc
+  source ~/0/Scene/1/db/Vim/appearances.vim
+endif
+
+set lines=51 columns=160       "lines=48+n, n for mode lines,
+                               "directory listing in netrw etc. 
+                               "I have also experimented with
+                               "a sidebar (30 cols) for SideCal,
+                               "netrw, and similar
+set termguicolors
+
+"let g:thematic#theme_name='plain'
+                               " Activate above or keep splashscreen
+
+"Editing ---------------------------------------------------------
+"                              |"Keep dropping into ex mode
+"https://vi.stackexchange.com/questions/457/does-ex-mode-have-any-practical-use
+nnoremap Q <nop>
+"                              |" no-op out Ctrl-z; suspend program why?
+nnoremap <C-z> <nop>
+"                              |"end of line actions
+"nnoremap A $a
+"                              |"So Y acts to end of line, not whole
+nnoremap Y y$
+
+"  Movement ------------------------------------------------------
+"
+" Move by visible lines, not logical
+" (displayed lines, not physical; screen lines, not buffer lines)
+" Better for wrapped prose but also works generally.
+" http://bit-101.com/techtips/2018/02/23/Better-cursor-movement-in-vim/
+nnoremap j gj
+nnoremap k gk
+nnoremap 0 g0
+" nnoremap $ g_
+
+"                              |"Don't need the newline
+"nnoremap d$ dg$
+"nnoremap c$ cg$
+"nnoremap y$ yg$
+"nnoremap $ g$
+"
+"  Search --------------------------------------------------------
+"
+set incsearch                  " Find next match as input proceeds
+"set hlsearch                  " Highlight searches by default
+set ignorecase                 " Ignore case ...
+set smartcase                  " ...unless it's uppercase
+" ******************************
+" https://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting
+" This clears the last search highlight in with ESC key
+" but it also messes up, starting vim in REPLACEMENT mode.
+" Better just to :noh after.
+" nnoremap <CR> :nohlsearch<CR><CR>
+"
+"  Autocorrect, abbreviations ------------------------------------
+
+" abbr Lniux Linux
+" abbr hte the
+"Ending markdown lines instead of trailing double whitespace
+" iabbrev Qde <br />
+
+" Time, templates ------------------------------------------------
+
+"                              "Insert-datetime
+" Toggle with :DisableTimestamp // :EnableTimestamp
+"nnoremap <Leader>idt :put=strftime('%Y.%m.%d.%H%M')<CR>
+"nnoremap <Leader>idt "=strftime('%Y.%m.%d.%H%M')<CR>P
+iabbrev <expr> idt strftime('%Y.%m.%d.%H%M')
+
+"                              "Insert day-datetime
+"nnoremap <Leader>ddt :put=strftime('%a %Y.%2m.%2d.%H%M')<CR>
+"nnoremap <Leader>ddt "=strftime('%a %Y.%m.%d.%H%M')<CR>P
+iabbrev <expr> ddt strftime('%a %Y.%m.%d.%H%M')
+
+"                              "Insert diary-date
+"iabbrev <expr> qIDD strftime('%a %d %b %Y')
+
+"                              "Timestamp on call
+source ~/0/Scene/1/db/Vim/timestamps.vim
+"
+" Buffers, files, folders ---------------------------------------
+"
+"inoremap ies :r ~/0/Scene/1/db/Templates/Plaintext/DQ-sign-email.txt<CR>
+"nnoremap <Leader>ies :r ~/0/Scene/1/db/Templates/Plaintext/DQ-sign-email.txt<CR>
+                               "Insert-my-email-signature
+iabbrev iDQ -- Danny Quah (me@DannyQuah.com)
+
+                               "Insert-header-general-text
+nnoremap <Leader>iht :0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header-general.txt<CR>
+
+                               "Insert-header-yaml
+"Template file replaced by python script, for dynamic insertion
+"nnoremap <Leader>ihy :0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header-yaml.md<CR>
+nnoremap <silent> <Leader>ihy :execute "%! ".$HOME."/0/Scene/1/db/Vim/bin/yaml-head-md.py"<CR>
+
+                               "Insert-latex-yaml"
+nnoremap <Leader>ily :r ~/0/Scene/1/db/Templates/Plaintext/DQ-latex-yaml.md<CR>
+
+"                              " Filetypes // here, if not filetype.vim
+"source filetype.vim           |"Automatic in Vim
+
+"  Directories and files ------------------------------------------
+"                              "Fuzzy File Finder via CtrlP
+cabbrev CPB CtrlPBuffer
+cabbrev CPM CtrlPMRU
+cabbrev CPL CtrlP ~/0/Light/1
+cabbrev CPC CtrlP ~/0/Scene/1
+cabbrev CPS CtrlP ~/0/Floor/1
+"                              "Start search from current file's directory 
+let g:ctrlp_working_path_mode='a'
+"let g:ctrlp_user_command='find %s -type f' 
+"Does W10 need instead
+"let g:ctrlp_user_command='dir %s /-n /b /s /a-d'
+"                              "Flow control disabled on modern setups
+"                              "So go ahead and use C-s
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+
+"Window splits ----------------------------------------------------
+"                              "I'm used to new splits opening below
+"                              "and to the right, unlike the default
+set splitbelow
+set splitright
+
+"Buffer control ---------------------------------------------------
+"https://stackoverflow.com/questions/4571494/open-a-buffer-as-a-vertical-split-in-vim
+"                              "Choose buffer to replace current
+nnoremap <Leader>bb :ls<cr>:b
+"                              "Choose buffer to v-split and use
+nnoremap <Leader>bv :ls<cr>:vsplit<space>#
+"                              "Choose buffer to h-split and use
+nnoremap <Leader>bs :ls<cr>:split<space>#
+"                              "Choose buffer to visit in other v-split
+"                              "Choose buffer to visit in other h-split
+nnoremap <Leader>bsv <c-w>w:ls<cr>:b
+"                              "Choose buffer to delete
+nnoremap <Leader>bd :ls<CR>:bd
+"                              "Choose buffer for new tab
+nnoremap <Leader>bt :ls<CR>:tabedit<space>#
+"nnoremap <Leader>bc :buffers<CR>:buffer 
+
+augroup dqFilesFoldersGrp
+"First, as usual, remove all dqFilesFoldersGrp autocommands
+  autocmd!
+" https://www.tecmint.com/create-custom-header-template-for-shell-scripts-in-vim/
+  autocmd BufNewFile *.txt 0r ~/0/Scene/1/db/Templates/Plaintext/DQ-custom-header.txt
+  autocmd BufNewFile *.R   0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header-Rscript.R
+  autocmd BufNewFile *.tex 0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header.tex
+  autocmd BufNewFile *.py  0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header.py
+  autocmd BufNewFile *.bat 0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header.bat
+  autocmd BufNewFile *.md silent execute "%! ".$HOME."/0/Scene/1/db/Vim/bin/yaml-head-md.py"
+
+"If too many markdown files that I don't need the YAML header each time,
+"then comment out the previous line
+
+" Change current directory to the file's
+" https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
+  autocmd BufEnter * silent! lcd %:p:h
+" A more direct alternative:
+" set autochdir
+" but some plugins will fail when they make assumptions about their
+" current directory.
+" Can also get fancier and not change lcd for certain places:
+" autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
+  autocmd BufNewFile,BufEnter *.md  set list
+  autocmd BufNewFile,BufEnter *.tex set list
+  autocmd BufNewFile,BufEnter *.tex setlocal expandtab
+  autocmd BufNewFile,BufEnter *.R   set list
+  autocmd BufNewFile,BufEnter *.R   setlocal expandtab
+  autocmd BufNewFile,BufEnter *.R   setlocal shiftwidth=2
+  "autocmd BufEnter,FocusGained,InsertLeave * set number relativenumber
+  "autocmd BufLeave,FocusLost,InsertEnter   * set number norelativenumber
+augroup END
+
+"  Directory management ------------------------------------------
+"
+"nnoremap <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
+" Use instead netrw https://shapeshed.com/vim-netrw/
+" Open with :Explore, :Sexplore (or :Sex, snicker), :Vexplore
+let g:netrw_liststyle=3
+let g:netrw_banner=0           "Remove directory banner
+"let g:netrw_browse_split=3     "Open file in new tab
+let g:netrw_browse_split=4     "Open file in previous window
+let g:netrw_winsize=26       "In percent, not cols; gives 30 with 110
+let g:netrw_altv=1
+" But can achieve NERDtree likeness with:
+" let g:netrw_banner=0
+" let g:netrw_liststyle=3
+" let g:netrw_browse_split=3
+" let g:netrw_altv=1
+" let g:netrw_winsize=25
+" augroup ProjectDrawer
+"   autocmd!
+"   autocmd VimEnter * :Vexplore
+" augroup END
+" OR open in new tab if desired
+" let g:netrw_browse_split=3
+
+"Otherwise you get asked to save every single netrw listing 
+"https://github.com/tpope/vim-vinegar/issues/13
+augroup netrwBuffers
+  autocmd!
+  autocmd FileType netrw setlocal bufhidden=delete 
+  " or else try replacing delete with wipe
+augroup end 
+let g:netrw_fastbrowse=-1
+"
+" Syntax and modes ----------------------------------------------
+"
+                               "pencil ---------------------------
+
+let g:pencil#wrapModeDefault='soft'
+                               "default, hard
+let g:pencil#textwidth=80
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd  call pencil#init()
+  autocmd FileType text          call pencil#init()
+augroup END
+" Pencil - initialise pencil
+" NoPencil - restore to global settings
+" TogglePencil or PencilToggle
+" PencilSoft / PencilHard
+
+                               "lightline ------------------------
+set laststatus=2
+set noshowmode                 "Get rid of redundant INSERT
+set t_Co=256                   "Have to do this by hand
+let g:lightline={
+\   'colorscheme': 'powerline',
+\   'active': {
+\     'left': [ [ 'mode', 'paste' ],
+\               [ 'readonly', 'filename', 'modified', 'charvaluehex' ] ]
+\     },
+\ 'component': {
+\   'charvaluehex': '0x%B'
+\   },
+\ }
+
+"                              "VimWiki -------------------------- 
+"Multiple Wikis 
+" https://opensource.com/article/18/6/vimwiki-gitlab-notes 
+" 
+" Use wiki names via :h vimwiki-option-name
+" https://github.com/vimwiki/vimwiki/blob/master/doc/vimwiki.txt // Interwiki~  
+" Clone off a default https://github.com/vimwiki/vimwiki/issues/365 
+let myWikiDefault={}
+let myWikiDefault.syntax='markdown'
+let myWikiDefault.ext='md'
+" 
+let myWikiPrsn=copy(myWikiDefault)
+let myWikiPrsn.path='~/0/Sound/1/Wp/'
+let myWikiPrsn.name='myWikiPrsn'
+
+"I can't get VimWiki to work in OneDrive under W10: 
+"1. With markdown syntax, links in markdown format will not activate,
+"although vimwiki-style links will. 
+"2. Switching to vimwiki syntax, links will not open automatically
+"in the Vim instance, but instead pop open a shell handler. 
+"All works fine, however, in Ubuntu: Links both vimwiki and markdown 
+"style work, and open correctly with Enter.
+let myWikiWork=copy(myWikiDefault)
+let myWikiWork.path='~/0/Board/1/Ww/'
+let myWikiWork.name='myWikiWork'
+
+let g:vimwiki_list=[myWikiPrsn, myWikiWork]
+let g:vimwiki_markdown_link_ext=0 
+"0 - Make sure not to append Wiki file extension to Markdown files
+
+let g:vimwiki_global_ext=0 
+" Try to keep markdown not under vimwiki control as markdown, not vimwiki 
+
+let g:vimwiki_ext2syntax={'.md': 'markdown'} 
+let g:vimwiki_autowriteall=1
+" Turn onautowrite when switching across wiki pages
+"
+"From Marcus Kazmierczak https://mkaz.blog/working-with-vim/vimwiki/
+command! Diary VimwikiDiaryIndex
+augroup vimwikiGroup
+  autocmd!
+  "On read diary, automatically update links to build index 
+  autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
+  "Python script rather than just static template as different every day
+  "On Linux we can get away with reading the script output ...
+"  autocmd BufNewFile */diary/*.md :silent 0r !~/0/Scene/1/db/Vim/bin/vimw-diary-template.py 
+  "but for W10 it's necessary (and on Linux it's fine) 
+  "to run execute, following
+  "https://stackoverflow.com/questions/9346318/how-to-use-windows-environment-variables-in-vim-script 
+  autocmd BufNewFile */diary/*.md silent execute "%! ".$HOME."/0/Scene/1/db/Vim/bin/vimw-diary-template.py"
+augroup end
+" The rest of what used to be here is now in ftplugin/vimwiki.vim 
+"
+"                              "goyo, limelight ------------------
+" http://www.bit-101.com/techtips/2018/02/24/Editing-text-with-Vim-Goyo-and-Limelight/
+nnoremap <Leader>gy :Goyo<CR>
+augroup goyogroup
+  autocmd!
+  autocmd User GoyoEnter Limelight
+  autocmd User GoyoLeave Limelight!
+augroup END
+" let g:limelight_conceal_ctermfg=240
+
+
+                               "TeX ------------------------------
+let g:tex_flavor="latex"       "LaTeX // otherwise, might be plaintex
+augroup texcode
+  autocmd!
+  autocmd FileType tex setlocal textwidth=72
+  autocmd FileType tex setlocal colorcolumn=73
+augroup END
+                               "Markdown -------------------------
+" https://vim.works/2019/03/16/using-markdown-in-vim/
+" https://stackoverflow.com/questions/10964681/enabling-markdown-highlighting-in-vim
+" set conceallevel=2
+
+"                              "vim markdown ---------------------
+let g:markdown_fenced_languages=['html', 'python', 'bash=sh']
+let g:vim_markdown_folding_disabled=1
+"                              "YAML frontmatter
+let g:vim_markdown_frontmatter=1
+"Following https://vimawesome.com/plugin/markdown-syntax
+let g:vim_markdown_strikethrough=1
+let g:vim_markdown_no_extensions_in_markdown=1
+
+"iamccor/markdown-preview-nvim ----------------------------------- 
+" :MarkdownPreview // :MarkdownPreviewStop
+" This mkdp install has to be run just once; it's a no-op afterwards
+call mkdp#util#install()
+let g:mkdp_auto_close=1      
+                               "1 autoclose window when done; 0 otherwise
+let g:mkdp_refresh_slow=0    
+							   "0 autorefresh as editing; 1 otherwise 
+let g:mkdp_preview_options={
+    \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
+    \ 'maid': {},
+    \ 'disable_sync_scroll': 0,
+    \ 'sync_scroll_type': 'middle',
+    \ 'hide_yaml_meta': 1,
+    \ 'sequence_diagrams': {},
+    \ 'flowchart_diagrams': {},
+    \ 'content_editable': v:false
+    \ } 
+
+let g:mkdp_markdown_css='~/0/Scene/1/db/Templates/stylesheets/github-markdown.css'
+
+"                              |"Use MacFarlane pandoc to render HTML
+                               "Bullets --------------------------
+let g:bullets_enabled_file_types=[
+  \ 'text',
+  \ 'markdown',
+  \ 'notes',
+  \ 'scratch'
+  \]
+" Line spacing between bullets - 1=no blank lines (default), 2=one blank line
+let g:bullets_line_spacing=1
+"
+
+" eof db/Vim/Vimrc <- .vimrc

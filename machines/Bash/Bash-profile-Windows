@@ -1,0 +1,19 @@
+#! /bin/bash
+# @(#) 0/Scene/1/db/machines/Bash/Bash-profile-Windows -> ~/.bash_profile
+# Last edited: Thu 2020.06.25.2140 -- Danny Quah
+# Created:     Sun 2013.01.27.1400 -- Danny Quah (dquah@GRAVITY)
+# "mklink .bash_profile 0/Scene.../Bash-profile-Windows" from Command
+# OR for Git-hub
+# ln -s 0/Scene/1/db/machines/Bash/Bash-profile-Windows .bash_profile
+# bash login
+# $
+# Revision History:
+#  % Sun Jan 27 14:00:05 2013 -  (DQUAH@GRAVITY)
+#    First draft
+
+source $HOME/0/Scene/1/db/machines/Bash/Bash-Windows
+
+#
+# Local variables:
+# end:
+# eof Bash-profile-Windows -> ~/.bash_profile
