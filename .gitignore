@@ -1,5 +1,5 @@
 # @(#) db0/.gitignore
-# Last-edited: Sat 2022.01.01.0623 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Sat 2022.01.01.2325 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2020.08.15.1306 -- Danny Quah (me@DannyQuah.com)
@@ -11,14 +11,14 @@
 lockfile
 */*Cache/
 1Unused.zip
+.obsidian/
 machines/Linux/bin/
 machines/Linux/fonts/
 machines/Linux/lib/
 machines/Ssh/
 machines/Zsh/oh-my-zsh
-Vim/Session.vim 
-Vim/autoload/
-Vim/bundle/
+Vim/bundle
+Vim/Session.vim
 Vim/sessions/
 # eof db0/.gitignore
 

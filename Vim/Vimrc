@@ -1,5 +1,5 @@
-" @(#) db/Vim/Vimrc <- .vimrc
-" Last-edited: Sat 2022.01.01.0620 -- Danny Quah (me@DannyQuah.com)
+" @(#) db0/Vim/Vimrc <- .vimrc
+" Last-edited: Sat 2022.01.01.2307 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sat 2021.12.11.1701 -- Danny Quah (me@DannyQuah.com)
@@ -171,7 +171,7 @@ set shiftwidth=2               "Indents have this width
 "  Appearance ----------------------------------------------------
 if !has('gui_running')
                                "fuller Themes in .gvimrc
-  source ~/0/Scene/1/db/Vim/appearances.vim
+  source ~/0/Scene/1/db0/Vim/appearances.vim
 endif
 
 set lines=51 columns=160       "lines=48+n, n for mode lines,
@@ -254,21 +254,21 @@ source timestamps.vim
 "
 " Buffers, files, folders ---------------------------------------
 "
-"inoremap ies :r ~/0/Scene/1/db/Templates/Plaintext/DQ-sign-email.txt<CR>
-"nnoremap <Leader>ies :r ~/0/Scene/1/db/Templates/Plaintext/DQ-sign-email.txt<CR>
+"inoremap ies :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-sign-email.txt<CR>
+"nnoremap <Leader>ies :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-sign-email.txt<CR>
                                "Insert-my-email-signature
 iabbrev iDQ -- Danny Quah (me@DannyQuah.com)
 
                                "Insert-header-general-text
-nnoremap <Leader>iht :0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header-general.txt<CR>
+nnoremap <Leader>iht :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header-general.txt<CR>
 
                                "Insert-header-yaml
 "Template file replaced by python script, for dynamic insertion
-"nnoremap <Leader>ihy :0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header-yaml.md<CR>
-nnoremap <silent> <Leader>ihy :execute "%! ".$HOME."/0/Scene/1/db/Vim/bin/yaml-head-md.py"<CR>
+"nnoremap <Leader>ihy :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header-yaml.md<CR>
+nnoremap <silent> <Leader>ihy :execute "%! ".$HOME."/.vim/bin/yaml-head-md.py"<CR>
 
                                "Insert-latex-yaml"
-nnoremap <Leader>ily :r ~/0/Scene/1/db/Templates/Plaintext/DQ-latex-yaml.md<CR>
+nnoremap <Leader>ily :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-latex-yaml.md<CR>
 
 "                              " Filetypes // here, if not filetype.vim
 "source filetype.vim           |"Automatic in Vim
@@ -317,12 +317,12 @@ augroup dqFilesFoldersGrp
 "First, as usual, remove all dqFilesFoldersGrp autocommands
   autocmd!
 " https://www.tecmint.com/create-custom-header-template-for-shell-scripts-in-vim/
-  autocmd BufNewFile *.txt 0r ~/0/Scene/1/db/Templates/Plaintext/DQ-custom-header.txt
-  autocmd BufNewFile *.R   0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header-Rscript.R
-  autocmd BufNewFile *.tex 0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header.tex
-  autocmd BufNewFile *.py  0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header.py
-  autocmd BufNewFile *.bat 0r ~/0/Scene/1/db/Templates/Plaintext/DQ-header.bat
-  autocmd BufNewFile *.md silent execute "%! ".$HOME."/0/Scene/1/db/Vim/bin/yaml-head-md.py"
+  autocmd BufNewFile *.txt 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-custom-header.txt
+  autocmd BufNewFile *.R   0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header-Rscript.R
+  autocmd BufNewFile *.tex 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header.tex
+  autocmd BufNewFile *.py  0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header.py
+  autocmd BufNewFile *.bat 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header.bat
+  autocmd BufNewFile *.md silent execute "%! ".$HOME."/0/Scene/1/db0/Vim/bin/yaml-head-md.py"
 
 "If too many markdown files that I don't need the YAML header each time,
 "then comment out the previous line
@@ -456,11 +456,11 @@ augroup vimwikiGroup
   autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
   "Python script rather than just static template as different every day
   "On Linux we can get away with reading the script output ...
-"  autocmd BufNewFile */diary/*.md :silent 0r !~/0/Scene/1/db/Vim/bin/vimw-diary-template.py 
+"  autocmd BufNewFile */diary/*.md :silent 0r !~/0/Scene/1/db0/Vim/bin/vimw-diary-template.py 
   "but for W10 it's necessary (and on Linux it's fine) 
   "to run execute, following
   "https://stackoverflow.com/questions/9346318/how-to-use-windows-environment-variables-in-vim-script 
-  autocmd BufNewFile */diary/*.md silent execute "%! ".$HOME."/0/Scene/1/db/Vim/bin/vimw-diary-template.py"
+  autocmd BufNewFile */diary/*.md silent execute "%! ".$HOME."/0/Scene/1/db0/Vim/bin/vimw-diary-template.py"
 augroup end
 " The rest of what used to be here is now in ftplugin/vimwiki.vim 
 "
@@ -517,7 +517,7 @@ let g:mkdp_preview_options={
     \ 'content_editable': v:false
     \ } 
 
-let g:mkdp_markdown_css='~/0/Scene/1/db/Templates/stylesheets/github-markdown.css'
+let g:mkdp_markdown_css='~/0/Scene/1/db0/Templates/stylesheets/github-markdown.css'
 
 "                              |"Use MacFarlane pandoc to render HTML
                                "Bullets --------------------------
@@ -531,4 +531,4 @@ let g:bullets_enabled_file_types=[
 let g:bullets_line_spacing=1
 "
 
-" eof db/Vim/Vimrc <- .vimrc
+" eof db0/Vim/Vimrc <- .vimrc
