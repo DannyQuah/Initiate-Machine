@@ -250,7 +250,7 @@ iabbrev <expr> ddt strftime('%a %Y.%m.%d.%H%M')
 
 "                              "Timestamp on call
 " in ~/0/Scene/1/db0/Vim/ and therefore .vim
-source ".$HOME."/.vim/timestamps.vim
+source ~/.vim/timestamps.vim
 "
 " Buffers, files, folders ---------------------------------------
 "
