@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: Sat 2022.01.01.0640 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Sat 2022.01.01.1447 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -98,7 +98,7 @@ fi
 # (Sat 2021.10.02.0830)
 case "$OSTYPE" in
   linux*)
-    if [ - d "~/0/Floor" ]; then
+    if [ -d "~/0/Floor" ]; then
       find -L ~/0/Floor -type d -exec chmod 755 {} \;
     fi
     ;;
