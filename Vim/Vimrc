@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Sat 2022.01.01.2307 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Sat 2022.01.01.2340 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sat 2021.12.11.1701 -- Danny Quah (me@DannyQuah.com)
@@ -250,7 +250,7 @@ iabbrev <expr> ddt strftime('%a %Y.%m.%d.%H%M')
 
 "                              "Timestamp on call
 " in ~/0/Scene/1/db0/Vim/ and therefore .vim
-source timestamps.vim
+source ".$HOME."/.vim/timestamps.vim
 "
 " Buffers, files, folders ---------------------------------------
 "
