@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Sun 2022.01.02.0846 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Sun 2022.01.02.1004 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sun 2022.01.02.0846 -- Danny Quah (me@DannyQuah.com)
@@ -503,7 +503,7 @@ let g:vim_markdown_no_extensions_in_markdown=1
 "iamccor/markdown-preview-nvim ----------------------------------- 
 " :MarkdownPreview // :MarkdownPreviewStop
 " This mkdp install has to be run just once; it's a no-op afterwards
-call mkdp#util#install()
+" call mkdp#util#install()
 let g:mkdp_auto_close=1      
                                "1 autoclose window when done; 0 otherwise
 let g:mkdp_refresh_slow=0    
