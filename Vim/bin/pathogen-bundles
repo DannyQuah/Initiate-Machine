@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+# @(#) pathogen-bundles
+# Last-edited: Sun 2022.01.02.0905 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % Sun 2022.01.02.0851 -- Danny Quah (me@DannyQuah.com)
+#    First draft: sh script to populate ~/.vim/bundle/
+#    Normally this is taken care of by syncthing or similar cloud
+#    syncing. However, on platforms such as iSH on iOS, I might
+#    only have syncing by git push/pull, and bundle/ should not
+#    get on my repos, as it itself comprises only other repos
+# ----------------------------------------------------------------
+
+# ------------------------------
+mkdir -p ~/.vim/bundle
+cd ~/.vim/bundle
+
+rm -rf bullets; git clone https://github.com/dkarter/bullets.vim
+rm -rf markdown-preview.nvim; git clone https://github.com/iamcco/markdown-preview.nvim
+rm -rf tabular; git clone https://github.com/godlygeek/tabular
+rm -rf timestamp; git clone https://github.com/vim-scripts/timestamp.vim
+rm -rf vim-easymotion git clone https://github.com/easymotion/vim-easymotion
+rm -rf vim-markdown; git clone https://github.com/plasticboy/vim-markdown
+rm -rf vim-renumber; git clone https://github.com/clarke/vim-renumber
+rm -rf vimwiki; git clone https://github.com/vimwiki/vimwiki
+
+# ------------------------------
+
+# eof pathogen-bundles
+

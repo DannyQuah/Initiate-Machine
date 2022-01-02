@@ -1,5 +1,5 @@
 #!/usr/bin/env R
-# @(#) theFileName
+# @(#) FILENAME
 # Last-edited: TIMESTAMP -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
@@ -12,4 +12,4 @@ library(lubridate)
 
 
 
-# eof theFileName
+# eof FILENAME

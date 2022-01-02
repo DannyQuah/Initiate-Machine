@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init
-# Last-edited: Sat 2022.01.01.0645 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Sun 2022.01.02.0854 -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
 #    First draft: Initialise with symbolic links to $HOME/
-#    This assumes the filesystem is already in place
+#    This assumes my ~/0 filesystem is already in place
 # ****************************************************************
 #
 ################################

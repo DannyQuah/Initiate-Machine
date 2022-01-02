@@ -1,7 +1,9 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Sat 2022.01.01.2340 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Sun 2022.01.02.0846 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
+"  % Sun 2022.01.02.0846 -- Danny Quah (me@DannyQuah.com)
+"    Reorganize Templates/Plaintext
 "  % Sat 2021.12.11.1701 -- Danny Quah (me@DannyQuah.com)
 "    VimWiki -> Wp, Ww (personal, work)
 "  % Sun 2021.05.16.0722 -- Danny Quah (me@DannyQuah.com)
@@ -259,16 +261,18 @@ source ~/.vim/timestamps.vim
                                "Insert-my-email-signature
 iabbrev iDQ -- Danny Quah (me@DannyQuah.com)
 
-                               "Insert-header-general-text
+                               "Insert templates
+nnoremap <Leader>iss :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-shell-script-template<CR>
 nnoremap <Leader>iht :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header-general.txt<CR>
+nnoremap <Leader>ily :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-latex-yaml.md<CR>
+nnoremap <Leader>itt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-tex-template.tex
+nnoremap <Leader>ipt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-python-template.py
+nnoremap <Leader>ibt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-bat-template.bat
 
                                "Insert-header-yaml
 "Template file replaced by python script, for dynamic insertion
 "nnoremap <Leader>ihy :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header-yaml.md<CR>
 nnoremap <silent> <Leader>ihy :execute "%! ".$HOME."/.vim/bin/yaml-head-md.py"<CR>
-
-                               "Insert-latex-yaml"
-nnoremap <Leader>ily :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-latex-yaml.md<CR>
 
 "                              " Filetypes // here, if not filetype.vim
 "source filetype.vim           |"Automatic in Vim
