@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init
-# Last-edited: Sun 2022.01.02.0854 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Tue 2022.01.04.1248 -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
@@ -31,6 +31,8 @@ rm -rf ~/.bash_aliases
 ln -s "$DBPF"/machines/Bash/Bash-Linux ~/.bash_aliases
 rm -rf ~/.Xmodmap-swapctrlcaps
 ln -s "$DBPF"/machines/Linux/src/Xmodmap-swapctrlcaps ~/.Xmodmap-swapctrlcaps
+rm -rf ~/.Xresources
+ln -s "$DPBF"/machines/Linux/src/Xresources ~/.Xresources
 ################################
 # For R I will take libraries specific to each machine, so
 # need to link just these dotfiles
@@ -49,6 +51,7 @@ ln -s "$DBPF"/Vim/Gvimrc ~/.gvimrc
 # Pandoc
 # Is this needed? I can find no Windows counterpart
 if [ -d "$DBNF" ]; then
+  rm -rf ~/.pandoc
   ln -s "$DBNF"/Pandoc ~/.pandoc
 fi
 ################################
@@ -103,7 +106,10 @@ ln -s "$DBPF"/machines/Common/bulk-heif ~/bin/
 # .config/
 if [ -d "$DBNF" ]; then
   mkdir -p ~/.config
+  rm -rf ~/.config/doublecmd
   ln -s "$DBNF"/Config/DoubleCmd-Linux ~/.config/doublecmd
+  rm -rf ~/.config/libreoffice
+  ln -s  "$DBNF"/Config/libreoffice ~/.config/libreoffice
 # Obsidian has a lot of cache baggage; just leave everything local
 # to .config or %LOCALAPPDATA% in each machine
 # ln -s "$DBNF"/Config/Obsidian-Linux ~/.config/obsidian
