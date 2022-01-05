@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # @(#) $HOME/0/Scene/1/db0/machines/Zsh/Zshrc
-# Last-edited: Sat 2022.01.01.0629 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Wed 2022.01.05.0725 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # $
 ## Revision History:
@@ -20,6 +20,13 @@
 #    First draft. From ~/.oh-my-zsh/templates/zshrc.zsh-template
 #    Upgrade Oh My Zsh is upgrade_oh_my_zsh
 # ----------------------------------------------------------------
+# Trying this for iSH on iOS, although ideally it should be version
+# free; might link to /usr/local/share/zsh/ and then use that instead.
+# However, I think FPATH is already being exported.  It's that file()
+# is really missing.
+if [ -d /usr/share/zsh/5.8 ]; then
+  export FPATH="/usr/share/zsh/5.8/functions:$FPATH"
+fi
 # Following https://github.com/rupa/z/pull/200
 unsetopt BG_NICE
 #

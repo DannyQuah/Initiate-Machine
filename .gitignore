@@ -1,5 +1,5 @@
 # @(#) db0/.gitignore
-# Last-edited: Sun 2022.01.02.0756 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Wed 2022.01.05.1456 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2020.08.15.1306 -- Danny Quah (me@DannyQuah.com)
@@ -16,9 +16,9 @@ machines/Linux/bin/
 machines/Linux/fonts/
 machines/Linux/lib/
 machines/Ssh/
-machines/Zsh/oh-my-zsh
-Vim/bundle
-Vim/Session.vim
+machines/Zsh/oh-my-zsh/
+Vim/bundle/
+Vim/Session.vim/
 Vim/sessions/
 # eof db0/.gitignore
 

@@ -1,0 +1,7 @@
+[user]
+	name = DannyQuah
+	email = D.Quah@nus.edu.sg
+[core]
+	editor = vim
+[credential]
+	helper = store

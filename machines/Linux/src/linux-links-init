@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init
-# Last-edited: Tue 2022.01.04.1248 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Wed 2022.01.05.1454 -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
@@ -32,7 +32,7 @@ ln -s "$DBPF"/machines/Bash/Bash-Linux ~/.bash_aliases
 rm -rf ~/.Xmodmap-swapctrlcaps
 ln -s "$DBPF"/machines/Linux/src/Xmodmap-swapctrlcaps ~/.Xmodmap-swapctrlcaps
 rm -rf ~/.Xresources
-ln -s "$DPBF"/machines/Linux/src/Xresources ~/.Xresources
+ln -s "$DBPF"/machines/Linux/src/Xresources ~/.Xresources
 ################################
 # For R I will take libraries specific to each machine, so
 # need to link just these dotfiles
@@ -115,6 +115,10 @@ if [ -d "$DBNF" ]; then
 # ln -s "$DBNF"/Config/Obsidian-Linux ~/.config/obsidian
 fi
 
+################################
+# git
+rm -rf ~/.gitconfig
+ln -s $DBPF/Config/gitconfig ~/.gitconfig
 ################################
 # Below no longer in use
 ################################
