@@ -1,14 +1,16 @@
 #!/usr/bin/env sh
 # @(#) pathogen-bundles
-# Last-edited: Sun 2022.01.02.1008 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Sat 2022.01.08.0700 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sun 2022.01.02.0851 -- Danny Quah (me@DannyQuah.com)
 #    First draft: sh script to populate ~/.vim/bundle/
-#    Normally this is taken care of by syncthing or similar cloud
-#    syncing. However, on platforms such as iSH on iOS, I might
+#    Normally this level of synchronization is done by syncthing or
+#    similar cloudi syncing.
+#    However, on platforms such as iSH on iOS, I might
 #    only have syncing by git push/pull, and bundle/ should not
-#    get on my GitHub repos, as it itself comprises only other repos
+#    get on my GitHub repos, as it itself comprises only other
+#    GitHub repos
 # ----------------------------------------------------------------
 
 # ------------------------------
@@ -21,9 +23,16 @@ rm -rf tabular; git clone https://github.com/godlygeek/tabular
 rm -rf timestamp; git clone https://github.com/vim-scripts/timestamp.vim
 rm -rf vim-easymotion git clone https://github.com/easymotion/vim-easymotion
 rm -rf vim-markdown; git clone https://github.com/plasticboy/vim-markdown
+rm -rf vim-pencil;  git clone https://github.com/reedes/vim-pencil
 rm -rf vim-renumber; git clone https://github.com/clarke/vim-renumber
 rm -rf vimwiki; git clone https://github.com/vimwiki/vimwiki
-
+#
+# ------------------------------
+# Colorschemes
+rm -rf vim-theme-papaya; git clone https://github.com/henrynewcomer/vim-theme-papaya
+rm -rf vim-monokai; git clone https://github.com/sickill/vim-monokai 
+rm -rf vim; git clone https://github.com/dracula/vim
+# rm -rf dracula_theme; git clone https://github.com/dracula/dracula-theme
 # ------------------------------
 
 # eof pathogen-bundles

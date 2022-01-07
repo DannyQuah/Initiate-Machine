@@ -3,5 +3,6 @@
 	email = D.Quah@nus.edu.sg
 [core]
 	editor = vim
+	filemode = false
 [credential]
 	helper = store

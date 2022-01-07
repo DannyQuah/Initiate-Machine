@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: Sat 2022.01.01.1447 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Sat 2022.01.08.0709 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -53,6 +53,14 @@ case "$OSTYPE" in
     #   export ATOM_HOME="~/.atom"
     ;;
 esac
+# ###############################
+# Formats and languages
+LC_LOCALE=en_SG.utf-8; export $LC_LOCALE
+# On Linux machines, sort otherwise ignores "." so that
+# "Li.H" and "Li.X" would then be separated by "Lin.A". No harm
+# putting this in for W10 machines too, so...
+# Sat 2022.01.08.0709 -- Danny Quah (me@DannyQuah.com)
+LANG=C; export $LANG
 # ###############################
 #
 for bindir in $( echo "$BIN_DIRS" ) ; do

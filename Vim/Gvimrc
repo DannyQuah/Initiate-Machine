@@ -1,5 +1,5 @@
 " @(#) Vim/Gvimrc <- ~/.gvimrc
-" Last-edited: Mon 2021.08.16.2057 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Sat 2022.01.08.0706 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sun 2020.07.19.0745 -- Danny Quah (me@DannyQuah.com)
@@ -43,25 +43,11 @@ set t_vb=
     "set guifont=DejaVu_Sans_Mono:h9:cANSI:qDRAFT
     "set guifont=Source_Code_Pro:h9:cANSI:qDRAFT
   else
-    set guifont=Inconsolata\ 10
+    "set guifont=Inconsolata\ 10
     "set guifont=Liberation\ Mono\ 9
     "set guifont=DejaVu\ Sans\ Mono\ 9
-    "set guifont=Source\ Code\ Pro\ 9
+    set guifont=Source\ Code\ Pro\ 9
   endif
-
-" Favorites
-  "colorscheme torte           "this came with GVim, but I like as well
-  "colorscheme koehler
-  "colorscheme industry
-"
-  colorscheme ron
-  "colorscheme monokai         "vim-monokai
-  "colorscheme papaya          "vim-theme-papaya
-  "let g:papaya_gui_color='blue'
-
-  "let g:dracula_colorterm=0 
-  "highlight normal guibg=none ctermbg=none
-  "colorscheme dracula 
 
 
 " Themes ---------------------------------------------------------

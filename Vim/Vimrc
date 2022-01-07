@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Sun 2022.01.02.1004 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Sat 2022.01.08.0711 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sun 2022.01.02.0846 -- Danny Quah (me@DannyQuah.com)
@@ -534,5 +534,21 @@ let g:bullets_enabled_file_types=[
 " Line spacing between bullets - 1=no blank lines (default), 2=one blank line
 let g:bullets_line_spacing=1
 "
+
+" Colorscheme
+                               " Favorites
+  colorscheme torte           "this came with GVim, but I like as well
+  "colorscheme koehler
+  "colorscheme industry
+
+                               " Others
+  "colorscheme ron
+  "colorscheme monokai         "vim-monokai
+  "colorscheme papaya          "vim-theme-papaya
+  "let g:papaya_gui_color='blue'
+
+  "let g:dracula_colorterm=0 
+  "highlight normal guibg=none ctermbg=none
+  "colorscheme dracula 
 
 " eof db0/Vim/Vimrc <- .vimrc
