@@ -185,3 +185,5 @@ function acs() {
 
 # eof Zshrc
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

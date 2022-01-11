@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) linux-specialapps-install
-# Last-edited: Fri 2021.12.24.1149 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Tue 2022.01.11.0641 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Tue 2018.09.18.1200 -- Danny Quah (me@DannyQuah.com)
@@ -40,7 +40,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # Set the below in linux-links-init
 #  mkdir -p ~/.config/Typora/themes
 #  cd ~/.config/Typora/themes
-#  ln -s ~/0/Scene/1/db/machines/Editors/Typora.base.user.css ./base.user.css
+#  ln -s ~/0/Scene/1/db0/machines/Editors/Typora.base.user.css ./base.user.css
 ################################
 # panwriter 2021.11
 # sudo snap install panwriter

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: Sat 2022.01.08.0709 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Sat 2022.01.08.1907 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -55,12 +55,12 @@ case "$OSTYPE" in
 esac
 # ###############################
 # Formats and languages
-LC_LOCALE=en_SG.utf-8; export $LC_LOCALE
+# export LC_LOCALE=en_SG.utf-8
 # On Linux machines, sort otherwise ignores "." so that
 # "Li.H" and "Li.X" would then be separated by "Lin.A". No harm
 # putting this in for W10 machines too, so...
 # Sat 2022.01.08.0709 -- Danny Quah (me@DannyQuah.com)
-LANG=C; export $LANG
+export LANG=C
 # ###############################
 #
 for bindir in $( echo "$BIN_DIRS" ) ; do

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) linux-baseapps-install
-# Last-edited: Sat 2021.10.16.0832-- Danny Quah (me@DannyQuah.com)
+# Last-edited: Tue 2022.01.11.0704 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Fri 2020.08.14.1928 -- Danny Quah (me@DannyQuah.com)
@@ -60,7 +60,7 @@ installBaseApps() {
 ################################
 # tilix
   sudo add-apt-repository ppa:webupd8team/terminix
-  sudo apt-get update && sudo apt upgrade
+  sudo apt update && sudo apt upgrade
   sudo apt install -y tilix
 ################################
 # termius

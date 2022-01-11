@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init
-# Last-edited: Wed 2022.01.05.1454 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Sun 2022.01.09.1459 -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
@@ -27,8 +27,10 @@ ln -s "$DBPF"/machines/Zsh/Zshrc     ~/.zshrc
 # mkdir -p ~/.local/share/oh-my-zsh
 # ln -s "$DBPF"/machines/Zsh/oh-my-zsh ~/.local/share/oh-my-zsh
 #
-rm -rf ~/.bash_aliases
-ln -s "$DBPF"/machines/Bash/Bash-Linux ~/.bash_aliases
+## rm -rf ~/.bashrc
+## ln -s "$DBPF"/machines/Bash/Bash-Windows ~/.bashrc
+rm -rf ~/.bashrc
+ln -s "$DBPF"/machines/Bash/Bash-Linux ~/.bashrc
 rm -rf ~/.Xmodmap-swapctrlcaps
 ln -s "$DBPF"/machines/Linux/src/Xmodmap-swapctrlcaps ~/.Xmodmap-swapctrlcaps
 rm -rf ~/.Xresources

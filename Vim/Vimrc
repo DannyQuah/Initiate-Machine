@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Sat 2022.01.08.0711 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Tue 2022.01.11.1749 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sun 2022.01.02.0846 -- Danny Quah (me@DannyQuah.com)
@@ -246,6 +246,7 @@ iabbrev <expr> idt strftime('%Y.%m.%d.%H%M')
 "nnoremap <Leader>ddt :put=strftime('%a %Y.%2m.%2d.%H%M')<CR>
 "nnoremap <Leader>ddt "=strftime('%a %Y.%m.%d.%H%M')<CR>P
 iabbrev <expr> ddt strftime('%a %Y.%m.%d.%H%M')
+iabbrev <expr> dd strftime('%a %Y.%m.%d')
 
 "                              "Insert diary-date
 "iabbrev <expr> qIDD strftime('%a %d %b %Y')
@@ -278,14 +279,52 @@ nnoremap <silent> <Leader>ihy :execute "%! ".$HOME."/.vim/bin/yaml-head-md.py"<C
 "source filetype.vim           |"Automatic in Vim
 
 "  Directories and files ------------------------------------------
+"                              "Fuzzy File Finder, FZF
+command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, <bang>0)
+nnoremap <C-o> :Files<CR>
+nnoremap <C-p> :GFiles<CR>
+                               " Buffer to replace current
+nnoremap <Leader>bb :Buffers<CR>
+                               " Buffer to delete
+nnoremap <Leader>bd :Buffers<CR>:bd
+"                              "Buffer for new tab
+nnoremap <Leader>bt :Buffers<CR>:tabedit<space>#
+"nnoremap <Leader>bc :buffers<CR>:buffer 
+
+" Options for fzf follow:
+" Popup window (anchored to the bottom of the current window)
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true, 'yoffset': 1.0 } }
+" Temporarily hide statusline
+let g:fzf_layout = { 'down': '30%' }
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+" Customize fzf colors to match color scheme
+" - fzf#wrap translates this to a set of `--color` options
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+
 "                              "Fuzzy File Finder via CtrlP
-cabbrev CPB CtrlPBuffer
-cabbrev CPM CtrlPMRU
-cabbrev CPL CtrlP ~/0/Light/1
-cabbrev CPC CtrlP ~/0/Scene/1
-cabbrev CPS CtrlP ~/0/Floor/1
+" cabbrev CPB CtrlPBuffer
+" cabbrev CPM CtrlPMRU
+" cabbrev CPL CtrlP ~/0/Board/1/Ww
+" cabbrev CPC CtrlP ~/0/Scene/1
+" cabbrev CPS CtrlP ~/0/Sound/1/Wp
 "                              "Start search from current file's directory 
-let g:ctrlp_working_path_mode='a'
+" let g:ctrlp_working_path_mode='a'
 "let g:ctrlp_user_command='find %s -type f' 
 "Does W10 need instead
 "let g:ctrlp_user_command='dir %s /-n /b /s /a-d'
@@ -302,8 +341,14 @@ set splitright
 
 "Buffer control ---------------------------------------------------
 "https://stackoverflow.com/questions/4571494/open-a-buffer-as-a-vertical-split-in-vim
-"                              "Choose buffer to replace current
-nnoremap <Leader>bb :ls<cr>:b
+                              "Buffer to replace current
+" nnoremap <Leader>bb :ls<cr>:b
+                              "Buffer to delete
+"nnoremap <Leader>bd :ls<CR>:bd
+                               "Buffer for new tab
+"nnoremap <Leader>bt :ls<CR>:tabedit<space>#
+"                              " The above have ls replaced by Buffers
+"                              " if fzf, fzf.vim are installed
 "                              "Choose buffer to v-split and use
 nnoremap <Leader>bv :ls<cr>:vsplit<space>#
 "                              "Choose buffer to h-split and use
@@ -311,11 +356,6 @@ nnoremap <Leader>bs :ls<cr>:split<space>#
 "                              "Choose buffer to visit in other v-split
 "                              "Choose buffer to visit in other h-split
 nnoremap <Leader>bsv <c-w>w:ls<cr>:b
-"                              "Choose buffer to delete
-nnoremap <Leader>bd :ls<CR>:bd
-"                              "Choose buffer for new tab
-nnoremap <Leader>bt :ls<CR>:tabedit<space>#
-"nnoremap <Leader>bc :buffers<CR>:buffer 
 
 augroup dqFilesFoldersGrp
 "First, as usual, remove all dqFilesFoldersGrp autocommands
