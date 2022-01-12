@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Tue 2022.01.11.1749 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Wed 2022.01.12.1840 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sun 2022.01.02.0846 -- Danny Quah (me@DannyQuah.com)
@@ -286,9 +286,9 @@ nnoremap <C-p> :GFiles<CR>
                                " Buffer to replace current
 nnoremap <Leader>bb :Buffers<CR>
                                " Buffer to delete
-nnoremap <Leader>bd :Buffers<CR>:bd
+"nnoremap <Leader>bd :Buffers<CR>:bd
 "                              "Buffer for new tab
-nnoremap <Leader>bt :Buffers<CR>:tabedit<space>#
+"nnoremap <Leader>bt :Buffers<CR>:tabedit<space>#
 "nnoremap <Leader>bc :buffers<CR>:buffer 
 
 " Options for fzf follow:
@@ -343,12 +343,13 @@ set splitright
 "https://stackoverflow.com/questions/4571494/open-a-buffer-as-a-vertical-split-in-vim
                               "Buffer to replace current
 " nnoremap <Leader>bb :ls<cr>:b
-                              "Buffer to delete
-"nnoremap <Leader>bd :ls<CR>:bd
+                              " The above have ls replaced by Buffers
+                              " if fzf, fzf.vim are installed
+
+"Buffer to delete
+nnoremap <Leader>bd :ls<CR>:bd
                                "Buffer for new tab
-"nnoremap <Leader>bt :ls<CR>:tabedit<space>#
-"                              " The above have ls replaced by Buffers
-"                              " if fzf, fzf.vim are installed
+nnoremap <Leader>bt :ls<CR>:tabedit<space>#
 "                              "Choose buffer to v-split and use
 nnoremap <Leader>bv :ls<cr>:vsplit<space>#
 "                              "Choose buffer to h-split and use
@@ -506,6 +507,12 @@ augroup vimwikiGroup
   "https://stackoverflow.com/questions/9346318/how-to-use-windows-environment-variables-in-vim-script 
   autocmd BufNewFile */diary/*.md silent execute "%! ".$HOME."/0/Scene/1/db0/Vim/bin/vimw-diary-template.py"
 augroup end
+
+" Disabling these VimWiki keystrokes 
+" as my diary notes are better managed through Obsidian
+nnoremap <Leader>w<Leader>w <NOP>
+nnoremap <Leader>wi <NOP>
+
 " The rest of what used to be here is now in ftplugin/vimwiki.vim 
 "
 "                              "goyo, limelight ------------------
@@ -544,10 +551,10 @@ let g:vim_markdown_no_extensions_in_markdown=1
 " :MarkdownPreview // :MarkdownPreviewStop
 " This mkdp install has to be run just once; it's a no-op afterwards
 " call mkdp#util#install()
-let g:mkdp_auto_close=1      
+let g:mkdp_auto_close=0
                                "1 autoclose window when done; 0 otherwise
-let g:mkdp_refresh_slow=0    
-							   "0 autorefresh as editing; 1 otherwise 
+let g:mkdp_refresh_slow=0
+                               "0 autorefresh as editing; 1 otherwise 
 let g:mkdp_preview_options={
     \ 'mkit': {},
     \ 'katex': {},
@@ -562,8 +569,8 @@ let g:mkdp_preview_options={
     \ } 
 
 let g:mkdp_markdown_css='~/0/Scene/1/db0/Templates/stylesheets/github-markdown.css'
+                               "Use MacFarlane pandoc to render HTML
 
-"                              |"Use MacFarlane pandoc to render HTML
                                "Bullets --------------------------
 let g:bullets_enabled_file_types=[
   \ 'text',
@@ -571,11 +578,25 @@ let g:bullets_enabled_file_types=[
   \ 'notes',
   \ 'scratch'
   \]
-" Line spacing between bullets - 1=no blank lines (default), 2=one blank line
 let g:bullets_line_spacing=1
-"
+                               " Line spacing between bullets
+                               " 1=no blank lines (default),
+                               " 2=one blank line
+let g:bullets_pad_right=1
+                               " default 1; extra spaces to align
+let g:bullets_max_alpha_characters=2
+                               " default 2
+let g:bullets_outline_levels = ['num', 'abc', 'std-', 'std*']
+                               " Example [keys pressed]:
+" 1. first parent
+"   a. child bullet [ <cr><C-t> ]
+"      - unordered bullet [ <cr><C-t> ]
+"        * unordered bullet [ <cr><C-t> ]
+"      - unordered bullet [ <cr><C-d> ]
+"   b. second child bullet [ <cr><C-d> ]
+" 2. second parent [ <cr><C-d> ]
 
-" Colorscheme
+"  Colorscheme ---------------------------------------------------
                                " Favorites
   colorscheme torte           "this came with GVim, but I like as well
   "colorscheme koehler
