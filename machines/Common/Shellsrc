@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: Sat 2022.01.08.1907 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Thu 2022.01.13.0005 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -142,6 +142,9 @@ alias ls='/bin/ls' # since many systems set this elsewhere to '/bin/ls --color=a
 alias ll='/bin/ls -lF'
 alias lt='/bin/ls -ltF'
 alias lf='/bin/ls -F'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # largest files recursively from here
 # alias Largest='find -L . -type f -printf "%s %p\n" | sort -nr | head -20'

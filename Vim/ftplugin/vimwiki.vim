@@ -1,5 +1,5 @@
 " @(#) db/Vim/ftplugin/vimwiki.vim
-" Last-edited: Sun 2020.11.01.1948 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Thu 2022.01.13.1156 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History: 
 "  % Tue 2020.09.15.1612 -- Danny Quah (me@DannyQuah.com)
@@ -23,6 +23,11 @@
 "[reuse] [move_cursor]
 nnoremap <Leader>wvs :VimwikiVSplitLink 1 1<CR> 
 nnoremap <Leader>whs :VimwikiSplitLink  1 1<CR> 
+
+" Disabling these VimWiki keystrokes 
+" as my diary notes are better managed through Obsidian
+nnoremap <Leader>w<Leader>w <NOP>
+nnoremap <Leader>wi <NOP>
 
 
 "                              "Calendar ------------------------- 

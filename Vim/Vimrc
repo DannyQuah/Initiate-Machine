@@ -1,7 +1,10 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Wed 2022.01.12.1840 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Thu 2022.01.13.1526 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
+"  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
+"    Winding down VimWiki control as I'm OK using Obsidian and FZF
+"    instead
 "  % Sun 2022.01.02.0846 -- Danny Quah (me@DannyQuah.com)
 "    Reorganize Templates/Plaintext
 "  % Sat 2021.12.11.1701 -- Danny Quah (me@DannyQuah.com)
@@ -463,13 +466,13 @@ let g:lightline={
 " Use wiki names via :h vimwiki-option-name
 " https://github.com/vimwiki/vimwiki/blob/master/doc/vimwiki.txt // Interwiki~  
 " Clone off a default https://github.com/vimwiki/vimwiki/issues/365 
-let myWikiDefault={}
-let myWikiDefault.syntax='markdown'
-let myWikiDefault.ext='md'
+" let myWikiDefault={}
+" let myWikiDefault.syntax='markdown'
+" let myWikiDefault.ext='md'
 " 
-let myWikiPrsn=copy(myWikiDefault)
-let myWikiPrsn.path='~/0/Sound/1/Wp/'
-let myWikiPrsn.name='myWikiPrsn'
+" let myWikiPrsn=copy(myWikiDefault)
+" let myWikiPrsn.path='~/0/Sound/1/Wp/'
+" let myWikiPrsn.name='myWikiPrsn'
 
 "I can't get VimWiki to work in OneDrive under W10: 
 "1. With markdown syntax, links in markdown format will not activate,
@@ -478,40 +481,43 @@ let myWikiPrsn.name='myWikiPrsn'
 "in the Vim instance, but instead pop open a shell handler. 
 "All works fine, however, in Ubuntu: Links both vimwiki and markdown 
 "style work, and open correctly with Enter.
-let myWikiWork=copy(myWikiDefault)
-let myWikiWork.path='~/0/Board/1/Ww/'
-let myWikiWork.name='myWikiWork'
+" Even so, however, I use  markdown syntax for markdown files.
+" This is for greater consistency in itemization among other " things;
+" wiki link management is better done and more widely in my workflow
+" in Obsidian in any case, and markdown format is more generally used.
+" let myWikiWork=copy(myWikiDefault)
+" let myWikiWork.path='~/0/Board/1/Ww/'
+" let myWikiWork.name='myWikiWork'
 
-let g:vimwiki_list=[myWikiPrsn, myWikiWork]
-let g:vimwiki_markdown_link_ext=0 
-"0 - Make sure not to append Wiki file extension to Markdown files
+" let g:vimwiki_list=[myWikiPrsn, myWikiWork]
+                               "  So VimWiki knows what to control
+" let g:vimwiki_markdown_link_ext=0 
+                               "0 - Do not append Wiki file extension
+                               "to Markdown files
 
-let g:vimwiki_global_ext=0 
-" Try to keep markdown not under vimwiki control as markdown, not vimwiki 
+" let g:vimwiki_global_ext=0 
+                               " Keep markdown not under
+                               " vimwiki control as markdown,
+                               " not vimwiki 
 
-let g:vimwiki_ext2syntax={'.md': 'markdown'} 
-let g:vimwiki_autowriteall=1
+" let g:vimwiki_ext2syntax={'.md': 'markdown'} 
+" let g:vimwiki_autowriteall=1
 " Turn onautowrite when switching across wiki pages
 "
 "From Marcus Kazmierczak https://mkaz.blog/working-with-vim/vimwiki/
-command! Diary VimwikiDiaryIndex
-augroup vimwikiGroup
-  autocmd!
+" command! Diary VimwikiDiaryIndex
+" augroup vimwikiGroup
+  " autocmd!
   "On read diary, automatically update links to build index 
-  autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
+  " autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
   "Python script rather than just static template as different every day
   "On Linux we can get away with reading the script output ...
 "  autocmd BufNewFile */diary/*.md :silent 0r !~/0/Scene/1/db0/Vim/bin/vimw-diary-template.py 
   "but for W10 it's necessary (and on Linux it's fine) 
   "to run execute, following
   "https://stackoverflow.com/questions/9346318/how-to-use-windows-environment-variables-in-vim-script 
-  autocmd BufNewFile */diary/*.md silent execute "%! ".$HOME."/0/Scene/1/db0/Vim/bin/vimw-diary-template.py"
-augroup end
-
-" Disabling these VimWiki keystrokes 
-" as my diary notes are better managed through Obsidian
-nnoremap <Leader>w<Leader>w <NOP>
-nnoremap <Leader>wi <NOP>
+  " autocmd BufNewFile */diary/*.md silent execute "%! ".$HOME."/0/Scene/1/db0/Vim/bin/vimw-diary-template.py"
+" augroup end
 
 " The rest of what used to be here is now in ftplugin/vimwiki.vim 
 "
@@ -578,6 +584,10 @@ let g:bullets_enabled_file_types=[
   \ 'notes',
   \ 'scratch'
   \]
+                               " can also add 'vimwiki' if I were
+                               " still using it
+let g:bullets_delete_last_bullet_if_empty=1
+                               " default 1
 let g:bullets_line_spacing=1
                                " Line spacing between bullets
                                " 1=no blank lines (default),
@@ -595,6 +605,17 @@ let g:bullets_outline_levels = ['num', 'abc', 'std-', 'std*']
 "      - unordered bullet [ <cr><C-d> ]
 "   b. second child bullet [ <cr><C-d> ]
 " 2. second parent [ <cr><C-d> ]
+
+let g:bullets_renumber_on_change=1
+                               " default 1 in any case
+let g:bullets_nested_checkboxes=1
+                               " default 1 in any case
+                               " <Leader>x
+let g:bullets_checkbox_markers=' .oOX'
+let g:bullets_checkbox_partials_toggle=0
+                               " default 1, checked when only partial
+
+
 
 "  Colorscheme ---------------------------------------------------
                                " Favorites

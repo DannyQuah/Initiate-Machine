@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOMESCENE/1/db0/machines/Bash/Bash-Windows -> .bashrc
-# Last-edited: Wed 2022.01.12.2329 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Thu 2022.01.13.0013 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Tue 2013.01.29.1220 -- Danny Quah (dquah@LSE016404)
@@ -13,11 +13,28 @@ case $- in
       *) return;;
 esac
 
-if [ -f ${HOME}/1/db0/machines/Bash/Bash-dispatcher ]; then
-  source ${HOME}/1/db0/machines/Bash/Bash-dispatcher
+if [ -f ${HOME}/0/Scene/1/db0/machines/Bash/Bash-dispatcher ]; then
+  source ${HOME}/0/Scene/1/db0/machines/Bash/Bash-dispatcher
 elif [ -f ~/.bash-dispatcher ]; then
   source ~/.bash-dispatcher
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/dq/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/dq/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/dq/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/dq/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Local Variables:
 # end:

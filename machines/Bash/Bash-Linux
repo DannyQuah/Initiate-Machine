@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 # @(#) $HOMESCENE/1/db0/machines/Bash/Bash-Linux -> .bashrc
-# Last-edited: Wed 2022.01.12.2344 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Thu 2022.01.13.0013 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Fri 2016.02.26.1457 -- Danny Quah (dquah@LSE039102)
@@ -19,8 +19,8 @@ case $- in
 esac
 
 #
-if [ -f ${HOME}/1/db0/machines/Bash/Bash-dispatcher ]; then
-  source ${HOME}/1/db0/machines/Bash/Bash-dispatcher
+if [ -f ${HOME}/0/Scene/1/db0/machines/Bash/Bash-dispatcher ]; then
+  source ${HOME}/0/Scene/1/db0/machines/Bash/Bash-dispatcher
 elif [ -f ~/.bash-dispatcher ]; then
   source ~/.bash-dispatcher
 fi
