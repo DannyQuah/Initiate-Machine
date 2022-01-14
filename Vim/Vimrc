@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Thu 2022.01.13.1526 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Thu 2022.01.13.2315 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -466,13 +466,13 @@ let g:lightline={
 " Use wiki names via :h vimwiki-option-name
 " https://github.com/vimwiki/vimwiki/blob/master/doc/vimwiki.txt // Interwiki~  
 " Clone off a default https://github.com/vimwiki/vimwiki/issues/365 
-" let myWikiDefault={}
-" let myWikiDefault.syntax='markdown'
-" let myWikiDefault.ext='md'
-" 
-" let myWikiPrsn=copy(myWikiDefault)
-" let myWikiPrsn.path='~/0/Sound/1/Wp/'
-" let myWikiPrsn.name='myWikiPrsn'
+let myWikiDefault={}
+let myWikiDefault.syntax='markdown'
+let myWikiDefault.ext='md'
+
+let myWikiPrsn=copy(myWikiDefault)
+let myWikiPrsn.path='~/0/Sound/1/Wp/'
+let myWikiPrsn.name='myWikiPrsn'
 
 "I can't get VimWiki to work in OneDrive under W10: 
 "1. With markdown syntax, links in markdown format will not activate,
@@ -485,39 +485,39 @@ let g:lightline={
 " This is for greater consistency in itemization among other " things;
 " wiki link management is better done and more widely in my workflow
 " in Obsidian in any case, and markdown format is more generally used.
-" let myWikiWork=copy(myWikiDefault)
-" let myWikiWork.path='~/0/Board/1/Ww/'
-" let myWikiWork.name='myWikiWork'
+let myWikiWork=copy(myWikiDefault)
+let myWikiWork.path='~/0/Board/1/Ww/'
+let myWikiWork.name='myWikiWork'
 
-" let g:vimwiki_list=[myWikiPrsn, myWikiWork]
+let g:vimwiki_list=[myWikiPrsn, myWikiWork]
                                "  So VimWiki knows what to control
-" let g:vimwiki_markdown_link_ext=0 
+let g:vimwiki_markdown_link_ext=0 
                                "0 - Do not append Wiki file extension
                                "to Markdown files
 
-" let g:vimwiki_global_ext=0 
+let g:vimwiki_global_ext=0 
                                " Keep markdown not under
                                " vimwiki control as markdown,
                                " not vimwiki 
 
-" let g:vimwiki_ext2syntax={'.md': 'markdown'} 
-" let g:vimwiki_autowriteall=1
+let g:vimwiki_ext2syntax={'.md': 'markdown'} 
+let g:vimwiki_autowriteall=1
 " Turn onautowrite when switching across wiki pages
 "
 "From Marcus Kazmierczak https://mkaz.blog/working-with-vim/vimwiki/
-" command! Diary VimwikiDiaryIndex
-" augroup vimwikiGroup
-  " autocmd!
-  "On read diary, automatically update links to build index 
+"command! Diary VimwikiDiaryIndex
+"augroup vimwikiGroup
+"  autocmd!
+" On read diary, automatically update links to build index 
   " autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
   "Python script rather than just static template as different every day
   "On Linux we can get away with reading the script output ...
-"  autocmd BufNewFile */diary/*.md :silent 0r !~/0/Scene/1/db0/Vim/bin/vimw-diary-template.py 
+  " autocmd BufNewFile */diary/*.md :silent 0r !~/0/Scene/1/db0/Vim/bin/vimw-diary-template.py 
   "but for W10 it's necessary (and on Linux it's fine) 
   "to run execute, following
   "https://stackoverflow.com/questions/9346318/how-to-use-windows-environment-variables-in-vim-script 
-  " autocmd BufNewFile */diary/*.md silent execute "%! ".$HOME."/0/Scene/1/db0/Vim/bin/vimw-diary-template.py"
-" augroup end
+" autocmd BufNewFile */diary/*.md silent execute "%! ".$HOME."/0/Scene/1/db0/Vim/bin/vimw-diary-template.py"
+"augroup end
 
 " The rest of what used to be here is now in ftplugin/vimwiki.vim 
 "
@@ -581,6 +581,7 @@ let g:mkdp_markdown_css='~/0/Scene/1/db0/Templates/stylesheets/github-markdown.c
 let g:bullets_enabled_file_types=[
   \ 'text',
   \ 'markdown',
+  \ 'vimwiki',
   \ 'notes',
   \ 'scratch'
   \]

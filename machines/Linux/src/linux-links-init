@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init
-# Last-edited: Sun 2022.01.09.1459 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Fri 2022.01.14.1742 -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
@@ -17,6 +17,7 @@ mkdir -p 0/Scene/1 0/Sound/Wp
 #
 DBPF=~/0/Scene/1/db0
 DBNF=~/0/Scene/1/db1
+DWMK=~/0/Light/1/t/Writings
 
 ################################
 # Zsh
@@ -121,6 +122,13 @@ fi
 # git
 rm -rf ~/.gitconfig
 ln -s $DBPF/Config/gitconfig ~/.gitconfig
+
+################################
+# Somewhat out of place but until there's somewhere else for the
+# rest of my filesystem
+rm -rf ~/0/Makefile
+ln -s $DWMF/Makefile ~/0/
+
 ################################
 # Below no longer in use
 ################################
