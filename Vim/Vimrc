@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Thu 2022.01.13.2315 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Sun 2022.01.16.1215 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -239,17 +239,20 @@ set smartcase                  " ...unless it's uppercase
 
 " Time, templates ------------------------------------------------
 
-"                              "Insert-datetime
-" Toggle with :DisableTimestamp // :EnableTimestamp
-"nnoremap <Leader>idt :put=strftime('%Y.%m.%d.%H%M')<CR>
-"nnoremap <Leader>idt "=strftime('%Y.%m.%d.%H%M')<CR>P
-iabbrev <expr> idt strftime('%Y.%m.%d.%H%M')
-
-"                              "Insert day-datetime
+iabbrev iDQ -- Danny Quah (me@DannyQuah.com)
+                               "Insert-my-email-signature
+iabbrev <expr> ddt strftime('%a %Y.%m.%d.%H%M')
+                               "Insert day-datetime
+" Other hings I tried:
 "nnoremap <Leader>ddt :put=strftime('%a %Y.%2m.%2d.%H%M')<CR>
 "nnoremap <Leader>ddt "=strftime('%a %Y.%m.%d.%H%M')<CR>P
-iabbrev <expr> ddt strftime('%a %Y.%m.%d.%H%M')
 iabbrev <expr> dd strftime('%a %Y.%m.%d')
+                               "Insert day-date
+iabbrev <expr> idt strftime('%Y.%m.%d.%H%M')
+                               "Insert-datetime
+" Other things I tried
+"nnoremap <Leader>idt :put=strftime('%Y.%m.%d.%H%M')<CR>
+"nnoremap <Leader>idt "=strftime('%Y.%m.%d.%H%M')<CR>P
 
 "                              "Insert diary-date
 "iabbrev <expr> qIDD strftime('%a %d %b %Y')
@@ -257,14 +260,17 @@ iabbrev <expr> dd strftime('%a %Y.%m.%d')
 "                              "Timestamp on call
 " in ~/0/Scene/1/db0/Vim/ and therefore .vim
 source ~/.vim/timestamps.vim
+                               "Toggle with :DisableTimestamp //
+                               ":EnableTimestamp
 "
 " Buffers, files, folders ---------------------------------------
 "
 "inoremap ies :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-sign-email.txt<CR>
 "nnoremap <Leader>ies :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-sign-email.txt<CR>
-                               "Insert-my-email-signature
-iabbrev iDQ -- Danny Quah (me@DannyQuah.com)
 
+" I don't really use these templates enough to remember them but 
+" likely good to keep them around so I know where the templates are
+" or in case my workflow changes.
                                "Insert templates
 nnoremap <Leader>iss :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-shell-script-template<CR>
 nnoremap <Leader>iht :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header-general.txt<CR>
@@ -286,12 +292,12 @@ nnoremap <silent> <Leader>ihy :execute "%! ".$HOME."/.vim/bin/yaml-head-md.py"<C
 command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, <bang>0)
 nnoremap <C-o> :Files<CR>
 nnoremap <C-p> :GFiles<CR>
+nnoremap <Leader>bf :Buffers<CR>
                                " Buffer to replace current
-nnoremap <Leader>bb :Buffers<CR>
-                               " Buffer to delete
 "nnoremap <Leader>bd :Buffers<CR>:bd
-"                              "Buffer for new tab
+                               " Buffer to delete
 "nnoremap <Leader>bt :Buffers<CR>:tabedit<space>#
+"                              "Buffer for new tab
 "nnoremap <Leader>bc :buffers<CR>:buffer 
 
 " Options for fzf follow:
@@ -344,22 +350,24 @@ set splitright
 
 "Buffer control ---------------------------------------------------
 "https://stackoverflow.com/questions/4571494/open-a-buffer-as-a-vertical-split-in-vim
-                              "Buffer to replace current
-" nnoremap <Leader>bb :ls<cr>:b
                               " The above have ls replaced by Buffers
                               " if fzf, fzf.vim are installed
 
-"Buffer to delete
+nnoremap <Leader>bb :ls<cr>:b
+                              "Choose buffer to replace current
 nnoremap <Leader>bd :ls<CR>:bd
-                               "Buffer for new tab
+                               "Buffer to delete
+nnoremap <Leader>bx :bp<bar>bd #<CR>
+                               "Delete buffer and replace with previous
 nnoremap <Leader>bt :ls<CR>:tabedit<space>#
-"                              "Choose buffer to v-split and use
+                               "Buffer for new tab
 nnoremap <Leader>bv :ls<cr>:vsplit<space>#
-"                              "Choose buffer to h-split and use
+"                              "Choose buffer to v-split and use
 nnoremap <Leader>bs :ls<cr>:split<space>#
+"                              "Choose buffer to h-split and use
+nnoremap <Leader>bsv <c-w>w:ls<cr>:b
 "                              "Choose buffer to visit in other v-split
 "                              "Choose buffer to visit in other h-split
-nnoremap <Leader>bsv <c-w>w:ls<cr>:b
 
 augroup dqFilesFoldersGrp
 "First, as usual, remove all dqFilesFoldersGrp autocommands
@@ -399,12 +407,12 @@ augroup END
 "nnoremap <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 " Use instead netrw https://shapeshed.com/vim-netrw/
 " Open with :Explore, :Sexplore (or :Sex, snicker), :Vexplore
-let g:netrw_liststyle=3
-let g:netrw_banner=0           "Remove directory banner
+"let g:netrw_liststyle=3
+"let g:netrw_banner=0           "Remove directory banner
 "let g:netrw_browse_split=3     "Open file in new tab
-let g:netrw_browse_split=4     "Open file in previous window
-let g:netrw_winsize=26       "In percent, not cols; gives 30 with 110
-let g:netrw_altv=1
+"let g:netrw_browse_split=4     "Open file in previous window
+"let g:netrw_winsize=26       "In percent, not cols; gives 30 with 110
+"let g:netrw_altv=1
 " But can achieve NERDtree likeness with:
 " let g:netrw_banner=0
 " let g:netrw_liststyle=3
@@ -420,12 +428,12 @@ let g:netrw_altv=1
 
 "Otherwise you get asked to save every single netrw listing 
 "https://github.com/tpope/vim-vinegar/issues/13
-augroup netrwBuffers
-  autocmd!
-  autocmd FileType netrw setlocal bufhidden=delete 
+"augroup netrwBuffers
+"  autocmd!
+"  autocmd FileType netrw setlocal bufhidden=delete 
   " or else try replacing delete with wipe
-augroup end 
-let g:netrw_fastbrowse=-1
+"augroup end 
+"let g:netrw_fastbrowse=-1
 "
 " Syntax and modes ----------------------------------------------
 "
