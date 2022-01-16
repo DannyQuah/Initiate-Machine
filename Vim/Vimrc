@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Sun 2022.01.16.1215 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Sun 2022.01.16.1535 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -146,7 +146,14 @@ let g:loaded_matchparen=1      |"Don't load matchparen.vim
 "                              "Show spaces as dots, plus other usefuls
 if has('gui_running')
   set list listchars+=space:·,tab:»·,trail:_,extends:>,precedes:<,nbsp:~
+  set lines=51 columns=160     "lines=48+n, n for mode lines,
+                               "directory listing in netrw etc. 
+                               "I have also experimented with
+                               "a sidebar (30 cols) for SideCal,
+                               "netrw, and similar
+  set termguicolors
 else
+                               " for instance iSH on iOS
   set list listchars+=space:_,tab:>·,trail:_,extends:>,precedes:<,nbsp:~
 endif
 "https://stackoverflow.com/questions/15904758/how-can-i-make-vim-show-spaces/49656087
@@ -179,12 +186,6 @@ if !has('gui_running')
   source ~/0/Scene/1/db0/Vim/appearances.vim
 endif
 
-set lines=51 columns=160       "lines=48+n, n for mode lines,
-                               "directory listing in netrw etc. 
-                               "I have also experimented with
-                               "a sidebar (30 cols) for SideCal,
-                               "netrw, and similar
-set termguicolors
 
 "let g:thematic#theme_name='plain'
                                " Activate above or keep splashscreen
