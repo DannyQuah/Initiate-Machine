@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Sun 2022.01.16.1535 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: Tue 2022.01.18.0628 -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -375,8 +375,8 @@ augroup dqFilesFoldersGrp
   autocmd!
 " https://www.tecmint.com/create-custom-header-template-for-shell-scripts-in-vim/
   autocmd BufNewFile *.txt 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-custom-header.txt
-  autocmd BufNewFile *.R   0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header-Rscript.R
-  autocmd BufNewFile *.tex 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header.tex
+  autocmd BufNewFile *.R   0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-R-template.R
+  autocmd BufNewFile *.tex 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-tex-template.tex
   autocmd BufNewFile *.py  0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header.py
   autocmd BufNewFile *.bat 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header.bat
   autocmd BufNewFile *.md silent execute "%! ".$HOME."/0/Scene/1/db0/Vim/bin/yaml-head-md.py"
@@ -497,8 +497,11 @@ let myWikiPrsn.name='myWikiPrsn'
 let myWikiWork=copy(myWikiDefault)
 let myWikiWork.path='~/0/Board/1/Ww/'
 let myWikiWork.name='myWikiWork'
+let myWikiDean=copy(myWikiDefault)
+let myWikiDean.path='~/0/Props/1/LKYSPP-Deans-Office/Obs-LDO'
+let myWikiDean.name='myWikiDean'
 
-let g:vimwiki_list=[myWikiPrsn, myWikiWork]
+let g:vimwiki_list=[myWikiPrsn, myWikiDean, myWikiWork]
                                "  So VimWiki knows what to control
 let g:vimwiki_markdown_link_ext=0 
                                "0 - Do not append Wiki file extension
