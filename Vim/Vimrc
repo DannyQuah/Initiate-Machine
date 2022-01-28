@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: Tue 2022.01.18.0628 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.01.28.1700.Fri -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -232,24 +232,24 @@ set smartcase                  " ...unless it's uppercase
 " nnoremap <CR> :nohlsearch<CR><CR>
 "
 "  Autocorrect, abbreviations ------------------------------------
-
 " abbr Lniux Linux
 " abbr hte the
 "Ending markdown lines instead of trailing double whitespace
 " iabbrev Qde <br />
 
 " Time, templates ------------------------------------------------
-
-iabbrev iDQ -- Danny Quah (me@DannyQuah.com)
+iabbrev iDQ@ -- Danny Quah (me@DannyQuah.com)
                                "Insert-my-email-signature
-iabbrev <expr> ddt strftime('%a %Y.%m.%d.%H%M')
+iabbrev <expr> dtd@ strftime('%Y.%m.%d.%H%M.%a')
                                "Insert day-datetime
-" Other hings I tried:
+" Other things I tried:
 "nnoremap <Leader>ddt :put=strftime('%a %Y.%2m.%2d.%H%M')<CR>
 "nnoremap <Leader>ddt "=strftime('%a %Y.%m.%d.%H%M')<CR>P
-iabbrev <expr> dd strftime('%a %Y.%m.%d')
+iabbrev <expr> dyd@ strftime('%Y.%m.%d.%a')
+                               "Insert date-day
+"iabbrev <expr> dd@ strftime('%a %Y.%m.%d')
                                "Insert day-date
-iabbrev <expr> idt strftime('%Y.%m.%d.%H%M')
+"iabbrev <expr> dt@ strftime('%Y.%m.%d.%H%M')
                                "Insert-datetime
 " Other things I tried
 "nnoremap <Leader>idt :put=strftime('%Y.%m.%d.%H%M')<CR>
@@ -260,7 +260,7 @@ iabbrev <expr> idt strftime('%Y.%m.%d.%H%M')
 
 "                              "Timestamp on call
 " in ~/0/Scene/1/db0/Vim/ and therefore .vim
-source ~/.vim/timestamps.vim
+source ~/.vim/timeauto.vim
                                "Toggle with :DisableTimestamp //
                                ":EnableTimestamp
 "
@@ -283,7 +283,16 @@ nnoremap <Leader>ibt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-bat-template.bat
                                "Insert-header-yaml
 "Template file replaced by python script, for dynamic insertion
 "nnoremap <Leader>ihy :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header-yaml.md<CR>
-nnoremap <silent> <Leader>ihy :execute "%! ".$HOME."/.vim/bin/yaml-head-md.py"<CR>
+" %! - replace the entire buffer
+" .! - replace the current line
+" $! - replace the last line
+nnoremap <silent> <Leader>ihy :execute ".! ".$HOME."/.vim/bin/yaml-head-md.py"<CR>
+" I'm still trying to get this to pass an argument that is the
+" name of the newBuffer to the python script.  This last works
+" at the command line, but not from here.
+" Tried expand(%:t)
+
+
 
 "                              " Filetypes // here, if not filetype.vim
 "source filetype.vim           |"Automatic in Vim
@@ -358,8 +367,8 @@ nnoremap <Leader>bb :ls<cr>:b
                               "Choose buffer to replace current
 nnoremap <Leader>bd :ls<CR>:bd
                                "Buffer to delete
-nnoremap <Leader>bx :bp<bar>bd #<CR>
-                               "Delete buffer and replace with previous
+nnoremap <Leader>bx :b#<bar>bd #<CR>
+                               "Delete buffer and replace with most recent
 nnoremap <Leader>bt :ls<CR>:tabedit<space>#
                                "Buffer for new tab
 nnoremap <Leader>bv :ls<cr>:vsplit<space>#
@@ -479,9 +488,9 @@ let myWikiDefault={}
 let myWikiDefault.syntax='markdown'
 let myWikiDefault.ext='md'
 
-let myWikiPrsn=copy(myWikiDefault)
-let myWikiPrsn.path='~/0/Sound/1/Wp/'
-let myWikiPrsn.name='myWikiPrsn'
+let myWikiWork=copy(myWikiDefault)
+let myWikiWork.path='~/0/Board/1/Ww/'
+let myWikiWork.name='myWikiWork'
 
 "I can't get VimWiki to work in OneDrive under W10: 
 "1. With markdown syntax, links in markdown format will not activate,
@@ -494,14 +503,14 @@ let myWikiPrsn.name='myWikiPrsn'
 " This is for greater consistency in itemization among other " things;
 " wiki link management is better done and more widely in my workflow
 " in Obsidian in any case, and markdown format is more generally used.
-let myWikiWork=copy(myWikiDefault)
-let myWikiWork.path='~/0/Board/1/Ww/'
-let myWikiWork.name='myWikiWork'
 let myWikiDean=copy(myWikiDefault)
-let myWikiDean.path='~/0/Props/1/LKYSPP-Deans-Office/Obs-LDO'
+let myWikiDean.path='~/0/Props/1/LKYSPP-Deans-Office/Wd'
 let myWikiDean.name='myWikiDean'
+let myWikiPrsn=copy(myWikiDefault)
+let myWikiPrsn.path='~/0/Sound/1/Wp/'
+let myWikiPrsn.name='myWikiPrsn'
 
-let g:vimwiki_list=[myWikiPrsn, myWikiDean, myWikiWork]
+let g:vimwiki_list=[myWikiWork, myWikiDean, myWikiPrsn]
                                "  So VimWiki knows what to control
 let g:vimwiki_markdown_link_ext=0 
                                "0 - Do not append Wiki file extension
@@ -559,8 +568,9 @@ augroup END
 "                              "vim markdown ---------------------
 let g:markdown_fenced_languages=['html', 'python', 'bash=sh']
 let g:vim_markdown_folding_disabled=1
-"                              "YAML frontmatter
 let g:vim_markdown_frontmatter=1
+"                              "YAML frontmatter
+
 "Following https://vimawesome.com/plugin/markdown-syntax
 let g:vim_markdown_strikethrough=1
 let g:vim_markdown_no_extensions_in_markdown=1
@@ -597,8 +607,6 @@ let g:bullets_enabled_file_types=[
   \ 'notes',
   \ 'scratch'
   \]
-                               " can also add 'vimwiki' if I were
-                               " still using it
 let g:bullets_delete_last_bullet_if_empty=1
                                " default 1
 let g:bullets_line_spacing=1
@@ -609,7 +617,7 @@ let g:bullets_pad_right=1
                                " default 1; extra spaces to align
 let g:bullets_max_alpha_characters=2
                                " default 2
-let g:bullets_outline_levels = ['num', 'abc', 'std-', 'std*']
+let g:bullets_outline_levels = ['num', 'abc', 'std-', 'std*', 'std+']
                                " Example [keys pressed]:
 " 1. first parent
 "   a. child bullet [ <cr><C-t> ]

@@ -1,7 +1,11 @@
-" @(#) db/Vim/timestamps.vim
-" Last-edited: Wed 2021.12.08.2101 -- Danny Quah (me@DannyQuah.com)
-" Created: Fri 2020.07.17.2000 -- Danny Quah (me@DannyQuah.com)
+" @(#) db0/Vim/timestamps.vim
+" Last-edited: 2022.01.22.1802.Sat -- Danny Quah (me@DannyQuah.com)
+" Created: 2020.07.17.2000.Fri -- Danny Quah (me@DannyQuah.com)
+" Needs timestamps.vim
 " Toggle with :DisableTimeStamp // :EnableTimestamp
+" Works fine with my old timestamp_rep format but I
+" want a new format, and my experiments with this failed.
+" So I'm switching to a new vimscript I wrote myself.
 " ----------------------------------------------------------------
 " Revision History:
 "  % Tue 2020.08.11.2318 -- Danny Quah (me@DannyQuah.com)
@@ -18,7 +22,9 @@
 "let g:timestamp_rep='%3a %4Y.%2m.%2d.%2H%2M '
 let g:timestamp_rep='%a %Y.%m.%d.%H%M '
 let g:timestamp_regexp='\v\c%(Last-%([cC]hanged?|[eE]dited):\s+)@<=\a+ \d{4}.\d{2}.\d{2}.\d{4}[h ]?%(\s+\a+)?|TIMESTAMP[ ]?'
+
+"let g:timestamp_regexp='\v\c%(Last-%([cC]hanged?|[eE]dited):\s+)@<=\d{4}.\d{2}.\d{2}.\d{4}.\a{3}|TIMESTAMP[ ]?'
                                " 'Last-edited' so it's a single token
 let g:timestamp_modelines=7   "Default is modelines, typically 5
 
-" eof db/Vim/timestamps.vim
+" eof db0/Vim/timestamps.vim

@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # @(#) $HOME/0/Scene/1/db0/machines/Zsh/Zshrc
-# Last-edited: Wed 2022.01.05.0725 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: Wed 2022.01.19.0732 -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # $
 ## Revision History:
@@ -47,6 +47,7 @@ export ZSH="$HOME/.local/share/oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 ZSH_THEME=random
+# ZSH_THEME=emotty
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -118,7 +119,9 @@ DISABLE_LS_COLORS="true"
 # This saves time and lets me use those aliases in bash as well.
 # But, e.g., gallois zsh theme needs a lot more of git, so now
 # I've put that back in, and adjusted Shellsrc
-plugins=(git vi-mode z)
+plugins=(emotty vi-mode z)
+                               # useful: git
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -127,7 +130,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

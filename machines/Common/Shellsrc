@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: Thu 2022.01.13.0005 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.01.23.1906.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -53,6 +53,11 @@ case "$OSTYPE" in
     #   export ATOM_HOME="~/.atom"
     ;;
 esac
+
+# ###############################
+# Settings
+set -o noclobber
+
 # ###############################
 # Formats and languages
 # export LC_LOCALE=en_SG.utf-8
@@ -78,6 +83,7 @@ FSROOT=${HOME}/0
 CDPATH=\
 ${FSROOT}/Scene/1:\
 ${FSROOT}/Sound/1/Wp:\
+${FSROOT}/Props/1/LKYSPP-Deans-Office/Wd/Dean-Office-Work-Share:\
 ${FSROOT}/Board/1/Ww:\
 ${FSROOT}/Floor/1/t:\
 ${FSROOT}/Light/1/j:\
@@ -153,11 +159,13 @@ alias trash='zip -m9or ${TMPDIR}/dq-trash $@'
 alias notabs-dq='sed -ie "s/\t//g" $@'
 alias tabscomma='sed "s/\t/,/g" $@'
 # grep md files recursively from current directory
-alias grepmdr='find -L . -type f -name "*.md" -print0 | xargs -0 grep $@ '
+alias grepmd='find -L . -type f -name "*.md" -print0 | xargs -0 grep $@ '
+# grep Deans-Office wiki recursively
+alias grepwd='grep --include=\*.md --colour=never -rnw ~/0/Props/1/LKYSPP-Deans-Office/Wd -e $@'
 # grep personal wiki recursively
-alias greppwr='grep --include=\*.md --colour=never -rnw ~/0/Sound/1/Wp -e $@'
+alias grepwp='grep --include=\*.md --colour=never -rnw ~/0/Sound/1/Wp -e $@'
 # grep work wiki recursively
-alias grepwwr='grep --include=\*.md --colour=never -rnw ~/0/Board/1/Ww -e $@'
+alias grepww='grep --include=\*.md --colour=never -rnw ~/0/Board/1/Ww -e $@'
 # alias grep1n='find -L ~/0/Board/1/1-Notes -type f -name "*.md" -exec grep -EH $@ {} ";"'
 # alias dollmd-dq="sed -ie 's/ \$/ \\$/g' $@"
 # alias starmd-dq="sed -ie 's/ \*/ \\*/g' $@"

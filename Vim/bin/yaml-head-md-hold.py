@@ -20,10 +20,10 @@ import datetime
 # ----------------------------------------------------------------
 myMdHeader = """---
 fileName: {theTitle}
-# Last-edited: {theDateTimeDay} -- Danny Quah (me@DannyQuah.com)
+# Last-edited: {theDayDateTime} -- Danny Quah (me@DannyQuah.com)
 Type: Event | Person | Notes | Publication | Log | Misc | Report
 Tags: China, US, LKYSPP, NUS, Hardware, Software, Talk, Write, Finance, COVID19
-# Created: {theDateTimeDay} -- Danny Quah (me@DannyQuah.com)
+# Created: {theDayDateTime} -- Danny Quah (me@DannyQuah.com)
 
 output: pdf_document
 title: DocTitle
@@ -48,7 +48,7 @@ myFileDict = {
         "theTitle": bufferName,
         "theLocalDate": myNow.strftime("%a %d %b %Y"),
         "theDateTime": myNow.strftime("%Y.%m.%d.%H%M"),
-        "theDateTimeDay": myNow.strftime("%Y.%m.%d.%H%M.%a"),
+        "theDayDateTime": myNow.strftime("%a %Y.%m.%d.%H%M"),
         "theStdDate": myNow.strftime("%Y-%m-%d-%a")
         } 
 

@@ -1,0 +1,41 @@
+#!/usr/bin/env sh
+# @(#) makegist
+# Last-edited: 2022.01.23.1948.Sun -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2022.01.23.1853.Sun -- Danny Quah (me@DannyQuah.com)
+#    switch from sed to awk
+#    modified from
+#    https://unix.stackexchange.com/questions/321073/delete-from-beginning-of-file-to-nth-occurrence-of-pattern
+#  % Thu 2022.01.20.1752 -- Danny Quah (me@DannyQuah.com)
+#    First draft: sh script to .make a gist from source..
+#    Obviously `sed -i '1,10d` works only when strictly the first
+#    ten lines are what we want to discard.
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+USAGE_MESSAGE="Usage: `basename $0` fileNamebase"
+
+if test $# -le 0 ; then
+  echo $USAGE_MESSAGE
+  exit 1
+fi
+
+if [ ! -f ./$1.md ] ; then
+  echo File $1.md doesn\'t exist
+  exit 1
+else
+  fileNamebase=$1
+fi 
+
+GISTSFOLDER=~/0/Light/1/t/Writings/Gists
+
+mkdir -p $GISTSFOLDER/$fileNamebase
+cp -p $fileNamebase.md $GISTSFOLDER/$fileNamebase/tmp.md
+cd $GISTSFOLDER/$fileNamebase
+# sed '1,10d' tmp.md > $fileNamebase.md
+awk -v 'n=2' 'NR == 1, /^---$/ && !--n {next}; 1' tmp.md > $fileNamebase.md
+#  Find the second (n=2) occurrence of the string '^---$', then print out
+#  everything from the following line.
+rm tmp.md
+
+# eof makegist
