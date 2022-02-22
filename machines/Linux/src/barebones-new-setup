@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # (@) barebones-new-setup
-# Last-edited: 2022.02.22.1812.Tue -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.22.1816.Tue -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------  
 # wget -O - https://raw.githubusercontent.com/DannyQuah/Configure-Machine/master/machines/Linux/src/barebones-new-setup | sudo bash
 # This is set up for any skeleton initialization of a new machine,
@@ -13,7 +13,7 @@ cd ~
 mkdir -p 0/Scene/1
 cd 0/Scene/1
 git clone https://github.com/DannyQuah/Initiate-Machine.git db0
-source ./machines/Linux/src/linux-links-init
+source ./db0/machines/Linux/src/linux-links-init
 
 # EOF barebones-new-setup
 
