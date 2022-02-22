@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2022.01.28.1700.Fri -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.02.17.2209.Thu -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -231,16 +231,20 @@ set smartcase                  " ...unless it's uppercase
 " Better just to :noh after.
 " nnoremap <CR> :nohlsearch<CR><CR>
 "
-"  Autocorrect, abbreviations ------------------------------------
+"  Autocorrect, abbreviations ----------------------------------
 " abbr Lniux Linux
 " abbr hte the
 "Ending markdown lines instead of trailing double whitespace
 " iabbrev Qde <br />
 
-" Time, templates ------------------------------------------------
+"  macros ------------------------------------------------------
+let @h='j0i| f:ls | A |'
+                               " Gmail header row to table row
+
+" Time, templates ----------------------------------------------
 iabbrev iDQ@ -- Danny Quah (me@DannyQuah.com)
                                "Insert-my-email-signature
-iabbrev <expr> dtd@ strftime('%Y.%m.%d.%H%M.%a')
+iabbrev <expr> ddt@ strftime('%Y.%m.%d.%H%M.%a')
                                "Insert day-datetime
 " Other things I tried:
 "nnoremap <Leader>ddt :put=strftime('%a %Y.%2m.%2d.%H%M')<CR>
@@ -635,8 +639,6 @@ let g:bullets_nested_checkboxes=1
 let g:bullets_checkbox_markers=' .oOX'
 let g:bullets_checkbox_partials_toggle=0
                                " default 1, checked when only partial
-
-
 
 "  Colorscheme ---------------------------------------------------
                                " Favorites

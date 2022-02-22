@@ -6,8 +6,13 @@
 #  % TIMESTAMP -- Danny Quah (me@DannyQuah.com)
 #    First draft: sh script to ...
 # ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+USAGE_MESSAGE="Usage: `basename $0` args"
 
-
+if test $# -le 0 ; then
+  echo $USAGE_MESSAGE
+  exit 1
+fi
 
 
 # eof FILENAME

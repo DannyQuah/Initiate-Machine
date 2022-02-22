@@ -1,6 +1,6 @@
 ---
 fileName: README.md
-# Last-edited: Tue 2022.01.11.1752 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.22.1731.Tue -- Danny Quah (me@DannyQuah.com)
 Type: Notes
 Tags: Software, git, GitHub
 # Created: Fri 2021.12.31.1615 -- Danny Quah (me@DannyQuah.com)
@@ -31,7 +31,7 @@ For a skeletal setup, appropriate for, e.g., iSH on iOS or Termux on Android, I 
 wget -O - https://raw.githubusercontent.com/DannyQuah/Initiate-Machine/main/machines/Linux/src/barebones-new-setup | sudo bash
 ```
 
-(Previously this and other files and folders were uploaded to GitHub into `Config-Management`.  That got too unwieldy, however, and so I've stripped down to this lightweight version.)
+(Previously, this and other files and folders were uploaded to GitHub into `Config-Management`.  That got too unwieldy, however, and so I've stripped down to this lightweight version.)
 
 <!---
    Invisible section: README.md

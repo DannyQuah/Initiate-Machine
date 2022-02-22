@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: 2022.01.23.1906.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.15.1437.Tue -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -82,14 +82,13 @@ TMPDIR=${HOME}/tmp
 FSROOT=${HOME}/0
 CDPATH=\
 ${FSROOT}/Scene/1:\
-${FSROOT}/Sound/1/Wp:\
-${FSROOT}/Props/1/LKYSPP-Deans-Office/Wd/Dean-Office-Work-Share:\
-${FSROOT}/Board/1/Ww:\
+${FSROOT}/Sound/1:\
+${FSROOT}/Props/1/LKYSPP-Deans-Office/:\
+${FSROOT}/Board/1:\
 ${FSROOT}/Floor/1/t:\
 ${FSROOT}/Light/1/j:\
-${FSROOT}/Light/1/t
-
-# ${FSROOT}/Scene/1/db # Previously in CDPATH
+${FSROOT}/Light/1/t:\
+${FSROOT}/Stage/Photos:
 
 for windir in $( echo "$WIN_DIRS" ) ; do
   if [ -d "$windir" ]; then
@@ -159,7 +158,7 @@ alias trash='zip -m9or ${TMPDIR}/dq-trash $@'
 alias notabs-dq='sed -ie "s/\t//g" $@'
 alias tabscomma='sed "s/\t/,/g" $@'
 # grep md files recursively from current directory
-alias grepmd='find -L . -type f -name "*.md" -print0 | xargs -0 grep $@ '
+alias grepmd='find -L . -type d ! -readable -prune -o -type f -name "*.md" ! -path "*/Trash/*" -print0 | xargs -0 grep $@ '
 # grep Deans-Office wiki recursively
 alias grepwd='grep --include=\*.md --colour=never -rnw ~/0/Props/1/LKYSPP-Deans-Office/Wd -e $@'
 # grep personal wiki recursively

@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init
-# Last-edited: Fri 2022.01.14.1742 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.20.1642.Sun -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
@@ -90,6 +90,7 @@ fi
 # bin/
 rm -rf ~/bin/Shellsrc ~/bin/update-mydomain ~/bin/recents0
 rm -rf ~/bin/Archive.S1.External ~/bin/cleanAssetFolder ~/bin/bulk-heif
+rm -rf ~/bin/makegist ~/bin/workLog
 mkdir -p ~/bin
 ln -s "$DBPF"/machines/Common/Shellsrc ~/bin/
 ln -s "$DBPF"/machines/Common/update-mydomain ~/bin/
@@ -97,6 +98,8 @@ ln -s "$DBPF"/machines/Common/recents0 ~/bin/
 ln -s "$DBPF"/machines/Common/Archive.S1.External ~/bin/
 ln -s "$DBPF"/machines/Common/cleanAssetFolder ~/bin/
 ln -s "$DBPF"/machines/Common/bulk-heif ~/bin/
+ln -s "$DBPF"/machines/Common/makegist ~/bin/
+ln -s "$DBPF"/machines/Common/workLog ~/bin/
 # cd ~
 # rm -rf ~/bin ~/tmp
 # mkdir ~/bin

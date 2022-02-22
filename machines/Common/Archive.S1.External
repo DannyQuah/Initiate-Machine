@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
-# @(#) bin/Archive.S1.External -> 0/Scene/1/db/machines/Common/ 
-# Last-edited: Fri 2021.11.05.2248-- Danny Quah (me@DannyQuah.com)
+# @(#) bin/Archive.S1.External -> 0/Scene/1/db0/machines/Common/
+# Last-edited: 2022.02.20.2042.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # -p archives pbook into Samsung-1TB-HD-2015.12.md
 # -l archives lbook into WD-My-Passport-Ultra-2Tb-2016.07 (use WSL, not MSYS)
@@ -17,42 +17,122 @@
 #    First draft: Backup onto External HD; try to do so regularly
 # ----------------------------------------------------------------
 trap 'exit 0' 2 15 
-USAGE_MESSAGE="Usage: `basename $0` {-n|-a} {-l|-p}" 
-LIST_FOLDERS="0 1"
-RSYNC_FLAGS='-LavrulhRHpEXgt --exclude .git/ --progress'
+USAGE_MESSAGE="Usage: `basename $0` {-b|-r} {-l|-p} {-n|-a}"
+LIST_FOLDERS="0/ 1/"
+RSYNC_FLAGS='-LavrulhRHpEXgt --exclude .git/ --delete --progress'
 #
-if test $# -le 0 ; then
+if [ $# -le 0 ] ; then
   echo $USAGE_MESSAGE
   exit 1
 fi
 
-if test $2 = -p ; then
-# pbook backup
+# ----------------------------------------------------------------
+bBackup=0
+bRestore=0
+if [ "$1" = "-b" ]; then
+  bBackup=1
+elif [ $1 = '-r' ]; then
+  bRestore=1
+else
+  echo "Invalid flag $1 // Unrecognized backup option"
+  echo $USAGE_MESSGE
+  exit 1
+fi
+
+blbook=0
+bpbook=0
+if [ "$2" = "-l" ]; then
+  blbook=1
+elif [ "$2" = "-p" ]; then
+  bpbook=1
+else
+  echo "Invalid flag $2 // Unrecognized machine option"
+  echo $USAGE_MESSAGE
+  exit 1
+fi
+
+#  In principle -b|-r could be folded into this but cleaner
+#  to keep no-op inspection separate
+bAction=0
+if [ "$3" = "-n" ]; then
+  # no-op, keep bAction unchanged
+  bAction=0
+elif [ "$3" = "-a" ]; then
+  bAction=1
+else
+  echo "Invalid flag $3 // Unrecognized action option"
+  echo $USAGE_MESSAGE
+  exit 1
+fi
+
+# ----------------------------------------------------------------
+
+# ----------------------------------------------------------------
+if [ $bpbook = 1 ]; then 
+  # pbook
   EXT_HD=/media/dq/DQS
-  PERSONAL_FOLDER=Users/dq
-elif test $2 = -l ; then
-# lbook backup
+  PERSONAL_FOLDER=Users/dq/
+elif [ $blbook = 1 ] ; then
+  # lbook
   EXT_HD=/mnt/e/dq
-  PERSONAL_FOLDER=backups
+  PERSONAL_FOLDER=backups/
 else
-  echo "Invalid flag $2 // Unrecognised machine"
+  # impossible to reach here, previously already tested
+  echo "Invalid flag $2 // Unrecognised machine option"
   echo $USAGE_MESSAGE
   exit 1
 fi
+# ----------------------------------------------------------------
 
-cd ~
-if test $1 = -n ; then
-# no action
-  for thisFolder in $LIST_FOLDERS ; do
-    rsync $RSYNC_FLAGS -n $thisFolder $EXT_HD/$PERSONAL_FOLDER
-  done
-elif test $1 = -a ; then
-# archive
-  for thisFolder in $LIST_FOLDERS ; do
-    rsync $RSYNC_FLAGS $thisFolder $EXT_HD/$PERSONAL_FOLDER
-  done
-else
-  echo "Invalid flag: $1"
-  echo $USAGE_MESSAGE
+# ----------------------------------------------------------------
+if [ $bBackup = 1 ]; then
+  # backup
+  cd ~
+  if [ $bAction = 0 ]; then
+    # no op but show what will be done
+    echo Backing up check
+    for thisFolder in $LIST_FOLDERS ; do
+      rsync $RSYNC_FLAGS -n $thisFolder $EXT_HD/$PERSONAL_FOLDER
+    done
+  elif [ $bAction = 1 ] ; then
+    # act
+    echo Backing up
+    for thisFolder in $LIST_FOLDERS ; do
+      rsync $RSYNC_FLAGS $thisFolder $EXT_HD/$PERSONAL_FOLDER
+    done
+  else
+    # impossible to reach here, previously already tested
+    echo "Invalid flag $3 // Unrecognized action option"
+    echo $USAGE_MESSAGE
+  fi
+# $bBackup = 1
+# ----------------------------------------------------------------
+
+# ----------------------------------------------------------------
+elif [ $bRestore = 1 ]; then
+  # restore
+  cd ~
+  if [ $bAction = 0 ]; then
+    # no op but show what will be done
+    echo Restoring check
+    for thisFolder in $LIST_FOLDERS ; do
+      rsync $RSYNC_FLAGS -n $EXT_HD/$PERSONAL_FOLDER $thisFolder
+    done
+  elif [ $bAction = 1 ] ; then
+    # act
+    echo Restore
+    for thisFolder in $LIST_FOLDERS ; do
+      rsync $RSYNC_FLAGS $EXT_HD/$PERSONAL_FOLDER $thisFolder
+    done
+  else
+    # impossible to reach here, previously already tested
+    echo "Invalid flag $3 // Unrecognized action option"
+    echo $USAGE_MESSAGE
+  fi
+# $bRestore = 1
 fi
+
+# ----------------------------------------------------------------
+
+# eof Archive.S1.External
 

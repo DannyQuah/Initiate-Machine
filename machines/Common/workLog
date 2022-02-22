@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+# @(#) workLog
+# Last-edited: 2022.02.22.0549.Tue -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2022.01.30.1639.Sun -- Danny Quah (me@DannyQuah.com)
+#    First draft: sh script to collate files worked on today.
+#    I can't figure out why "./.obsidian" appears (as it is neither
+#    "-type f" nor included after "path .. -prune").  I'm excluding
+#    it now with "grep -v".
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+USAGE_MESSAGE="Usage: `basename $0` --[tonight|yesterday]"
+
+if [ "$#" -lt 1 ] ; then
+  echo $USAGE_MESSAGE
+  exit 1
+elif [ "$1" == '--help' ] || [ "$1" == '-h' ] ; then
+  echo $USAGE_MESSAGE
+  exit 1
+elif [ "$1" != "--tonight" ] && [ "$1" != '--yesterday' ] ; then
+  echo $USAGE_MESSAGE
+  exit 1
+fi
+
+DB0=${HOME}/0/Scene/1/db0
+FLR=${HOME}/0/Floor/1/t
+LGT=${HOME}/0/Light/1/t
+PHT=${HOME}/0/Stage/Photos
+WDD=${HOME}/0/Props/1/LKYSPP-Deans-Office/Wd
+WPD=${HOME}/0/Sound/1/Wp
+WWD=${HOME}/0/Board/1/Ww
+                               # Typically let Obsidian do this last, but
+                               # future-guard as might need to bring in
+
+ADD_FOLDERS="$DB0 $FLR $LGT $PHT $WDD $WPD"
+                               # If just --tonight, Obsidian does $WWD
+if [ "$1" == '--yesterday' ]; then
+  ADD_FOLDERS="$WWD $ADD_FOLDERS"
+fi
+
+midnTime="00:00:00"
+yesterdayDate=`date -d "yesterday"  '+%Y-%m-%d'`
+# yesterdayDate="$yesterdayDate $midnTime"
+todayDate=`date -d "today" '+%Y-%m-%d'`
+#todayDate="$todayDate $midnTime"
+
+FINDFLAGS='! -name "*doublecmd.xml*" ! -name "*history.xml*" ! -name "*session.ini" ! -name "*desktop.ini" ! -name "*.lock" ! -path "*/.obsidian/*" ! -path "*/.git/*"  ! -path "*/libreoffice/4/*" ! -path "*/Thunderbird/*"
+'
+                               # This $FINDFLAGS is identical to the
+                               # below but I can't get it to work if
+                               # not directly in the instruction
+
+if [ "$1" == "--yesterday" ] ; then
+  TIMEFLAGS="-newermt "$yesterdayDate" ! -newermt "$todayDate""
+elif [ "$1" == "--tonight" ] ; then
+  TIMEFLAGS="-newermt $todayDate "
+fi
+
+# Trials here
+# echo Executing with $TIMEFLAGS $FINDFLAGS
+# -path ./.obsidian -prune -o \
+# | grep -v './.obsidian'
+
+for theFolder in $( echo "$ADD_FOLDERS" ) ; do
+  cd $theFolder/..
+  find -L .  \
+    -type f $TIMEFLAGS \
+  ! -name "*doublecmd.xml*" ! -name "*history.xml*" ! -name "*session.ini" ! -name "*desktop.ini" ! -name "*.lock" ! -name "*.cache" ! -path "*/.obsidian/*" ! -path "*/.git/*" ! -path "*/libreoffice/4/*" ! -path "*/Thunderbird/*" 
+done
+
+
+
+# eof workLog
+
