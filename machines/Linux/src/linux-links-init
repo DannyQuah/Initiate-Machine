@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init
-# Last-edited: 2022.02.20.1642.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.22.1835.Tue -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
@@ -71,6 +71,7 @@ fi
 ################################
 # Ssh
 rm -rf ~/.ssh/config
+mkdir -p ~/.ssh
 ln -s "$DBPF"/machines/Ssh/config ~/.ssh/config
 
 ################################
