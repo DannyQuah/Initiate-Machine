@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# @(#) 11-linux-baseapps-install
+# Last-edited: 2022.02.23.1653.Wed -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % Fri 2018.09.28.0500 -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+#
+installBaseApps() {
+# Base Apps
+#  sudo apt --fix-broken install
+  sudo apt -y \
+    bzip2 \
+    zip
+###############################
+# vim/gvim
+  sudo add-apt-repository ppa:jonathonf/vim
+  sudo apt -y install gvim
+###############################
+# end installBaseApps()
+}
+
+## Begin execution here
+sudo apt update
+sudo apt upgrade -y
+
+installBaseApps
+
+sudo apt update
+
+#
+# EOF 11-linux-baseapps-install
+#

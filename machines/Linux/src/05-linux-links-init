@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init
-# Last-edited: 2022.02.22.1835.Tue -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.23.0939.Wed -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
@@ -69,7 +69,13 @@ if [ -f "$MAKEF" ]; then
   ln -s "$MAKEF" ~/0/
 fi
 ################################
-# Ssh
+# OneDrive
+rm -rf ~/.config/onedrive/config
+mkdir -p ~/.config/onedrive
+ln -s "$DBPF"/Config/OneDrive/config ~/.config/onedrive/config
+
+################################
+# OneDrive, Ssh
 rm -rf ~/.ssh/config
 mkdir -p ~/.ssh
 ln -s "$DBPF"/machines/Ssh/config ~/.ssh/config

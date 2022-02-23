@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# (@) 00-linux-prelims-install
+# Last-edited: 2022.02.23.1631.Wed -- Danny Quah (me@DannyQuah.com)
+# Created:     Mon 2020.05.25.2250 -- Danny Quah (dq@pbook)
+# ****************************************************************
+# Revision History:
+#  % Fri 2018.09.28.0500 -- Danny Quah (dq@pbook)
+#    First draft
+#    Preliminary apps, if needed, before anything else can be
+#    downloaded
+# ****************************************************************
+#
+installPrelimsApps() {
+  sudo apt -y install curl git snapd wget
+}
+
+# Execution begins here
+sudo apt update
+sudo apt upgrade -y
+#
+installPrelimsApps
+
+sudo apt update
+sudo apt upgrade -y
+
+# eof 00-linux-prelims-install

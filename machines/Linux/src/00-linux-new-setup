@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# (@) linux-new-setup
-# Last-edited: Fri 2021.12.24.1146 -- Danny Quah (me@DannyQuah.com)
+# (@) 00-linux-new-setup
+# Last-edited: 2022.02.23.1621.Wed -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------  
 # Revision History:
 #  % Sun 2018.09.28.0500 - Danny Quah (me@DannyQuah.com)
@@ -24,12 +24,12 @@ sudo apt upgrade -y
 
 ## If there is time, uncomment the below to install those scripts
 ## that will take a while
+## If needed
+source ./00-linux-prelims-install
+
 ## This assumes the filesystem has already initialised, following syncthing
 # Initialise links
-source ./linux-links-init
-
-# Initial apps (previously Dropbox, but no longer needed)
-# source ./linux-initapps-install
+source ./05-linux-links-init
 
 # installBaseApps
 source ./linux-baseapps-install
@@ -42,4 +42,6 @@ source ./linux-largeapps-install
 sudo apt-get update
 # initialise Desktop
 source ./linux-desktop-init
-# EOF linux-new-setup
+#
+# EOF 00-linux-new-setup
+#

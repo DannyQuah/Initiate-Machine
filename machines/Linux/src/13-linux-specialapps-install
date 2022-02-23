@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# @(#) linux-specialapps-install
-# Last-edited: Tue 2022.01.11.0641 -- Danny Quah (me@DannyQuah.com)
+# @(#) 13-linux-specialapps-install
+# Last-edited: 2022.02.23.1650.Wed -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Tue 2018.09.18.1200 -- Danny Quah (me@DannyQuah.com)
@@ -27,23 +27,10 @@ installSpecialApps() {
 #sudo apt update
 #sudo apt install -y atom
 ################################
-# zsh 2020.05
-sudo apt install -y zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-################################
-# typora 2019.05
-#  wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add
-# add Typora's repository
-#  sudo add-apt-repository 'deb https://typora.io/linux ./'
-#  sudo apt update
-#  sudo apt install -y typora
-# Set the below in linux-links-init
-#  mkdir -p ~/.config/Typora/themes
-#  cd ~/.config/Typora/themes
-#  ln -s ~/0/Scene/1/db0/machines/Editors/Typora.base.user.css ./base.user.css
-################################
-# panwriter 2021.11
-# sudo snap install panwriter
+## firefox
+#  cd ~
+#  wget -O - "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US" | sudo tar xJ -C /opt/
+#  sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
 ################################
 # joplin 2019.10.13 1400h
 ##  wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
@@ -53,6 +40,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
   sudo wget -O mendeley.deb "https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest"
   sudo dpkg -i mendeley.deb
   rm -rf mendeley.deb
+################################
+# panwriter 2021.11
+# sudo snap install panwriter
+################################
+# shotcut video editing
+  sudo snap install -y shotcut --classic
 ################################
 # spotify
   cd ~
@@ -68,19 +61,49 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # 4. Install Spotify
   sudo apt install -y spotify-client
 ################################
+## syncthing
+  curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+  echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+  sudo apt update
+  sudo apt install -y syncthing
+################################
+# onenote 2019.11
+#  sudo snap install -y p3x-onenote
+################################
+# wechat
+#  sudo snap install -y electronic-wechat
+################################
+# signal-desktop 2021.01
+  sudo snap install -y signal-desktop
+################################
 ## Telegram // now can use snap instead, so take out
 #  cd ~
 #  wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
 #  sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
+# telegram-desktop 2020.02
+  sudo snap install -y telegram-desktop
+################################
+# termius
+#  sudo snap install termius
+################################
+# typora 2019.05
+#  wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add
+# add Typora's repository
+#  sudo add-apt-repository 'deb https://typora.io/linux ./'
+#  sudo apt update
+#  sudo apt install -y typora
+# Set the below in linux-links-init
+#  mkdir -p ~/.config/Typora/themes
+#  cd ~/.config/Typora/themes
+#  ln -s ~/0/Scene/1/db0/machines/Editors/Typora.base.user.css ./base.user.css
 ################################
 ## youtube-dl
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 ################################
-## firefox
-#  cd ~
-#  wget -O - "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US" | sudo tar xJ -C /opt/
-#  sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
+# zsh 2020.05
+sudo apt install -y zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ################################
 
 # installSpecialApps()
@@ -94,4 +117,4 @@ installSpecialApps
 
 sudo apt update
 
-# eof linux-specialapps-install
+# eof 13-linux-specialapps-install

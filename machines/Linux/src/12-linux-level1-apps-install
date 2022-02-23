@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+# @(#) 12-linux-level1-apps-install
+# Last-edited: 2022.02.23.1654.Wed -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2022.02.23.1626.Wed -- Danny Quah (me@DannyQuah.com)
+#    extract out of linux-baseapps, as these are (level 1) fancier
+# ----------------------------------------------------------------
+#
+installLevelOneApps() {
+# Level One Apps
+#  sudo apt --fix-broken install
+  sudo apt install -y \
+    software-properties-common \
+    apt-file \ 
+    dos2unix \
+    powerline \
+    fonts-powerline \
+    gnupg \
+    gconf2 gconf-service gvfs-bin libxkbfile1 \
+    compizconfig-settings-manager \
+    zsh \
+    autojump \
+    thunderbird \
+    qpdf \
+    qpdfview \
+#    okular \
+#    xournal \
+    jpegoptim \
+    libheif-examples \
+    variety \
+    pandoc
+#
+# Touchpad management
+# https://github.com/atareao/Touchpad-Indicator
+#  sudo add-apt-repository ppa:atareao/atareao
+#  sudo apt update && sudo apt upgrade
+#  sudo apt install -y touchpad-indicator
+################################
+# tilix
+#  sudo add-apt-repository ppa:webupd8team/terminix
+#  sudo apt update && sudo apt upgrade
+#  sudo apt install -y tilix
+#################################
+# jupyter, python 2020.02
+# https://askubuntu.com/questions/737094/jupyter-notebook-installation
+#  sudo apt install -y jupyter
+###############################
+# Pulse Secure client // need to source deb from somewhere but then
+  sudo apt install -y lib32z1 libwebkitgtk-1.0 \
+    libproxy1v5 libproxy1-plugin-gsettings libproxy1-plugin-webkit \
+    libdconf1 dconf-gsettings-backend
+###############################
+# Fonts
+# Remembering that linux-links-install will symlink
+# ~/0/Scene/1/db0/machines/Linux/fonts to ~/.fonts
+# (https://gist.github.com/marcora/cb37b2432c072e8e9d77)
+  mkdir -p ~/0/Scene/1/db0/machines/Linux/fonts/adobe-fonts/source-code-pro
+  git clone https://github.com/adobe-fonts/source-code-pro.git ~/0/Scene/1/db0/machines/Linux/fonts/adobe-fonts/source-code-pro
+#  fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
+###############################
+# end installLevelOneApps()
+}
+
+## Begin execution here
+sudo apt update
+sudo apt upgrade -y
+
+installLevelOneApps
+
+sudo apt update
+
+#
+# EOF 12-linux-level1-apps-install
+#
