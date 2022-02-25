@@ -4,6 +4,8 @@
 [core]
 	editor = vim
 	filemode = false
+[pull]
+	rebase = false
 [credential]
 	helper = store
 [oh-my-zsh]

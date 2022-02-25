@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init
-# Last-edited: 2022.02.23.0939.Wed -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.25.1708.Fri -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
@@ -11,8 +11,15 @@
 ################################
 # One-time check on 0/ folders (for path and cleanliness generally)
 cd ~
-mkdir -p 0/Board/Ww 0/Floor/1/t 0/Light/1/j 0/Light/1/t 
-mkdir -p 0/Scene/1 0/Sound/Wp
+#                              # Other Obsidian vaults' parent folders
+mkdir -p 0/Board/1
+mkdir -p 0/Sound/1
+mkdir -p 0/Props/1/LKYSPP-Deans-Office
+#                              # Referents
+mkdir -p 0/Floor/1/t
+mkdir -p 0/Light/1/j
+mkdir -p 0/Light/1/t 
+mkdir -p 0/Scene/1
 ################################
 #
 DBPF=~/0/Scene/1/db0

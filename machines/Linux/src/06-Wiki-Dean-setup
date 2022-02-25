@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# (@) 06-Wiki-Dean-setup
+# Last-edited: 2022.02.25.1719.Fri -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------  
+# Revision History:
+#  % 2022.02.25.1714.Fri -- Danny Quah (me@DannyQuah.com)
+#    First draft. Clone from 01-barebones-new-setup for Wiki-Personal
+# ---------------------------------------------------------------- 
+cd ~
+mkdir -p 0/Props/1
+cd 0/Props/1
+git clone https://github.com/DannyQuah/LKYSPP-Deans-Office.git LKYSPP-Deans-Office
+
+# EOF 06-Wiki-Dean-setup
+
