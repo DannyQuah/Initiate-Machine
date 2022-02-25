@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # (@) 00-linux-prelims-install
-# Last-edited: 2022.02.23.1631.Wed -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.23.1709.Wed -- Danny Quah (me@DannyQuah.com)
 # Created:     Mon 2020.05.25.2250 -- Danny Quah (dq@pbook)
 # ****************************************************************
 # Revision History:
@@ -11,7 +11,8 @@
 # ****************************************************************
 #
 installPrelimsApps() {
-  sudo apt -y install curl git snapd wget
+  # add-apt-repository is in software-properties-common
+  sudo apt -y install curl git snapd software-properties-common wget
 }
 
 # Execution begins here

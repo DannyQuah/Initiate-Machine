@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2022.02.17.2209.Thu -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.02.25.1634.Fri -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -514,7 +514,7 @@ let myWikiPrsn=copy(myWikiDefault)
 let myWikiPrsn.path='~/0/Sound/1/Wp/'
 let myWikiPrsn.name='myWikiPrsn'
 
-let g:vimwiki_list=[myWikiWork, myWikiDean, myWikiPrsn]
+let g:vimwiki_list=[myWikiPrsn, myWikiDean, myWikiWork]
                                "  So VimWiki knows what to control
 let g:vimwiki_markdown_link_ext=0 
                                "0 - Do not append Wiki file extension
