@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2022.02.26.1621.Sat -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.02.26.1649.Sat -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -35,8 +35,8 @@
 " ----------------------------------------------------------------
 "
 "  Preliminaries -------------------------------------------------
-execute 'source' "sourceifexists.vim"
-call SourceIfExists("platform-identify.vim")
+execute 'source $HOME/.vim/sourceifexists.vim'
+call SourceIfExists("$HOME/.vim/platform-identify.vim")
 "
 if WINDOWS()
   set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after

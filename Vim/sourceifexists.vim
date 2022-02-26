@@ -1,5 +1,5 @@
 " @(#) sourceifexists.vim
-" Last-edited: 2022.02.26.1522.Sat -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.02.26.1634.Sat -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % 2022.02.26.1520.Sat -- Danny Quah (me@DannyQuah.com)
@@ -9,7 +9,7 @@
 " Function to source if file exists {
 function! SourceIfExists(file)
   if filereadable(expand(a:file))
-    exe 'source' a:file
+    execute 'source' a:file
   endif
 endfunction
 " }

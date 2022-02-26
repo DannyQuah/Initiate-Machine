@@ -1,5 +1,5 @@
 " @(#) Vim/Gvimrc <- ~/.gvimrc
-" Last-edited: 2022.02.26.1619.Sat -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.02.26.1650.Sat -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sun 2020.07.19.0745 -- Danny Quah (me@DannyQuah.com)
@@ -15,8 +15,8 @@
 "Might well be redundant given this is .gvimrc, but keep for now.
 if has('gui_running')
                                 "GUI running or about to start
-  execute 'source' "sourceifexists.vim"
-	call SourceIfExists("platform-identify.vim")
+  execute "source $HOME/.vim/sourceifexists.vim"
+	call SourceIfExists("$HOME/.vim/platform-identify.vim")
 
 " Vim screenflashes or beeps even when commands run as they should
 " (like executing a macro @@). So disable the visual bell. Must be
