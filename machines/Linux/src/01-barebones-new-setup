@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # (@) 01-barebones-new-setup
-# Last-edited: 2022.02.23.1625.Wed -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.25.1752.Fri -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------  
 # wget -O - https://raw.githubusercontent.com/DannyQuah/Configure-Machine/master/machines/Linux/src/barebones-new-setup | sudo bash
 # This is set up for any skeleton initialization of a new machine,
@@ -14,6 +14,7 @@ mkdir -p 0/Scene/1
 cd 0/Scene/1
 git clone https://github.com/DannyQuah/Initiate-Machine.git db0
 source ./db0/machines/Linux/src/05-linux-links-init
+source ~/.vim/bin/pathogen-bundles
 
 # EOF 01-barebones-new-setup
 

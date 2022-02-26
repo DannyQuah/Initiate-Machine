@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2022.02.25.1634.Fri -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.02.26.1621.Sat -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -35,8 +35,10 @@
 " ----------------------------------------------------------------
 "
 "  Preliminaries -------------------------------------------------
+execute 'source' "sourceifexists.vim"
+call SourceIfExists("platform-identify.vim")
 "
-if has('win32') || has('win64')
+if WINDOWS()
   set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
 
@@ -642,8 +644,8 @@ let g:bullets_checkbox_partials_toggle=0
 
 "  Colorscheme ---------------------------------------------------
                                " Favorites
-  colorscheme torte           "this came with GVim, but I like as well
-  "colorscheme koehler
+  "colorscheme torte           "this came with GVim, but I like as well
+  colorscheme koehler
   "colorscheme industry
 
                                " Others

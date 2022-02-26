@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) 11-linux-baseapps-install
-# Last-edited: 2022.02.25.1543.Fri -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.25.2309.Fri -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Fri 2018.09.28.0500 -- Danny Quah (me@DannyQuah.com)
@@ -14,9 +14,11 @@ installBaseApps() {
     zip
 ###############################
 # vim/gvim
-  sudo apt install -y vim-athena
-  # OR instead
-  # sudo apt -y install vim-gtk3
+sudo apt -y install vim-gtk3
+# OR instead
+#  sudo apt install -y vim-athena
+# But vim-athena doesn't show font selector with guifont=*
+# or from menubar//Edit
 ###############################
 # end installBaseApps()
 }

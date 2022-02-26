@@ -1,5 +1,5 @@
 " @(#) Vim/Gvimrc <- ~/.gvimrc
-" Last-edited: Sat 2022.01.08.0706 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.02.26.1619.Sat -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sun 2020.07.19.0745 -- Danny Quah (me@DannyQuah.com)
@@ -15,6 +15,9 @@
 "Might well be redundant given this is .gvimrc, but keep for now.
 if has('gui_running')
                                 "GUI running or about to start
+  execute 'source' "sourceifexists.vim"
+	call SourceIfExists("platform-identify.vim")
+
 " Vim screenflashes or beeps even when commands run as they should
 " (like executing a macro @@). So disable the visual bell. Must be
 " done here in gvimrc
@@ -36,12 +39,22 @@ set t_vb=
 
 " Fonts ----------------------------------------------------------
 " Input fontspec with :put =&guifont
-   if has('win32') || has('win64')
-    set guifont=Consolas:h9:cANSI:qDRAFT
+   if WINDOWS()
+    "set guifont=Consolas:h9:cANSI:qDRAFT
     "set guifont=Noto_Mono:h9:cANSI:qDRAFT
+    set guifont=Cascadia_Mono:h9:cANSI:qDRAFT
+    "set guifont=Lucida_Sans_Typewriter:h9:cANSI:qDRAFT
     "set guifont=Liberation_Mono:h9:cANSI:qDRAFT
     "set guifont=DejaVu_Sans_Mono:h9:cANSI:qDRAFT
     "set guifont=Source_Code_Pro:h9:cANSI:qDRAFT
+  elseif CHROMEOS()
+    "set guifont=Consolas\ Regular\ 6
+    "set guifont=Cousine\ Regular\ 6
+    set guifont=DejaVu\ Sans\ Mono\ 6
+    "set guifont=Inconsolata\ 6
+    "set guifont=Liberation\ Mono\ 6
+    "set guifont=Monospace\ Regular\ 6
+    "set guifont=Source\ Code\ Pro\ 6
   else
     "set guifont=Inconsolata\ 10
     "set guifont=Liberation\ Mono\ 9

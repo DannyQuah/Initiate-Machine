@@ -1,11 +1,14 @@
 #!/usr/bin/env sh
-# @(#) linux-links-init
-# Last-edited: 2022.02.25.1708.Fri -- Danny Quah (me@DannyQuah.com)
+# @(#) linux-links-init // NOT on Windows as ~/0 will connect elsewhere
+# Last-edited: 2022.02.26.1607.Sat -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
 #    First draft: Initialise with symbolic links to $HOME/
 #    This assumes my ~/0 filesystem is already in place
+#    Fonts under $DBNF rather than $DBPF as the latter often
+#    starts out from github, and I don't want font binaries up
+#    there
 # ****************************************************************
 #
 ################################
@@ -20,6 +23,7 @@ mkdir -p 0/Floor/1/t
 mkdir -p 0/Light/1/j
 mkdir -p 0/Light/1/t 
 mkdir -p 0/Scene/1
+mkdir -p ~/tmp
 ################################
 #
 DBPF=~/0/Scene/1/db0
@@ -27,32 +31,52 @@ DBNF=~/0/Scene/1/db1
 DWMK=~/0/Light/1/t/Writings
 
 ################################
-# Zsh
-rm -rf ~/.zshrc
-ln -s "$DBPF"/machines/Zsh/Zshrc     ~/.zshrc
-# Each machine now has its own oh-my-zsh
-# rm -rf ~/.local/share/oh-my-zsh 
-# mkdir -p ~/.local/share/oh-my-zsh
-# ln -s "$DBPF"/machines/Zsh/oh-my-zsh ~/.local/share/oh-my-zsh
-#
-## rm -rf ~/.bashrc
-## ln -s "$DBPF"/machines/Bash/Bash-Windows ~/.bashrc
-rm -rf ~/.bashrc
-ln -s "$DBPF"/machines/Bash/Bash-Linux ~/.bashrc
-rm -rf ~/.Xmodmap-swapctrlcaps
-ln -s "$DBPF"/machines/Linux/src/Xmodmap-swapctrlcaps ~/.Xmodmap-swapctrlcaps
-rm -rf ~/.Xresources
-ln -s "$DBPF"/machines/Linux/src/Xresources ~/.Xresources
+# Bash
+THE_FILE = "$DBPF"/machines/Bash/Bash-Linux
+if [ -f "$THE_FILE" ]; then
+	## rm -rf ~/.bashrc
+  ## ln -s "$THE_FILE" ~/.bashrc
+  rm -rf ~/.bashrc
+  ln -s "$THE_FILE" ~/.bashrc
+fi
 ################################
-# For R I will take libraries specific to each machine, so
-# need to link just these dotfiles
-if [ -d "$DBNF" ]; then
+# Newer linux installations use .config subdirectory for dotfiles
+# DoubleCmd- Linux, Windows differ
+THE_FILE = "$DBNF"/DoubleCmd-Linux
+if [ -f "$THE_FILE" ]; then
+	rm -rf ~/.config/doublecmd
+	mkdir -p ~/.config
+  ln -s "$THE_FILE" ~/.config/doublecmd
+fi
+################################
+# git
+THE_FILE = "$DBPF"/Config/gitconfig
+if [ -f "$THE_FILE" ]; then
+  rm -rf ~/.gitconfig
+  ln -s "$THE_FILE" ~/.gitconfig
+fi
+################################
+# LibreOffice
+THE_FILE = "$DBNF"/Config/libreoffice
+if [ -f "$THE_FILE" ]; then
+  rm -rf ~/.config/libreoffice
+  ln -s "$THE_FILE" ~/.config/libreoffice
+fi
+################################
+# Obsidian
+# Obsidian has a lot of cache baggage; just leave everything local
+# to .config or %LOCALAPPDATA% in each machine
+# ln -s "$DBNF"/Config/Obsidian-Linux ~/.config/obsidian
+################################
+# R I will take libraries specific to each machine, so
+# link just these dotfiles
+if [ -d "$DBNF"/R ]; then
   rm -rf ~/.Renviron ~/.Rprofile
   ln -s "$DBNF"/R/Renviron-Linux ~/.Renviron
   ln -s "$DBNF"/R/Rprofile-Linux ~/.Rprofile
 fi
 ################################
-#
+# Vim
 rm -rf ~/.vim ~/.vimrc ~/.gvimrc
 ln -s "$DBPF"/Vim        ~/.vim
 ln -s "$DBPF"/Vim/Vimrc  ~/.vimrc
@@ -60,13 +84,13 @@ ln -s "$DBPF"/Vim/Gvimrc ~/.gvimrc
 ################################
 # Pandoc
 # Is this needed? I can find no Windows counterpart
-if [ -d "$DBNF" ]; then
+if [ -d "$DBNF"/Pandoc ]; then
   rm -rf ~/.pandoc
   ln -s "$DBNF"/Pandoc ~/.pandoc
 fi
 ################################
 # texmf
-if [ -d "$DBNF" ]; then
+if [ -d "$DBNF"/texmf ]; then
   rm -rf ~/texmf
   ln -s "$DBNF"/texmf ~/texmf
 fi
@@ -77,68 +101,70 @@ if [ -f "$MAKEF" ]; then
 fi
 ################################
 # OneDrive
-rm -rf ~/.config/onedrive/config
-mkdir -p ~/.config/onedrive
-ln -s "$DBPF"/Config/OneDrive/config ~/.config/onedrive/config
-
+if [ -f "$DBPF"/Config/OneDrive/config ]; then
+  rm -rf ~/.config/onedrive/config
+  mkdir -p ~/.config/onedrive
+  ln -s "$DBPF"/Config/OneDrive/config ~/.config/onedrive/config
+fi
 ################################
 # OneDrive, Ssh
-rm -rf ~/.ssh/config
-mkdir -p ~/.ssh
-ln -s "$DBPF"/machines/Ssh/config ~/.ssh/config
-
+if [ -f "$DBPF"/machines/Ssh/config ]; then
+  rm -rf ~/.ssh/config
+  mkdir -p ~/.ssh
+  ln -s "$DBPF"/machines/Ssh/config ~/.ssh/config
+fi
 ################################
 # gtk
 # v ~/.config/gtk-3.0/bookmarks ~/.config/gtk-3.0/bookmarks-hold
 # ln -s "$DBPF"/machines/Linux/Config/gtk-3.0/bookmarks ~/.config/gtk-3.0/bookmarks
 ################################
 # Fonts
-rm -rf ~/.fonts
-mkdir -p "$DBPF"/machines/Linux/fonts
-ln -s "$DBPF"/machines/Linux/fonts ~/.fonts
-if command -v fc-cache &> /dev/null; then
-  fc-cache -f -v
+if [ -d "$DBNF"/machines/Linux/fonts ]; then
+  rm -rf ~/.fonts
+  ln -s "$DBNF"/machines/Linux/fonts ~/.fonts
+  if command -v fc-cache &> /dev/null; then
+    fc-cache -f -v
+  fi
 fi
-#
 ################################
 # bin/
-rm -rf ~/bin/Shellsrc ~/bin/update-mydomain ~/bin/recents0
-rm -rf ~/bin/Archive.S1.External ~/bin/cleanAssetFolder ~/bin/bulk-heif
-rm -rf ~/bin/makegist ~/bin/workLog
-mkdir -p ~/bin
-ln -s "$DBPF"/machines/Common/Shellsrc ~/bin/
-ln -s "$DBPF"/machines/Common/update-mydomain ~/bin/
-ln -s "$DBPF"/machines/Common/recents0 ~/bin/
-ln -s "$DBPF"/machines/Common/Archive.S1.External ~/bin/
-ln -s "$DBPF"/machines/Common/cleanAssetFolder ~/bin/
-ln -s "$DBPF"/machines/Common/bulk-heif ~/bin/
-ln -s "$DBPF"/machines/Common/makegist ~/bin/
-ln -s "$DBPF"/machines/Common/workLog ~/bin/
-# cd ~
-# rm -rf ~/bin ~/tmp
-# mkdir ~/bin
-# mkdir ~/tmp
-# ln -s ~/0/Scene/1/db/machines/Bash/packup ~/bin/packup
-# ln -s ~/Dropbox ~/0/Scene # I don't use Dropbox any more on linux
+if [ -d "$DBPF"/machines/Common ]; then
+  rm -rf ~/bin/Shellsrc ~/bin/update-mydomain ~/bin/recents0
+  rm -rf ~/bin/Archive.S1.External ~/bin/cleanAssetFolder ~/bin/bulk-heif
+  rm -rf ~/bin/makegist ~/bin/workLog
+  mkdir -p ~/bin
+  ln -s "$DBPF"/machines/Common/Shellsrc ~/bin/
+  ln -s "$DBPF"/machines/Common/update-mydomain ~/bin/
+  ln -s "$DBPF"/machines/Common/recents0 ~/bin/
+  ln -s "$DBPF"/machines/Common/Archive.S1.External ~/bin/
+  ln -s "$DBPF"/machines/Common/cleanAssetFolder ~/bin/
+  ln -s "$DBPF"/machines/Common/bulk-heif ~/bin/
+  ln -s "$DBPF"/machines/Common/makegist ~/bin/
+  ln -s "$DBPF"/machines/Common/workLog ~/bin/
 #
 ################################
-# Newer linux installations use .config subdirectory for dotfiles
-# .config/
-if [ -d "$DBNF" ]; then
-  mkdir -p ~/.config
-  rm -rf ~/.config/doublecmd
-  ln -s "$DBNF"/Config/DoubleCmd-Linux ~/.config/doublecmd
-  rm -rf ~/.config/libreoffice
-  ln -s  "$DBNF"/Config/libreoffice ~/.config/libreoffice
-# Obsidian has a lot of cache baggage; just leave everything local
-# to .config or %LOCALAPPDATA% in each machine
-# ln -s "$DBNF"/Config/Obsidian-Linux ~/.config/obsidian
+# X
+THE_XFILE = "$DBPF"/machines/Linux/src/Xmodmap-swapctrlcaps
+if [ -f "$THE_XFILE" ]; then
+  rm -rf ~/.Xmodmap-swapctrlcaps
+  ln -s "$THE_XFILE" ~/.Xmodmap-swapctrlcaps
 fi
-
+THE_XFILE = "$DBPF"/machines/Linux/src/Xresources
+if [ -f "$THE_XFILE" ]; then
+  rm -rf ~/.Xresources
+  ln -s "$THE_XFILE" ~/.Xresources
+fi
 ################################
-# git
-rm -rf ~/.gitconfig
-ln -s $DBPF/Config/gitconfig ~/.gitconfig
+# Zsh
+if [ -f "$DBPF"/machines/Zsh/Zshrc ]; then
+  rm -rf ~/.zshrc
+  ln -s "$DBPF"/machines/Zsh/Zshrc ~/.zshrc
+# Each machine now has its own oh-my-zsh
+# rm -rf ~/.local/share/oh-my-zsh 
+# mkdir -p ~/.local/share/oh-my-zsh
+# ln -s "$DBPF"/machines/Zsh/oh-my-zsh ~/.local/share/oh-my-zsh
+fi
+#
 
 ################################
 # Somewhat out of place but until there's somewhere else for the
