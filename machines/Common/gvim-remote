@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+# @(#) gvim-remote
+# Last-edited: 2022.03.13.1210.Sun -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % TIMESTAMP -- Danny Quah (me@DannyQuah.com)
+#    First draft: sh script to ...
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+USAGE_MESSAGE="Usage: `basename $0` args"
+
+if test $# -le 0 ; then
+  echo $USAGE_MESSAGE
+  exit 1
+fi
+
+/usr/bin/gvim --servername GVIM --remote-silent "$@"
+
+
+# eof gvim-remote
+

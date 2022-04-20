@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: 2022.02.15.1437.Tue -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.03.31.0832.Thu -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -81,10 +81,10 @@ export PATH=$PATH
 TMPDIR=${HOME}/tmp
 FSROOT=${HOME}/0
 CDPATH=\
-${FSROOT}/Scene/1:\
-${FSROOT}/Sound/1:\
-${FSROOT}/Props/1/LKYSPP-Deans-Office/:\
-${FSROOT}/Board/1:\
+${FSROOT}/Scene/1/db0:\
+${FSROOT}/Sound/1/Wp:\
+${FSROOT}/Props/1/LKYSPP-Deans-Office/Wd/Work-Share:\
+${FSROOT}/Board/1/Ww:\
 ${FSROOT}/Floor/1/t:\
 ${FSROOT}/Light/1/j:\
 ${FSROOT}/Light/1/t:\
@@ -143,6 +143,8 @@ alias agud='sudo $APT update && sudo $APT dist-upgrade'
 alias agug='sudo $APT upgrade'
 alias aguu='sudo $APT update && sudo $APT upgrade'
 
+alias dbi='sudo dpkg --install'
+
 alias ls='/bin/ls' # since many systems set this elsewhere to '/bin/ls --color=auto'
 alias ll='/bin/ls -lF'
 alias lt='/bin/ls -ltF'
@@ -157,6 +159,8 @@ alias l='ls -CF'
 alias trash='zip -m9or ${TMPDIR}/dq-trash $@'
 alias notabs-dq='sed -ie "s/\t//g" $@'
 alias tabscomma='sed "s/\t/,/g" $@'
+# clean find from root avoiding directories that aren't relevant
+alias cleanrootfind='find / -type d \( -name "proc" -o -name "var" -o -name "run" -o -name "dev" -o -name "tmp" \) -prune -o'
 # grep md files recursively from current directory
 alias grepmd='find -L . -type d ! -readable -prune -o -type f -name "*.md" ! -path "*/Trash/*" -print0 | xargs -0 grep $@ '
 # grep Deans-Office wiki recursively

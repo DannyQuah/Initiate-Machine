@@ -1,5 +1,5 @@
 // settings.json
-// Last-edited: Mon 2021.12.27.0649 -- Danny Quah (me@DannyQuah.com)
+// Last-edited: 2022.03.08.1617.Tue -- Danny Quah (me@DannyQuah.com)
 // %LOCALAPPDATA%\Packages\Microsoft. WindowsTerminal_8wekyb3d8bbwe\LocalState\ <- Windows-Terminal/
 // ----------------------------------------------------------------
 // Revision History:
@@ -20,8 +20,10 @@
 // For documentation on these settings, see: https://aka.ms/terminal-documentation
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-
-    "defaultProfile": "{0592677f-1bf7-4e72-8b5d-83eeb1dc5c45}",
+    // zsh on MSYS2
+    // "defaultProfile": "{0592677f-1bf7-4e72-8b5d-83eeb1dc5c45}",
+    // bash on MSYS2
+    "defaultProfile": "{09dc5eef-6840-4050-ae69-21e55e6a2e63}",
 
     // You can add more global application settings here.
     // To learn more about global settings, visit https://aka.ms/terminal-global-settings
@@ -49,23 +51,20 @@
         "list":
         [
             {
-                // msys2/zsh profile	
-                "guid": "{0592677f-1bf7-4e72-8b5d-83eeb1dc5c45}",
-                "name": "MSYS2//zsh",
-                "commandline": "C:\\msys64\\usr\\bin\\zsh.exe -i -l",
+                // msys2/bash profile	
+                "guid": "{09dc5eef-6840-4050-ae69-21e55e6a2e63}",
+                "name": "MSYS2//bash",
+                "commandline": "C:\\msys64\\usr\\bin\\bash.exe -i -l",
                 // "commandline": "msys2.cmd",
                 "acrylicOpacity": 0.65,
-                "backgroundImage": "%USERPROFILE%/0/Light/1/db/Commons/Wallpapers/Pixabay/pixabay-palacio-nacional-de-mafra-5118010_1920.jpg",
-                // "backgroundImage": "%USERPROFILE%/1/Store/Archive/1/i/Uncommons/Wallpapers/Android-Miui/26.jpg",
-                // "backgroundImage": "%USERPROFILE%/1/Store/Archive/1/i/Uncommons/Wallpapers/Android-Miui/50.jpg",
-                // "backgroundImage": "%USERPROFILE%/1/Store/Archive/1/i/Uncommons/Wallpapers/Android-Miui/13.jpg",
-                // "backgroundImage": "%USERPROFILE%/0/Sound/1/db/Uncommons/Wallpapers/Android-Miui/23.jpg",
-                // "backgroundImage": "%USERPROFILE%/0/Sound/1/db/Uncommons/Wallpapers/Android-Miui/43.jpg",
+                // "backgroundImage": "%USERPROFILE%/0/Light/1/db/Commons/Wallpapers/Flickr/Patio-flickr.jpg",
+                "backgroundImage": "%USERPROFILE%/0/Light/1/db/Commons/Wallpapers/Google-Meets/Google-Meets-Game-of-Thrones-Throne.png",
                 "backgroundImageAlignment": "center",
                 "backgroundImageOpacity": 0.05,
-                "backgroundImageStretchMode": "uniformToFill",
+                // "backgroundImageStretchMode": "uniformToFill",
+                "backgroundImageStretchMode": "none",
                 "closeOnExit": true,
-                // "colorScheme": "Elementary",
+                "colorScheme": "Elementary",
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
                 "fontFace": "Consolas",
@@ -75,7 +74,7 @@
                 // "icon": "ms-appdata:///roaming/msys2.ico",
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
-                "tabTitle": "MSYS2-zsh",
+                "tabTitle": "MSYS2-bash",
                 "useAcrylic": true
             },
             {
@@ -105,14 +104,23 @@
                 "useAcrylic": true
             },
             {
-                // msys2/bash profile	
-                "guid": "{09dc5eef-6840-4050-ae69-21e55e6a2e63}",
-                "name": "MSYS2//bash",
-                "commandline": "C:\\msys64\\usr\\bin\\bash.exe -i -l",
+                // msys2/zsh profile	
+                "guid": "{0592677f-1bf7-4e72-8b5d-83eeb1dc5c45}",
+                "name": "MSYS2//zsh",
+                "commandline": "C:\\msys64\\usr\\bin\\zsh.exe -i -l",
                 // "commandline": "msys2.cmd",
-				"acrylicOpacity": 0.65,
+                "acrylicOpacity": 0.65,
+                "backgroundImage": "%USERPROFILE%/0/Light/1/db/Commons/Wallpapers/Pixabay/pixabay-palacio-nacional-de-mafra-5118010_1920.jpg",
+                // "backgroundImage": "%USERPROFILE%/1/Store/Archive/1/i/Uncommons/Wallpapers/Android-Miui/26.jpg",
+                // "backgroundImage": "%USERPROFILE%/1/Store/Archive/1/i/Uncommons/Wallpapers/Android-Miui/50.jpg",
+                // "backgroundImage": "%USERPROFILE%/1/Store/Archive/1/i/Uncommons/Wallpapers/Android-Miui/13.jpg",
+                // "backgroundImage": "%USERPROFILE%/0/Sound/1/db/Uncommons/Wallpapers/Android-Miui/23.jpg",
+                // "backgroundImage": "%USERPROFILE%/0/Sound/1/db/Uncommons/Wallpapers/Android-Miui/43.jpg",
+                "backgroundImageAlignment": "center",
+                "backgroundImageOpacity": 0.05,
+                "backgroundImageStretchMode": "uniformToFill",
                 "closeOnExit": true,
-                "colorScheme": "Elementary",
+                // "colorScheme": "Elementary",
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
                 "fontFace": "Consolas",
@@ -122,7 +130,7 @@
                 // "icon": "ms-appdata:///roaming/msys2.ico",
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
-                "tabTitle": "MSYS2-bash",
+                "tabTitle": "MSYS2-zsh",
                 "useAcrylic": true
             },
             {

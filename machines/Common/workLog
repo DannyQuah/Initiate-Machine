@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) workLog
-# Last-edited: 2022.02.22.0549.Tue -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.27.2252.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % 2022.01.30.1639.Sun -- Danny Quah (me@DannyQuah.com)
@@ -28,15 +28,15 @@ FLR=${HOME}/0/Floor/1/t
 LGT=${HOME}/0/Light/1/t
 PHT=${HOME}/0/Stage/Photos
 WDD=${HOME}/0/Props/1/LKYSPP-Deans-Office/Wd
-WPD=${HOME}/0/Sound/1/Wp
 WWD=${HOME}/0/Board/1/Ww
+WPD=${HOME}/0/Sound/1/Wp
                                # Typically let Obsidian do this last, but
                                # future-guard as might need to bring in
 
-ADD_FOLDERS="$DB0 $FLR $LGT $PHT $WDD $WPD"
-                               # If just --tonight, Obsidian does $WWD
+ADD_FOLDERS="$DB0 $FLR $LGT $PHT $WDD $WWD"
+                               # If just --tonight, Obsidian does $WPD
 if [ "$1" == '--yesterday' ]; then
-  ADD_FOLDERS="$WWD $ADD_FOLDERS"
+  ADD_FOLDERS="$WPD $ADD_FOLDERS"
 fi
 
 midnTime="00:00:00"

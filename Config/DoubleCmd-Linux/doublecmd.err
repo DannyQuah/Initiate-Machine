@@ -1,0 +1,63 @@
+--------------- 04-12-2021, 15:21:45 ---------------
+| DC v0.8.2 beta Rev. 8010 -- x86_64-Linux-gtk2
+| GalliumOS 3.1 -- GTK 2.24.32 | PID 28428
+Unhandled exception: EInvalidOp: Invalid floating point operation
+  Stack trace:
+  $00000000004815D9 line 916, column 7 of lclproc.pas in /usr/lib/doublecmd/doublecmd
+  $00000000004663DC line 1893, column 87 of gtk2winapi.inc in /usr/lib/doublecmd/doublecmd
+  $000000000046633A line 1918, column 5 of gtk2winapi.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000636673 line 1828, column 5 of include/intfbasewinapi.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000471861 line 7215, column 13 of gtk2winapi.inc in /usr/lib/doublecmd/doublecmd
+  $000000000059A612 line 795, column 22 of include/winapi.inc in /usr/lib/doublecmd/doublecmd
+  $000000000057793C line 4908, column 53 of include/wincontrol.inc in /usr/lib/doublecmd/doublecmd
+  $000000000057779A line 4843, column 5 of include/wincontrol.inc in /usr/lib/doublecmd/doublecmd
+  $000000000057BB79 line 6773, column 23 of include/wincontrol.inc in /usr/lib/doublecmd/doublecmd
+  $000000000059090C line 112, column 28 of include/customcontrol.inc in /usr/lib/doublecmd/doublecmd
+  $000000000043334F in /usr/lib/doublecmd/doublecmd
+  $0000000000578C0D line 5397, column 28 of include/wincontrol.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000746882 line 112, column 36 of lclmessageglue.pas in /usr/lib/doublecmd/doublecmd
+  $0000000000645625 line 3702, column 68 of gtk2proc.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000650F52 line 27, column 44 of gtk2callback.inc in /usr/lib/doublecmd/doublecmd
+  $000000000065102A line 45, column 13 of gtk2callback.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000651214 line 103, column 13 of gtk2callback.inc in /usr/lib/doublecmd/doublecmd
+
+--------------- 04-12-2021, 15:21:49 ---------------
+| DC v0.8.2 beta Rev. 8010 -- x86_64-Linux-gtk2
+| GalliumOS 3.1 -- GTK 2.24.32 | PID 28428
+Unhandled exception: EInvalidOp: Invalid floating point operation
+  Stack trace:
+  $00000000004815D9 line 916, column 7 of lclproc.pas in /usr/lib/doublecmd/doublecmd
+  $00000000004663DC line 1893, column 87 of gtk2winapi.inc in /usr/lib/doublecmd/doublecmd
+  $000000000046633A line 1918, column 5 of gtk2winapi.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000471C19 line 7366, column 11 of gtk2winapi.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000468E4A line 2845, column 21 of gtk2winapi.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000598769 line 240, column 39 of include/winapi.inc in /usr/lib/doublecmd/doublecmd
+  $000000000063F5FE line 901, column 39 of gtk2proc.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000651041 line 47, column 34 of gtk2callback.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000651214 line 103, column 13 of gtk2callback.inc in /usr/lib/doublecmd/doublecmd
+  $00000000006525E6 line 744, column 47 of gtk2callback.inc in /usr/lib/doublecmd/doublecmd
+  $00007FC02756538B in /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0
+
+--------------- 10-01-2022, 22:18:14 ---------------
+| DC v0.8.2 beta Rev. 8010 -- x86_64-Linux-gtk2
+| GalliumOS 3.1 -- GTK 2.24.32 | PID 7254
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $00000000004325E5 in /usr/lib/doublecmd/doublecmd
+  $000000000045F708 line 4807, column 3 of gtk2widgetset.inc in /usr/lib/doublecmd/doublecmd
+  $000000000045F414 line 4716, column 3 of gtk2widgetset.inc in /usr/lib/doublecmd/doublecmd
+  $00000000007BC897 line 358, column 3 of gtk2wsmenus.pp in /usr/lib/doublecmd/doublecmd
+  $00000000005C9683 line 713, column 20 of include/menuitem.inc in /usr/lib/doublecmd/doublecmd
+  $00000000005C8247 line 194, column 3 of include/menuitem.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000432E20 in /usr/lib/doublecmd/doublecmd
+  $000000000050CE4F line 2921, column 3 of fmain.pas in /usr/lib/doublecmd/doublecmd
+  $000000000050CD4C line 2789, column 3 of fmain.pas in /usr/lib/doublecmd/doublecmd
+  $00000000009A3A06 line 3631, column 3 of umaincommands.pas in /usr/lib/doublecmd/doublecmd
+  $00000000008735F4 line 228, column 7 of uformcommands.pas in /usr/lib/doublecmd/doublecmd
+  $0000000000513BF7 line 4628, column 97 of fmain.pas in /usr/lib/doublecmd/doublecmd
+  $0000000000977734 line 621, column 41 of kastoolbar.pas in /usr/lib/doublecmd/doublecmd
+  $00000000005874A2 line 2864, column 5 of include/control.inc in /usr/lib/doublecmd/doublecmd
+  $00000000005D2419 line 111, column 3 of include/speedbutton.inc in /usr/lib/doublecmd/doublecmd
+  $00000000005D4344 line 913, column 7 of include/speedbutton.inc in /usr/lib/doublecmd/doublecmd
+  $000000000043334F in /usr/lib/doublecmd/doublecmd
+

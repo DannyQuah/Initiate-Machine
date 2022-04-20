@@ -1,0 +1,20 @@
+#!/usr/bin/env xdg-open
+# @(#) obsidian.desktop
+# Last-edited: 2022.03.12.1829.Sat -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2022.03.06.1204.Sun -- Danny Quah (me@DannyQuah.com)
+#    First draft:
+# via https://forum.obsidian.md/t/running-obsidian-on-chromebook/6195/11
+# ----------------------------------------------------------------
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Obsidian
+Exec=sommelier -X --scale=0.6 --dpi=160 /home/dq/Apps/obsidian/Obsidian.AppImage %u
+Icon=/home/dq/Apps/obsidian/Obsidian.png
+MimeType=text/html;x-scheme-handler/obsidian;
+#
+# eof obsidian.desktop
+

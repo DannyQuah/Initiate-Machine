@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# (@) linux-appimage-install
-# Last-edited: Fri 2021.12.24.1152 -- Danny Quah (me@DannyQuah.com)
+# (@) 15-linux-appimage-install
+# Last-edited: 2022.03.12.1825.Sat -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------  
 # Revision History:
 #  % Fri 2021.12.24.1147 -- Danny Quah (me@DannyQuah.com)
@@ -9,13 +9,29 @@
 # ---------------------------------------------------------------- 
 installAppImageFiles() {
 ################################
-# Obsidian-2021.12
+# Obsidian-2021.12 // not least as pbook>Linux beta doesn't do snapd
 ################################
 # installAppImageFiles()
+ICONS_FOLDER=${HOME}/0/Light/1/db/Commons/Icons
+## Download appimage to ~/Apps/appName/ ; make it executable
+## perhaps `ln -s` so the version number is not significant. Done
+
+# Obsidian to ~/Apps/obsidian/Obsidian.AppImage  
+# icons from https://www.dropbox.com/sh/ndnckpa2nzdqblu/AACsvpWFq6soHo2kdIC-A8hka
+DBPF=~/0/Scene/1/db0
+mkdir -p ~/Apps/obsidian
+cd ~/Apps/obsidian
+ln -s ${ICONS_FOLDER}/obsidian-big-sur-NoBG-small.png ./Obsidian.png
+mkdir -p ~/.local/share/applications
+cd ~/.local/share/applications
+ln -s ${DBPF}/machines/Linux/desktop/obsidian.desktop .
+# needs libnss3 on pbook>Linux beta
+sudo apt -y install libnss3
+
 }
 
 # Execution begins here
 
 installAppImageFiles
 
-# EOF linux-appimage-install
+# EOF 15-linux-appimage-install

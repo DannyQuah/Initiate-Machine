@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # (@) 00-linux-new-setup
-# Last-edited: 2022.02.23.1621.Wed -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.03.04.1021.Fri -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------  
 # Revision History:
 #  % Sun 2018.09.28.0500 - Danny Quah (me@DannyQuah.com)
@@ -32,13 +32,15 @@ source ./00-linux-prelims-install
 source ./05-linux-links-init
 
 # installBaseApps
-source ./linux-baseapps-install
+source ./11-linux-baseapps-install
+# installLevel1Apps
+source ./12-linux-level1-apps-install
 # installSpecialApps
-source ./linux-specialapps-install
+source ./13-linux-specialapps-install
 # install AppImageFiles
-source ./linux-appimage-install
+source ./15-linux-appimage-install
 # installLargeApps
-source ./linux-largeapps-install
+source ./21-linux-largeapps-install
 sudo apt-get update
 # initialise Desktop
 source ./linux-desktop-init

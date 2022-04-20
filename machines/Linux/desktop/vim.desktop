@@ -1,0 +1,19 @@
+#!/usr/bin/env xdg-open
+# @(#) vim.desktop
+# Last-edited: 2022.03.12.1814.Sat -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2022.03.12.1812.Sat -- Danny Quah (me@DannyQuah.com)
+#    First draft: Clone obsidian.desktop
+# ----------------------------------------------------------------
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Vim
+Exec=/usr/bin/vim
+Icon=/usr/share/icons/hicolor/48x48/apps/gvim.png
+MimeType=text/html;x-scheme-handler/vim;
+#
+# eof vim.desktop
+

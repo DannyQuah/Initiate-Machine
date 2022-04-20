@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 # @(#) 13-linux-specialapps-install
-# Last-edited: 2022.02.23.1650.Wed -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.27.1317.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
+#  % 2022.02.27.1313.Sun -- Danny Quah (me@DannyQuah.com)
+#    apt-key is deprecated and no longer used from Ubuntu 22.04.
+#    Its use below is gradually being replaced by -keyring.gpg // Use
+#    syncthing as example.
 #  % Tue 2018.09.18.1200 -- Danny Quah (me@DannyQuah.com)
 #    First draft:
 #    Install Linux special apps, those needing special repositories
@@ -62,8 +66,11 @@ installSpecialApps() {
   sudo apt install -y spotify-client
 ################################
 ## syncthing
-  curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
-  echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+# Add the release PGP keys:
+  sudo curl -s -o /usr/share/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg
+# Add the "stable" channel to your APT sources:
+  echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+#
   sudo apt update
   sudo apt install -y syncthing
 ################################

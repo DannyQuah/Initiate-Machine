@@ -12,11 +12,21 @@ author:
 #    affiliation: Economics Department, NUS
 #    email: DannyQuah@u.nus.edu
 #    number: 2
-date: Dec 2020
+date: Apr 2022
 # abstract:
 # keywords:
 # thanks:
 
+# documentclass: article | scrartcl
+documentclass: article
+classoption:
+ - notitlepage
+ - onecolumn
+bibliography: library.bib
+reference-section-title: References
+# // Don't need explicit "::: {#refs} // :::"  automatically at the end.
+# // But if so, References needs to be made explicit.
+suppress-bibliography: true
 ## Formatting -- for LaTeX
 fontsize: 12pt
 # mainfont: "gentium" # See https://fonts.google.com/ for fonts
@@ -25,11 +35,6 @@ fontsize: 12pt
 mathfont: ccmath
 # fontfamily: lmodern | concrete | gentium | libertine
 fontfamily: concrete
-# documentclass: article | scrartcl
-documentclass: article
-classoption:
- - notitlepage
- - onecolumn
 fontenc: T1
 geometry:
  - a4paper

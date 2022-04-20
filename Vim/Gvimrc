@@ -1,5 +1,5 @@
 " @(#) Vim/Gvimrc <- ~/.gvimrc
-" Last-edited: 2022.02.26.1650.Sat -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.03.27.1205.Sun -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sun 2020.07.19.0745 -- Danny Quah (me@DannyQuah.com)
@@ -15,7 +15,7 @@
 "Might well be redundant given this is .gvimrc, but keep for now.
 if has('gui_running')
                                 "GUI running or about to start
-  execute "source $HOME/.vim/sourceifexists.vim"
+  source $HOME/.vim/sourceifexists.vim
 	call SourceIfExists("$HOME/.vim/platform-identify.vim")
 
 " Vim screenflashes or beeps even when commands run as they should
@@ -40,27 +40,34 @@ set t_vb=
 " Fonts ----------------------------------------------------------
 " Input fontspec with :put =&guifont
    if WINDOWS()
-    "set guifont=Consolas:h9:cANSI:qDRAFT
+    "set guifont=Consolas:h10:cANSI:qDRAFT
     "set guifont=Noto_Mono:h9:cANSI:qDRAFT
-    set guifont=Cascadia_Mono:h9:cANSI:qDRAFT
+    "set guifont=Cascadia_Mono:h9:cANSI:qDRAFT
+    set guifont=Cascadia_Code:h9:cANSI:qDRAFT
     "set guifont=Lucida_Sans_Typewriter:h9:cANSI:qDRAFT
     "set guifont=Liberation_Mono:h9:cANSI:qDRAFT
     "set guifont=DejaVu_Sans_Mono:h9:cANSI:qDRAFT
     "set guifont=Source_Code_Pro:h9:cANSI:qDRAFT
   elseif CHROMEOS()
-    "set guifont=Consolas\ Regular\ 6
-    "set guifont=Cousine\ Regular\ 6
-    set guifont=DejaVu\ Sans\ Mono\ 6
-    "set guifont=Inconsolata\ 6
-    "set guifont=Liberation\ Mono\ 6
-    "set guifont=Monospace\ Regular\ 6
-    "set guifont=Source\ Code\ Pro\ 6
+    "set guifont=Consolas\ Regular\ 17
+    "set guifont=Cousine\ Regular\ 17
+    "set guifont=DejaVu\ Sans\ Mono\ 17
+    "set guifont=Inconsolata\ 17
+    "set guifont=Liberation\ Mono\ 17
+    set guifont=Monospace\ Regular\ 17
+    "set guifont=Source\ Code\ Pro\ 17
   else
     "set guifont=Inconsolata\ 10
     "set guifont=Liberation\ Mono\ 9
     "set guifont=DejaVu\ Sans\ Mono\ 9
     set guifont=Source\ Code\ Pro\ 9
   endif
+
+"  Colorscheme ---------------------------------------------------
+"  gvim only // If all commented out, Vimrc sets
+  "colorscheme torte           "this came with GVim, but I like as well
+  "colorscheme industry
+
 
 
 " Themes ---------------------------------------------------------
@@ -130,6 +137,14 @@ set t_vb=
   " :ThematicNext          " switch to the next theme, ordered by name
   " :ThematicPrevious      " switch to the previous theme, ordered by name
   " :ThematicRandom        " switch to a random theme
+
+
+  set lines=51 columns=160
+                               "lines=48+n, n for mode lines,
+                               "directory listing in netrw etc. 
+                               "I have also experimented with
+                               "a sidebar (30 cols) for SideCal,
+                               "netrw, and similar
 
 endif
 " eof Vim/Gvimrc <- ~/.gvimrc

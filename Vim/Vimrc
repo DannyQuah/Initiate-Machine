@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2022.02.26.1649.Sat -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.04.16.1301.Sat -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -35,7 +35,7 @@
 " ----------------------------------------------------------------
 "
 "  Preliminaries -------------------------------------------------
-execute 'source $HOME/.vim/sourceifexists.vim'
+source $HOME/.vim/sourceifexists.vim
 call SourceIfExists("$HOME/.vim/platform-identify.vim")
 "
 if WINDOWS()
@@ -45,7 +45,7 @@ endif
 execute pathogen#infect()
 
 "                              "VimWiki
-set nocompatible 
+set nocompatible
 
 if has("syntax")
   syntax on                    "Syntax highlighting
@@ -148,11 +148,6 @@ let g:loaded_matchparen=1      |"Don't load matchparen.vim
 "                              "Show spaces as dots, plus other usefuls
 if has('gui_running')
   set list listchars+=space:·,tab:»·,trail:_,extends:>,precedes:<,nbsp:~
-  set lines=51 columns=160     "lines=48+n, n for mode lines,
-                               "directory listing in netrw etc. 
-                               "I have also experimented with
-                               "a sidebar (30 cols) for SideCal,
-                               "netrw, and similar
   set termguicolors
 else
                                " for instance iSH on iOS
@@ -236,16 +231,18 @@ set smartcase                  " ...unless it's uppercase
 "  Autocorrect, abbreviations ----------------------------------
 " abbr Lniux Linux
 " abbr hte the
-"Ending markdown lines instead of trailing double whitespace
-" iabbrev Qde <br />
 
 "  macros ------------------------------------------------------
 let @h='j0i| f:ls | A |'
                                " Gmail header row to table row
 
+let @t="?from:A\n| :-- | :-- |"
+                               " Gmail header second row; after all @h 
+
 " Time, templates ----------------------------------------------
 iabbrev iDQ@ -- Danny Quah (me@DannyQuah.com)
                                "Insert-my-email-signature
+nnoremap <Leader>t i<C-R>=strftime('%Y.%m.%d.%H%M.%a')<CR><ESC>
 iabbrev <expr> ddt@ strftime('%Y.%m.%d.%H%M.%a')
                                "Insert day-datetime
 " Other things I tried:
@@ -282,6 +279,7 @@ source ~/.vim/timeauto.vim
 nnoremap <Leader>iss :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-shell-script-template<CR>
 nnoremap <Leader>iht :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header-general.txt<CR>
 nnoremap <Leader>ily :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-latex-yaml.md<CR>
+nnoremap <Leader>ilsr :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-latex-short-report-yaml.md<CR>
 nnoremap <Leader>itt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-tex-template.tex
 nnoremap <Leader>ipt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-python-template.py
 nnoremap <Leader>ibt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-bat-template.bat
@@ -606,6 +604,7 @@ let g:mkdp_markdown_css='~/0/Scene/1/db0/Templates/stylesheets/github-markdown.c
                                "Use MacFarlane pandoc to render HTML
 
                                "Bullets --------------------------
+" https://github.com/dkarter/bullets.vim
 let g:bullets_enabled_file_types=[
   \ 'text',
   \ 'markdown',
@@ -623,13 +622,15 @@ let g:bullets_pad_right=1
                                " default 1; extra spaces to align
 let g:bullets_max_alpha_characters=2
                                " default 2
-let g:bullets_outline_levels = ['num', 'abc', 'std-', 'std*', 'std+']
+let g:bullets_outline_levels = ['num', 'abc', 'rom', 'std-', 'std*', 'std+']
                                " Example [keys pressed]:
 " 1. first parent
 "   a. child bullet [ <cr><C-t> ]
-"      - unordered bullet [ <cr><C-t> ]
-"        * unordered bullet [ <cr><C-t> ]
-"      - unordered bullet [ <cr><C-d> ]
+"     i.  Roman [another <cr><C-t>]
+"        - unordered bullet [ <cr><C-t> ]
+"          * unordered bullet [ <cr><C-t> ]
+"        - unordered bullet [ <cr><C-d> ]
+"     ii. Roman [ <cr><C-d> ]
 "   b. second child bullet [ <cr><C-d> ]
 " 2. second parent [ <cr><C-d> ]
 
@@ -643,12 +644,8 @@ let g:bullets_checkbox_partials_toggle=0
                                " default 1, checked when only partial
 
 "  Colorscheme ---------------------------------------------------
-                               " Favorites
-  "colorscheme torte           "this came with GVim, but I like as well
-  colorscheme koehler
-  "colorscheme industry
-
-                               " Others
+"  vim (and therefore gvim too)
+  "colorscheme koehler
   "colorscheme ron
   "colorscheme monokai         "vim-monokai
   "colorscheme papaya          "vim-theme-papaya
@@ -657,5 +654,11 @@ let g:bullets_checkbox_partials_toggle=0
   "let g:dracula_colorterm=0 
   "highlight normal guibg=none ctermbg=none
   "colorscheme dracula 
+  "colorscheme badwolf
+  "colorscheme hyper-snazzy
+  colorscheme inkpot
+  "colorscheme jellybeans
+  "colorscheme vim-one
+  "colorscheme tender
 
 " eof db0/Vim/Vimrc <- .vimrc

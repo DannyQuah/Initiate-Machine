@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) 12-linux-level1-apps-install
-# Last-edited: 2022.02.23.1654.Wed -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.02.27.1339.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % 2022.02.23.1626.Wed -- Danny Quah (me@DannyQuah.com)
@@ -11,25 +11,24 @@ installLevelOneApps() {
 # Level One Apps
 #  sudo apt --fix-broken install
   sudo apt install -y \
-    software-properties-common \
-    apt-file \ 
+    autojump \
+    compizconfig-settings-manager \
     dos2unix \
-    powerline \
     fonts-powerline \
     gnupg \
     gconf2 gconf-service gvfs-bin libxkbfile1 \
-    compizconfig-settings-manager \
-    zsh \
-    autojump \
-    thunderbird \
-    qpdf \
-    qpdfview \
-#    okular \
-#    xournal \
     jpegoptim \
     libheif-examples \
+#    okular \
+    pandoc \
+    powerline \
+    qpdf \
+    qpdfview \
+    software-properties-common \
+    thunderbird \
     variety \
-    pandoc
+#    xournal \
+    zsh
 #
 # Touchpad management
 # https://github.com/atareao/Touchpad-Indicator

@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) pathogen-bundles
-# Last-edited: Sat 2022.01.08.1541 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.03.12.1650.Sat -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sun 2022.01.02.0851 -- Danny Quah (me@DannyQuah.com)
@@ -20,8 +20,8 @@ cd ~/.vim/bundle
 rm -rf bullets
 git clone --depth 1 https://github.com/dkarter/bullets.vim
 
-rm -rf markdown-preview.nvim
-git clone --depth 1 https://github.com/iamcco/markdown-preview.nvim
+rm -rf csapprox
+git clone --depth 1 https://github.com/godlygeek/csapprox
 
 # rm -rf fuzzy-finder
 # git clone --depth 1 https://github.com/atom/fuzzy-finder
@@ -32,11 +32,14 @@ cd ./fzf ; ./install
 cd ..
 git clone --depth 1 https://github.com/junegunn/fzf.vim
 
+rm -rf markdown-preview.nvim
+git clone --depth 1 https://github.com/iamcco/markdown-preview.nvim
+
 rm -rf tabular
 git clone --depth 1 https://github.com/godlygeek/tabular
 
-rm -rf timestamp
-git clone --depth 1 https://github.com/vim-scripts/timestamp.vim
+# rm -rf timestamp
+# git clone --depth 1 https://github.com/vim-scripts/timestamp.vim
 
 rm -rf vim-easymotion
 git clone --depth 1 https://github.com/easymotion/vim-easymotion
@@ -55,14 +58,39 @@ git clone --depth 1 https://github.com/vimwiki/vimwiki
 #
 # ------------------------------
 # Colorschemes
-rm -rf vim-theme-papaya
-git clone --depth 1 https://github.com/henrynewcomer/vim-theme-papaya
+rm -rf badwolf
+git clone --depth 1 https://github.com/sjl/badwolf.git
+
+rm -rf vim
+git clone --depth 1 https://github.com/dracula/vim
+
+rm -rf hyper-snazzy
+git clone --depth 1 https://github.com/sindresorhus/hyper-snazzy.git
+
+rm -rf inkpot
+git clone --depth 1 https://github.com/ciaranm/inkpot
+
+rm -rf jellybeans.vim
+git clone --depth 1 https://github.com/nanotech/jellybeans.vim
+
 
 rm -rf vim-monokai
 git clone --depth 1 https://github.com/sickill/vim-monokai
 
-rm -rf vim
-git clone --depth 1 https://github.com/dracula/vim
+rm -rf vim-one
+git clone --depth 1 https://github.com/rakr/vim-one
+
+rm -rf onehalf
+git clone --depth 1 https://github.com/sonph/onehalf
+
+rm -rf vim-theme-papaya
+git clone --depth 1 https://github.com/henrynewcomer/vim-theme-papaya
+
+rm -rf tender
+git clone --depth 1 https://github.com/jacoborus/tender
+
+
+
 
 # rm -rf dracula_theme
 # git clone --depth 1 https://github.com/dracula/dracula-theme
