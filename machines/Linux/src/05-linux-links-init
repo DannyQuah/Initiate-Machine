@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init // NOT on Windows as ~/0 will connect elsewhere
-# Last-edited: 2022.04.21.2044.Thu -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.04.21.2053.Thu -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
@@ -55,6 +55,7 @@ if [ -d "$THE_FOLDER" ]; then
   ln -s "$THE_FOLDER"/bulk-heif ~/bin/
   ln -s "$THE_FOLDER"/makegist ~/bin/
   ln -s "$THE_FOLDER"/workLog ~/bin/
+fi
 ################################
 # Newer linux installations use .config subdirectory for dotfiles
 # DoubleCmd- Linux, Windows differ
