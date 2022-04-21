@@ -465,8 +465,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>953</Left>
-      <Top>-1268</Top>
+      <Left>1020</Left>
+      <Top>-1289</Top>
       <Width>1731</Width>
       <Height>1018</Height>
       <PixelsPerInch>120</PixelsPerInch>
@@ -852,56 +852,56 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="Quah-D-1996.06-Empirics-for-Economic-Growth-and-Convergence">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\</Path>
-                  <Path Filename="..">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\Quah-D-1996.06-Empirics-for-Economic-Growth-and-Convergence\</Path>
-                  <Path Filename="Quah-D-Vahey-S-1995.09-Measuring-Core-Inflation-EJ">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\</Path>
-                  <Path Filename="..">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\Quah-D-Vahey-S-1995.09-Measuring-Core-Inflation-EJ\</Path>
-                  <Path Filename="Quah-D-1994.04-One-Business-Cycle-One-Trend-EER">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\</Path>
-                  <Path Filename="..">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\Quah-D-1994.04-One-Business-Cycle-One-Trend-EER\</Path>
-                  <Path Filename="Quah-D-1993.12-Galtons-Fallacy-Tests-Convergence-Hypothesis-SJE">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\</Path>
-                  <Path Filename="..">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\Quah-D-1993.12-Galtons-Fallacy-Tests-Convergence-Hypothesis-SJE\</Path>
-                  <Path Filename="LSE-IDEAS-2012.01">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\</Path>
-                  <Path Filename="2014.05.07-LSE-IDEAS-Economics-Drug-Policy">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\LSE-IDEAS-2012.01\</Path>
-                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\LSE-IDEAS-2012.01\2014.05.07-LSE-IDEAS-Economics-Drug-Policy\</Path>
-                  <Path Filename="2014.12.03-LSE-Diplomacy-Commission-Hearing">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\LSE-IDEAS-2012.01\</Path>
-                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\LSE-IDEAS-2012.01\2014.12.03-LSE-Diplomacy-Commission-Hearing\</Path>
-                  <Path Filename="2014.12.03-LSE-Diplomacy-Commission-Hearing">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\LSE-IDEAS-2012.01\</Path>
-                  <Path Filename="2022">C:\Users\sppdqlsh\0\Stage\Photos\Photos-Work\</Path>
-                  <Path Filename="2022.03.28-Lunch-with-LKYSPP-students">C:\Users\sppdqlsh\0\Stage\Photos\Photos-Work\2022\</Path>
-                  <Path Filename="2022.04.13.1230.Wed-Deans-Lunch-with-Students-Fish-Co-Paragon-wefie.jpg">C:\Users\sppdqlsh\0\Stage\Photos\Photos-Work\2022\2022.03.28-Lunch-with-LKYSPP-students\</Path>
-                  <Path Filename="F">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
-                  <Path Filename="Fischer-S-2021.11-Central-Banks-GFC-COVID">C:\Users\sppdqlsh\0\Board\1\Ww\References\F\</Path>
-                  <Path Filename="2021.11-Stanley.Fischer-Central-Banks-GFC-COVID-Monetary-Policy-Research-Paper.pdf">C:\Users\sppdqlsh\0\Board\1\Ww\References\F\Fischer-S-2021.11-Central-Banks-GFC-COVID\</Path>
-                  <Path Filename="Fischer-S-2021.11-Central-Banks-GFC-COVID">C:\Users\sppdqlsh\0\Board\1\Ww\References\F\</Path>
-                  <Path Filename="2021.11-Stanley.Fischer-Central-Banks-GFC-COVID-Monetary-Policy-Research-Paper.pdf">C:\Users\sppdqlsh\0\Board\1\Ww\References\F\Fischer-S-2021.11-Central-Banks-GFC-COVID\</Path>
-                  <Path Filename="Fischer-S-2021.11-Central-Banks-GFC-COVID">C:\Users\sppdqlsh\0\Board\1\Ww\References\F\</Path>
-                  <Path Filename="2021.11-Stanley.Fischer-Central-Banks-GFC-COVID-Monetary-Policy-Research-Paper.pdf">C:\Users\sppdqlsh\0\Board\1\Ww\References\F\Fischer-S-2021.11-Central-Banks-GFC-COVID\</Path>
-                  <Path Filename="Fischer-S-2021.11-Central-Banks-GFC-COVID">C:\Users\sppdqlsh\0\Board\1\Ww\References\F\</Path>
-                  <Path Filename="Z">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
-                  <Path Filename="2016.06-Zhou-Xiaochuan-Multi-Objective-Monetary-Policy-Chinese-Economy-IMF-Michel.Camdessus-Lecture">C:\Users\sppdqlsh\0\Board\1\Ww\References\Z\</Path>
-                  <Path Filename="2016.06-Zhou-Xiaochuan-Multi-Objective-Monetary-Policy-Chinese-Economy-IMF-Michel.Camdessus-Lecture.md">C:\Users\sppdqlsh\0\Board\1\Ww\References\Z\2016.06-Zhou-Xiaochuan-Multi-Objective-Monetary-Policy-Chinese-Economy-IMF-Michel.Camdessus-Lecture\</Path>
-                  <Path Filename="2016.06-Zhou-Xiaochuan-Multi-Objective-Monetary-Policy-Chinese-Economy-IMF-Michel.Camdessus-Lecture">C:\Users\sppdqlsh\0\Board\1\Ww\References\Z\</Path>
+                  <Path Filename="Screenshot_20220414-224811_OCBC Digital.jpg">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="0-Spam-Report-Dangerous.jpg">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="W">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
+                  <Path Filename="Wachtel-P-Blejer-M-2020-Fresh-Look-Central-Bank-Independence-Cato">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\</Path>
+                  <Path Filename="2020-Wachtel-P-Blejer-M-Fresh-Look-Central-Bank-Independence-Cato-cj-v40n1-7.pdf">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\Wachtel-P-Blejer-M-2020-Fresh-Look-Central-Bank-Independence-Cato\</Path>
+                  <Path Filename="Wachtel-P-Blejer-M-2020-Fresh-Look-Central-Bank-Independence-Cato">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\</Path>
+                  <Path Filename="T">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
+                  <Path Filename="The-Economist-2017.04.29-History-Central-Banks">C:\Users\sppdqlsh\0\Board\1\Ww\References\T\</Path>
+                  <Path Filename="Physical-Data-DQ.ods">C:\Users\sppdqlsh\0\Floor\1\t\Personal\</Path>
+                  <Path Filename="2022.04.07-LKYSPP-SPGR-Assistant-Manager.jpg">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="MAS-50th-Anniversary-Conference-2021.11.03">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\</Path>
+                  <Path Filename="DQ-MAS50-summary-2022.04">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\MAS-50th-Anniversary-Conference-2021.11.03\</Path>
+                  <Path Filename="2022.02-GJC-Conference-Volume-via-Edward.Robinson.pdf">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\MAS-50th-Anniversary-Conference-2021.11.03\DQ-MAS50-summary-2022.04\</Path>
+                  <Path Filename="Physical-Data-DQ.ods">C:\Users\sppdqlsh\0\Floor\1\t\Personal\</Path>
+                  <Path Filename="W">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
+                  <Path Filename="Walsh-CE-2008-Central-Bank-Independence-New-Palgrave-Dictionary">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\</Path>
+                  <Path Filename="2008-Carl.Walsh-Central-Bank-Independence-cbi_newpalgrave.pdf">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\Walsh-CE-2008-Central-Bank-Independence-New-Palgrave-Dictionary\</Path>
+                  <Path Filename="Walsh-CE-2008-Central-Bank-Independence-New-Palgrave-Dictionary">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\</Path>
                   <Path Filename="C">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
-                  <Path Filename="Carney-M-2019.12-Fifty-Shades-Green-FD">C:\Users\sppdqlsh\0\Board\1\Ww\References\C\</Path>
-                  <Path Filename="2019.12-Mark.Carney-Fifty-Shades-Green-FD.pdf">C:\Users\sppdqlsh\0\Board\1\Ww\References\C\Carney-M-2019.12-Fifty-Shades-Green-FD\</Path>
-                  <Path Filename="Carney-M-2019.12-Fifty-Shades-Green-FD">C:\Users\sppdqlsh\0\Board\1\Ww\References\C\</Path>
-                  <Path Filename="2022.04.20.1130.Wed-Francis.Fukuyama-Liberalism-Discontents-Zoom">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="2022-Francis.Fukuyama-Liberalism-Discontents-cover.jpg">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.20.1130.Wed-Francis.Fukuyama-Liberalism-Discontents-Zoom\</Path>
-                  <Path Filename="2022.04.18.0900.Mon-PWAC-Pre-meeting-Zoom">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.18.0900.Mon-PWAC-Pre-meeting-Zoom\</Path>
-                  <Path Filename="2022.05.04.1230.Wed-Khoo.Teng_Chye-Lunch-NUS-Cities-Programme-Tanglin-Club">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="2022.05.04.1230.Wed-Khoo.Teng_Chye-Lunch-NUS-Cities-Programme-Tanglin-Club.md">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.05.04.1230.Wed-Khoo.Teng_Chye-Lunch-NUS-Cities-Programme-Tanglin-Club\</Path>
-                  <Path Filename="2022.04.18.0900.Mon-PWAC-Pre-meeting-Zoom">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="3. Update to Chairs and Advisor on Workers&apos; Engagements_SGH_18 Apr.pdf">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.18.0900.Mon-PWAC-Pre-meeting-Zoom\</Path>
-                  <Path Filename="2022.04.19.0830.Tue-NUS-Senior-Management-Retreat-Parkroyal">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="NUS Strategy and Strategic Priorities for 2023-2027 shortened (31 March 2022).pptx">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.19.0830.Tue-NUS-Senior-Management-Retreat-Parkroyal\</Path>
-                  <Path Filename="2022.04.20.1130.Wed-Francis.Fukuyama-Liberalism-Discontents-Zoom">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="A_RES_3201(S-VI)-EN.pdf">C:\Users\sppdqlsh\Downloads\</Path>
-                  <Path Filename="0">C:\Users\sppdqlsh\</Path>
-                  <Path Filename="tmp">C:\Users\sppdqlsh\0\</Path>
-                  <Path Filename="2022.04-Danny.Quah-Roles-Evolution-Demand-Supply-MAS.pdf">C:\Users\sppdqlsh\0\tmp\</Path>
-                  <Path Filename="Boxes">C:\Users\sppdqlsh\0\Board\1\Ww\Machines\</Path>
-                  <Path Filename="Lenovo-ltpp15-Thinkpad-P15s-2022.04">C:\Users\sppdqlsh\0\Board\1\Ww\Machines\Boxes\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Board\1\Ww\References\C\</Path>
+                  <Path Filename="Q">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
+                  <Path Filename="Quah-D-2022.04-Roles-Evolution-Demand-Supply-MAS-GJC">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\</Path>
+                  <Path Filename="2022.04-Danny.Quah-Roles-Evolution-Demand-Supply-MAS_EPGsuggestions_190422_0755.docx">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\Quah-D-2022.04-Roles-Evolution-Demand-Supply-MAS-GJC\</Path>
+                  <Path Filename="Research-Centres-Institutes-Thinktanks">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\</Path>
+                  <Path Filename="IWP-2020.05">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\Research-Centres-Institutes-Thinktanks\</Path>
+                  <Path Filename="2021.09.10.0930-Ben.Cashore-IWP-Zoom">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\Research-Centres-Institutes-Thinktanks\IWP-2020.05\</Path>
+                  <Path Filename="Quah-D-Thomas-V-2022.04-Resilience-Paradigm-Shift">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\</Path>
+                  <Path Filename="2022.04-Quah-D-Thomas-V-EAF-track.docx">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\Quah-D-Thomas-V-2022.04-Resilience-Paradigm-Shift\</Path>
+                  <Path Filename="Quah-D-2021.06-Ong.Toon-Hui-Quah-D-2021.06-Taking-Stock-Unprecedented-Epidemic-Ethos">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\Quah-D-2021.06-Ong.Toon-Hui-Quah-D-2021.06-Taking-Stock-Unprecedented-Epidemic-Ethos\</Path>
+                  <Path Filename="Quah-D-2021.06-Ong-Toon-Hui-Quah-D-2021.06-Taking-Stock-Unprecedented-Epidemic-Ethos">C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\</Path>
+                  <Path Filename="Q">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\</Path>
+                  <Path Filename="2022.03.25.1445.Fri-Common-Prosperity-MPAM-lecture-Zoom">C:\Users\sppdqlsh\0\Light\1\t\Writings\Quah-D-2020-Mobility-Political-Upheaval-Inequality\P-Social-Immobility\</Path>
+                  <Path Filename="2022.04-Translated_柯成兴院长讲座2022_Danny Quah - From leaky buckets to common prosperity-draft1 GIA.docx">C:\Users\sppdqlsh\0\Light\1\t\Writings\Quah-D-2020-Mobility-Political-Upheaval-Inequality\P-Social-Immobility\2022.03.25.1445.Fri-Common-Prosperity-MPAM-lecture-Zoom\</Path>
+                  <Path Filename="2022.03.25.1445.Fri-Common-Prosperity-MPAM-lecture-Zoom">C:\Users\sppdqlsh\0\Light\1\t\Writings\Quah-D-2020-Mobility-Political-Upheaval-Inequality\P-Social-Immobility\</Path>
+                  <Path Filename="2022.04.20.2100.Wed-APSIA-EXCO-Zoom">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.20.2100.Wed-APSIA-EXCO-Zoom\</Path>
+                  <Path Filename="2022.04.20.2100.Wed-NOT-ATTENDING-APSIA-EXCO-Zoom">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.20.2100.Wed-NOT-ATTENDING-APSIA-EXCO-Zoom\</Path>
+                  <Path Filename="2022.04.18.1600.Mon-Evelyn.Chng-Gift-Proposal-Oei.Hong_Leong-OTH.DO">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="2022.04.18.1600.Mon-Evelyn.Chng-Gift-Proposal-Oei.Hong_Leong-OTH.DO.md">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.18.1600.Mon-Evelyn.Chng-Gift-Proposal-Oei.Hong_Leong-OTH.DO\</Path>
+                  <Path Filename="2022.04.21.Thu-KV-house-move">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.21.Thu-KV-house-move\</Path>
+                  <Path Filename="2022.04.21.Thu-KV-house-move-E2B">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.21.Thu-KV-house-move-E2B\</Path>
+                  <Path Filename="2022.04.21.Thu-KV-house-move-E2B">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.21.Thu-KV-house-move-E2B\</Path>
+                  <Path Filename="OP Draft (2022-02-11) (For comments).docx">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="2022.04.26.1900.Tue-Dinner-Provost-Andrew.Rose-and-Spouses-Imperial.Treasure-Paragon">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
                 </Paths>
               </Entry>
             </History>
@@ -986,40 +986,53 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="Templates">C:\Users\sppdqlsh\0\Scene\1\db1\</Path>
-                  <Path Filename="..">C:\Users\sppdqlsh\0\Scene\1\db1\Templates\</Path>
-                  <Path Filename="Templates">C:\Users\sppdqlsh\0\Scene\1\db1\</Path>
-                  <Path Filename="db0">C:\Users\sppdqlsh\0\Scene\1\</Path>
-                  <Path Filename="Templates">C:\Users\sppdqlsh\0\Scene\1\db0\</Path>
-                  <Path Filename="Plaintext">C:\Users\sppdqlsh\0\Scene\1\db0\Templates\</Path>
-                  <Path Filename="DQ-latex-yaml.md">C:\Users\sppdqlsh\0\Scene\1\db0\Templates\Plaintext\</Path>
-                  <Path Filename="DQ-MAS50-summary-2022.04">C:\Users\sppdqlsh\OneDrive\iPad-OneDrive-Synced-Documents\</Path>
-                  <Path Filename="Screenshot_20220414-224811_OCBC Digital.jpg">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\</Path>
-                  <Path Filename="0-Spam-Report-Dangerous.jpg">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="Issing-Otmar-2021.12-Central-Banks-Independent-Almighty-OMFIF">C:\Users\sppdqlsh\0\Board\1\Ww\References\I\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Board\1\Ww\References\I\Issing-Otmar-2021.12-Central-Banks-Independent-Almighty-OMFIF\</Path>
+                  <Path Filename="Issing-Otmar-2021.12-Central-Banks-Independent-Almighty-OMFIF">C:\Users\sppdqlsh\0\Board\1\Ww\References\I\</Path>
                   <Path Filename="W">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
                   <Path Filename="Wachtel-P-Blejer-M-2020-Fresh-Look-Central-Bank-Independence-Cato">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\</Path>
-                  <Path Filename="2020-Wachtel-P-Blejer-M-Fresh-Look-Central-Bank-Independence-Cato-cj-v40n1-7.pdf">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\Wachtel-P-Blejer-M-2020-Fresh-Look-Central-Bank-Independence-Cato\</Path>
-                  <Path Filename="Wachtel-P-Blejer-M-2020-Fresh-Look-Central-Bank-Independence-Cato">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\</Path>
-                  <Path Filename="T">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
-                  <Path Filename="The-Economist-2017.04.29-History-Central-Banks">C:\Users\sppdqlsh\0\Board\1\Ww\References\T\</Path>
-                  <Path Filename="Physical-Data-DQ.ods">C:\Users\sppdqlsh\0\Floor\1\t\Personal\</Path>
-                  <Path Filename="2022.04.07-LKYSPP-SPGR-Assistant-Manager.jpg">C:\Users\sppdqlsh\Downloads\</Path>
-                  <Path Filename="MAS-50th-Anniversary-Conference-2021.11.03">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\</Path>
-                  <Path Filename="DQ-MAS50-summary-2022.04">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\MAS-50th-Anniversary-Conference-2021.11.03\</Path>
-                  <Path Filename="2022.02-GJC-Conference-Volume-via-Edward.Robinson.pdf">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\MAS-50th-Anniversary-Conference-2021.11.03\DQ-MAS50-summary-2022.04\</Path>
-                  <Path Filename="Physical-Data-DQ.ods">C:\Users\sppdqlsh\0\Floor\1\t\Personal\</Path>
-                  <Path Filename="W">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
-                  <Path Filename="Walsh-CE-2008-Central-Bank-Independence-New-Palgrave-Dictionary">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\</Path>
-                  <Path Filename="2008-Carl.Walsh-Central-Bank-Independence-cbi_newpalgrave.pdf">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\Walsh-CE-2008-Central-Bank-Independence-New-Palgrave-Dictionary\</Path>
-                  <Path Filename="Walsh-CE-2008-Central-Bank-Independence-New-Palgrave-Dictionary">C:\Users\sppdqlsh\0\Board\1\Ww\References\W\</Path>
-                  <Path Filename="C">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
-                  <Path Filename="Chow-Chung-Yan-2020.04.Apr-Blaming-China-for-Coronavirus-SCMP">C:\Users\sppdqlsh\0\Board\1\Ww\References\C\</Path>
-                  <Path Filename="Chow.Chung-Yan-2020.04-Blaming-China-for-Coronavirus-SCMPx.md">C:\Users\sppdqlsh\0\Board\1\Ww\References\C\Chow-Chung-Yan-2020.04.Apr-Blaming-China-for-Coronavirus-SCMP\</Path>
-                  <Path Filename="Chow-Chung-Yan-2020.04-Blaming-China-for-Coronavirus-SCMPx">C:\Users\sppdqlsh\0\Board\1\Ww\References\C\</Path>
-                  <Path Filename="MAS-50th-Anniversary-Conference-2021.11.03">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\</Path>
-                  <Path Filename="DQ-MAS50-summary-2022.04">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\MAS-50th-Anniversary-Conference-2021.11.03\</Path>
-                  <Path Filename="2022.04-Danny.Quah-Roles-Evolution-Demand-Supply-MAS_EPGsuggestions_190422_0755.docx">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\MAS-50th-Anniversary-Conference-2021.11.03\DQ-MAS50-summary-2022.04\</Path>
-                  <Path Filename="Physical-Data-DQ.ods">C:\Users\sppdqlsh\0\Floor\1\t\Personal\</Path>
+                  <Path Filename="gb 1 2022 - minutes (draft).doc">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Writings\Quah-D-2020-Mobility-Political-Upheaval-Inequality\P-Social-Immobility\2022.03.25.1445.Fri-Common-Prosperity-MPAM-lecture-Zoom\</Path>
+                  <Path Filename="sppdqlsh">C:\Users\</Path>
+                  <Path Filename="Documents and Settings">C:\</Path>
+                  <Path Filename="..">C:\Users\</Path>
+                  <Path Filename="Users">C:\</Path>
+                  <Path Filename="Box Sync">C:\Users\sppdqlsh\</Path>
+                  <Path Filename="Thunderbird">C:\Users\sppdqlsh\Box Sync\</Path>
+                  <Path Filename="2022.04-Danny.Quah-Roles-Evolution-Demand-Supply-MAS.pdf">C:\Users\sppdqlsh\Box Sync\Thunderbird\</Path>
+                  <Path Filename="Finance">C:\Users\sppdqlsh\0\Floor\1\t\Personal\</Path>
+                  <Path Filename="FinancePrsn.ods">C:\Users\sppdqlsh\0\Floor\1\t\Personal\Finance\</Path>
+                  <Path Filename="PWAC-MOM-Platform-Workers-Advisory-Committee-2021.08">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-Platform-Workers-Advisory-Committee-2021.08\</Path>
+                  <Path Filename="H">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\</Path>
+                  <Path Filename="Ho.Selina-2016.07">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\H\</Path>
+                  <Path Filename="2022.04.18.1230.Mon-Selina.Ho-thank-you-lunch-Atout">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\H\Ho.Selina-2016.07\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\H\Ho.Selina-2016.07\2022.04.18.1230.Mon-Selina.Ho-thank-you-lunch-Atout\</Path>
+                  <Path Filename="2022.04.18.1230.Mon-Selina.Ho-thank-you-lunch-Atout">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\H\Ho.Selina-2016.07\</Path>
+                  <Path Filename="Ho.Selina-2016.07">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\H\</Path>
+                  <Path Filename="F">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\</Path>
+                  <Path Filename="Fukuyama.Francis-2022.04">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\F\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\F\Fukuyama.Francis-2022.04\</Path>
+                  <Path Filename="Fukuyama.Francis-2022.04">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\F\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\F\Fukuyama.Francis-2022.04\</Path>
+                  <Path Filename="Fukuyama.Francis-2022.04">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\F\</Path>
+                  <Path Filename="F">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\</Path>
+                  <Path Filename="APSIA-2018.01">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\APSIA-2018.01\</Path>
+                  <Path Filename="Advancement-Development-LKYSPP">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\</Path>
+                  <Path Filename="Donor-Cultivation-2021.05">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\Advancement-Development-LKYSPP\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\Advancement-Development-LKYSPP\Donor-Cultivation-2021.05\</Path>
+                  <Path Filename="Donor-Cultivation-2021.05">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\Advancement-Development-LKYSPP\</Path>
+                  <Path Filename="S">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\</Path>
+                  <Path Filename="Shanmugaratnam.Tharman-2018.04">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\S\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\S\Shanmugaratnam.Tharman-2018.04\</Path>
+                  <Path Filename="LifePINs">C:\Users\sppdqlsh\0\Sound\1\Wp\</Path>
+                  <Path Filename="Utilities-2016.07">C:\Users\sppdqlsh\0\Sound\1\Wp\LifePINs\</Path>
+                  <Path Filename="KVE1-Kent-Vale-Housing-Services-2016.07">C:\Users\sppdqlsh\0\Sound\1\Wp\LifePINs\Utilities-2016.07\</Path>
+                  <Path Filename="2022.03-Kent-Vale-NUS-move-E2B">C:\Users\sppdqlsh\0\Sound\1\Wp\LifePINs\Utilities-2016.07\KVE1-Kent-Vale-Housing-Services-2016.07\</Path>
+                  <Path Filename="Application for Bulk Delivery or House Movers.doc">C:\Users\sppdqlsh\0\Sound\1\Wp\LifePINs\Utilities-2016.07\KVE1-Kent-Vale-Housing-Services-2016.07\2022.03-Kent-Vale-NUS-move-E2B\</Path>
+                  <Path Filename="2022.04.21.Thu-KV-house-move-E2B">C:\Users\sppdqlsh\0\Sound\1\Wp\LifePINs\Utilities-2016.07\KVE1-Kent-Vale-Housing-Services-2016.07\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Sound\1\Wp\LifePINs\Utilities-2016.07\KVE1-Kent-Vale-Housing-Services-2016.07\2022.04.21.Thu-KV-house-move-E2B\</Path>
                 </Paths>
               </Entry>
             </History>

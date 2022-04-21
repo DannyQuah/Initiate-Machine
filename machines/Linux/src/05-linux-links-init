@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) linux-links-init // NOT on Windows as ~/0 will connect elsewhere
-# Last-edited: 2022.03.12.1826.Sat -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.04.21.2044.Thu -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % Mon 2020.05.25.0620h -- Danny Quah (me@DannyQuah.com)
@@ -32,7 +32,7 @@ DWMK=~/0/Light/1/t/Writings
 
 ################################
 # Bash
-THE_FILE = "$DBPF"/machines/Bash/Bash-Linux
+THE_FILE="$DBPF"/machines/Bash/Bash-Linux
 if [ -f "$THE_FILE" ]; then
 	## rm -rf ~/.bashrc
   ## ln -s "$THE_FILE" ~/.bashrc
@@ -41,7 +41,7 @@ if [ -f "$THE_FILE" ]; then
 fi
 ################################
 # bin/
-THE_FOLDER = "$DBPF"/machines/Common
+THE_FOLDER="$DBPF"/machines/Common
 if [ -d "$THE_FOLDER" ]; then
   rm -rf ~/bin/Shellsrc ~/bin/update-mydomain ~/bin/recents0
   rm -rf ~/bin/Archive.S1.External ~/bin/cleanAssetFolder ~/bin/bulk-heif
@@ -58,7 +58,7 @@ if [ -d "$THE_FOLDER" ]; then
 ################################
 # Newer linux installations use .config subdirectory for dotfiles
 # DoubleCmd- Linux, Windows differ
-THE_FILE = "$DBPF"/DoubleCmd-Linux
+THE_FILE="$DBPF"/DoubleCmd-Linux
 if [ -f "$THE_FILE" ]; then
 	rm -rf ~/.config/doublecmd
 	mkdir -p ~/.config
@@ -66,7 +66,7 @@ if [ -f "$THE_FILE" ]; then
 fi
 ################################
 # Fonts
-THE_FILE = "$DBNF"/machines/Linux/fonts
+THE_FILE="$DBNF"/machines/Linux/fonts
 if [ -d "$THE_FILE" ]; then
   rm -rf ~/.fonts
   ln -s "$THE_FILE" ~/.fonts
@@ -76,14 +76,14 @@ if [ -d "$THE_FILE" ]; then
 fi
 ################################
 # git
-THE_FILE = "$DBPF"/Config/gitconfig
+THE_FILE="$DBPF"/Config/gitconfig
 if [ -f "$THE_FILE" ]; then
   rm -rf ~/.gitconfig
   ln -s "$THE_FILE" ~/.gitconfig
 fi
 ################################
 # LibreOffice
-THE_FILE = "$DBNF"/Config/libreoffice
+THE_FILE="$DBNF"/Config/libreoffice
 if [ -f "$THE_FILE" ]; then
   rm -rf ~/.config/libreoffice
   ln -s "$THE_FILE" ~/.config/libreoffice
@@ -95,7 +95,7 @@ fi
 # ln -s "$DBNF"/Config/Obsidian-Linux ~/.config/obsidian
 # However, pinnablity on ChromeOS>Linux is needed for Low Density
 # So make it pinnable
-THE_FOLDER = "~/.local/share/applications"
+THE_FOLDER="~/.local/share/applications"
 mkdir -p "$THE_FOLDER"
 ln -s "$DBPF"/machines/Linux/desktop/obsidian.desktop "$THE_FOLDER"/
 
@@ -155,12 +155,12 @@ fi
 # ln -s "$DBPF"/machines/Linux/Config/gtk-3.0/bookmarks ~/.config/gtk-3.0/bookmarks
 ################################
 # X
-THE_XFILE = "$DBPF"/machines/Linux/src/Xmodmap-swapctrlcaps
+THE_XFILE="$DBPF"/machines/Linux/src/Xmodmap-swapctrlcaps
 if [ -f "$THE_XFILE" ]; then
   rm -rf ~/.Xmodmap-swapctrlcaps
   ln -s "$THE_XFILE" ~/.Xmodmap-swapctrlcaps
 fi
-THE_XFILE = "$DBPF"/machines/Linux/src/Xresources
+THE_XFILE="$DBPF"/machines/Linux/src/Xresources
 if [ -f "$THE_XFILE" ]; then
   rm -rf ~/.Xresources
   ln -s "$THE_XFILE" ~/.Xresources
