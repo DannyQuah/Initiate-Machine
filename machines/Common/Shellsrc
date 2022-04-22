@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: 2022.03.31.0832.Thu -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.04.22.1239.Fri -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -101,7 +101,10 @@ export CDPATH=$CDPATH
 # ###############################
 # https://gnunn1.github.io/tilix-web/manual/vteconfig/
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-  source /etc/profile.d/vte.sh
+	if [ -f /etc/profile.d/vte.sh ]; then
+	  source /etc/profile.d/vte.sh
+	elif [ -f /etc/profile.d/vte.csh ]; then
+		source /etc/profile.d/vte.csh
 fi
 # ###############################
 # Since 2021.08 update to "Backup and Sync",
