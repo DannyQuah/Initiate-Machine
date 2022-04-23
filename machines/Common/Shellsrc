@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: 2022.04.24.0632.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.04.24.0646.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -27,7 +27,7 @@
 case "$HOSTNAME" in
 	ltppu15*)
 # VMware but don't see yet a better way to test for it
-		/usr/bin/vmhgfs-fuse .host:/0 /home/dq/0 -o subtype=vmhgfs-fuse,allow_other
+		/usr/bin/vmhgfs-fuse .host:/0 /home/dq/0 -o subtype=vmhgfs-fuse,allow_other,gid=1001,uid=1001
 		;;
 	xbook*)
 		;;
