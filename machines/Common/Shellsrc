@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: 2022.04.22.2335.Fri -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.04.24.0632.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -23,11 +23,23 @@
 # Still need a way to separate when coming in on ssh, whereupon xmodmap
 # not needed anywhere.
 #
+# Branch on machine ----------------------------------------------
+case "$HOSTNAME" in
+	ltppu15*)
+# VMware but don't see yet a better way to test for it
+		/usr/bin/vmhgfs-fuse .host:/0 /home/dq/0 -o subtype=vmhgfs-fuse,allow_other
+		;;
+	xbook*)
+		;;
+	PC1MDCKR*)
+# WIN_DIRS for Ubuntu use under WSL; not needed on real Ubuntu machines
+    WIN_DIRS="/mnt/c/Users/sppdqlsh /mnt/d/dq"
+		;;
+esac
+
 # Branch on OS ---------------------------------------------------
 case "$OSTYPE" in
   linux*)
-# WIN_DIRS for Ubuntu use under WSL; nothing on real Ubuntu machines
-    WIN_DIRS="/mnt/c/Users/sppdqlsh /mnt/d/dq"
     BIN_DIRS="${HOME}/bin ${HOME}/local/bin"
     DC_CONFIG_PATH="${HOME}/0/Scene/1/db0/Config/DoubleCmd-Linux"
 
@@ -53,6 +65,7 @@ case "$OSTYPE" in
     #   export ATOM_HOME="~/.atom"
     ;;
 esac
+
 
 # ###############################
 # Settings

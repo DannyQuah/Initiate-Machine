@@ -2,6 +2,10 @@
 <doublecmd>
   <History>
     <Navigation>
+      <Item>C:\Users\sppdqlsh\Downloads\</Item>
+      <Item>C:\Users\sppdqlsh\0\Board\1\Ww\References\T\The-Economist-2022.04.23-Central-Banks-Special-Report\</Item>
+      <Item>C:\Users\sppdqlsh\0\Board\1\Ww\References\T\</Item>
+      <Item>C:\Users\sppdqlsh\0\Board\1\Ww\References\</Item>
       <Item>C:\Users\sppdqlsh\0\Stage\Photos\Photos-Personal\Time\2021\2021.H2-Southeast-Asia\</Item>
       <Item>C:\Users\sppdqlsh\0\Stage\Photos\Photos-Personal\Time\2021\</Item>
       <Item>C:\Users\sppdqlsh\0\Stage\Photos\Photos-Personal\Time\</Item>
@@ -9,7 +13,6 @@
       <Item>C:\Users\sppdqlsh\0\Stage\Photos\Photos-Personal\Time\2022\2022.H1-Southeast-Asia\</Item>
       <Item>C:\Users\sppdqlsh\0\Stage\Photos\Photos-Personal\</Item>
       <Item>C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\</Item>
-      <Item>C:\Users\sppdqlsh\Downloads\</Item>
       <Item>C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\Quah-D-2022.04-Roles-Evolution-Demand-Supply-MAS-GJC\</Item>
       <Item>C:\Users\sppdqlsh\0\Board\1\Ww\References\Q\</Item>
       <Item>C:\Users\sppdqlsh\0\Light\1\j\GitHub-My-Pages-2021.07\DannyQuah.github.io\docs\Storage\</Item>
@@ -32,7 +35,6 @@
       <Item>C:\Users\sppdqlsh\0\Light\1\t\Writings\Gists\</Item>
       <Item>C:\Users\sppdqlsh\0\Light\1\t\Writings\</Item>
       <Item>C:\Users\sppdqlsh\0\Light\1\t\</Item>
-      <Item>C:\Users\sppdqlsh\0\Board\1\Ww\References\</Item>
       <Item>C:\Users\sppdqlsh\0\Light\1\t\Writings\Quah-D-2019.08-Great-Power-Competition-Marketplace-World-Order\</Item>
       <Item>C:\Users\sppdqlsh\0\Light\1\t\Writings\Quah-D-2019.08-Great-Power-Competition-Marketplace-World-Order\P-Great-Power-Competition\</Item>
       <Item>C:\Users\sppdqlsh\0\tmp\</Item>
@@ -51,8 +53,6 @@
       <Item>C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Item>
       <Item>C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.21.Thu-KV-house-move-E2B\</Item>
       <Item>C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\F\Fukuyama.Francis-2022.04\2022.04.20.1130.Wed-Francis.Fukuyama-Liberalism-Discontents-Zoom\</Item>
-      <Item>C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\F\Fukuyama.Francis-2022.04\</Item>
-      <Item>C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\F\</Item>
     </Navigation>
     <CommandLine>
       <Item>cd ~/0/Scene</Item>
@@ -81,6 +81,7 @@
     <ReplaceText/>
     <ReplaceTextPath/>
     <CreateDirectories>
+      <Item>The-Economist-2022.04.23-Central-Banks-Special-Report</Item>
       <Item>2022.04.23.1200-WT.Cheah-Old-Frees-lunch-Windsor-Arms-British-Club</Item>
       <Item>Fukuyama.Francis-2022.04</Item>
       <Item>Issing-Otmar-2021.12-Central-Banks-Independent-Almighty-OMFIF</Item>
@@ -100,7 +101,6 @@
       <Item>Wachtel-P-Blejer-M-2020-Fresh-Look-Central-Bank-Independence-Cato</Item>
       <Item>Walsh-C-2005.12-Central-Bank-Independence-Palgrave-Dictionary</Item>
       <Item>2022.02.22.1630.Tue-Naniek.Yuliati-HoA-followup-OTH.DO</Item>
-      <Item>2022.04.13.2230.Wed.World50-Summit-Supply-Chain-50-Zoom</Item>
     </CreateDirectories>
     <RenameNameMask>
       <Item>[N]</Item>

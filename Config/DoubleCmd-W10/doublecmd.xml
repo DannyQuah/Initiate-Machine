@@ -852,7 +852,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.20.2100.Wed-NOT-ATTENDING-APSIA-EXCO-Zoom\</Path>
                   <Path Filename="2022.04.18.1600.Mon-Evelyn.Chng-Gift-Proposal-Oei.Hong_Leong-OTH.DO">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
                   <Path Filename="2022.04.18.1600.Mon-Evelyn.Chng-Gift-Proposal-Oei.Hong_Leong-OTH.DO.md">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.04.18.1600.Mon-Evelyn.Chng-Gift-Proposal-Oei.Hong_Leong-OTH.DO\</Path>
                   <Path Filename="2022.04.21.Thu-KV-house-move">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
@@ -902,6 +901,7 @@
                   <Path Filename="2021">C:\Users\sppdqlsh\0\Stage\Photos\Photos-Personal\Time\</Path>
                   <Path Filename="2021.H2-Southeast-Asia">C:\Users\sppdqlsh\0\Stage\Photos\Photos-Personal\Time\2021\</Path>
                   <Path Filename="..">C:\Users\sppdqlsh\0\Stage\Photos\Photos-Personal\Time\2021\2021.H2-Southeast-Asia\</Path>
+                  <Path Filename="Screenshot 2022-01-14 135854.jpg">C:\Users\sppdqlsh\Downloads\</Path>
                 </Paths>
               </Entry>
             </History>
@@ -986,9 +986,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\APSIA-2018.01\</Path>
-                  <Path Filename="Advancement-Development-LKYSPP">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\</Path>
-                  <Path Filename="Donor-Cultivation-2021.05">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\Advancement-Development-LKYSPP\</Path>
                   <Path Filename="..">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\Advancement-Development-LKYSPP\Donor-Cultivation-2021.05\</Path>
                   <Path Filename="Donor-Cultivation-2021.05">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\Advancement-Development-LKYSPP\</Path>
                   <Path Filename="S">C:\Users\sppdqlsh\0\Board\1\Ww\People-Groups-Confidential\</Path>
@@ -1036,6 +1033,9 @@
                   <Path Filename="2022.04-Danny.Quah-Roles-Evolution-Demand-Supply-MAS.pdf">C:\Users\sppdqlsh\0\Light\1\j\GitHub-My-Pages-2021.07\DannyQuah.github.io\docs\Storage\</Path>
                   <Path Filename="A_RES_3201(S-VI)-EN.pdf">C:\Users\sppdqlsh\Downloads\</Path>
                   <Path Filename="Templates">C:\Users\sppdqlsh\0\Props\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="T">C:\Users\sppdqlsh\0\Board\1\Ww\References\</Path>
+                  <Path Filename="The-Economist-2022.04.23-Central-Banks-Special-Report">C:\Users\sppdqlsh\0\Board\1\Ww\References\T\</Path>
+                  <Path Filename="The curse of being too competent _ The Economist.pdf">C:\Users\sppdqlsh\0\Board\1\Ww\References\T\The-Economist-2022.04.23-Central-Banks-Special-Report\</Path>
                 </Paths>
               </Entry>
             </History>
