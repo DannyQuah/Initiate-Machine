@@ -933,6 +933,15 @@
         <FrameStyle>0</FrameStyle>
         <FrameEdges>1</FrameEdges>
       </Attribute>
+      <Attribute Name="Procedure header name">
+        <Style>0</Style>
+        <StyleMask>0</StyleMask>
+        <Foreground>536870911</Foreground>
+        <Background>536870911</Background>
+        <FrameColor>536870911</FrameColor>
+        <FrameStyle>0</FrameStyle>
+        <FrameEdges>1</FrameEdges>
+      </Attribute>
       <Attribute Name="Reserved word">
         <Style>1</Style>
         <StyleMask>0</StyleMask>

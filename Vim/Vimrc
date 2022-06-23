@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2022.04.16.1301.Sat -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.05.29.1453.Sun -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -238,7 +238,8 @@ let @h='j0i| f:ls | A |'
 
 let @t="?from:A\n| :-- | :-- |"
                                " Gmail header second row; after all @h 
-
+let @a='jA  '
+" Append two spaces at the end of line that follows 
 " Time, templates ----------------------------------------------
 iabbrev iDQ@ -- Danny Quah (me@DannyQuah.com)
                                "Insert-my-email-signature
@@ -391,7 +392,7 @@ augroup dqFilesFoldersGrp
   autocmd BufNewFile *.R   0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-R-template.R
   autocmd BufNewFile *.tex 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-tex-template.tex
   autocmd BufNewFile *.py  0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header.py
-  autocmd BufNewFile *.bat 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header.bat
+  autocmd BufNewFile *.bat 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-bat-template.bat
   autocmd BufNewFile *.md silent execute "%! ".$HOME."/0/Scene/1/db0/Vim/bin/yaml-head-md.py"
 
 "If too many markdown files that I don't need the YAML header each time,

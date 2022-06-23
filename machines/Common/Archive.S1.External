@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 # @(#) bin/Archive.S1.External -> 0/Scene/1/db0/machines/Common/
-# Last-edited: 2022.04.16.0736.Sat -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.05.15.1106.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
-# -p archives pbook into Samsung-1TB-HD-2015.12.md
 # -l archives lbook into WD-My-Passport-Ultra-2Tb-2016.07 (use WSL, not MSYS)
 # -[n|a] no-op, just list OR action
+# -p archives pbook into Samsung-1TB-HD-2015.12.md (retired)
 #
 #    On lbook if /mnt/e not already mounted or available, first unlock
 #    BitLocker-protected external drive onto E:, then open WSL:

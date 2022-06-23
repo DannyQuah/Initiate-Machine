@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: 2022.04.24.0646.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.06.19.0716.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -27,7 +27,13 @@
 case "$HOSTNAME" in
 	ltppu15*)
 # VMware but don't see yet a better way to test for it
-		/usr/bin/vmhgfs-fuse .host:/0 /home/dq/0 -o subtype=vmhgfs-fuse,allow_other,gid=1001,uid=1001
+# Might move to /etc/fstab but then there won't be an obvious record
+		# used to have 00-VMw-connect-fs-hack contents here but
+		# replaced with /etc/fstab entry
+		# if [ ! -d ~/0/Light ]; then
+			# ~/00-VMw-connect-fs-hack
+			# no-op
+		# fi
 		;;
 	xbook*)
 		;;
@@ -40,7 +46,9 @@ esac
 # Branch on OS ---------------------------------------------------
 case "$OSTYPE" in
   linux*)
-    BIN_DIRS="${HOME}/bin ${HOME}/local/bin"
+    BIN_DIRS="${HOME}/local/bin /usr/local/texlive/2022/bin/x86_64-linux"
+    MANPATH=$MANPATH:"/usr/local/texlive/2022/texmf-dist/doc/man"
+    INFOPATH=$INFOPATH:"/usr/local/texlive/2022/texmf-dist/doc/info"
     DC_CONFIG_PATH="${HOME}/0/Scene/1/db0/Config/DoubleCmd-Linux"
 
 # Keyboard -------------------------------------------------------
@@ -174,8 +182,10 @@ alias l='ls -CF'
 # alias Largest='find -L . -type f -printf "%s %p\n" | sort -nr | head -20'
 
 alias trash='zip -m9or ${TMPDIR}/dq-trash $@'
-alias notabs-dq='sed -ie "s/\t//g" $@'
+# alias notabs-dq='sed -ie "s/\t//g" $@'
 alias tabscomma='sed "s/\t/,/g" $@'
+# find files containing text from this directory
+alias greptextf='grep --exclude-dir={.git} -rnw . -e $@'
 # clean find from root avoiding directories that aren't relevant
 alias cleanrootfind='find / -type d \( -name "proc" -o -name "var" -o -name "run" -o -name "dev" -o -name "tmp" \) -prune -o'
 # grep md files recursively from current directory

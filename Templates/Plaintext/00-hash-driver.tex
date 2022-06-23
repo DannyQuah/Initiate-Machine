@@ -1,0 +1,113 @@
+% @(#) 00-hash-driver.tex: theDedicatedFolderName
+% Last-edited: 2022.06.12.2245.Sun -- Danny Quah (me@DannyQuah.com)
+% $
+% Revision History:
+%  % 2022.06.10.2223.Fri -- Danny Quah (me@DannyQuah.com)
+%    First draft - from Templates/Plaintext/00-hash-driver.tex
+% $
+% $Log$
+%
+\documentclass[%
+ %nohyper,% Otherwise title and author are metadata and cannot contain \\
+ 12pt,% No-op if tufte-book
+ %preprint,% ELS, not used AEA
+ %1p,% ELS, not used AEA
+ authoryear,% ELS, not used AEA
+ %AER,% AEA default
+ %draftmode,%finalmode,%reviewmode,% AEA
+ %%
+ %letterpaper%
+ a4paper%
+ %b5paper
+]%
+{article}
+%{elsarticle} % Elsevier
+%{cje} % CJE
+%{AEA}
+%{amsart}
+%{scrbook}
+%{memoir}
+%{tufte-book}
+%
+\usepackage{
+ %verbatim,%		% Verbatim, comments, etc.
+ ifthen,%		% Obsolete package for conditionals
+ etoolbox,%     % Modern if-then handling
+ amsmath,%amstex,%	% Math (v1.2++ uses amsmath)
+ amsfonts,% Frak
+ amssymb,%		% Additional ams symbols
+ euscript,%		% \EuScript (Euler script)
+ gensymb,%             % \degree
+ graphicx,%             % PS figures and graphics
+ grffile,%              % filenames for \includegraphics
+ array,%		% For \PBS etc., in tabular
+ tabularx,%
+ %supertabular,%
+ multirow,%		%
+ %booktabs,%
+ tikz,%
+ fancyhdr,%
+}
+%% concmath and eulervm cannot be used together
+\usepackage[boldsans]{ccfonts} \usepackage{concmath}% OR
+%\usepackage{ccfonts, concmath}% OR
+%\usepackage[boldsans]{ccfonts} \usepackage{eulervm}
+%%
+\input{qamsthm-w-check}
+\usepackage{% My own
+ localfiles,%           % Directory info on local files
+ deflmath,%		% Own LaTeX math defines
+ defs-world-order,% % World Order book
+ defs-geogr,%    % geography_L
+ defl%			% Own LaTeX defines
+}
+\usepackage[gen]{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Bibliography package and style
+\newtoggle{bReferences} \togglefalse{bReferences}
+% \toggletrue{bReferences} \usepackage[round,sort]{natbib}
+%\usepackage{hyperref}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DQ documentclass dependencies
+\usepackage{qdoc-class-deps}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{code/defs} % Local directory definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title page data
+\input{code/00-titlepage-data}
+%% %%%%%%%%%%%%%%%%
+%% End prologue ...
+%% %%%%%%%%%%%%%%%%
+%% \includeonly{%
+%%  code/01-Introduction,%
+%%  code/02-Market-for-World-Order,%
+%%  code/08-Technical-Appendix%
+%% } % for only checking out chapter-specific changes
+%% %%%%%%%%%%%%%%%%
+\begin{document}
+%%
+\input{qfront-matter}
+%% Paper contents begin here
+% \setcounter{section}{-1}
+\input{code/01-Introduction}
+%% \input{code/02-Quick-Findings}
+%% \input{code/03-Related-Literature}
+%% \input{code/04-Results-Growth-Mobility-Inequality}
+%% \input{code/05-Political-Upheaval}
+%% \input{code/06-Conclusion}
+% \clearpage
+%% \input{code/07-Technical-Appendix}
+%% %
+\iftoggle{bReferences}{
+  \input{qrefs}
+  \bibliography{library-DQ}
+  \input{qback-matter}
+}{\relax}
+\end{document}
+%
+% ^L
+% Local Variables:
+% mode: TeX
+% end:
+% eof 00-hash-driver.tex

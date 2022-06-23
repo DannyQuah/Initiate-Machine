@@ -1,6 +1,6 @@
 ---
 fileName: README.md
-# Last-edited: 2022.04.24.0601.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.06.11.0633.Sat -- Danny Quah (me@DannyQuah.com)
 Type: Notes
 Tags: Software, git, GitHub, Linux
 # Created: Fri 2021.12.31.1615 -- Danny Quah (me@DannyQuah.com)
@@ -8,7 +8,6 @@ Tags: Software, git, GitHub, Linux
 output: pdf_document
 title: Initiate Machine README
 ---
-# 
 This repo initiates a machine with shell scripts, dotfiles, Linux installations, editor configurations, templates, stylesheets, and so on.  Barebones, it can be used to kickstart iSH on iOS, Termux on Android, Linux Beta on ChromeOS, or larger.  
 
 If this repo is already in place locally, just run  
