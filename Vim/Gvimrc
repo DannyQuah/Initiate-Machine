@@ -1,5 +1,5 @@
 " @(#) Vim/Gvimrc <- ~/.gvimrc
-" Last-edited: 2022.05.26.1452.Thu -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.07.22.1206.Fri -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sun 2020.07.19.0745 -- Danny Quah (me@DannyQuah.com)
@@ -42,14 +42,14 @@ set t_vb=
 " related characters  
 " Input fontspec with :put =&guifont
    if WINDOWS()
-    "set guifont=Consolas:h10:cANSI:qDRAFT
+    set guifont=Consolas:h10:cANSI:qDRAFT
     "set guifont=Noto_Mono:h9:cANSI:qDRAFT
     "set guifont=Cascadia_Mono:h9:cANSI:qDRAFT
     "set guifont=Cascadia_Code:h9:cANSI:qDRAFT
     "set guifont=Lucida_Sans_Typewriter:h9:cANSI:qDRAFT
     "set guifont=Liberation_Mono:h9:cANSI:qDRAFT
     "set guifont=DejaVu_Sans_Mono:h9:cANSI:qDRAFT
-    set guifont=Source_Code_Pro:h9:cANSI:qDRAFT
+    "set guifont=Source_Code_Pro:h9:cANSI:qDRAFT
   elseif CHROMEOS()
     "set guifont=Consolas\ Regular\ 17
     "set guifont=Cousine\ Regular\ 17
@@ -60,7 +60,13 @@ set t_vb=
     "set guifont=Source\ Code\ Pro\ 17
   else
     "set guifont=Inconsolata\ 10
-    set guifont=Liberation\ Mono\ 9
+    set guifont=Ubuntu\ Mono\ Regular\ 10
+		"set guifont=Noto\ Mono\ Regular\ 9
+		"set guifont=Monospace\ Regular\ 9
+    "set guifont=Liberation\ Mono\ 9
+		"set guifont=Go\ Mono\ Regular\ 9
+		"set guifont=Freemono\ Regular\ 9
+		"set guifont=Fira\ Code\ Regular\ 9
     "set guifont=DejaVu\ Sans\ Mono\ 9
     "set guifont=Source\ Code\ Pro\ 9
     "set guifont=Cousine\ Regular\ 9

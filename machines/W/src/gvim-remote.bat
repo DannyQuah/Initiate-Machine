@@ -1,5 +1,5 @@
 :: @(#) gvim-remote.bat
-:: Last-edited: Tue 2021.03.30.0709 -- Danny Quah (me@DannyQuah.com)
+:: Last-edited: 2022.08.22.1220.Mon -- Danny Quah (me@DannyQuah.com)
 :: ----------------------------------------------------------------
 :: $
 :: Revision History:
@@ -12,7 +12,7 @@
 :: ----------------------------------------------------------------
 ::
 IF %1.==. GOTO No1
-"C:\Program Files (x86)\Vim\vim82\gvim.exe" --remote-silent %*  
+"C:\Program Files (x86)\Vim\vim90\gvim.exe" --remote-silent %*  
 GOTO End1
 
 :No1

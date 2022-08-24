@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2022.05.29.1453.Sun -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.08.14.1602.Sun -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -390,11 +390,13 @@ augroup dqFilesFoldersGrp
 " https://www.tecmint.com/create-custom-header-template-for-shell-scripts-in-vim/
   autocmd BufNewFile *.txt 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-custom-header.txt
   autocmd BufNewFile *.R   0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-R-template.R
-  autocmd BufNewFile *.tex 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-tex-template.tex
   autocmd BufNewFile *.py  0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header.py
   autocmd BufNewFile *.bat 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-bat-template.bat
-  autocmd BufNewFile *.md silent execute "%! ".$HOME."/0/Scene/1/db0/Vim/bin/yaml-head-md.py"
 
+" Moved to Obsidian Templates:
+"  autocmd BufNewFile *.md silent execute "%! ".$HOME."/0/Scene/1/db0/Vim/bin/yaml-head-md.py"
+" autocmd BufNewFile *.tex 0r ~/0/Scene/1/db0/Templates/Plaintext/tex-template.tex  
+"
 "If too many markdown files that I don't need the YAML header each time,
 "then comment out the previous line
 
@@ -657,8 +659,8 @@ let g:bullets_checkbox_partials_toggle=0
   "colorscheme dracula 
   "colorscheme badwolf
   "colorscheme hyper-snazzy
-  colorscheme inkpot
-  "colorscheme jellybeans
+  "colorscheme inkpot
+  colorscheme jellybeans
   "colorscheme vim-one
   "colorscheme tender
 
