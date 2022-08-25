@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Bash/Bash-dispatcher
-# Last-edited: 2022.08.25.1542.Thu -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.08.25.1547.Thu -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sun 2020.07.19.1458 -- Danny Quah (me@DannyQuah.com)
@@ -148,6 +148,7 @@ fi
 # ################################
 # git use - extract from oh-my-zsh git plugin
 alias gitcred="git config --global credential.helper 'cache --timeout=3600'"
+alias gitremote="git remote update"
 alias ga="git add"
 # alias gaa="git add --all"
 # alias gcam="git commit -a -m"

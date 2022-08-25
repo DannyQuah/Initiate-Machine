@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 # @(#) $HOMESCENE/1/db0/machines/Bash/Bash-Linux -> .bashrc
-# Last-edited: 2022.05.15.1519.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.08.25.1554.Thu -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Fri 2016.02.26.1457 -- Danny Quah (dquah@LSE039102)
@@ -25,7 +25,10 @@ elif [ -f ~/.bash-dispatcher ]; then
   source ~/.bash-dispatcher
 fi
 
-xrdb ~/.Xresources
+if hash xrdb 2>/dev/null; then
+	xrdb ~/.Xresources
+fi
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Local Variables:
