@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) pathogen-bundles
-# Last-edited: 2022.03.12.1650.Sat -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.08.25.1338.Thu -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sun 2022.01.02.0851 -- Danny Quah (me@DannyQuah.com)
@@ -41,8 +41,8 @@ git clone --depth 1 https://github.com/godlygeek/tabular
 # rm -rf timestamp
 # git clone --depth 1 https://github.com/vim-scripts/timestamp.vim
 
-rm -rf vim-easymotion
-git clone --depth 1 https://github.com/easymotion/vim-easymotion
+# rm -rf vim-easymotion
+# git clone --depth 1 https://github.com/easymotion/vim-easymotion
 
 rm -rf vim-markdown
 git clone --depth 1 https://github.com/plasticboy/vim-markdown
