@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) pathogen-bundles
-# Last-edited: 2022.08.25.1338.Thu -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.08.25.1543.Thu -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sun 2022.01.02.0851 -- Danny Quah (me@DannyQuah.com)
@@ -17,7 +17,7 @@
 mkdir -p ~/.vim/bundle
 cd ~/.vim/bundle
 
-rm -rf bullets
+rm -rf bullets.vim
 git clone --depth 1 https://github.com/dkarter/bullets.vim
 
 rm -rf csapprox
@@ -73,7 +73,6 @@ git clone --depth 1 https://github.com/ciaranm/inkpot
 rm -rf jellybeans.vim
 git clone --depth 1 https://github.com/nanotech/jellybeans.vim
 
-
 rm -rf vim-monokai
 git clone --depth 1 https://github.com/sickill/vim-monokai
 
@@ -88,9 +87,6 @@ git clone --depth 1 https://github.com/henrynewcomer/vim-theme-papaya
 
 rm -rf tender
 git clone --depth 1 https://github.com/jacoborus/tender
-
-
-
 
 # rm -rf dracula_theme
 # git clone --depth 1 https://github.com/dracula/dracula-theme

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Bash/Bash-dispatcher
-# Last-edited: Thu 2022.01.13.0005 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.08.25.1542.Thu -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sun 2020.07.19.1458 -- Danny Quah (me@DannyQuah.com)
@@ -20,8 +20,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=500
+HISTFILESIZE=1000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -149,8 +149,8 @@ fi
 # git use - extract from oh-my-zsh git plugin
 alias gitcred="git config --global credential.helper 'cache --timeout=3600'"
 alias ga="git add"
-alias gaa="git add --all"
-alias gcam="git commit -a -m"
+# alias gaa="git add --all"
+# alias gcam="git commit -a -m"
 alias gcmsg="git commit -m"
 alias gp='git push'
 alias gpd='git push --dry-run'
