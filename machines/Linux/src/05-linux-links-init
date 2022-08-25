@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
-# @(#) linux-links-init // NOT on Windows as ~/0 will connect elsewhere
-# Last-edited: 2022.08.07.1729.Sun -- Danny Quah (me@DannyQuah.com)
+# @(#) 05-linux-links-init // NOT on Windows as ~/0 will connect elsewhere
+# Last-edited: 2022.08.25.1333.Thu -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % 2020.05.25.0620.Mon -- Danny Quah (me@DannyQuah.com)
@@ -168,16 +168,8 @@ if [ -f "$THE_XFILE" ]; then
   ln -s "$THE_XFILE" ~/.Xresources
 fi
 ################################
-# Zsh
-if [ -f "$DBPF"/machines/Zsh/Zshrc ]; then
-  rm -rf ~/.zshrc
-  ln -s "$DBPF"/machines/Zsh/Zshrc ~/.zshrc
-# Each machine now has its own oh-my-zsh
-# rm -rf ~/.local/share/oh-my-zsh 
-# mkdir -p ~/.local/share/oh-my-zsh
-# ln -s "$DBPF"/machines/Zsh/oh-my-zsh ~/.local/share/oh-my-zsh
-fi
-#
+
+
 
 ################################
 # Below no longer in use
@@ -196,5 +188,14 @@ fi
 # cd .atom
 # ln -s ~/0/Scene/1/db/Atom/keymap.cson .
 ################################
-
-# eof linux-links-init
+# Zsh - I don't use this any more  
+# if [ -f "$DBPF"/machines/Zsh/Zshrc ]; then
+#   rm -rf ~/.zshrc
+#   ln -s "$DBPF"/machines/Zsh/Zshrc ~/.zshrc
+# Each machine now has its own oh-my-zsh
+# rm -rf ~/.local/share/oh-my-zsh 
+# mkdir -p ~/.local/share/oh-my-zsh
+# ln -s "$DBPF"/machines/Zsh/oh-my-zsh ~/.local/share/oh-my-zsh
+# fi
+#
+# eof 05-linux-links-init

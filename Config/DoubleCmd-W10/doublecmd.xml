@@ -406,8 +406,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>1938</Left>
-      <Top>136</Top>
+      <Left>2006</Left>
+      <Top>116</Top>
       <Width>1542</Width>
       <Height>838</Height>
       <PixelsPerInch>96</PixelsPerInch>
@@ -719,7 +719,7 @@
     <ActionOnDoubleClick>2</ActionOnDoubleClick>
     <OpenedTabs>
       <Left>
-        <ActiveTab>0</ActiveTab>
+        <ActiveTab>1</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -924,16 +924,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="2022.07.13.1130.Wed-George.Yeo-talk-LKYSPP-donors-OTH.L">D:\home\dq\0\Stage\Photos\Photos-Work\2022\</Path>
-                  <Path Filename="2022.07.13.Wed-160-GY-DQ-standing.jpg">D:\home\dq\0\Stage\Photos\Photos-Work\2022\2022.07.13.1130.Wed-George.Yeo-talk-LKYSPP-donors-OTH.L\</Path>
-                  <Path Filename="2022.07.13.1130.Wed-George.Yeo-talk-LKYSPP-donors-OTH.L">D:\home\dq\0\Stage\Photos\Photos-Work\2022\</Path>
-                  <Path Filename="2019">D:\home\dq\0\Stage\Photos\Photos-Work\</Path>
-                  <Path Filename="2019.08.05-SERC-Mandarin-Orchard">D:\home\dq\0\Stage\Photos\Photos-Work\2019\</Path>
-                  <Path Filename="2019.08.05-SERC-Mandarin-Orchard-panel-Euston.Quah-Jack.Knetsch-DQ.jpeg">D:\home\dq\0\Stage\Photos\Photos-Work\2019\2019.08.05-SERC-Mandarin-Orchard\</Path>
-                  <Path Filename="2019.08.05-SERC-Mandarin-Orchard">D:\home\dq\0\Stage\Photos\Photos-Work\2019\</Path>
-                  <Path Filename="2022">D:\home\dq\0\Stage\Photos\Photos-Work\</Path>
-                  <Path Filename="2022.H2-Southeast-Asia">D:\home\dq\0\Stage\Photos\Photos-Work\2022\</Path>
-                  <Path Filename="2022.08.17.1815.Wed-ESS-Annual-Dinner-Hilton-Orchard-Quahs-Euston-John-D.jpeg">D:\home\dq\0\Stage\Photos\Photos-Work\2022\2022.H2-Southeast-Asia\</Path>
                   <Path Filename="Official-Documents">D:\home\dq\0\Floor\1\t\Personal\</Path>
                   <Path Filename="DQ">D:\home\dq\0\Floor\1\t\Personal\Official-Documents\</Path>
                   <Path Filename="NRIC-SG-DQ-01-2022.02-camera.jpg">D:\home\dq\0\Floor\1\t\Personal\Official-Documents\DQ\</Path>
@@ -965,12 +955,16 @@
                   <Path Filename="SK-FAR2022_ForDiscussion.docx">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\K\Kadir.Suzaina-2018.05\2022.08.23.1000.Tue-FAR-Suzaina.Kadir-OTH.DO\</Path>
                   <Path Filename="2022.08.23.1000.Tue-FAR-Suzaina.Kadir-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\K\Kadir.Suzaina-2018.05\</Path>
                   <Path Filename="Kadir.Suzaina-2018.05">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\K\</Path>
-                  <Path Filename="M">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\</Path>
-                  <Path Filename="Mancini.Francesco-2016.08">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\M\</Path>
-                  <Path Filename="2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\M\Mancini.Francesco-2016.08\</Path>
-                  <Path Filename="2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO.md">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\M\Mancini.Francesco-2016.08\2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO\</Path>
-                  <Path Filename="2022.08.23.1400.Tue-SCM-Zoom">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="sc 12 2022 - item 4 - fy2021 financial report (slides).pptx">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.08.23.1400.Tue-SCM-Zoom\</Path>
+                  <Path Filename="C">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\</Path>
+                  <Path Filename="Cashore.Ben-2018.05">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\</Path>
+                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\Cashore.Ben-2018.05\</Path>
+                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO.md">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\Cashore.Ben-2018.05\2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO\</Path>
+                  <Path Filename="Telegram Desktop">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="Quah-D-2022.01-Obsidian-iPad-syncing-via-iSH-git">D:\home\dq\0\Board\1\Ww\References\Q\</Path>
+                  <Path Filename="Quah-D-2022.01-Obsidian-iPad-syncing-via-iSH-git.md">D:\home\dq\0\Board\1\Ww\References\Q\Quah-D-2022.01-Obsidian-iPad-syncing-via-iSH-git\</Path>
+                  <Path Filename="Quah-D-2022.01-Obsidian-iPad-syncing-via-iSH-git">D:\home\dq\0\Board\1\Ww\References\Q\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\OneDrive\iPad-OneDrive-Synced-Documents\</Path>
+                  <Path Filename="Physical-Data-DQ.ods">D:\home\dq\0\Floor\1\t\Personal\</Path>
                 </Paths>
               </Entry>
             </History>
@@ -1055,7 +1049,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">C:\Users\sppdqlsh\OneDrive\1\</Path>
                   <Path Filename="local">C:\Users\sppdqlsh\OneDrive\</Path>
                   <Path Filename="db">C:\Users\sppdqlsh\OneDrive\local\</Path>
                   <Path Filename="Office_Templates">C:\Users\sppdqlsh\OneDrive\local\db\</Path>
@@ -1105,6 +1098,7 @@
                   <Path Filename="Rudd.Kevin-2011.02">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\R\</Path>
                   <Path Filename="2022.08.19.1700.Fri-Kevin.Rudd-Avoidable-War-EAI">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\R\Rudd.Kevin-2011.02\</Path>
                   <Path Filename="EAI-Webinar-Banner-KevinRuddBookEvent.jpg">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\R\Rudd.Kevin-2011.02\2022.08.19.1700.Fri-Kevin.Rudd-Avoidable-War-EAI\</Path>
+                  <Path Filename="diary">D:\home\dq\0\Sound\1\Wp\</Path>
                 </Paths>
               </Entry>
             </History>
@@ -1186,56 +1180,56 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="Dinner Menu.pdf">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\2022.08.11.1830.Thu-PWAC-pre-meeting-dinner-East-Treasure\</Path>
-                  <Path Filename="2022.08.11.1830.Thu-PWAC-pre-meeting-dinner-East-Treasure">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\</Path>
-                  <Path Filename="PWAC-MOM-2021.08">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\</Path>
-                  <Path Filename="Platform-Companies-Workers-Responses-2022.06">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\</Path>
-                  <Path Filename="src">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\Platform-Companies-Workers-Responses-2022.06\</Path>
-                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\Platform-Companies-Workers-Responses-2022.06\src\</Path>
-                  <Path Filename="src">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\Platform-Companies-Workers-Responses-2022.06\</Path>
-                  <Path Filename="Platform-Companies-Workers-Responses-2022.06">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\</Path>
-                  <Path Filename="src">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\Platform-Companies-Workers-Responses-2022.06\</Path>
-                  <Path Filename="code">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\Platform-Companies-Workers-Responses-2022.06\src\</Path>
-                  <Path Filename="02-Policy-Issues.tex">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\Platform-Companies-Workers-Responses-2022.06\src\code\</Path>
-                  <Path Filename="PWAC-MOM-2021.08">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\</Path>
-                  <Path Filename="Platform-Companies-Workers-Responses-2022.06">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\</Path>
-                  <Path Filename="src">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\Platform-Companies-Workers-Responses-2022.06\</Path>
-                  <Path Filename="code">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\Platform-Companies-Workers-Responses-2022.06\src\</Path>
-                  <Path Filename="defs.tex">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PWAC-MOM-2021.08\Platform-Companies-Workers-Responses-2022.06\src\code\</Path>
-                  <Path Filename="Express-Highlights">C:\Users\sppdqlsh\Downloads\</Path>
-                  <Path Filename="diary">D:\home\dq\0\Sound\1\Wp\</Path>
-                  <Path Filename="2022.08.19.1300.Fri-FAR-Sanjana.Goswami-OTH.DO">D:\home\dq\0\Board\1\FAR-AY2021-2022\</Path>
-                  <Path Filename="CHRS - Self Appraisal (Sanjana G).pdf">D:\home\dq\0\Board\1\FAR-AY2021-2022\2022.08.19.1300.Fri-FAR-Sanjana.Goswami-OTH.DO\</Path>
-                  <Path Filename="2022.08.18.0900.Thu-FAR-Reuben.Ng-OTH.DO">D:\home\dq\0\Board\1\FAR-AY2021-2022\</Path>
-                  <Path Filename="..">D:\home\dq\0\Board\1\FAR-AY2021-2022\2022.08.18.0900.Thu-FAR-Reuben.Ng-OTH.DO\</Path>
-                  <Path Filename="..">D:\home\tmp\</Path>
-                  <Path Filename="tmp">D:\home\</Path>
-                  <Path Filename="Quah-D-2022.xx-Not-Zero-Sum-Alternate-World-Orders">C:\Users\sppdqlsh\OneDrive\iPad-OneDrive-Synced-Documents\</Path>
-                  <Path Filename="..">D:\home\tmp\</Path>
-                  <Path Filename="dq">D:\home\</Path>
-                  <Path Filename="1">D:\home\dq\</Path>
-                  <Path Filename="Store">D:\home\dq\1\</Path>
-                  <Path Filename="..">D:\home\dq\1\Store\</Path>
-                  <Path Filename="Downloads">D:\home\dq\1\</Path>
-                  <Path Filename="gvim90.exe">D:\home\dq\1\Downloads\</Path>
-                  <Path Filename="Boxes.odt">C:\Users\sppdqlsh\OneDrive\iPad-OneDrive-Synced-Documents\</Path>
-                  <Path Filename="2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO">D:\home\dq\0\Board\1\FAR-AY2021-2022\</Path>
-                  <Path Filename="CHRS - Goal Plan (Francesco M).pdf">D:\home\dq\0\Board\1\FAR-AY2021-2022\2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO\</Path>
-                  <Path Filename="2022.08.22.1400.Mon-FAR-Ed.Araral-OTH.DO">D:\home\dq\0\Board\1\FAR-AY2021-2022\</Path>
-                  <Path Filename="MAP AY2021-22 Education  (Eduardo A).xlsx">D:\home\dq\0\Board\1\FAR-AY2021-2022\2022.08.22.1400.Mon-FAR-Ed.Araral-OTH.DO\</Path>
-                  <Path Filename="2022.08.22.1400.Mon-FAR-Ed.Araral-OTH.DO">D:\home\dq\0\Board\1\FAR-AY2021-2022\</Path>
-                  <Path Filename="FAR-AY2021-2022">D:\home\dq\0\Board\1\</Path>
-                  <Path Filename="2022.08.23.1000.Tue-FAR-Suzaina.Kadir-OTH.DO">D:\home\dq\0\Board\1\FAR-AY2021-2022\</Path>
-                  <Path Filename="..">D:\home\dq\0\Board\1\FAR-AY2021-2022\2022.08.23.1000.Tue-FAR-Suzaina.Kadir-OTH.DO\</Path>
-                  <Path Filename="2022.08.23.1000.Tue-FAR-Suzaina.Kadir-OTH.DO">D:\home\dq\0\Board\1\FAR-AY2021-2022\</Path>
-                  <Path Filename="..">D:\home\dq\0\Board\1\FAR-AY2021-2022\2022.08.23.1000.Tue-FAR-Suzaina.Kadir-OTH.DO\</Path>
-                  <Path Filename="2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO">D:\home\dq\0\Board\1\FAR-AY2021-2022\</Path>
-                  <Path Filename="2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO.md">D:\home\dq\0\Board\1\FAR-AY2021-2022\2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO\</Path>
-                  <Path Filename="Boxes">D:\home\dq\0\Board\1\Ww\Machines\</Path>
-                  <Path Filename="Apple-iPad-Pro-1G-10.5-2017.08">D:\home\dq\0\Board\1\Ww\Machines\Boxes\</Path>
-                  <Path Filename="Boxes">D:\home\dq\0\Board\1\Ww\Machines\</Path>
-                  <Path Filename="2022.08.19.1900.Fri-Oei.Hong_Leong-TEC-dinner-Raffles-Club">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="Donor Brief on Mr Oei Hong Leong - 20220418.pdf">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.08.19.1900.Fri-Oei.Hong_Leong-TEC-dinner-Raffles-Club\</Path>
+                  <Path Filename="M">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\</Path>
+                  <Path Filename="Mancini.Francesco-2016.08">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\M\</Path>
+                  <Path Filename="2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\M\Mancini.Francesco-2016.08\</Path>
+                  <Path Filename="2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO.md">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\M\Mancini.Francesco-2016.08\2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO\</Path>
+                  <Path Filename="2022.08.22.1700.Mon-FAR-Francesco.Mancini-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\M\Mancini.Francesco-2016.08\</Path>
+                  <Path Filename="Mancini.Francesco-2016.08">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\M\</Path>
+                  <Path Filename="2017.06.20-KM-re-Donald.Low.jpg">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\M\Mancini.Francesco-2016.08\</Path>
+                  <Path Filename="Mancini.Francesco-2016.08">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\M\</Path>
+                  <Path Filename="L">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\</Path>
+                  <Path Filename="Low.Donald-2014">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\L\</Path>
+                  <Path Filename="2018.01-Donald.Low">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\L\Low.Donald-2014\</Path>
+                  <Path Filename="..">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\L\Low.Donald-2014\2018.01-Donald.Low\</Path>
+                  <Path Filename="2018.01-Donald.Low">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\L\Low.Donald-2014\</Path>
+                  <Path Filename="Low.Donald-2014">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\L\</Path>
+                  <Path Filename="B">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\</Path>
+                  <Path Filename="Bajpai.Kanti-2018.02">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\</Path>
+                  <Path Filename="2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\Bajpai.Kanti-2018.02\</Path>
+                  <Path Filename="MAP AY2021-22 Education (Kanti B).xlsx">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\Bajpai.Kanti-2018.02\2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO\</Path>
+                  <Path Filename="2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\Bajpai.Kanti-2018.02\</Path>
+                  <Path Filename="Bajpai.Kanti-2018.02">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\</Path>
+                  <Path Filename="C">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\</Path>
+                  <Path Filename="Cashore.Ben-2018.05">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\</Path>
+                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\Cashore.Ben-2018.05\</Path>
+                  <Path Filename="TEACHER REPORT for 2120(PP5227-PRINCIPLES AND POLICIES IN SUSTAINABILITY AND THE ENVIRONMENT (LECTURE))-PP5227(LECTURE).pdf">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\Cashore.Ben-2018.05\2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO\</Path>
+                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\Cashore.Ben-2018.05\</Path>
+                  <Path Filename="Cashore.Ben-2018.05">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\</Path>
+                  <Path Filename="B">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\</Path>
+                  <Path Filename="Bajpai.Kanti-2018.02">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\</Path>
+                  <Path Filename="2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\Bajpai.Kanti-2018.02\</Path>
+                  <Path Filename="TEACHER REPORT for 2120(PP5902-INTERNATIONAL SECURITY - CONCEPTS  ISSUES &amp; POLICIES (LECTURE))-PP5902(LECTURE)-Kanti Prasa.pdf">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\Bajpai.Kanti-2018.02\2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO\</Path>
+                  <Path Filename="2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\Bajpai.Kanti-2018.02\</Path>
+                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO">D:\home\dq\0\Board\1\FAR-AY2021-2022\</Path>
+                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO.md">D:\home\dq\0\Board\1\FAR-AY2021-2022\2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO\</Path>
+                  <Path Filename="..">D:\home\dq\0\Sound\1\Wp\</Path>
+                  <Path Filename="home">d:\</Path>
+                  <Path Filename="dq">d:\home\</Path>
+                  <Path Filename="..">d:\home\dq\</Path>
+                  <Path Filename="tmp">d:\home\</Path>
+                  <Path Filename="..">d:\home\tmp\</Path>
+                  <Path Filename="tmp">d:\home\</Path>
+                  <Path Filename="home">d:\</Path>
+                  <Path Filename="dq">d:\home\</Path>
+                  <Path Filename="1">d:\home\dq\</Path>
+                  <Path Filename="Store">d:\home\dq\1\</Path>
+                  <Path Filename="..">d:\home\dq\1\Store\</Path>
+                  <Path Filename="Downloads">d:\home\dq\1\</Path>
+                  <Path Filename="..">d:\home\dq\1\Downloads\</Path>
+                  <Path Filename="Apps">D:\home\dq\0\Board\1\Ww\Machines\</Path>
+                  <Path Filename="Obsidian-2021.12">D:\home\dq\0\Board\1\Ww\Machines\Apps\</Path>
+                  <Path Filename="Obsidian-2021.12.md">D:\home\dq\0\Board\1\Ww\Machines\Apps\Obsidian-2021.12\</Path>
                 </Paths>
               </Entry>
             </History>

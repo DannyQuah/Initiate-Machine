@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) makegist
-# Last-edited: 2022.01.23.1948.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.08.24.2154.Wed -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % 2022.01.23.1853.Sun -- Danny Quah (me@DannyQuah.com)
@@ -27,7 +27,7 @@ else
   fileNamebase=$1
 fi 
 
-GISTSFOLDER=~/0/Light/1/t/Writings/Gists
+GISTSFOLDER=~/0/Board/1/Ww/Work-Text/Writings/Gists
 
 mkdir -p $GISTSFOLDER/$fileNamebase
 cp -p $fileNamebase.md $GISTSFOLDER/$fileNamebase/tmp.md

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) 13-linux-specialapps-install
-# Last-edited: 2022.02.27.1317.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.08.25.0622.Thu -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % 2022.02.27.1313.Sun -- Danny Quah (me@DannyQuah.com)
@@ -93,6 +93,10 @@ installSpecialApps() {
 # termius
 #  sudo snap install termius
 ################################
+################################
+# typeapp email
+  sudo snap install typeapp-mail 
+################################
 # typora 2019.05
 #  wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add
 # add Typora's repository
@@ -109,8 +113,8 @@ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/you
 sudo chmod a+rx /usr/local/bin/youtube-dl
 ################################
 # zsh 2020.05
-sudo apt install -y zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# sudo apt install -y zsh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ################################
 
 # installSpecialApps()
