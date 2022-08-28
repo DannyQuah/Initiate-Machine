@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.0.1 beta">
-  <Hotkeys Version="52">
+<doublecmd DCVersion="1.0.5 beta">
+  <Hotkeys Version="53">
     <Form Name="Main">
       <Hotkey>
         <Shortcut>F1</Shortcut>
@@ -337,7 +337,7 @@
         <Param>index=9</Param>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Alt+`</Shortcut>
+        <Shortcut>Alt+0</Shortcut>
         <Command>cm_ActivateTabByIndex</Command>
         <Param>index=-1</Param>
       </Hotkey>

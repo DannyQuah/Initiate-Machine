@@ -1,8 +1,16 @@
 #!/usr/bin/env sh
 # @(#) pathogen-bundles
-# Last-edited: 2022.08.25.1543.Thu -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.08.28.0736.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
+#  % 2022.08.28.0655.Sun -- Danny Quah (me@DannyQuah.com)  
+#    Restore (after yesterday's removal)?
+#    -  goyo.vim (distraction-free writing; No)
+#    -  lightline.vim (configurable statusline)  
+#    -  limelight.vim (hyperfocus writing, best with goyo; No)  
+#    -  vim-colors-pencil (colorscheme; No)
+#    -  vim-easymotion (jump anywhere with two-chars; No)  
+#    -  vim-thematic (separate themes for tasks, etc.; No)
 #  % Sun 2022.01.02.0851 -- Danny Quah (me@DannyQuah.com)
 #    First draft: sh script to populate ~/.vim/bundle/
 #    Normally this level of synchronization is done by syncthing or
@@ -11,6 +19,7 @@
 #    only have syncing by git push/pull, and bundle/ should not
 #    get on my GitHub repos, as it itself comprises only other
 #    GitHub repos
+#    Plugins listing at https://vimawesome.com
 # ----------------------------------------------------------------
 
 # ------------------------------
@@ -31,6 +40,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ./fzf
 cd ./fzf ; ./install
 cd ..
 git clone --depth 1 https://github.com/junegunn/fzf.vim
+
+rm -rf lightline.vim
+git clone --depth 1 https://github.com/itchyny/lightline.vim
 
 rm -rf markdown-preview.nvim
 git clone --depth 1 https://github.com/iamcco/markdown-preview.nvim

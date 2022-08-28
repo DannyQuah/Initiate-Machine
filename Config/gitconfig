@@ -8,6 +8,5 @@
 	rebase = false
 [credential]
 	helper = store
-[oh-my-zsh]
-	hide-status = 1
-	hide-dirty = 1
+[init]
+	defaultBranch = main

@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2022.08.14.1602.Sun -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.08.28.0731.Sun -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -186,6 +186,7 @@ endif
 
 "let g:thematic#theme_name='plain'
                                " Activate above or keep splashscreen
+															 " Have taken this out in any case
 
 "Editing ---------------------------------------------------------
 "                              |"Keep dropping into ex mode
