@@ -1,8 +1,8 @@
 # @(#) DQ's ssh config ~/.ssh/config
-# Last-edited: 2022.09.04.1439.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.09.04.1459.Sun -- Danny Quah (me@DannyQuah.com)
 # Needs to be copied (not linked) on lbook; chmod 644 config
 # whether Ubuntu or MSYS
-# Created:     Sat 2019.05.18 1519 -- Danny Quah (me@DannyQuah.com)
+# Created: 2019.05.18 1519.Sat -- Danny Quah (me@DannyQuah.com)
 #-------------------------------------------------------------------- 
 # Revision History:
 #  % Thu 2021.12.30.1240 -- Danny Quah (me@DannyQuah.com)
