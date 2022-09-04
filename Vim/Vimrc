@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2022.08.28.0731.Sun -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.09.03.0600.Sat -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -232,6 +232,10 @@ set smartcase                  " ...unless it's uppercase
 "  Autocorrect, abbreviations ----------------------------------
 " abbr Lniux Linux
 " abbr hte the
+iabbrev ltpp15 Lenovo-ltpp15-Thinkpad-P15s-2022.04
+iabbrev ipad2 Apple-iPad-Pro-2G-10.5-2017.08
+iabbrev ipad5 Apple-iPad-Pro-5G-12.9-2022.08
+iabbrev xbook Dell-xbook-XPS-13-9350-2016.03
 
 "  macros ------------------------------------------------------
 let @h='j0i| f:ls | A |'
@@ -240,7 +244,8 @@ let @h='j0i| f:ls | A |'
 let @t="?from:A\n| :-- | :-- |"
                                " Gmail header second row; after all @h 
 let @a='jA  '
-" Append two spaces at the end of line that follows 
+" Append two spaces at the end of line that follows  
+"
 " Time, templates ----------------------------------------------
 iabbrev iDQ@ -- Danny Quah (me@DannyQuah.com)
                                "Insert-my-email-signature
@@ -648,7 +653,16 @@ let g:bullets_checkbox_partials_toggle=0
                                " default 1, checked when only partial
 
 "  Colorscheme ---------------------------------------------------
+"  Default if light terminal is peachpuff; if dark, then ron  
+"  (although on iOS > iVim, default is closest to torte although
+"  a bit more popping)
+"  colorscheme default is good on iOS > iVim; get that by turning
+"  off everything below or by "colorscheme default".  Doesn't work
+"  on Ubuntu, though, so, choose instead one of the below
+"
 "  vim (and therefore gvim too)
+  "colorscheme default
+  colorscheme torte
   "colorscheme koehler
   "colorscheme ron
   "colorscheme monokai         "vim-monokai
@@ -661,7 +675,7 @@ let g:bullets_checkbox_partials_toggle=0
   "colorscheme badwolf
   "colorscheme hyper-snazzy
   "colorscheme inkpot
-  colorscheme jellybeans
+  "colorscheme jellybeans
   "colorscheme vim-one
   "colorscheme tender
 

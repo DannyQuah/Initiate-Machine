@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="0.9.8 beta" ConfigVersion="10">
+<doublecmd DCVersion="1.0.5 beta" ConfigVersion="12">
   <Configuration Save="True" SortOrder="0" TreeType="0">
     <UseConfigInProgramDir>False</UseConfigInProgramDir>
     <FolderTabs Save="True"/>
@@ -162,7 +162,7 @@
       <WcxPlugin Enabled="True">
         <ArchiveExt>rar</ArchiveExt>
         <Path>%commander_path%/plugins/wcx/unrar/unrar.wcx</Path>
-        <Flags>68</Flags>
+        <Flags>607</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>7z</ArchiveExt>
@@ -315,7 +315,9 @@
           <Icon>cm_makedir</Icon>
           <Command>cm_MakeDir</Command>
         </Command>
-        <Separator/>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
         <Command>
           <ID>{7734BC65-0CEE-4559-AA41-CC3A6A632616}</ID>
           <Icon>cm_viewhistoryprev</Icon>
@@ -331,7 +333,9 @@
           <Icon>cm_viewhistory</Icon>
           <Command>cm_ViewHistory</Command>
         </Command>
-        <Separator/>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
         <Command>
           <ID>{7B742844-E0EF-420A-85B4-EA9EC19B64D2}</ID>
           <Icon>cm_columnsview</Icon>
@@ -347,7 +351,9 @@
           <Icon>cm_thumbnailsview</Icon>
           <Command>cm_ThumbnailsView</Command>
         </Command>
-        <Separator/>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
         <Command>
           <ID>{B0C20EAE-9C5A-467F-ADE1-8446229F3D64}</ID>
           <Icon>cm_search</Icon>
@@ -358,7 +364,9 @@
           <Icon>cm_multirename</Icon>
           <Command>cm_MultiRename</Command>
         </Command>
-        <Separator/>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
         <Command>
           <ID>{CC8176EE-CE4C-4B96-BC1C-4CCE162CC247}</ID>
           <Icon>cm_refresh</Icon>
@@ -406,8 +414,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>2230</Left>
-      <Top>53</Top>
+      <Left>2071</Left>
+      <Top>37</Top>
       <Width>1492</Width>
       <Height>954</Height>
       <PixelsPerInch>96</PixelsPerInch>
@@ -420,6 +428,7 @@
   </Language>
   <Behaviours>
     <GoToRoot>False</GoToRoot>
+    <ShowCurDirTitleBar>False</ShowCurDirTitleBar>
     <ActiveRight>False</ActiveRight>
     <RunInTerminalStayOpenCmd>x-terminal-emulator</RunInTerminalStayOpenCmd>
     <RunInTerminalStayOpenParams>-e sh -c '{command}; echo -n Press ENTER to exit... ; read a'</RunInTerminalStayOpenParams>
@@ -431,9 +440,11 @@
     <LynxLike>True</LynxLike>
     <FileSizeFormat>0</FileSizeFormat>
     <OperationSizeFormat>0</OperationSizeFormat>
-    <HeaderFooterSizeFormat>0</HeaderFooterSizeFormat>
+    <HeaderSizeFormat>0</HeaderSizeFormat>
+    <FooterSizeFormat>0</FooterSizeFormat>
     <FileSizeDigits>1</FileSizeDigits>
-    <HeaderFooterDigits>1</HeaderFooterDigits>
+    <HeaderDigits>1</HeaderDigits>
+    <FooterDigits>1</FooterDigits>
     <OperationSizeDigits>1</OperationSizeDigits>
     <PersonalizedByte>B</PersonalizedByte>
     <PersonalizedKilo>KB</PersonalizedKilo>
@@ -573,8 +584,19 @@
       <FlatIcons>True</FlatIcons>
       <ButtonHeight>26</ButtonHeight>
       <IconSize>22</IconSize>
+      <ShowCaptions>False</ShowCaptions>
       <ReportErrorWithCommands>False</ReportErrorWithCommands>
+      <FilenameStyle>0</FilenameStyle>
+      <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
+      <PathModifierElements>0</PathModifierElements>
     </ButtonBar>
+    <MiddleBar Enabled="False">
+      <FlatIcons>True</FlatIcons>
+      <ButtonHeight>24</ButtonHeight>
+      <IconSize>16</IconSize>
+      <ShowCaptions>False</ShowCaptions>
+      <ReportErrorWithCommands>False</ReportErrorWithCommands>
+    </MiddleBar>
     <DriveBar1>False</DriveBar1>
     <DriveBar2>True</DriveBar2>
     <DriveBarFlat>True</DriveBarFlat>
@@ -599,6 +621,8 @@
     <PanelOfOperationsInBackground>True</PanelOfOperationsInBackground>
     <HorizontalFilePanels>False</HorizontalFilePanels>
     <ShortFormatDriveInfo>True</ShortFormatDriveInfo>
+    <UppercaseDriveLetter>False</UppercaseDriveLetter>
+    <ShowColonAfterDrive>False</ShowColonAfterDrive>
   </Layout>
   <FilesViews>
     <Sorting>
@@ -716,50 +740,47 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="W">/home/dq/0/Board/1/Ww/People-Groups-Confidential/</Path>
-                  <Path Filename="Wu.Alfred-2019.08">/home/dq/0/Board/1/Ww/People-Groups-Confidential/W/</Path>
-                  <Path Filename="2022.08.22.1530.Mon-FAR-Alfred.Wu-OTH.DO">/home/dq/0/Board/1/Ww/People-Groups-Confidential/W/Wu.Alfred-2019.08/</Path>
-                  <Path Filename="CHRS - Self Appraisal (Alfred W).pdf">/home/dq/0/Board/1/Ww/People-Groups-Confidential/W/Wu.Alfred-2019.08/2022.08.22.1530.Mon-FAR-Alfred.Wu-OTH.DO/</Path>
-                  <Path Filename="2022.08.22.1530.Mon-FAR-Alfred.Wu-OTH.DO">/home/dq/0/Board/1/Ww/People-Groups-Confidential/W/Wu.Alfred-2019.08/</Path>
-                  <Path Filename="Wu.Alfred-2019.08">/home/dq/0/Board/1/Ww/People-Groups-Confidential/W/</Path>
-                  <Path Filename="W">/home/dq/0/Board/1/Ww/People-Groups-Confidential/</Path>
-                  <Path Filename="People-Groups-Confidential">/home/dq/0/Board/1/Ww/</Path>
-                  <Path Filename="A">/home/dq/0/Board/1/Ww/People-Groups-Confidential/</Path>
-                  <Path Filename="Araral.Eduardo-2010.05">/home/dq/0/Board/1/Ww/People-Groups-Confidential/A/</Path>
-                  <Path Filename="2022.08.22.1400.Mon-FAR-Ed.Araral-OTH.DO">/home/dq/0/Board/1/Ww/People-Groups-Confidential/A/Araral.Eduardo-2010.05/</Path>
-                  <Path Filename="2022.08.22.1400.Mon-FAR-Ed.Araral-OTH.DO.md">/home/dq/0/Board/1/Ww/People-Groups-Confidential/A/Araral.Eduardo-2010.05/2022.08.22.1400.Mon-FAR-Ed.Araral-OTH.DO/</Path>
-                  <Path Filename="2022.08.22.1400.Mon-FAR-Ed.Araral-OTH.DO">/home/dq/0/Board/1/Ww/People-Groups-Confidential/A/Araral.Eduardo-2010.05/</Path>
-                  <Path Filename="Araral.Eduardo-2010.05">/home/dq/0/Board/1/Ww/People-Groups-Confidential/A/</Path>
-                  <Path Filename="W">/home/dq/0/Board/1/Ww/People-Groups-Confidential/</Path>
-                  <Path Filename="Wu.Alfred-2019.08">/home/dq/0/Board/1/Ww/People-Groups-Confidential/W/</Path>
-                  <Path Filename="2022.08.22.1530.Mon-FAR-Alfred.Wu-OTH.DO">/home/dq/0/Board/1/Ww/People-Groups-Confidential/W/Wu.Alfred-2019.08/</Path>
-                  <Path Filename="2022.08.22.1530.Mon-FAR-Alfred.Wu-OTH.DO.md">/home/dq/0/Board/1/Ww/People-Groups-Confidential/W/Wu.Alfred-2019.08/2022.08.22.1530.Mon-FAR-Alfred.Wu-OTH.DO/</Path>
-                  <Path Filename="2022.08.22.1530.Mon-FAR-Alfred.Wu-OTH.DO">/home/dq/0/Board/1/Ww/People-Groups-Confidential/W/Wu.Alfred-2019.08/</Path>
-                  <Path Filename="Wu.Alfred-2019.08">/home/dq/0/Board/1/Ww/People-Groups-Confidential/W/</Path>
-                  <Path Filename="PWAC-MOM-2021.08">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/</Path>
-                  <Path Filename="Platform-Companies-Workers-Responses-2022.06">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/</Path>
-                  <Path Filename="src">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/Platform-Companies-Workers-Responses-2022.06/</Path>
-                  <Path Filename="code">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/Platform-Companies-Workers-Responses-2022.06/src/</Path>
-                  <Path Filename="defs.tex">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/Platform-Companies-Workers-Responses-2022.06/src/code/</Path>
-                  <Path Filename="00-hash-20220611-driver.pdf">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/Platform-Companies-Workers-Responses-2022.06/src/</Path>
-                  <Path Filename="src">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/Platform-Companies-Workers-Responses-2022.06/</Path>
-                  <Path Filename="2022.08.19.1530.Fri-PWAC-12-MOM">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/</Path>
-                  <Path Filename="2022.08.19.1530.Fri-PWAC-12-MOM.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/2022.08.19.1530.Fri-PWAC-12-MOM/</Path>
-                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/</Path>
-                  <Path Filename="2022.08.25.1900.Thu-IPS-CA-dinner-David.Koh-Shangri-La">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
-                  <Path Filename="CAD_DK_Seating Plan_20220822.pdf">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.25.1900.Thu-IPS-CA-dinner-David.Koh-Shangri-La/</Path>
-                  <Path Filename="C">/home/dq/0/Board/1/Ww/People-Groups-Confidential/</Path>
-                  <Path Filename="Cashore.Ben-2018.05">/home/dq/0/Board/1/Ww/People-Groups-Confidential/C/</Path>
-                  <Path Filename="..">/home/dq/0/Board/1/Ww/People-Groups-Confidential/C/Cashore.Ben-2018.05/</Path>
-                  <Path Filename="Cashore.Ben-2018.05">/home/dq/0/Board/1/Ww/People-Groups-Confidential/C/</Path>
-                  <Path Filename="B">/home/dq/0/Board/1/Ww/People-Groups-Confidential/</Path>
-                  <Path Filename="Bajpai.Kanti-2018.02">/home/dq/0/Board/1/Ww/People-Groups-Confidential/B/</Path>
-                  <Path Filename="..">/home/dq/0/Board/1/Ww/People-Groups-Confidential/B/Bajpai.Kanti-2018.02/</Path>
-                  <Path Filename="2022.08.26.1830.Fri-Deans-List-Dinner-Ngee-Ann-City-Bali-Thai">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
-                  <Path Filename="Dean's List Dinner - Seating Plan - 26 Aug.pptx">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.26.1830.Fri-Deans-List-Dinner-Ngee-Ann-City-Bali-Thai/</Path>
-                  <Path Filename="L">/home/dq/0/Board/1/Ww/People-Groups-Confidential/</Path>
-                  <Path Filename="Lu.Xi-2018.01">/home/dq/0/Board/1/Ww/People-Groups-Confidential/L/</Path>
-                  <Path Filename="">/home/dq/0/Board/1/Ww/People-Groups-Confidential/L/Lu.Xi-2018.01/</Path>
+                  <Path Filename="FB_IMG_1658538177051.jpg">/home/dq/0/Stage/Photos/Photos-Personal/Runnings-2017.07/2022.08.13.0730.Sat-West-Coast-Park-parkrun-0187/</Path>
+                  <Path Filename="2022.07.23.0730.Sat-West-Coast-Park-parkrun-0183">/home/dq/0/Stage/Photos/Photos-Personal/Runnings-2017.07/</Path>
+                  <Path Filename="2022.07.23.0730.Sat-West-Coast-Park-parkrun-0183-via-Chaoyan.Dong.jpeg">/home/dq/0/Stage/Photos/Photos-Personal/Runnings-2017.07/2022.07.23.0730.Sat-West-Coast-Park-parkrun-0183/</Path>
+                  <Path Filename="2022.07.16.0730.Sat-West-Coast-Park-parkrun-0182">/home/dq/0/Stage/Photos/Photos-Personal/Runnings-2017.07/</Path>
+                  <Path Filename="2022.07.16.0730.Sat-West-Coast-Park-parkrun-0182-DQ-clouds.jpg">/home/dq/0/Stage/Photos/Photos-Personal/Runnings-2017.07/2022.07.16.0730.Sat-West-Coast-Park-parkrun-0182/</Path>
+                  <Path Filename="2022.07.16.0730.Sat-West-Coast-Park-parkrun-0182">/home/dq/0/Stage/Photos/Photos-Personal/Runnings-2017.07/</Path>
+                  <Path Filename="Time">/home/dq/0/Stage/Photos/Photos-Personal/</Path>
+                  <Path Filename="2021">/home/dq/0/Stage/Photos/Photos-Personal/Time/</Path>
+                  <Path Filename="2021.H2-Southeast-Asia">/home/dq/0/Stage/Photos/Photos-Personal/Time/2021/</Path>
+                  <Path Filename="2021.10.29.1412-ART-from-BTC-Vending-Machines.jpg">/home/dq/0/Stage/Photos/Photos-Personal/Time/2021/2021.H2-Southeast-Asia/</Path>
+                  <Path Filename="LifePINs">/home/dq/0/Sound/1/Wp/</Path>
+                  <Path Filename="Health-2014.06">/home/dq/0/Sound/1/Wp/LifePINs/</Path>
+                  <Path Filename="Physical-Training-2017.07">/home/dq/0/Sound/1/Wp/LifePINs/Health-2014.06/</Path>
+                  <Path Filename="Run-2017.07">/home/dq/0/Sound/1/Wp/LifePINs/Health-2014.06/Physical-Training-2017.07/</Path>
+                  <Path Filename="2022.09.18.Sun-25.Sun-Singtel-Singapore-Race-Against-Cancer">/home/dq/0/Sound/1/Wp/LifePINs/Health-2014.06/Physical-Training-2017.07/Run-2017.07/</Path>
+                  <Path Filename="..">/home/dq/0/Sound/1/Wp/LifePINs/Health-2014.06/Physical-Training-2017.07/Run-2017.07/2022.09.18.Sun-25.Sun-Singtel-Singapore-Race-Against-Cancer/</Path>
+                  <Path Filename="Time">/home/dq/0/Stage/Photos/Photos-Personal/</Path>
+                  <Path Filename="Martial-Arts-DQ">/home/dq/0/Stage/Photos/Photos-Personal/Time/</Path>
+                  <Path Filename="2008.02.23-MSS-MS+DQ-JSpBK.jpg">/home/dq/0/Stage/Photos/Photos-Personal/Time/Martial-Arts-DQ/</Path>
+                  <Path Filename="Martial-Arts-DQ">/home/dq/0/Stage/Photos/Photos-Personal/Time/</Path>
+                  <Path Filename="2015.10-Hemel-TKD-Blackbelt-DQ.jpg">/home/dq/0/Stage/Photos/Photos-Personal/Time/Martial-Arts-DQ/</Path>
+                  <Path Filename="..">/home/dq/0/Scene/1/db0/</Path>
+                  <Path Filename="db1">/home/dq/0/Scene/1/</Path>
+                  <Path Filename="Config">/home/dq/0/Scene/1/db1/</Path>
+                  <Path Filename="..">/home/dq/0/Scene/1/db1/Config/</Path>
+                  <Path Filename="Config">/home/dq/0/Scene/1/db1/</Path>
+                  <Path Filename="db2">/home/dq/0/Scene/1/</Path>
+                  <Path Filename="Config">/home/dq/0/Scene/1/db2/</Path>
+                  <Path Filename="..">/home/dq/0/Scene/1/db2/Config/</Path>
+                  <Path Filename="Config">/home/dq/0/Scene/1/db2/</Path>
+                  <Path Filename="db1">/home/dq/0/Scene/1/</Path>
+                  <Path Filename="Internet-Services">/home/dq/0/Board/1/Ww/Machines/</Path>
+                  <Path Filename="..">/home/dq/0/Board/1/Ww/Machines/Internet-Services/</Path>
+                  <Path Filename="MOE-NUS-LKYSPP-Trilateral-2021.02">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/</Path>
+                  <Path Filename="2022.02.16.1400.Wed-MOE-NUS-LKYSPP-Trilateral-01-Zoom">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/MOE-NUS-LKYSPP-Trilateral-2021.02/</Path>
+                  <Path Filename="2022.02.16.1400.Wed-MOE-NUS-LKYSPP-Trilateral-01-Zoom.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/MOE-NUS-LKYSPP-Trilateral-2021.02/2022.02.16.1400.Wed-MOE-NUS-LKYSPP-Trilateral-01-Zoom/</Path>
+                  <Path Filename="Work-Share">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/</Path>
+                  <Path Filename="Projects">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/</Path>
+                  <Path Filename="PIIE-LKYSPP-Next-STEP-2020.12">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/</Path>
+                  <Path Filename="2022.11.09.Wed-11.Fri-Next-STEP">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PIIE-LKYSPP-Next-STEP-2020.12/</Path>
+                  <Path Filename="2022.11.09.Wed-11.Fri-Next-STEP.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PIIE-LKYSPP-Next-STEP-2020.12/2022.11.09.Wed-11.Fri-Next-STEP/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -768,6 +789,79 @@
             </ColumnsView>
           </FileView>
         </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>0</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="2022.08.29.1400.Mon-Uzbek-Ambassador-Kakhramon.Shakirov-OTH.DO.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.29.1400.Mon-Uzebkistan-Ambassador-Kakhramon.Shakirov-OTH.DO/</Path>
+                  <Path Filename="2022.08.29.1400.Mon-Uzbek-Ambassador-Kakhramon.Shakirov-OTH.DO">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.29.1400.Mon-Uzbek-Ambassador-Kakhramon.Shakirov-OTH.DO/</Path>
+                  <Path Filename="2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project/</Path>
+                  <Path Filename="2022.08.31.1600.Wed-George.Yeo-book-launch-NLB-Pod">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.1600.Wed-George.Yeo-book-launch-NLB-Pod/</Path>
+                  <Path Filename="2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-receipt.jpg">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy/</Path>
+                  <Path Filename="2022.08.30.1530.Tue-FAR-Moderation-SK-HR-OTH.3MD">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.30.1530.Tue-FAR-Moderation-SK-HR-OTH.3MD/</Path>
+                  <Path Filename="2022.09.02.1800.Fri-USS-Tripoli-Reception-Changi-Naval-Base">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.09.02.1800.Fri-USS-Tripoli-Reception-Changi-Naval-Base.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.09.02.1800.Fri-USS-Tripoli-Reception-Changi-Naval-Base/</Path>
+                  <Path Filename="2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan/</Path>
+                  <Path Filename="2022.09.01.1830.Thu-SGTech-Anniversary-Gala-Dinner-Ritz-Carlton">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.09.01.1830.Thu-SGTech-Anniversary-Gala-Dinner-Ritz-Carlton.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.09.01.1830.Thu-SGTech-Anniversary-Gala-Dinner-Ritz-Carlton/</Path>
+                  <Path Filename="2022.09.02.1200.Lawrence.Jin-Economics-Brownbag-Seminar-LKS1-2">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="PWAC-MOM-2021.08">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/</Path>
+                  <Path Filename="Platform-Companies-Workers-Responses-2022.06">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/Platform-Companies-Workers-Responses-2022.06/</Path>
+                  <Path Filename="Platform-Companies-Workers-Responses-2022.06">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/PWAC-MOM-2021.08/</Path>
+                  <Path Filename="2022.09.01.1500.Thu-Liu.Tong-OTH.DO">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.09.01.1500.Thu-Liu.Tong-OTH.DO/</Path>
+                  <Path Filename="2022.09.01.1500.Thu-Liu.Tong-OTH.DO">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.09.01.1500.Thu-Liu.Tong-OTH.DO.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.09.01.1500.Thu-Liu.Tong-OTH.DO/</Path>
+                  <Path Filename="2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan/</Path>
+                  <Path Filename="2022.09.03.1830.Sat-Girls-Night-dinner-KVB">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.09.03.1830.Sat-Girls-Night-dinner-KVB/</Path>
+                  <Path Filename="2022.09.01.1230.Thu-Selina.Ho-Jon.Chu-lunch-Lino-Binjai-Park">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.09.01.1230.Thu-Selina.Ho-Jon.Chu-lunch-Lino-Binjai-Park/</Path>
+                  <Path Filename="2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf/</Path>
+                  <Path Filename="2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf/</Path>
+                  <Path Filename="2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project/</Path>
+                  <Path Filename="2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project/</Path>
+                  <Path Filename="2022.09.01.1230.Thu-Selina.Ho-Jon.Chu-lunch-Lino-Binjai-Park">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.09.01.1230.Thu-Selina.Ho-Jon.Chu-lunch-Lino-Binjai-Park/</Path>
+                  <Path Filename="2022.09.01.1230.Thu-Selina.Ho-Jon.Chu-lunch-Lino-Binjai-Park">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.09.01.1230.Thu-Selina.Ho-Jon.Chu-lunch-Lino-Binjai-Park/</Path>
+                  <Path Filename="2022.08.30.1730.Tue-College-Green-informal-visit-CG">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.30.1730.Tue-College-Green-informal-visit-CG.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.30.1730.Tue-College-Green-informal-visit-CG/</Path>
+                  <Path Filename="2022.09.01.1230.Thu-Selina.Ho-Jon.Chu-lunch-Lino-Binjai-Park">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.09.01.1230.Thu-Selina.Ho-Jon.Chu-lunch-Lino-Binjai-Park.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.09.01.1230.Thu-Selina.Ho-Jon.Chu-lunch-Lino-Binjai-Park/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default-DQ</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Left>
+      <Right>
+        <ActiveTab>0</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -805,78 +899,29 @@
                   <Path Filename="vMuYHMT">/tmp/</Path>
                   <Path Filename="..">/tmp/vMuYHMT/</Path>
                   <Path Filename="vMuYHMT">/tmp/</Path>
+                  <Path Filename="2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan/</Path>
+                  <Path Filename="2022.08.31.1500-Wed-TLSC-strategy-OTH.3MD">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.1500-Wed-TLSC-strategy-OTH.3MD.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.1500-Wed-TLSC-strategy-OTH.3MD/</Path>
+                  <Path Filename="2022.08.31.1700.Wed-George.Yeo-book-launch-NL-Pod">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.1700.Wed-George.Yeo-book-launch-NL-Pod/</Path>
+                  <Path Filename="2022.08.31.1700.Wed-George.Yeo-book-launch-NLB-Pod">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.1700.Wed-George.Yeo-book-launch-NLB-Pod.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.1700.Wed-George.Yeo-book-launch-NLB-Pod/</Path>
                   <Path Filename="2022.08.29.1400.Mon-Uzebkistan-Ambassador-Kakhramon.Shakirov-OTH.DO">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
-                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.29.1400.Mon-Uzebkistan-Ambassador-Kakhramon.Shakirov-OTH.DO/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default-DQ</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-      </Left>
-      <Right>
-        <ActiveTab>0</ActiveTab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>0</Function>
-              </Sorting>
-            </Sortings>
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="..">/home/dq/0/Board/1/Ww/Machines/Boxes/Apple-iPad-Pro-5G-12.9-2022.08/</Path>
-                  <Path Filename="2022.08.17.1500.Wed-Takuya.Kamata-WB-UHall">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
-                  <Path Filename="List of placement opportunities at The World Bank Group .xlsx">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.17.1500.Wed-Takuya.Kamata-WB-UHall/</Path>
-                  <Path Filename="2022.08.18.1600.Thu-TBC-PWAC-MOM">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
-                  <Path Filename="2022.08.18.1600.Thu-TBC-PWAC-MOM.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.18.1600.Thu-TBC-PWAC-MOM/</Path>
-                  <Path Filename="2022.08.17.1815.Wed-ESS-Annual-Dinner-Hilton-Orchard">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
-                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO">/home/dq/0/Board/1/FAR-AY2021-2022/</Path>
-                  <Path Filename="..">/home/dq/0/Board/1/FAR-AY2021-2022/2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO/</Path>
-                  <Path Filename="2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO">/home/dq/0/Board/1/FAR-AY2021-2022/</Path>
-                  <Path Filename="..">/home/dq/0/Board/1/FAR-AY2021-2022/2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO/</Path>
-                  <Path Filename="2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO">/home/dq/0/Board/1/FAR-AY2021-2022/</Path>
-                  <Path Filename="Advancement-Development-LKYSPP">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/</Path>
-                  <Path Filename="Donor-Cultivation-2021.05">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/Advancement-Development-LKYSPP/</Path>
-                  <Path Filename="2022.08.19.1900.Fri-Oei.Hong_Leong-TEC-dinner-Raffles-Town-Club">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/Advancement-Development-LKYSPP/Donor-Cultivation-2021.05/</Path>
-                  <Path Filename="Donor Brief on Mr Oei Hong Leong - 20220418.pdf">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/Advancement-Development-LKYSPP/Donor-Cultivation-2021.05/2022.08.19.1900.Fri-Oei.Hong_Leong-TEC-dinner-Raffles-Town-Club/</Path>
-                  <Path Filename="Light">/home/dq/0/</Path>
-                  <Path Filename="1">/home/dq/0/Light/</Path>
-                  <Path Filename="..">/home/dq/0/Light/1/</Path>
-                  <Path Filename="Board">/home/dq/0/</Path>
-                  <Path Filename="1">/home/dq/0/Board/</Path>
-                  <Path Filename="..">/home/dq/0/Board/1/</Path>
-                  <Path Filename="1">/home/dq/0/Board/</Path>
-                  <Path Filename="Board">/home/dq/0/</Path>
-                  <Path Filename="Gists">/home/dq/0/Board/1/Ww/Work-Text/Writings/</Path>
-                  <Path Filename="2022.06-Price-responses-PWAC-DQ">/home/dq/0/Board/1/Ww/Work-Text/Writings/Gists/</Path>
-                  <Path Filename="..">/home/dq/0/Board/1/Ww/Work-Text/Writings/Gists/2022.06-Price-responses-PWAC-DQ/</Path>
-                  <Path Filename="2022.01-D.Quah-Syncthing-Setup">/home/dq/0/Board/1/Ww/Work-Text/Writings/Gists/</Path>
-                  <Path Filename="..">/home/dq/0/Board/1/Ww/Work-Text/Writings/Gists/2022.01-D.Quah-Syncthing-Setup/</Path>
-                  <Path Filename="2022.01-D.Quah-Syncthing-Setup">/home/dq/0/Board/1/Ww/Work-Text/Writings/Gists/</Path>
-                  <Path Filename="Gists">/home/dq/0/Board/1/Ww/Work-Text/Writings/</Path>
-                  <Path Filename="Boxes">/home/dq/0/Board/1/Ww/Machines/</Path>
-                  <Path Filename="Apple-iPad-Pro-2G-10.5-2017.08">/home/dq/0/Board/1/Ww/Machines/Boxes/</Path>
-                  <Path Filename="Apple-iPad-Pro-2G-10.5-2017.08.md">/home/dq/0/Board/1/Ww/Machines/Boxes/Apple-iPad-Pro-2G-10.5-2017.08/</Path>
-                  <Path Filename="FAR Other Faculty - No Meeting">/home/dq/0/Board/1/FAR-AY2021-2022/</Path>
-                  <Path Filename="2022.08-FAR-Han.Dan">/home/dq/0/Board/1/FAR-AY2021-2022/FAR Other Faculty - No Meeting/</Path>
-                  <Path Filename="CHRS - Goal Plan (Han D).pdf">/home/dq/0/Board/1/FAR-AY2021-2022/FAR Other Faculty - No Meeting/2022.08-FAR-Han.Dan/</Path>
-                  <Path Filename="2022.08-FAR-Jimmy.Lim">/home/dq/0/Board/1/FAR-AY2021-2022/FAR Other Faculty - No Meeting/</Path>
-                  <Path Filename="CHRS - Goal Plan.pdf">/home/dq/0/Board/1/FAR-AY2021-2022/FAR Other Faculty - No Meeting/2022.08-FAR-Jimmy.Lim/</Path>
-                  <Path Filename="2022.08-FAR-Lee.Zeewan">/home/dq/0/Board/1/FAR-AY2021-2022/FAR Other Faculty - No Meeting/</Path>
-                  <Path Filename="Theo.Knibb-02 Will Questionnaire.pdf">/home/dq/OneDrive/iPad-OneDrive-Synced-Documents/</Path>
-                  <Path Filename="dq">/home/</Path>
-                  <Path Filename="tmp">/</Path>
-                  <Path Filename="bundle">/tmp/</Path>
-                  <Path Filename="..">/tmp/bundle/</Path>
-                  <Path Filename="Boxes">/home/dq/0/Board/1/Ww/Machines/</Path>
-                  <Path Filename="Apple-iPad-Pro-5G-12.9-2022.08">/home/dq/0/Board/1/Ww/Machines/Boxes/</Path>
-                  <Path Filename="..">/home/dq/0/Board/1/Ww/Machines/Boxes/Apple-iPad-Pro-5G-12.9-2022.08/</Path>
+                  <Path Filename="2022.08.29.1400.Mon-Uzbek-Ambassador-Kakhramon.Shakirov-OTH.DO.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.29.1400.Mon-Uzebkistan-Ambassador-Kakhramon.Shakirov-OTH.DO/</Path>
+                  <Path Filename="2022.08.29.1400.Mon-Uzbek-Ambassador-Kakhramon.Shakirov-OTH.DO">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.29.1400.Mon-Uzbek-Ambassador-Kakhramon.Shakirov-OTH.DO/</Path>
+                  <Path Filename="2022">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.01.06.0900-ISEAS-Regional-Outlook-Forum-Zoom">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="samba">/etc/</Path>
+                  <Path Filename="smb.conf">/etc/samba/</Path>
+                  <Path Filename="Screenshot from 2022-01-05 15-12-55.png">/home/dq/Downloads/</Path>
+                  <Path Filename="2022">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022/</Path>
+                  <Path Filename="Screenshot from 2022-01-05 15-12-55.png">/home/dq/Downloads/</Path>
+                  <Path Filename="2022.09.01.1230.Thu-Selina.Ho-Jon.Chu-lunch-Lino-Binjai-Park">/home/tmp/</Path>
+                  <Path Filename="..">/home/tmp/2022.09.01.1230.Thu-Selina.Ho-Jon.Chu-lunch-Lino-Binjai-Park/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -897,19 +942,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/home/dq/0/Board/1/Ww/Machines/Boxes/Apple-iPad-Pro-5G-12.9-2022.08/</Path>
-                  <Path Filename="2022.08.17.1500.Wed-Takuya.Kamata-WB-UHall">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
-                  <Path Filename="List of placement opportunities at The World Bank Group .xlsx">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.17.1500.Wed-Takuya.Kamata-WB-UHall/</Path>
-                  <Path Filename="2022.08.18.1600.Thu-TBC-PWAC-MOM">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
-                  <Path Filename="2022.08.18.1600.Thu-TBC-PWAC-MOM.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.18.1600.Thu-TBC-PWAC-MOM/</Path>
-                  <Path Filename="2022.08.17.1815.Wed-ESS-Annual-Dinner-Hilton-Orchard">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
-                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO">/home/dq/0/Board/1/FAR-AY2021-2022/</Path>
-                  <Path Filename="..">/home/dq/0/Board/1/FAR-AY2021-2022/2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO/</Path>
-                  <Path Filename="2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO">/home/dq/0/Board/1/FAR-AY2021-2022/</Path>
-                  <Path Filename="..">/home/dq/0/Board/1/FAR-AY2021-2022/2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO/</Path>
-                  <Path Filename="2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO">/home/dq/0/Board/1/FAR-AY2021-2022/</Path>
-                  <Path Filename="Advancement-Development-LKYSPP">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/</Path>
-                  <Path Filename="Donor-Cultivation-2021.05">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/Advancement-Development-LKYSPP/</Path>
                   <Path Filename="2022.08.19.1900.Fri-Oei.Hong_Leong-TEC-dinner-Raffles-Town-Club">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/Advancement-Development-LKYSPP/Donor-Cultivation-2021.05/</Path>
                   <Path Filename="Donor Brief on Mr Oei Hong Leong - 20220418.pdf">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/Advancement-Development-LKYSPP/Donor-Cultivation-2021.05/2022.08.19.1900.Fri-Oei.Hong_Leong-TEC-dinner-Raffles-Town-Club/</Path>
                   <Path Filename="Light">/home/dq/0/</Path>
@@ -938,7 +970,98 @@
                   <Path Filename="2022.07.25.1200.Mon-Faculty-lunch-monthly-Kinex.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/Faculty-2017.05/2022.07.25.1200.Mon-Faculty-lunch-monthly-Kinex/</Path>
                   <Path Filename="Faculty-2017.05">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/</Path>
                   <Path Filename="Practice-Track-2022.08">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/Faculty-2017.05/</Path>
-                  <Path Filename="">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/Faculty-2017.05/Practice-Track-2022.08/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/Faculty-2017.05/Practice-Track-2022.08/</Path>
+                  <Path Filename="Practice-Track-2022.08">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/Faculty-2017.05/</Path>
+                  <Path Filename="Faculty-2017.05">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/</Path>
+                  <Path Filename="2022.08.31.1600.Wed-George.Yeo-book-launch-NLB-Pod">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022">/home/dq/0/Stage/Photos/Photos-Work/</Path>
+                  <Path Filename="2022.H2-Southeast-Asia">/home/dq/0/Stage/Photos/Photos-Work/2022/</Path>
+                  <Path Filename="2022.08.31.1600.Wed-George.Yeo-book-launch-FDKM-DQ.jpeg">/home/dq/0/Stage/Photos/Photos-Work/2022/2022.H2-Southeast-Asia/</Path>
+                  <Path Filename="2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.1230.Wed-Faculty-lunch-monthly-receipt.jpg">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy/</Path>
+                  <Path Filename="2022.08.18.1530.Thu-Tomoo.Kikuchi-Economic-Model-World-Order-EAI-Zoom">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="L">/home/dq/0/Board/1/Ww/People-Groups-Confidential/</Path>
+                  <Path Filename="Liu.Tong-2021.02">/home/dq/0/Board/1/Ww/People-Groups-Confidential/L/</Path>
+                  <Path Filename="Liu.Tong-2021.02.md">/home/dq/0/Board/1/Ww/People-Groups-Confidential/L/Liu.Tong-2021.02/</Path>
+                  <Path Filename="Liu.Tong-2021.02">/home/dq/0/Board/1/Ww/People-Groups-Confidential/L/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default-DQ</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>0</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="Faculty-2017.05">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/LKYSPP/</Path>
+                  <Path Filename="2022.08.31.1600.Wed-George.Yeo-book-launch-NLB-Pod">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022">/home/dq/0/Stage/Photos/Photos-Work/</Path>
+                  <Path Filename="2022.H2-Southeast-Asia">/home/dq/0/Stage/Photos/Photos-Work/2022/</Path>
+                  <Path Filename="2022.08.31.1600.Wed-George.Yeo-book-launch-FDKM-DQ.jpeg">/home/dq/0/Stage/Photos/Photos-Work/2022/2022.H2-Southeast-Asia/</Path>
+                  <Path Filename="2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.1230.Wed-Faculty-lunch-monthly-receipt.jpg">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.1230.Wed-Faculty-lunch-monthly-Godmama-Funan/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/2022.08.31.0900.Wed-Edi.Pambudi-Indonesian-Embassy/</Path>
+                  <Path Filename="2022.08.18.1530.Thu-Tomoo.Kikuchi-Economic-Model-World-Order-EAI-Zoom">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Events/</Path>
+                  <Path Filename="L">/home/dq/0/Board/1/Ww/People-Groups-Confidential/</Path>
+                  <Path Filename="Liu.Tong-2021.02">/home/dq/0/Board/1/Ww/People-Groups-Confidential/L/</Path>
+                  <Path Filename="Liu.Tong-2021.02.md">/home/dq/0/Board/1/Ww/People-Groups-Confidential/L/Liu.Tong-2021.02/</Path>
+                  <Path Filename="Liu.Tong-2021.02">/home/dq/0/Board/1/Ww/People-Groups-Confidential/L/</Path>
+                  <Path Filename="C">/home/dq/0/Board/1/Ww/People-Groups-Confidential/</Path>
+                  <Path Filename="Cashore.Ben-2018.05">/home/dq/0/Board/1/Ww/People-Groups-Confidential/C/</Path>
+                  <Path Filename="2019.08-Tenure-Ben.Cashore">/home/dq/0/Board/1/Ww/People-Groups-Confidential/C/Cashore.Ben-2018.05/</Path>
+                  <Path Filename="2. CV - Prof Ben Cashore.pdf">/home/dq/0/Board/1/Ww/People-Groups-Confidential/C/Cashore.Ben-2018.05/2019.08-Tenure-Ben.Cashore/</Path>
+                  <Path Filename="..">/home/dq/OneDrive/iPad-OneDrive-Synced-Documents/</Path>
+                  <Path Filename="SMF-Social-Mobility-Foundation-2021.03">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/</Path>
+                  <Path Filename="SMF-Social-Mobility-Foundation-LKYSPP-2021.03.md">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/SMF-Social-Mobility-Foundation-2021.03/</Path>
+                  <Path Filename="2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf">/home/dq/OneDrive/iPad-OneDrive-Synced-Documents/</Path>
+                  <Path Filename="..">/home/dq/OneDrive/iPad-OneDrive-Synced-Documents/2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf/</Path>
+                  <Path Filename="2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf">/home/dq/OneDrive/iPad-OneDrive-Synced-Documents/</Path>
+                  <Path Filename="..">/home/dq/OneDrive/iPad-OneDrive-Synced-Documents/2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf/</Path>
+                  <Path Filename="2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf">/home/dq/OneDrive/iPad-OneDrive-Synced-Documents/</Path>
+                  <Path Filename="Boxes">/home/dq/0/Board/1/Ww/Machines/</Path>
+                  <Path Filename="Apple-iPad-Pro-2G-10.5-2017.08">/home/dq/0/Board/1/Ww/Machines/Boxes/</Path>
+                  <Path Filename="Internet-Services">/home/dq/0/Board/1/Ww/Machines/</Path>
+                  <Path Filename="..">/home/dq/0/Board/1/Ww/Machines/Internet-Services/</Path>
+                  <Path Filename="Apps">/home/dq/0/Board/1/Ww/Machines/</Path>
+                  <Path Filename="..">/home/dq/0/Board/1/Ww/Machines/Apps/</Path>
+                  <Path Filename="Internet-Services">/home/dq/0/Board/1/Ww/Machines/</Path>
+                  <Path Filename="Samba-2022.08">/home/dq/0/Board/1/Ww/Machines/Internet-Services/</Path>
+                  <Path Filename="..">/home/dq/0/Board/1/Ww/Machines/Internet-Services/Samba-2022.08/</Path>
+                  <Path Filename="2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project">/home/tmp/</Path>
+                  <Path Filename="..">/home/tmp/2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project/</Path>
+                  <Path Filename="Apps">/home/dq/0/Board/1/Ww/Machines/</Path>
+                  <Path Filename="..">/home/dq/0/Board/1/Ww/Machines/Apps/</Path>
+                  <Path Filename="2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project">/home/tmp/</Path>
+                  <Path Filename="2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-receipt.jpg">/home/tmp/2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project/</Path>
+                  <Path Filename="2022.08.29.1600.Mon-Chan.Heng_Chee-LKY100-Dempsey-Project">/home/tmp/</Path>
+                  <Path Filename="LKY100-2022.08">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/</Path>
+                  <Path Filename="..">/home/dq/0/Props/1/LKYSPP-Deans-Office/Wd/Work-Share/Projects/LKY100-2022.08/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -1096,6 +1219,8 @@
     <MaxTextWidth>1024</MaxTextWidth>
     <PrintMargins>200|200|200|200</PrintMargins>
     <ShowCaret>False</ShowCaret>
+    <LeftMargin>4</LeftMargin>
+    <ExtraLineSpan>0</ExtraLineSpan>
   </Viewer>
   <Editor>
     <EditWaitTime>2000</EditWaitTime>
@@ -1594,7 +1719,27 @@
     </Colors>
   </Differ>
   <MultiRenamePresets>
-    <LastPreset/>
-    <Presets/>
+    <LastPreset>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</LastPreset>
+    <Presets>
+      <Preset>
+        <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
+        <Filename>[N]</Filename>
+        <Extension>[E]</Extension>
+        <FilenameStyle>0</FilenameStyle>
+        <ExtensionStyle>0</ExtensionStyle>
+        <Find>FB_IMG_16615311</Find>
+        <Replace>2022.08.09.0730.Tue-West-Coast-Park-parkrun-</Replace>
+        <RegExp>False</RegExp>
+        <UseSubs>False</UseSubs>
+        <Counter>1</Counter>
+        <Interval>1</Interval>
+        <Width>0</Width>
+        <Log>
+          <Enabled>False</Enabled>
+          <Append>False</Append>
+          <File/>
+        </Log>
+      </Preset>
+    </Presets>
   </MultiRenamePresets>
 </doublecmd>

@@ -1,0 +1,92 @@
+# @(#) DQ's ssh config ~/.ssh/config
+# Last-edited: 2022.09.04.1439.Sun -- Danny Quah (me@DannyQuah.com)
+# Needs to be copied (not linked) on lbook; chmod 644 config
+# whether Ubuntu or MSYS
+# Created:     Sat 2019.05.18 1519 -- Danny Quah (me@DannyQuah.com)
+#-------------------------------------------------------------------- 
+# Revision History:
+#  % Thu 2021.12.30.1240 -- Danny Quah (me@DannyQuah.com)
+#    pbook // "what is my ip" - 27.125.189.116 (works) // whatismyip.org (same); but when VPN, 137.132.217.206
+#    lbook // "what is my ip" 137.132.217.206 // whatismyip.org 27.125.189.116
+#  % Fri 2021.12.24.0653 -- Danny Quah (me@DannyQuah.com)
+#    www.whatsmyip.org in KVE12 returns 27.125.189.116
+#    (previously 27.125.138.47)
+#  % Thu 2020.06.25.1432 -- Danny Quah
+#    www.whatsmyip.org in OTH Dean's Office returns
+#    (whatsmyip: 137.132.216.215) (ip a: 172.23.237.197)
+#    (/etc/sshd_conf SSH port 8801)
+#  % Sat 2020.06.06.1210h -- Danny Quah
+#    www.whatsmyip.org in KVE1.2 returns 27.125.138.47
+#  % Sat 2019.05.18.1519h -- Danny Quah (me@DannyQuah.com)
+#    First draft: 
+#    www.whatsmyip.org shows 116.87.46.185 for KVE1.2 
+#    Retired tbook
+# -------------------------------------------------------------------- 
+
+# When xbook sits in OTH DO, use for hostname the value
+# that "ip a" returns, not whatsmyip.org; use for Port 
+# what I placed in /etc/ssh/sshd_config
+Host xbook
+#   HostName 172.23.237.197
+#   HostName 10.244.68.39
+#   HostName 202.51.247.23
+   Hostname 192.168.0.153
+   User dq
+   Port 8801
+   ForwardAgent yes
+   ForwardX11 yes
+
+# Host tbook
+#   HostName 116.87.46.185
+#   User dq
+#   Port 8802
+#   ForwardAgent yes
+#   ForwardX11 yes
+
+# Host kve2.dq-ubuntu
+#   HostName 27.125.138.47
+#   User dq
+#   Port 8800
+#   ForwardAgent yes
+#   ForwardX11 yes
+
+# Trying out ssh on Lenovo-lbook-Thinkpad-X13-2020.10 // WSL
+# Host lbook
+#   HostName 27.125.189.116
+#   User dq
+#   Port 8804
+#   ForwardAgent yes
+#   ForwardX11 yes
+
+# When pbook sits in OTH DO, use for hostname the value
+# that "ip a" returns, not whatsmyip.org
+# However, when pbook sits in KVE1.2, use for hostname the return on
+# whatsmyip.org, now not what "ip a" returns.
+# In all cases, use for Port what I placed in /etc/ssh/sshd_config
+# Host pbook
+#   HostName 27.125.189.116
+#   User dq
+#   Port 8803
+#   ForwardAgent yes
+#   ForwardX11 yes
+
+# This is just to record what I might need if I use ngrok's randomly
+# generated Hostname and Port
+# Host pbook.ngrok
+#   HostName 0.tcp.ngrok.io
+#   User dq
+#   Port 15324
+#   ForwardAgent yes
+#   ForwardX11 yes
+
+# This just to record what 'ip a' returns when in OTH;
+# however, it sits behind a firewall that I can't tunnel through
+# This should be www.whatsmyip.org returns in any case
+# Host pbook.OTH
+#   HostName 137.132.212.197
+#   User dq
+#   Port 8803
+#   ForwardAgent yes
+#   ForwardX11 yes
+
+# eof ~/.ssh/config
