@@ -1,7 +1,7 @@
 # @(#) DQ's ssh config ~/.ssh/config
-# Last-edited: 2022.09.04.1459.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.09.05.1921.Mon -- Danny Quah (me@DannyQuah.com)
 # Needs to be copied (not linked) on lbook; chmod 644 config
-# whether Ubuntu or MSYS
+# whether Ubuntu or MSY but ok to link on Ubuntu or iSH
 # Created: 2019.05.18 1519.Sat -- Danny Quah (me@DannyQuah.com)
 #-------------------------------------------------------------------- 
 # Revision History:
@@ -35,6 +35,12 @@ Host xbook
    Port 8801
    ForwardAgent yes
    ForwardX11 yes
+
+Host ipad5-ish
+   Hostname 192.168.0.162
+   User dq
+   Port 8802
+   ForwardAgent yes
 
 # Host tbook
 #   HostName 116.87.46.185
