@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 # @(#) $HOMESCENE/1/db0/machines/Bash/Bash-Linux -> .bashrc
-# Last-edited: 2022.09.04.2127.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.09.05.0746.Mon -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Fri 2016.02.26.1457 -- Danny Quah (dquah@LSE039102)
@@ -26,13 +26,16 @@ elif [ -f ~/.bash-dispatcher ]; then
 fi
 
 # https://askubuntu.com/questions/1270719/is-it-possible-to-check-if-a-connection-is-local-or-via-ssh-after-elevating-to
-if [[ $(pstree -s $$) = *sshd* ]]; then
-	:
-else
-	if command -v xrdb &>/dev/null; then
-		xrdb ~/.Xresources
-	fi
-fi
+# if [[ $(pstree -s $$) = *sshd* ]]; then
+# 	:
+# else
+# 	if command -v xrdb &>/dev/null; then
+# 		xrdb ~/.Xresources
+# 	fi
+# fi
+# although still doesn't quite work because `pstree -s` not on
+# iSH
+
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
