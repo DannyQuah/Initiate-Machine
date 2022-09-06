@@ -10,3 +10,5 @@
 	helper = store
 [init]
 	defaultBranch = main
+[pack]
+	threads = 1
