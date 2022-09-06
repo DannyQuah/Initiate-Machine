@@ -406,8 +406,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>2253</Left>
-      <Top>132</Top>
+      <Left>2108</Left>
+      <Top>166</Top>
       <Width>1542</Width>
       <Height>838</Height>
       <PixelsPerInch>96</PixelsPerInch>
@@ -793,19 +793,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="2022.09.01.0800.Thu-WCP-Su-Lynn.Chua-DQ.jpg">D:\home\dq\0\Stage\Photos\Photos-Personal\Runnings-2017.07\</Path>
-                  <Path Filename="L">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\</Path>
-                  <Path Filename="Liow.Joseph-2014">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\L\</Path>
-                  <Path Filename="2022.06.16.1630.Thu-Joseph.Liow-coffee-Affogato-Cluny-Court">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\L\Liow.Joseph-2014\</Path>
-                  <Path Filename="2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf\</Path>
-                  <Path Filename="2022.09.03.1830.Sat-Girls-Night-dinner-KVB">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="2022.09.03.1830.Sat-Girls-Night-dinner-KVB.md">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.03.1830.Sat-Girls-Night-dinner-KVB\</Path>
-                  <Path Filename="2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="exco 2 2022 - talking points and key highlights for dean.docx">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.02.1000.Fri-LKYSPP-EXCO-Meeting-OTH.Conf\</Path>
-                  <Path Filename="2022.09.09.1330.Fri-MOE-LKYSPP-Roundtable">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="RT Programme and Guiding Qns.pdf">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.09.1330.Fri-MOE-LKYSPP-Roundtable\</Path>
-                  <Path Filename="Boxes">D:\home\dq\0\Board\1\Ww\Machines\</Path>
                   <Path Filename="Lenovo-ltpp15-Thinkpad-P15s-2022.04">D:\home\dq\0\Board\1\Ww\Machines\Boxes\</Path>
                   <Path Filename="2022.08.26.1830.Fri-Deans-List-Dinner-Ngee-Ann-City-Bali-Thai">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
                   <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.08.26.1830.Fri-Deans-List-Dinner-Ngee-Ann-City-Bali-Thai\</Path>
@@ -843,6 +830,19 @@
                   <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.05.1600.Mon-PWAC-Engagement-Session-Foodpanda-MOM\</Path>
                   <Path Filename="2022.09.05.1600.Mon-PWAC-Engagement-Session-Foodpanda-MOM">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
                   <Path Filename="Talking Points for Phase 3 Engagements.docx">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.05.1600.Mon-PWAC-Engagement-Session-Foodpanda-MOM\</Path>
+                  <Path Filename="2022.09.06.1400.Tue-SCM-Zoom">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="sc 13 2022 - item 4b - alumni employment outcomes.doc">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.06.1400.Tue-SCM-Zoom\</Path>
+                  <Path Filename="2022.09.14.1900.Wed-SGTech-Dinner-PWAC">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="2022.09.14.1900.Wed-SGTech-Dinner-PWAC.md">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.14.1900.Wed-SGTech-Dinner-PWAC\</Path>
+                  <Path Filename="2022.09.07.0800.Wed-PIIE-Next-STEP-planning-Zoom">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.07.0800.Wed-PIIE-Next-STEP-planning-Zoom\</Path>
+                  <Path Filename="2022.09.06.1800.Fri-Jo.Tyndall-NZ-Ambassador-farewell-Queen-Astrid-Park">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="2022.09.06.1800.Fri-Jo.Tyndall-NZ-Ambassador-farewell-Queen-Astrid-Park.md">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.06.1800.Fri-Jo.Tyndall-NZ-Ambassador-farewell-Queen-Astrid-Park\</Path>
+                  <Path Filename="2022.09.07.0800.Wed-PIIE-Next-STEP-planning-Zoom">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="Agenda Outline_Nov2022 Next STEP draftv.2022-09-02.docx">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.07.0800.Wed-PIIE-Next-STEP-planning-Zoom\</Path>
+                  <Path Filename="2022.09.06.1730.Tue-ESS-Council-02-Zoom">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="Minutes-1st Council Meeting 26.May.2022 66th Council.pdf">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.09.06.1730.Tue-ESS-Council-02-Zoom\</Path>
+                  <Path Filename="2022.11.09.Wed-11.Fri-Next-STEP">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
                 </Paths>
               </Entry>
             </History>
@@ -984,7 +984,7 @@
         </Tab>
       </Left>
       <Right>
-        <ActiveTab>0</ActiveTab>
+        <ActiveTab>1</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -1058,12 +1058,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="2022.08.26.1830.Fri-Deans-List-Dinner-Ngee-Ann-City-Bali-Thai">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
-                  <Path Filename="2020-2021-2122-Deans-List-Student-Profile.xlsx">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022.08.26.1830.Fri-Deans-List-Dinner-Ngee-Ann-City-Bali-Thai\</Path>
-                  <Path Filename="PIIE-LKYSPP-Next-STEP-2020.12">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\</Path>
-                  <Path Filename="2022.11.09.Wed-11.Fri-Next-STEP">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PIIE-LKYSPP-Next-STEP-2020.12\</Path>
-                  <Path Filename="2022.07.14.0800.Thu-PIIE-Next-STEP-Conf-planning-Zoom">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PIIE-LKYSPP-Next-STEP-2020.12\2022.11.09.Wed-11.Fri-Next-STEP\</Path>
-                  <Path Filename="Target speaker list Next STEP 2022 MASTER v07-29.xlsx">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PIIE-LKYSPP-Next-STEP-2020.12\2022.11.09.Wed-11.Fri-Next-STEP\2022.07.14.0800.Thu-PIIE-Next-STEP-Conf-planning-Zoom\</Path>
                   <Path Filename="2022.07.14.0800.Thu-PIIE-Next-STEP-Conf-planning-Zoom">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PIIE-LKYSPP-Next-STEP-2020.12\2022.11.09.Wed-11.Fri-Next-STEP\</Path>
                   <Path Filename="2022.11.09.Wed-11.Fri-Next-STEP">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PIIE-LKYSPP-Next-STEP-2020.12\</Path>
                   <Path Filename="2022.08.26.1830.Fri-Deans-List-Dinner-Ngee-Ann-City-Bali-Thai">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
@@ -1108,6 +1102,12 @@
                   <Path Filename="..">D:\home\tmp\</Path>
                   <Path Filename="2022.09.05.1600.Mon-PWAC-Engagement-Session-Foodpanda-MOM">C:\Users\sppdqlsh\OneDrive\iPad-OneDrive-Synced-Documents\</Path>
                   <Path Filename="..">C:\Users\sppdqlsh\OneDrive\iPad-OneDrive-Synced-Documents\2022.09.05.1600.Mon-PWAC-Engagement-Session-Foodpanda-MOM\</Path>
+                  <Path Filename="2022">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022\</Path>
+                  <Path Filename="bmj-2021-069503.pdf">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="SC-Steering-Committee-2019.07">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\</Path>
+                  <Path Filename="2022">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\SC-Steering-Committee-2019.07\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\LKYSPP\SC-Steering-Committee-2019.07\2022\</Path>
                 </Paths>
               </Entry>
             </History>
@@ -1189,32 +1189,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="Bajpai.Kanti-2018.02">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\</Path>
-                  <Path Filename="C">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\</Path>
-                  <Path Filename="Cashore.Ben-2018.05">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\</Path>
-                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\Cashore.Ben-2018.05\</Path>
-                  <Path Filename="TEACHER REPORT for 2120(PP5227-PRINCIPLES AND POLICIES IN SUSTAINABILITY AND THE ENVIRONMENT (LECTURE))-PP5227(LECTURE).pdf">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\Cashore.Ben-2018.05\2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO\</Path>
-                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\Cashore.Ben-2018.05\</Path>
-                  <Path Filename="Cashore.Ben-2018.05">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\C\</Path>
-                  <Path Filename="B">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\</Path>
-                  <Path Filename="Bajpai.Kanti-2018.02">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\</Path>
-                  <Path Filename="2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\Bajpai.Kanti-2018.02\</Path>
-                  <Path Filename="TEACHER REPORT for 2120(PP5902-INTERNATIONAL SECURITY - CONCEPTS  ISSUES &amp; POLICIES (LECTURE))-PP5902(LECTURE)-Kanti Prasa.pdf">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\Bajpai.Kanti-2018.02\2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO\</Path>
-                  <Path Filename="2022.08.24.1700.Wed-FAR-Kanti.Bajpai-OTH.DO">D:\home\dq\0\Board\1\Ww\People-Groups-Confidential\B\Bajpai.Kanti-2018.02\</Path>
-                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO">D:\home\dq\0\Board\1\FAR-AY2021-2022\</Path>
-                  <Path Filename="2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO.md">D:\home\dq\0\Board\1\FAR-AY2021-2022\2022.08.24.1300.Wed-FAR-Ben.Cashore-OTH.DO\</Path>
-                  <Path Filename="..">D:\home\dq\0\Sound\1\Wp\</Path>
-                  <Path Filename="home">d:\</Path>
-                  <Path Filename="dq">d:\home\</Path>
-                  <Path Filename="..">d:\home\dq\</Path>
-                  <Path Filename="tmp">d:\home\</Path>
-                  <Path Filename="..">d:\home\tmp\</Path>
-                  <Path Filename="tmp">d:\home\</Path>
-                  <Path Filename="home">d:\</Path>
-                  <Path Filename="dq">d:\home\</Path>
-                  <Path Filename="1">d:\home\dq\</Path>
-                  <Path Filename="Store">d:\home\dq\1\</Path>
-                  <Path Filename="..">d:\home\dq\1\Store\</Path>
                   <Path Filename="Downloads">d:\home\dq\1\</Path>
                   <Path Filename="..">d:\home\dq\1\Downloads\</Path>
                   <Path Filename="Apps">D:\home\dq\0\Board\1\Ww\Machines\</Path>
@@ -1237,6 +1211,34 @@
                   <Path Filename="2022">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
                   <Path Filename="2022.08.29.1400.Mon-Uzbek-Ambassador-Kakhramon.Shakirov-OTH.DO">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\2022\</Path>
                   <Path Filename="syncth-excludes.txt">D:\home\dq\0\Sound\1\Wp\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Events\</Path>
+                  <Path Filename="ltpp15u">d:\</Path>
+                  <Path Filename="Ubuntu">d:\ltpp15u\</Path>
+                  <Path Filename="..">d:\ltpp15u\Ubuntu\</Path>
+                  <Path Filename="Ubuntu-22">d:\ltpp15u\</Path>
+                  <Path Filename="..">d:\ltpp15u\Ubuntu-22\</Path>
+                  <Path Filename="Ubuntu-22">d:\ltpp15u\</Path>
+                  <Path Filename="VMStorage">d:\</Path>
+                  <Path Filename="..">d:\VMStorage\</Path>
+                  <Path Filename="VMwareWS16">d:\</Path>
+                  <Path Filename="..">d:\VMwareWS16\</Path>
+                  <Path Filename="home">d:\</Path>
+                  <Path Filename="tmp">d:\home\</Path>
+                  <Path Filename="..">d:\home\tmp\</Path>
+                  <Path Filename="tmp">d:\home\</Path>
+                  <Path Filename="ltpp15u-to-trash">d:\</Path>
+                  <Path Filename="Ubuntu">d:\ltpp15u-to-trash\</Path>
+                  <Path Filename="..">d:\ltpp15u-to-trash\Ubuntu\</Path>
+                  <Path Filename="Ubuntu">d:\ltpp15u-to-trash\</Path>
+                  <Path Filename="VMware">d:\</Path>
+                  <Path Filename="Ubuntu-2204">d:\VMware\</Path>
+                  <Path Filename="..">d:\VMware\Ubuntu-2204\</Path>
+                  <Path Filename="Ubuntu-2204">d:\VMware\</Path>
+                  <Path Filename="VMware">d:\</Path>
+                  <Path Filename="..">d:\VMware\</Path>
+                  <Path Filename="VMStorage-to-trash">d:\</Path>
+                  <Path Filename="PIIE-LKYSPP-Next-STEP-2020.12">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\</Path>
+                  <Path Filename="2022.11.09.Wed-11.Fri-Next-STEP">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Work-Share\Projects\PIIE-LKYSPP-Next-STEP-2020.12\</Path>
                 </Paths>
               </Entry>
             </History>

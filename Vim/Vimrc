@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2022.09.03.0600.Sat -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.09.06.2119.Tue -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
@@ -151,7 +151,7 @@ if has('gui_running')
   set termguicolors
 else
                                " for instance iSH on iOS
-  set list listchars+=space:_,tab:>·,trail:_,extends:>,precedes:<,nbsp:~
+  set list listchars+=space:·,tab:>·,trail:_,extends:>,precedes:<,nbsp:~
 endif
 "https://stackoverflow.com/questions/15904758/how-can-i-make-vim-show-spaces/49656087
 "set list listchars+=space:·
