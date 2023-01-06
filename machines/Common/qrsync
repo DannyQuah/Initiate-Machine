@@ -1,0 +1,144 @@
+#!/usr/bin/env bash
+# @(#) qrsync
+# Last-edited: 2022.11.13.1035.Sun -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2022.09.12.2112.Mon -- Danny Quah (me@DannyQuah.com)
+#    Add --dry-run option
+#  % 2022.09.09.1037.Fri -- Danny Quah (me@DannyQuah.com)
+#    First draft: sh script to rsync set of directories  
+#    Arg logic https://stackoverflow.com/questions/192249/how-do-i-parse-command-line-arguments-in-bash  
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+USAGE_MESSAGE="Usage: `basename $0` [--dry-run]] --machine [xbook|ipad5-ish] --action [pull|push] --folder [all|db0|dnoff|wp|ww] (as many as desired) "
+
+if test $# -le 0 ; then
+  echo $USAGE_MESSAGE
+  exit 1
+fi
+
+OTHER_MACHINE=""
+THE_ACTION=""
+# ALL_FOLDERS="db0 dnoff wp ww" # not used but just as a record
+THE_FOLDERS=""
+ADD_FLAGS=""
+
+while [[ $# -gt 0 ]]; do
+	case $1 in
+		-d|--dry-run)
+			ADD_FLAGS="$ADD_FLAGS --dry-run"
+			shift 1 # past arg
+			;;
+		-m|--machine)
+			if [[ "$2" = "xbook" ]] || [[ "$2" = "ipad5-ish" ]]; then
+				OTHER_MACHINE="$2"
+			else
+				echo "Invalid arg $1 $2 // Unrecognized machine"
+				echo $USAGE_MESSAGE
+				exit 1
+			fi
+			shift 2 # past arg and value
+			;;
+		-a|--action)
+			if [[ "$2" = "pull" ]] || [[ "$2" = "push" ]]; then
+				THE_ACTION="$2"
+			else
+				echo "Invalid arg $1 $2 // Unrecognized action"
+				echo $USAGE_MESSAGE
+				exit 1
+			fi
+			shift 2 # past arg and value
+			;;
+		-f|--folder)
+			if [[ "$2" = "all" ]] || 
+				[[ "$2" = "db0" ]] ||
+				[[ "$2" = "dnoff" ]] ||
+				[[ "$2" = "wp" ]] ||
+				[[ "$2" = "ww" ]]; then
+				THE_FOLDERS="${THE_FOLDERS}$2 "
+			else
+				echo "Invalid arg $1 $2 // Unrecognized folder"
+				echo $USAGE_MESSAGE
+				exit 1
+			fi
+			shift 2 # past-arg and value
+			;;
+		*)
+			echo "Invalid $1 // Unrecognized flag"
+			echo $USAGE_MESSAGE
+			exit 1
+	esac
+done
+
+# Drop all other folders if "all"  
+if [[ "${THE_FOLDERS}" =~ .*"all".* ]]; then
+	THE_FOLDERS="all"
+fi
+
+# echo "${THE_ACTION} ${OTHER_MACHINE} ${THE_FOLDERS}" ; exit 0
+
+TRAIL_db0="0/Scene/1"
+TRAIL_dnoff="0/Props/1"
+TRAIL_wp="0/Sound/1"
+TRAIL_ww="0/Board/1"
+
+DIR_db0="db0"
+DIR_dnoff="LKYSPP-Deans-Office"
+DIR_wp="Wp"
+DIR_ww="Ww"
+
+EXCLUDE_FLAGS="--exclude=.git --exclude=.obsidian"
+
+
+HEAD_OTHER="${OTHER_MACHINE}"
+HEAD_THIS="${HOME}"
+
+# --dry-run as needed  
+RSYNC_SYNC="rsync --archive --delete -P --verbose --update --human-readable ${EXCLUDE_FLAGS} ${ADD_FLAGS}"
+
+if [[ "${THE_ACTION}" = "pull" ]]; then
+	if [[ "${THE_FOLDERS}" = "all" ]]; then
+		 ${RSYNC_SYNC} ${HEAD_OTHER}:${TRAIL_db0}/${DIR_db0} ${HEAD_THIS}/${TRAIL_db0}
+		 ${RSYNC_SYNC} ${HEAD_OTHER}:${TRAIL_dnoff}/${DIR_dnoff} ${HEAD_THIS}/${TRAIL_dnoff}
+		 ${RSYNC_SYNC} ${HEAD_OTHER}:${TRAIL_wp}/${DIR_wp} ${HEAD_THIS}/${TRAIL_wp}
+		 ${RSYNC_SYNC} ${HEAD_OTHER}:${TRAIL_ww}/${DIR_ww} ${HEAD_THIS}/${TRAIL_ww}
+		exit 0
+	fi
+	if [[ "${THE_FOLDERS}" =~ .*"db0".* ]]; then
+		 ${RSYNC_SYNC} ${HEAD_OTHER}:${TRAIL_db0}/${DIR_db0} ${HEAD_THIS}/${TRAIL_db0}
+	fi
+	if [[ "${THE_FOLDERS}" =~ .*"dnoff".* ]]; then
+		 ${RSYNC_SYNC} ${HEAD_OTHER}:${TRAIL_dnoff}/${DIR_dnoff} ${HEAD_THIS}/${TRAIL_dnoff}
+	fi
+	if [[ "${THE_FOLDERS}" =~ .*"wp".* ]]; then
+		 ${RSYNC_SYNC} ${HEAD_OTHER}:${TRAIL_wp}/${DIR_wp} ${HEAD_THIS}/${TRAIL_wp}
+	fi
+	if [[ "${THE_FOLDERS}" =~ .*"ww".* ]]; then
+		 ${RSYNC_SYNC} ${HEAD_OTHER}:${TRAIL_ww}/${DIR_ww} ${HEAD_THIS}/${TRAIL_ww}
+	fi
+
+elif [[ "${THE_ACTION}" = "push" ]]; then
+	if [[ "${THE_FOLDERS}" = "all" ]]; then
+		 ${RSYNC_SYNC} ${HEAD_THIS}/${TRAIL_db0}/${DIR_db0} ${HEAD_OTHER}:${TRAIL_db0}
+		 ${RSYNC_SYNC} ${HEAD_THIS}/${TRAIL_dnoff}/${DIR_dnoff} ${HEAD_OTHER}:${TRAIL_dnoff}
+		 ${RSYNC_SYNC} ${HEAD_THIS}/${TRAIL_wp}/${DIR_wp} ${HEAD_OTHER}:${TRAIL_wp}
+		 ${RSYNC_SYNC} ${HEAD_THIS}/${TRAIL_ww}/${DIR_ww} ${HEAD_OTHER}:${TRAIL_ww}
+		exit 0
+	fi
+	if [[ "${THE_FOLDERS}" =~ .*"db0".* ]]; then
+		 ${RSYNC_SYNC} ${HEAD_THIS}/${TRAIL_db0}/${DIR_db0} ${HEAD_OTHER}:${TRAIL_db0}
+	fi
+	if [[ "${THE_FOLDERS}" =~ .*"dnoff".* ]]; then
+		 ${RSYNC_SYNC} ${HEAD_THIS}/${TRAIL_dnoff}/${DIR_dnoff} ${HEAD_OTHER}:${TRAIL_dnoff}
+	fi
+	if [[ "${THE_FOLDERS}" =~ .*"wp".* ]]; then
+		 ${RSYNC_SYNC} ${HEAD_THIS}/${TRAIL_wp}/${DIR_wp} ${HEAD_OTHER}:${TRAIL_wp}
+	fi
+	if [[ "${THE_FOLDERS}" =~ .*"ww".* ]]; then
+		 ${RSYNC_SYNC} ${HEAD_THIS}/${TRAIL_ww}/${DIR_ww} ${HEAD_OTHER}:${TRAIL_ww}
+	fi
+fi
+
+# vim: filetype=bash
+# eof qrsync
+

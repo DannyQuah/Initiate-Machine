@@ -1,0 +1,70 @@
+% @(#) This-module-00-Lectures-2014-DQ.tex:
+% Last edited: Mon Jun 30 15:17:02 2014 - Danny Quah (dquah@LSE016404)
+% $
+% EC4880 lectures - Driver and commons
+% Revision History:
+%  % Tue Mar 25 14:56:16 2014 - Danny Quah (dquah@infinity)
+%    First draft.  Cloned from EC402
+% $
+% $Log$
+% These next arguments are the only changes needed
+\newcommand{\theOutput}%
+%{presentation}
+{handout}
+\newcommand{\theInputFile}%
+%{../This-module-01-Overview-Growth-2014-DQ}
+%{../This-module-02-Overview-Governance-2014-DQ}
+%{../This-module-03-Middle-Income-Trap-2014-DQ}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Standard beamer presentation prologue follows.
+\documentclass[\theOutput]{beamer}
+\usetheme{Singapore}
+\usecolortheme{beaver} %\usecolortheme{default} %lily,orchid,rose,seahorse
+\usepackage{%
+ %verbatim,%		% Verbatim, comments, etc.
+ ifthen,%		% Package for conditionals
+ amsmath,%amstex,%	% Math (v1.2++ uses amsmath)
+ amsfonts,		% Frak
+ amssymb,%		% Additional ams symbols
+ euscript,%		% \EuScript (Euler script)
+ graphicx,%             % PS figures and graphics
+ grffile,%              % filenames for \includegraphics
+ array,%		% For \PBS etc., in tabular
+ tabularx,% 
+%supertabular,%
+ %multirow,%		%
+ %booktabs,%
+ tikz,
+ %epic,%		% Enhanced picture env.
+ %eepic,%		% Enhanced, enhanced picture env.
+ %ecltree,%		% Draw trees
+ %pstricks,%		% PSTricks
+}
+\usepackage{ccfonts} %\usepackage[boldsans]{ccfonts}
+\usepackage{eulervm} %\usepackage{arev}
+\usepackage[T1]{fontenc}
+\usefonttheme{serif,professionalfonts}
+\usepackage{% My own
+ %qgrfinp,%		% Own graphics defines
+ %defg,%		% TeXdraw defines (switched to tikz)
+ %deflsem,%		% Own LaTeX defines for seminar (OLD)
+ localfiles,%           % Directory info on local files
+ deflmath,%		% Own LaTeX math defines
+ defl,%			% Own LaTeX defines
+ beamerdefl%
+}
+%%
+\institute{%
+Danny Quah\\
+Economics NUS\\
+Sem2 2014
+}
+\date{\relax}
+%%
+\input{\theInputFile}
+%
+% 
+% Local Variables:
+% mode: TeX
+% end:
+% eof This-module-00-Lectures-2014-DQ.tex

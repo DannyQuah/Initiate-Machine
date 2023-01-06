@@ -1,0 +1,146 @@
+% @(#) 00-hash-20180719-DQ-driver.tex
+% Last-edited: Sun 2021.10.10.1555 -- Danny Quah (me@DannyQuah.com)
+% China and World Order Transformed: A Logic of Supply and Demand
+% Created: Thu 2018.07.18.0700 -- Danny Quah (me@DannyQuah.com)
+% $
+% Revision History:
+%  % Thu 2018.07.18.0700 -- Danny Quah (me@DannyQuah.com)
+%    First draft
+% $
+% $Log$
+%
+\documentclass[%
+ %nohyper,% Otherwise title and author are metadata and cannot contain \\
+ %12pt,% This does nothing if tufte-book
+ %letterpaper%
+ a4paper%
+ %b5paper
+]{article}
+%{scrbook}
+%{memoir}
+%{tufte-book}
+%{article}
+%
+\usepackage{
+ %verbatim,%		% Verbatim, comments, etc.
+ ifthen,%		% Package for conditionals
+ amsmath,%amstex,%	% Math (v1.2++ uses amsmath)
+ amsfonts,		% Frak
+ amssymb,%		% Additional ams symbols
+ amsthm,%
+ euscript,%		% \EuScript (Euler script)
+ gensymb,%             % \degree
+ graphicx,%             % PS figures and graphics
+ grffile,%              % filenames for \includegraphics
+ array,%		% For \PBS etc., in tabular
+ %supertabular,%
+ %multirow,%		%
+ %booktabs,%
+ tikz,
+}
+\usepackage{% My own
+ localfiles,%           % Directory info on local files
+ deflmath,%		% Own LaTeX math defines
+ defs-world-order,% % World Order book
+ defs-geogr,%    % geography
+ defl%			% Own LaTeX defines
+}
+\usepackage{natbib}
+\usepackage{makeidx} \makeindex
+\usepackage{titletoc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If tufte-book we've got customizations to do
+% \makeatletter
+% \@ifclassloaded{tufte-book}{
+% \input{tufte-book-custom.tex}
+% \newenvironment{qMarginFigure}{marginfigure} % Doesn't quite work yet
+%}{%
+% If not tufte-book
+ \usepackage{ccfonts} %\usepackage[boldsans]{ccfonts}
+ \newenvironment{qMarginFigure}{figure} % no margin figures if not tufte-book
+%}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% http://tex.stackexchange.com/questions/163986/format-table-of-contents-with-latex
+%%NO-TOC \titlecontents{chapter}
+%%NO-TOC [0.0cm]             % left margin
+%%NO-TOC {\vspace{0.5cm}}                  % above code
+%%NO-TOC {%                  % numbered format
+%%NO-TOC {{\scshape Chapter} \thecontentslabel---}%
+%%NO-TOC }%
+%%NO-TOC {}         % unnumbered format
+%%NO-TOC {\hfill\thecontentspage}         % filler-page-format, e.g dots
+%%NO-TOC
+%%NO-TOC % indented subsection (in toc)
+%%NO-TOC \titlecontents*{subsection}
+%%NO-TOC [1.0cm]             % left margin
+%%NO-TOC {}                  % above code
+%%NO-TOC {%                  % numbered format
+%%NO-TOC {\thecontentslabel. }%
+%%NO-TOC }%
+%%NO-TOC {}         % unnumbered format
+%%NO-TOC { (\thecontentspage)}         % filler-page-format
+%%NO-TOC [.~]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eulervm} %\usepackage{arev}
+\usepackage[T1]{fontenc}
+%\usefonttheme{serif,professionalfonts}
+%\usepackage{relsize}\relsize{3}
+%\input{titlepage-book.tex}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \input{../defs} % Local directory definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title page data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\theTitle{%
+China and the World Transformed: \\
+A Logic of Supply and Demand
+}
+\newcommand\theAuthor{%
+Danny Quah
+}
+\newcommand\theAffiliation{%
+Lee Kuan Yew School of Public Policy, NUS
+}
+\newcommand\theDate{%
+%\the\month\ \the\year
+${ } $ \\
+\dqToday\
+% (Draft manuscript incomplete)
+}
+%%
+\title\theTitle
+%% %%%%%%%%%%%%%%%%
+%% End prologue ...
+%% %%%%%%%%%%%%%%%%
+%% \includeonly{%
+%%  code/01-Introduction,%
+%%  code/02-Market-for-World-Order,%
+%%  code/08-Technical-Appendix%
+%% } % for only checking out chapter-specific changes
+%% %%%%%%%%%%%%%%%%
+\begin{document}
+% \makemytitle
+% \tableofcontents
+\maketitle
+
+\setcounter{secnumdepth}{1} % turn on numbered chapters (0), numbered
+                            % sections (1)
+\include{code/01-Introduction}
+
+\bibliography{library}
+\bibliographystyle{plainnat}
+
+\printindex
+
+\end{document}
+%
+% ^L
+% Local Variables:
+% mode: TeX
+% end:
+% eof 00-hash-20180719-DQ-driver.tex

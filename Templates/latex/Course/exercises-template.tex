@@ -1,0 +1,19 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+\item{% Begin:
+\ifthenelse{\boolean{qPrintQuestions}}{%
+{
+QUESTION HERE
+}
+\ifthenelse{\boolean{qPrintAnswers}}{\par\textbf{ANS}\quad}{}%
+}{\relax}%qPrintQuestions
+\ifthenelse{\boolean{qPrintAnswers}}{%
+{
+ANSWER HERE
+}
+}{\relax}%qPrintAnswers
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+}%%--End:

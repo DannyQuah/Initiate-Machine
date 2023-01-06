@@ -1,0 +1,86 @@
+% @(#) 0memo-driver-DQ.tex
+% Last edited: Wed Apr 16 05:57:44 2014 - Danny Quah (dquah@infinity)
+% $
+% Revision History:
+%  % Sun Apr  7 13:48:09 2013 - Danny Quah (dquah@infinity)
+%    First draft
+% $
+% $Log$
+%
+\documentclass[%
+ a4paper,%letterpaper,%a4paper,%a5paper,%	% a4 sized paper, otherwise letter?
+ %twoside,%		% two-sided paper print?, also qTwoSide in ?0.tex
+ %twocolumn,%		% two-column output
+ %leqno,%reqno,%	% Equation tags on left/right (amstex)
+ 11pt%10pt%12pt%	% Font size
+]{article}
+%
+\usepackage{%
+ %verbatim,%		% Verbatim, comments, etc.
+ ifthen,%		% Package for conditionals
+ amsmath,%amstex,%	% Math (v1.2++ uses amsmath)
+ amsfonts,		% Frak
+ amssymb,%		% Additional ams symbols
+ euscript,%		% \EuScript (Euler script)
+ theorem,%
+ graphicx,%             % PS figures and graphics
+ grffile,%              % filenames for \includegraphics
+ fancyhdr,%
+ float,%
+ array,%		% For \PBS etc., in tabular
+ %supertabular,%
+ %multirow,%		%
+ %booktabs,%
+ tikz,
+ %epic,%		% Enhanced picture env.
+ %eepic,%		% Enhanced, enhanced picture env.
+ %ecltree,%		% Draw trees
+ %pstricks,%		% PSTricks
+}
+\usepackage{% My own
+ %qgrfinp,%		% Own graphics defines
+ %defg,%		% TeXdraw defines (switched to tikz)
+ %deflsem,%		% Own LaTeX defines for seminar (OLD)
+ localfiles,%           % Directory info on local files
+ deflmath,%		% Own LaTeX math defines
+ defl%			% Own LaTeX defines
+}
+\usepackage{ccfonts,eulervm} %\usepackage[boldsans]{ccfonts}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\floatstyle{ruled} \restylefloat{figure} \restylefloat{table}
+%% \setcounter{secnumdepth}{0} % turn off section numbering
+%
+\newcommand\thisDocument{Memo Driver -- CHANGE}
+\newcommand\thisAuthor{D.~Quah}
+%% %%%%%%%%%%%%%%%%
+%% End prologue ...
+%% %%%%%%%%%%%%%%%%
+\begin{document}
+\input{pages-basic}\thispagestyle{empty}
+
+\noindent\textbf{Memo:} theSubject\\
+\noindent\textbf{From:} Danny Quah\\
+\noindent\textbf{Date:} theDate
+
+\bigskip
+\vskip+0.3em
+\hrule
+\vskip+0.3em
+\bigskip
+
+\noindent Take the right side, remembering that
+\begin{equation*}
+ \log_{2a}(b) = \frac{\log_2(b)}{\log_2(2a)} .
+\end{equation*}
+
+\end{document}
+
+%
+% ^L
+% Local Variables:
+% mode: TeX
+% end:
+% eof 0memo-driver-DQ.tex
+

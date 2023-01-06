@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+# @(#) $HOMESCENE/1/db0/machines/Bash/Bash-Profile -> .bash_profile
+# Last-edited: 2022.11.12.1552.Sat -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2022.11.12.1546.Sat -- Danny Quah (me@DannyQuah.com) 
+## if the shell is interactive and .bashrc exists, get the aliases and functions
+if [[ $- == *i* && -f ~/.bashrc ]]; then
+  . ~/.bashrc
+fi
+# 
+# vim: filetype=sh
+# eof Bash-Profile

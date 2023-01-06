@@ -1,0 +1,73 @@
+% @(#) presentation-driver-DQ.tex
+% Last edited: Fri May 30 12:38:33 2014 - Danny Quah (dquah@LSE016404)
+% $
+% Revision History:
+%  % Mon Apr 21 08:14:10 2014 - Danny Quah (dquah@infinity)
+%    First draft
+% $
+% $Log$
+\newcommand{\theOutput}%
+{presentation}
+%{handout}
+\newcommand{\theInputFile}%
+{presentation-template-DQ}
+%%%%
+\documentclass[\theOutput]{beamer}
+\usetheme{Singapore}
+\usecolortheme{beaver} %\usecolortheme{default} %lily,orchid,rose,seahorse
+\usepackage{%
+ %verbatim,%		% Verbatim, comments, etc.
+ ifthen,%		% Package for conditionals
+ amsmath,%amstex,%	% Math (v1.2++ uses amsmath)
+ amsfonts,		% Frak
+ amssymb,%		% Additional ams symbols
+ euscript,%		% \EuScript (Euler script)
+ graphicx,%             % PS figures and graphics
+ grffile,%              % filenames for \includegraphics
+ array,%		% For \PBS etc., in tabular
+ tabularx,%
+ %supertabular,%
+ %multirow,%		%
+ %booktabs,%
+ tikz,
+ %epic,%		% Enhanced picture env.
+ %eepic,%		% Enhanced, enhanced picture env.
+ %ecltree,%		% Draw trees
+ %pstricks,%		% PSTricks
+}
+\usepackage{ccfonts} %\usepackage[boldsans]{ccfonts}
+\usepackage{eulervm} %\usepackage{arev}
+\usepackage[T1]{fontenc}
+\usefonttheme{serif,professionalfonts}
+\usepackage{% My own
+ defg,%			% TeXdraw defines
+ deflsem,%		% Own LaTeX defines for seminar
+ localfiles,%           % Directory info on local files
+ deflmath,%		% Own LaTeX math defines
+ defl,%			% Own LaTeX defines
+ beamerdefl%
+}
+%
+%---------------------------------------------------------------------%
+%                        LOCAL SYMBOL DEFINES                         %
+%---------------------------------------------------------------------%
+% If any
+%---------------------------------------------------------------------%
+%                           NEAR CONSTANTS                            %
+%---------------------------------------------------------------------%
+\institute{%
+%%Tecity Group Luncheon Workshop\\
+Danny Quah\\
+%%Tan Chin Tuan Visiting Professor, NUS\\
+Economics and International Development, LSE\\
+Singapore, 21 April 2014
+}
+\date{\relax} % so the titlepage doesn't have an automatic date
+\input{\theInputFile}
+%
+% 
+% Local Variables:
+% mode: TeX
+% end:
+% eof presentation-driver-DQ.tex
+

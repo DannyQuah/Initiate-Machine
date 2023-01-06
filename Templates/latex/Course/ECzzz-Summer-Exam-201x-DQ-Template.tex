@@ -1,0 +1,221 @@
+% @(#) ECzzz-201xt1y-Summer-Exam-DQ.tex
+% Last edited: Sun Mar 30 13:21:17 2014 - Danny Quah (DQUAH@GRAVITY)
+% $
+% Only *-exam-defs.tex, Prologue, and Exam Content need to change for
+% each exam.  Copy this and *-exam-defs.tex to an Exams/
+% directory; edit and add content to just these two.
+% Revision History:
+%  % Sat Mar 02 10:50:27 2013 - Danny Quah (DQUAH@GRAVITY)
+%    First draft
+% $
+% $Log$
+%
+\documentclass[%
+ a4paper,%letterpaper,
+ %twoside,%
+ %twocolumn,%
+ %leqno,%reqno,%
+ 11pt%10pt%12pt%
+]{article}
+\usepackage{
+ ifthen,%            % conditionals
+ %magnpage,%,a5%    % pagesize
+ verbatim,%         % \begin{comment}..\end{comment}
+ %endnotes,%
+ fancyhdr,%
+ %multicol,%
+ %doublespace,%
+ amsmath,
+ amsfonts,amssymb,euscript,%
+ theorem,
+ float,%            % figures/tables to float - \restylefloat below
+ graphicx,%             % PS figures and graphics
+ grffile,%              % filenames for \includegraphics
+ array,%		% For \PBS etc., in tabular
+ %bar,%             % barcharts, barenv (after amsmath)
+ tikz,%
+ localfiles,%
+ deflmath,%
+ defl%
+}
+%\usepackage[boldsans]{ccfonts} % eulervm and this do not get along -
+                               % symbols go missing, unless eulervm
+                               % loads *after* it
+%\usepackage{eulervm}
+\usepackage{ccfonts,eulervm}
+%\usepackage{palatino}
+%\usepackage{garamond}
+%\usepackage{millenial} % New Century Schoolbook text, Millenial math
+%\usepackage{fouriernc} % New Century Schoolbook text, Fourier math
+%\usepackage{pxfonts}   % Palatino text, pxfonts math
+%\usepackage{mathpazo}   % Palatino text, pazo math
+%\usepackage{mathpple}   % Palatino text, Euler math
+%\usepackage[charter]{mathdesign}
+%\usepackage[garamond]{mathdesign}
+%\usepackage{fourier} % Utopia text, Fourier-GUTenberg math
+%\usepackage[utopia]{mathdesign}
+\usepackage[T1]{fontenc}
+\usepackage[round,sort]{natbib} % instead of cite
+% \usepackage{pdfpages}
+\pagestyle{fancy}
+\floatstyle{ruled} \restylefloat{figure} \restylefloat{table}
+\renewcommand{\theequation}{\theenumi.\arabic{equation}}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Begin Prologue
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{course-defs}
+\input{../src/localspecs}
+% \setboolean{qPrintAnswers}{true} % default false
+\newcommand\thisFrontPage{LSE-2014exam-frontpage}
+\input{ECzzz-201xt1y-exam-defs}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% End Prologue
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{document}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Begin frontpage and formatting
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{qPrintAnswers}}{
+ \thispagestyle{empty}%	No page number on the first page
+}{\relax} %
+\ifthenelse{\boolean{qPrintQuestions}}{
+\input{\thisFrontPage}
+\clearpage
+}{\relax}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  End frontpage and formatting
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Begin exam content
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\Large SECTION A}
+
+Answer TWO out of three questions.
+
+\begin{enumerate}
+% \setcounter{enumi}{1}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- Begin Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{%%- Begin Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{qPrintQuestions}}{%
+{
+ Is this the Question?
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{qPrintAnswers}}{\par\textbf{ANS}\quad}{\relax}%
+}{\relax}%qPrintQuestions
+\ifthenelse{\boolean{qPrintAnswers}}{%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+{
+ If so, then this must be the Answer.
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+}{\relax}%qPrintAnswers
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- End Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{qPrintAnswers}}{\clearpage}{\relax}%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- Begin Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{%%- Begin Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{qPrintQuestions}}{%
+{
+ Is this the Question?
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{qPrintAnswers}}{\par\textbf{ANS}\quad}{\relax}%
+}{\relax}%qPrintQuestions
+\ifthenelse{\boolean{qPrintAnswers}}{%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+{
+ If so, then this must be the Answer.
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+}{\relax}%qPrintAnswers
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- End Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+
+\clearpage
+\section*{\Large SECTION B}
+
+Answer TWO out of three questions.
+
+\begin{enumerate}
+% \setcounter{enumi}{3}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- Begin Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{%%- Begin Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{qPrintQuestions}}{%
+{
+ Is this the next Question?
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{qPrintAnswers}}{\par\textbf{ANS}\quad}{}%
+}{\relax}%qPrintQuestions
+\ifthenelse{\boolean{qPrintAnswers}}{%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+{
+ If so, then this must be the next Answer.
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+}{\relax}%qPrintAnswers
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- End Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{qPrintAnswers}}{\clearpage}{\relax}%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- Begin Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{%%- Begin Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{qPrintQuestions}}{%
+{
+ Is this the next Question?
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{qPrintAnswers}}{\par\textbf{ANS}\quad}{}%
+}{\relax}%qPrintQuestions
+\ifthenelse{\boolean{qPrintAnswers}}{%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+{
+ If so, then this must be the next Answer.
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+}{\relax}%qPrintAnswers
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- End Question: -
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  End exam content
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+% ^L
+% Local Variables:
+% mode: TeX
+% end:
+% eof ECzzz-201xt1y-Summer-Exam-DQ.tex

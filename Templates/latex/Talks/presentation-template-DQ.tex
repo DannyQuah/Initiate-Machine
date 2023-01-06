@@ -1,0 +1,123 @@
+% @(#) presentation-template-DQ.tex
+% Last edited: Mon Apr 21 16:47:21 2014 - Danny Quah (DQUAH@GRAVITY)
+% $
+% Revision History:
+%  % Tue Feb 11 10:39:30 2014 - Danny Quah (dquah@spartan)
+%    First draft
+% $
+% $Log$
+%
+%---------------------------------------------------------------------%
+%                             INFORMATION                             %
+%---------------------------------------------------------------------%
+\title[China's Economy]{China's Economy --- Is It Done?}
+% %%% DOCUMENT %%%
+\begin{document}
+ \frame{\titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+ \frametitle{OUTLINE}
+ \tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Financial Weakness}
+%---------------------------------------------------------------------%
+% FRAME %
+%---------------------------------------------------------------------%
+%% US / exponential growth ++
+\begin{frame}[plain]
+ % \frametitle{}
+ \begin{center}
+ \includegraphics[width=0.8\textwidth]%
+  {\DirCode/{2014.03-World-Growth/figure/US-trend1}}
+ \end{center}
+\end{frame}
+%---------------------------------------------------------------------%
+% FRAME %
+%---------------------------------------------------------------------%
+%% The Financials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \begin{frame}{SERIAL CORRELATION}
+ \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The World's Economic Centre of Gravity}
+%---------------------------------------------------------------------%
+% FRAME %
+%---------------------------------------------------------------------%
+%% Lights
+
+%% From
+%% http://tex.stackexchange.com/questions/3915/image-on-full-slide-in-beamer-package
+{ % all template changes are local to this group.
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[width=\paperwidth]%
+                {\DirImages/{NASA/DQ-Land-Lights}}
+%{\DirImages/{NASA/Final-from-Design-Unit/land-lights-16384lightened-lower}}
+            };
+        \end{tikzpicture}
+     \btVFill
+        \hspace{-0.9cm}\noindent{\linespread{0.5}\selectfont
+        \textcolor{white}{\tiny
+        Source: DMSP data courtesy Marc
+        Imhoff of NASA GSFC and Christopher Elvidge of NOAA
+        NGDC. Image by Craig Mayhew and Robert Simmon, NASA Earth
+        Observatory. 
+        }
+        \par
+        }
+     \end{frame}
+}
+%---------------------------------------------------------------------%
+% FRAME %
+%---------------------------------------------------------------------%
+%% WECG
+{ % all template changes are local to this group.
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[width=\paperwidth]%
+                {\DirImages/{2010.09.27-LSE-Research-DQ-Map}}
+            };
+        \end{tikzpicture}
+     \btVFill
+        \hspace{-0.9cm}\noindent{\linespread{0.5}\selectfont
+        \textcolor{black}{\tiny
+        Source: D. Quah (2011).  The World's Shifting Economic Centre of
+    Gravity
+        }
+        \par
+        }
+     \end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%---------------------------------------------------------------------%
+% FRAME %
+%---------------------------------------------------------------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Conclusion}
+\begin{frame}
+ \frametitle{KEY IDEAS}
+ \tableofcontents
+\end{frame}
+%---------------------------------------------------------------------%
+% (END) FRAME %
+%---------------------------------------------------------------------%
+%
+\end{document}
+
+\begin{frame}
+
+
+\end{frame}
+%
+%
+% 
+% Local Variables:
+% mode: TeX
+% end:
+% eof presentation-template-DQ.tex
+

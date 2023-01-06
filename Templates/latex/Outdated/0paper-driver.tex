@@ -1,0 +1,92 @@
+% @(#) 0paper-Driver.tex
+% Last edited: Wed Apr 16 05:59:27 2014 - Danny Quah (dquah@infinity)
+% $
+% Driver for paper, typically re-named 0.tex in directory
+% Revision History:
+%  % Fri Feb  1 13:00:13 2013 - Danny Quah (dquah@spartan)
+%    First draft
+% $
+% $Log$
+%
+\documentclass[%
+ a4paper,%letterpaper,
+ %twoside,%
+ %twocolumn,%
+ %leqno,%reqno,%
+ 11pt%10pt%12pt%
+]{article}
+\usepackage{
+ ifthen%            % conditionals
+ %,magnpage%,a5%    % pagesize
+ ,verbatim%         % \begin{comment}..\end{comment}
+ %,endnotes%
+ ,fancyhdr%
+ %,multicol%
+ %,doublespace%
+ ,amsmath
+ ,amsfonts,amssymb,euscript%
+ ,graphicx%         % PS figures and graphics
+ ,grffile%          % filenames for \includegraphics
+ ,theorem
+ ,float%            % figures/tables to float - \restylefloat below
+ %,bar%             % barcharts, barenv (after amsmath)
+ %,array%           % PBS, etc., in tabular
+ ,texdraw%
+ ,defg%
+ ,localfiles%
+ ,deflmath%
+ ,defl%
+}
+\usepackage{ccfonts}
+%\usepackage[boldsans]{ccfonts} % eulervm and this do not get along -
+                               % symbols go missing, unless eulervm
+                               % loads *after* it
+\usepackage{eulervm}
+%\usepackage{palatino}
+%\usepackage{garamond}
+%\usepackage{millenial} % New Century Schoolbook text, Millenial math
+%\usepackage{fouriernc} % New Century Schoolbook text, Fourier math
+%\usepackage{pxfonts}   % Palatino text, pxfonts math
+%\usepackage{mathpazo}   % Palatino text, pazo math
+%\usepackage{mathpple}   % Palatino text, Euler math
+%\usepackage[charter]{mathdesign}
+%\usepackage[garamond]{mathdesign}
+%\usepackage{fourier} % Utopia text, Fourier-GUTenberg math
+%\usepackage[utopia]{mathdesign}
+\usepackage[T1]{fontenc}
+\usepackage[round,sort]{natbib} % instead of cite
+\usepackage{hyperref}
+% \usepackage{pdfpages}
+\pagestyle{fancy}
+\floatstyle{ruled} \restylefloat{figure} \restylefloat{table}
+%
+% \newcommand{\thisDocument}{Asia's Economic Growth} % optional
+% \newcommand{\thisAuthor}{D. Quah} % optional
+\begin{document}
+\input{pages-basic}\thispagestyle{empty}
+\input{1-Front}
+\hrule\bigskip
+\input{1-Introduction}
+\input{2-WECG}
+
+\section{Behaviour in Global Business Cycles}
+
+The.
+
+\section{Export Flows Across Geographical Space}
+
+Turn.
+
+\section{Conclusions}
+
+This.
+
+\bibliography{refrs,refrt,refru,library}
+\bibliographystyle{plainnat}
+
+\end{document}
+% ^L
+% Local Variables:
+% mode: TeX
+% end:
+% eof 0paper-Driver.tex
