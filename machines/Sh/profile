@@ -2,7 +2,7 @@
 #!/usr/bin/env sh
 # @(#) .profile -> .../db0/machines/Sh/Profile
 # ~/.profile: executed by the command interpreter for login shells.
-# Last-edited: Mon 2022.01.03.1922 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.09.10.1802.Sat -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Mon 2022.01.03.1756 -- Danny Quah (me@DannyQuah.com)
@@ -16,7 +16,7 @@
 #
 # the default umask is set in /etc/profile; for setting the umask
 # for ssh logins, install and configure the libpam-umask package.
-#umask 022
+umask 022
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

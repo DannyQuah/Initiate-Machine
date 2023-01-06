@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Bash/Bash-dispatcher
-# Last-edited: 2022.09.07.1124.Wed -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.10.30.1945.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sun 2020.07.19.1458 -- Danny Quah (me@DannyQuah.com)
@@ -161,7 +161,14 @@ alias gss='git status -s'
 # ################################
 # rsync use 
 # --dry-run as needed  
-alias rsync-sync='rsync --archive --delete --verbose --update --human-readable'
+## alias rsync-sync="rsync --archive --delete -P --verbose --update --human-readable --exclude=.git "
+
+# These have been replaced by the shell script qrsync
+# From source xbook to whatever machine I'm on
+## alias rsync-xb-lky='rsync-sync xbook:0/Props/1/LKYSPP-Deans-Office ~/0/Props/1'
+## alias rsync-xb-wp='rsync-sync xbook:0/Sound/1/Wp ~/0/Sound/1/'
+## alias rsync-xb-ww='rsync-sync xbook:0/Board/1/Ww ~/0/Board/1/'
+## alias rsync-xb-db0='rsync-sync xbook:0/Scene/1/db0 ~/0/Scene/1/'
 #
 # export HISTIGNORE="&:ls:ls *:mutt:[bf]g:exit" # no repeats in shell history
 
@@ -177,7 +184,4 @@ function acs {
   apt-cache search $1 | grep $2
 }
 
-#
-# Local Variables:
-# end:
 # eof Bash-dispatcher

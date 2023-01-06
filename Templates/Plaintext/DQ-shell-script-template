@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) FILENAME
-# Last-edited: TIMESTAMP -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.11.13.1032.Sun -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % TIMESTAMP -- Danny Quah (me@DannyQuah.com)
@@ -14,5 +14,5 @@ if test $# -le 0 ; then
   exit 1
 fi
 
-
+# vim: filetype=sh
 # eof FILENAME

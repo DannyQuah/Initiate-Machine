@@ -1,8 +1,10 @@
 #!/usr/bin/env sh
 # @(#) pathogen-bundles
-# Last-edited: 2022.08.28.0736.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.10.08.0755.Sat -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
+#  % 2022.09.24.1132.Sat -- Danny Quah (me@DannyQuah.com)  
+#    Take out vimwiki  
 #  % 2022.08.28.0655.Sun -- Danny Quah (me@DannyQuah.com)  
 #    Restore (after yesterday's removal)?
 #    -  goyo.vim (distraction-free writing; No)
@@ -41,11 +43,20 @@ cd ./fzf ; ./install
 cd ..
 git clone --depth 1 https://github.com/junegunn/fzf.vim
 
+rm -rf goyo.vim
+git clone https://github.com/junegunn/goyo.vim 
+
 rm -rf lightline.vim
 git clone --depth 1 https://github.com/itchyny/lightline.vim
 
+rm -rf limelight.vim
+git clone --depth 1 https://github.com/junegunn/limelight.vim
+
 rm -rf markdown-preview.nvim
 git clone --depth 1 https://github.com/iamcco/markdown-preview.nvim
+
+rm -rf powerline
+git clone --depth 1 https://github.com/powerline/powerline  
 
 rm -rf tabular
 git clone --depth 1 https://github.com/godlygeek/tabular
@@ -56,6 +67,9 @@ git clone --depth 1 https://github.com/godlygeek/tabular
 # rm -rf vim-easymotion
 # git clone --depth 1 https://github.com/easymotion/vim-easymotion
 
+rm -rf vim-mail  
+git clone --depth 1 https://github.com/dbeniamine/vim-mail.git  
+
 rm -rf vim-markdown
 git clone --depth 1 https://github.com/plasticboy/vim-markdown
 
@@ -65,8 +79,8 @@ git clone --depth 1 https://github.com/reedes/vim-pencil
 rm -rf vim-renumber
 git clone --depth 1 https://github.com/clarke/vim-renumber
 
-rm -rf vimwiki
-git clone --depth 1 https://github.com/vimwiki/vimwiki
+# rm -rf vimwiki
+# git clone --depth 1 https://github.com/vimwiki/vimwiki
 #
 # ------------------------------
 # Colorschemes

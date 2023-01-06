@@ -1,10 +1,14 @@
 #!/usr/bin/env sh
 # @(#) bin/Archive.S1.External -> 0/Scene/1/db0/machines/Common/
-# Last-edited: 2022.05.15.1106.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.11.14.1451.Mon -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
+# -[b|r] backup (to external storage) or recover
 # -l archives lbook into WD-My-Passport-Ultra-2Tb-2016.07 (use WSL, not MSYS)
+# -t archives ltpp15u into WD-My-Passport-Ultra-2TB-2016.07 (from VMware)  
+# -x archives xbook into Samsung-1TB-HD-2015.12  
 # -[n|a] no-op, just list OR action
-# -p archives pbook into Samsung-1TB-HD-2015.12.md (retired)
+#
+#    On ltpp15u (after VM > Settings ...) /usr/bin/vmhgfs-fuse .host:/MyPassport /mnt/hgfs/e -o subtype=fmhgfs-fuse,allow_other
 #
 #    On lbook if /mnt/e not already mounted or available, first unlock
 #    BitLocker-protected external drive onto E:, then open WSL:
@@ -13,6 +17,9 @@
 #    (afterwards sudo umount /mnt/e)
 #
 # Revision History:
+# 
+#  % 2022.10.29.1527.Sat -- Danny Quah (me@DannyQuah.com)
+#    No longer have pbook, switch to Dell-xbook-XPS-13-9350-2016.03
 #  % 2022.02.20.1530.Sun -- Danny Quah (me@DannyQuah.com) 
 #    Refactor and extend
 #  % Wed 2021.02.10.2039 -- Danny Quah (me@DannyQuah.com)
@@ -24,7 +31,7 @@
 #    First draft: Backup onto External HD; try to do so regularly
 # ----------------------------------------------------------------
 trap 'exit 0' 2 15 
-USAGE_MESSAGE="Usage: `basename $0` {-b|-r} {-l|-p} {-n|-a}"
+USAGE_MESSAGE="Usage: `basename $0` {-b|-r} {-t|-l|-x} {-n|-a}"
 LIST_FOLDERS="0/ 1/"
 RSYNC_FLAGS='-LavrulhRHpEXgt --exclude .git/ --delete --progress'
 #
@@ -38,7 +45,7 @@ bBackup=0
 bRestore=0
 if [ "$1" = "-b" ]; then
   bBackup=1
-elif [ $1 = '-r' ]; then
+elif [ $1 = "-r" ]; then
   bRestore=1
 else
   echo "Invalid flag $1 // Unrecognized backup option"
@@ -46,12 +53,15 @@ else
   exit 1
 fi
 
+bltppu=0
 blbook=0
-bpbook=0
-if [ "$2" = "-l" ]; then
+bxbook=0
+if [ "$2" = "-t" ]; then
+  bltppu=1
+elif [ "$2" = "-l" ]; then
   blbook=1
-elif [ "$2" = "-p" ]; then
-  bpbook=1
+elif [ "$2" = "-x" ]; then
+  bxbook=1
 else
   echo "Invalid flag $2 // Unrecognized machine option"
   echo $USAGE_MESSAGE
@@ -75,8 +85,12 @@ fi
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-if [ $bpbook = 1 ]; then 
-  # pbook
+if [ $bltppu = 1 ]; then
+  # ltpp15u
+  EXT_HD=/mnt/hgfs/e/dq
+  PERSONAL_FOLDER=backups
+elif [ $bxbook = 1 ]; then 
+  # xbook
   EXT_HD=/media/dq/DQS
   PERSONAL_FOLDER=Users/dq/
 elif [ $blbook = 1 ] ; then
@@ -141,5 +155,6 @@ fi
 
 # ----------------------------------------------------------------
 
+# vim: filetype=sh
 # eof Archive.S1.External
 

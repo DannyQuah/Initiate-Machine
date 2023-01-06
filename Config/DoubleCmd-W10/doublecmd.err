@@ -38,3 +38,26 @@ Unhandled exception: EInvalidOp: Invalid floating point operation
   $00000000006525E6 line 744, column 47 of gtk2callback.inc in /usr/lib/doublecmd/doublecmd
   $00007FC02756538B in /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0
 
+--------------- 10-10-2022, 16:09:29 ---------------
+| DC v1.0.5 beta Rev. 104 -- x86_64-Win64-win32/win64
+| Windows 10 21H2 x86_64 | PID 51432
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $00007FF70E8B97AD in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70E9062F7 line 6614, column 111 of fmain.pas in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70E905DCC line 6531, column 54 of fmain.pas in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70EB784FC line 507, column 5 of udriveslist.pas in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70EB784B0 line 499, column 5 of udriveslist.pas in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70EB7805D line 350, column 47 of udriveslist.pas in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70EA19131 line 2327, column 5 of include/control.inc in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70EA197CB line 2506, column 22 of include/control.inc in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70E890801 in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70EA19031 line 2287, column 24 of include/control.inc in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70EA0D2E9 line 5429, column 28 of include/wincontrol.inc in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70EADF38D line 4955, column 31 of grids.pas in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70EAD5869 line 112, column 36 of lclmessageglue.pas in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70E9EFABD line 2607, column 38 of win32/win32callback.inc in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FF70E9F0250 line 2772, column 19 of win32/win32callback.inc in C:\Program Files\Double Commander\doublecmd.exe
+  $00007FFDB301E858 in C:\Windows\System32\user32.dll
+  $00007FFDB301E299 in C:\Windows\System32\user32.dll
+

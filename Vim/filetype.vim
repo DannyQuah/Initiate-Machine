@@ -1,5 +1,5 @@
 " @(#) filetype.vim
-" Last-edited: Mon 2021.01.04.1645 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.10.24.1226.Mon -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Mon 2021.01.04.1644 -- Danny Quah (me@DannyQuah.com)
@@ -15,9 +15,11 @@ endif
 augroup filetypedetect
   autocmd!
 "  autocmd BufRead,BufNewFile *.tex     setfiletype tex
-"  autocmd BufEnter *.md setlocal filetype=markdown
+  autocmd BufEnter *.md setlocal filetype=markdown
   autocmd BufRead,BufNewFile *.md      setfiletype markdown
+"  autocmd BufRead,BufNewFile *.md      setfiletype vimwiki
   autocmd BufRead,BufNewFile *.txt     setfiletype text
+"  autocmd BufRead,BufNewFile *.email   setfiletype mail
   autocmd BufRead,BufNewFile Vimrc     setfiletype vim
   autocmd FileType r inoremap <buffer> > <Esc>:normal! a%>%<CR>a
 augroup END

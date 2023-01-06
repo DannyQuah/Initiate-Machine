@@ -1,5 +1,5 @@
 " @(#) Vim/Gvimrc <- ~/.gvimrc
-" Last-edited: 2022.08.28.0734.Sun -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.11.13.0701.Sun -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sun 2020.07.19.0745 -- Danny Quah (me@DannyQuah.com)
@@ -149,7 +149,7 @@ set t_vb=
   " :ThematicRandom        " switch to a random theme
 
 
-  set lines=51 columns=160
+  set lines=53 columns=160
                                "lines=48+n, n for mode lines,
                                "directory listing in netrw etc. 
                                "I have also experimented with

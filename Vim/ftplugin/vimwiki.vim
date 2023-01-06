@@ -1,9 +1,15 @@
 " @(#) db/Vim/ftplugin/vimwiki.vim
-" Last-edited: Thu 2022.01.13.1156 -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2022.09.24.1224.Sat -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
-" Revision History: 
+" Revision History:  
+"  % 2022.09.24.1218.Sat -- Danny Quah (me@DannyQuah.com)
+"   When in use (although no longer)  my index.md's had
+"    [WikiPrsn](wn.myWikiPrsn:./index.md)  
+"    [WikiDean](wn.myWikiDean:./index.md)  
+"    [WikiWork](wn.myWikiWork:./index.md)  
+"    [EL-DQ-Inbox](wn.myWikiDean:./EL-DQ-inbox/EL-DQ-inbox.md)  
 "  % Tue 2020.09.15.1612 -- Danny Quah (me@DannyQuah.com)
-"    First draft
+"    First draft. "
 " ----------------------------------------------------------------
 "
 " :VWS /thisToken/ - will search across all wiki notes

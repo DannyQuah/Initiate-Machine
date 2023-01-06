@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: 2022.06.19.0716.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.11.23.1000.Wed -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -37,6 +37,8 @@ case "$HOSTNAME" in
 		;;
 	xbook*)
 		;;
+	iPad-Pro*)
+		;;
 	PC1MDCKR*)
 # WIN_DIRS for Ubuntu use under WSL; not needed on real Ubuntu machines
     WIN_DIRS="/mnt/c/Users/sppdqlsh /mnt/d/dq"
@@ -46,9 +48,9 @@ esac
 # Branch on OS ---------------------------------------------------
 case "$OSTYPE" in
   linux*)
-    BIN_DIRS="${HOME}/local/bin /usr/local/texlive/2022/bin/x86_64-linux"
-    MANPATH=$MANPATH:"/usr/local/texlive/2022/texmf-dist/doc/man"
-    INFOPATH=$INFOPATH:"/usr/local/texlive/2022/texmf-dist/doc/info"
+    BIN_DIRS="${HOME}/local/bin ${HOME}/bin"
+#    MANPATH=$MANPATH:"/usr/local/texlive/2022/texmf-dist/doc/man"
+#    INFOPATH=$INFOPATH:"/usr/local/texlive/2022/texmf-dist/doc/info"
     DC_CONFIG_PATH="${HOME}/0/Scene/1/db0/Config/DoubleCmd-Linux"
 
 # Keyboard -------------------------------------------------------
@@ -77,6 +79,7 @@ esac
 
 # ###############################
 # Settings
+umask 022 
 set -o noclobber
 
 # ###############################
@@ -86,12 +89,17 @@ set -o noclobber
 # "Li.H" and "Li.X" would then be separated by "Lin.A". No harm
 # putting this in for W10 machines too, so...
 # Sat 2022.01.08.0709 -- Danny Quah (me@DannyQuah.com)
-export LANG=C
+# export LANG=C
+# mosh requires UTF-8 native locale
+export LANG=en_SG.utf-8
 # ###############################
 #
+# Following https://askubuntu.com/questions/432217/prevent-duplicate-entries-in-path  
+#
 for bindir in $( echo "$BIN_DIRS" ) ; do
-  if [ -d "$bindir" ]; then
-   PATH="$bindir":$PATH
+  if [ -d "${bindir}" ]; then
+    [[ ":${PATH}:" =~ ":${bindir}:" ]] || PATH="${bindir}:${PATH}"
+#   PATH="$bindir":$PATH
   fi
 done
 export PATH=$PATH
@@ -104,11 +112,10 @@ FSROOT=${HOME}/0
 CDPATH=\
 ${FSROOT}/Scene/1/db0:\
 ${FSROOT}/Sound/1/Wp:\
-${FSROOT}/Props/1/LKYSPP-Deans-Office/Wd/Work-Share:\
+${FSROOT}/Props/1/LKYSPP-Deans-Office/Wd/:\
 ${FSROOT}/Board/1/Ww:\
-${FSROOT}/Floor/1/t:\
+${FSROOT}/Board/1/Ww/People-Groups-Confidential:\
 ${FSROOT}/Light/1/j:\
-${FSROOT}/Light/1/t:\
 ${FSROOT}/Stage/Photos:
 
 for windir in $( echo "$WIN_DIRS" ) ; do
@@ -118,6 +125,14 @@ for windir in $( echo "$WIN_DIRS" ) ; do
 done
 export CDPATH=$CDPATH
 # source /usr/share/autojump/autojump.sh
+
+#
+# ###############################
+# Email management - I sync Gmail for
+# offline use
+alias olm="offlineimap"
+alias olq="offlineimap -q"
+#
 #
 # ###############################
 # https://gnunn1.github.io/tilix-web/manual/vteconfig/
@@ -128,6 +143,31 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 #		source /etc/profile.d/vte.csh
 	fi
 fi
+
+#
+# ###############################
+# tmux is now my terminal multiplexer
+# if [ -d "/tmp/tmux-1000" ]; then
+#   set ...
+# fi
+
+# on Dell-xbook-XPS-13-9350-2016.03 console  
+alias tmnxc="tmux -u new-session -s xbConsole"
+alias tmaxc="tmux -u attach -t xbConsole"  
+# on Apple-iPad-Pro-5G-12.9-2022.08 over mosh or similar  
+alias tmnxi5="tmux -u new-session -s xbook-ip5"
+alias tmaxi5="tmux -u attach -t xbook-ip5"
+# on Apple-iPad-Pro-5G-12.9-2022.08 // iSH  
+alias tmni5="tmux -u new-session -s i5Console"
+alias tmai5="tmux -u attach -t i5Console"
+# on Lenovo-ltpp15-Thinkpad-P15s-2022.04 > ltpp15u  
+alias tmnlt="tmux -u new-session -s ltConsole"
+alias tmalt="tmux -u attach -t ltConsole"
+alias tmnxlt="tmux -u new-session -s xbook-lt"
+alias tmaxlt="tmux -u attach -t xbook-lt"
+#
+
+#
 # ###############################
 # Since 2021.08 update to "Backup and Sync",
 # Google Drive now defaults to no "w" permission
@@ -159,14 +199,14 @@ alias python='/usr/bin/python3'
 # apt use - took out ubuntu plugin
 APT=apt
 # APT=apt-get
-alias afs='apt-file search --regexp'
-alias agi='sudo $APT install'
-alias agp='sudo $APT purge'
-alias agr='sudo $APT remove'
-alias agu='sudo $APT update'
+# alias afs='apt-file search --regexp'
+# alias agi='sudo $APT install'
+# alias agp='sudo $APT purge'
+# alias agr='sudo $APT remove'
+# alias agu='sudo $APT update'
 alias agud='sudo $APT update && sudo $APT dist-upgrade'
-alias agug='sudo $APT upgrade'
-alias aguu='sudo $APT update && sudo $APT upgrade'
+# alias agug='sudo $APT upgrade'
+# alias aguu='sudo $APT update && sudo $APT upgrade'
 
 alias dbi='sudo dpkg --install'
 
@@ -188,6 +228,9 @@ alias tabscomma='sed "s/\t/,/g" $@'
 alias greptextf='grep --exclude-dir={.git} -rnw . -e $@'
 # clean find from root avoiding directories that aren't relevant
 alias cleanrootfind='find / -type d \( -name "proc" -o -name "var" -o -name "run" -o -name "dev" -o -name "tmp" \) -prune -o'
+# filepath lengths longer than 249 chars plus /home/dq if running there
+# https://unix.stackexchange.com/questions/61197/command-to-find-file-path-lengths-that-are-too-long-for-burning-to-dvd  
+alias find-longfn='find ./ -regextype posix-extended -regex '.{249,}''
 # grep md files recursively from current directory
 alias grepmd='find -L . -type d ! -readable -prune -o -type f -name "*.md" ! -path "*/Trash/*" -print0 | xargs -0 grep $@ '
 # grep Deans-Office wiki recursively
@@ -201,7 +244,7 @@ alias grepww='grep --include=\*.md --colour=never -rnw ~/0/Board/1/Ww -e $@'
 # alias starmd-dq="sed -ie 's/ \*/ \\*/g' $@"
 alias syncconf-find='find -L ~/0 -type f -name "*sync-conflict*"'
 alias syncconf-trash='find -L ~/0 -type f -name "*sync-conflict*" | zip -m9@ ${TMPDIR}/dq-trash'
-alias texcln='zip -m9o ${TMPDIR}/dq-trash *.log *.aux *.nav *.out *.snm *.synctex.gz *.toc *.tex~'
+alias texcln='zip -m9o ${TMPDIR}/dq-trash *.blg *.log *.aux *.nav *.out *.snm *.synctex.gz *.toc *.tex~'
 
 # Below just archive; all commented out --------------------------
 # Aliases for scaling on Pixelbook - also through .desktop in

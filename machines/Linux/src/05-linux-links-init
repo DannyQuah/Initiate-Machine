@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
-# @(#) 05-linux-links-init // NOT on Windows as ~/0 will connect elsewhere
-# Last-edited: 2022.08.25.1333.Thu -- Danny Quah (me@DannyQuah.com)
+# @(#) 05-linux-links-init // NOT on Windows>VMware
+# as ~/0 will connect elsewhere.
+# This calls 05-llinks-inside-init; this last can
+# be used on Windows>VMware
+# Last-edited: 2022.10.01.0819.Sat -- Danny Quah (me@DannyQuah.com)
 # ****************************************************************
 # Revision History:
 #  % 2020.05.25.0620.Mon -- Danny Quah (me@DannyQuah.com)
@@ -26,176 +29,10 @@ mkdir -p 0/Scene/1
 mkdir -p ~/tmp
 ################################
 #
-DBPF=~/0/Scene/1/db0
-DBNF=~/0/Scene/1/db1
-DWMK=~/0/Board/1/WW/Work-Text/Writings
 
-################################
-# Bash
-THE_FILE="$DBPF"/machines/Bash/Bash-Linux
-if [ -f "$THE_FILE" ]; then
-	## rm -rf ~/.bashrc
-  ## ln -s "$THE_FILE" ~/.bashrc
-  rm -rf ~/.bashrc
-  ln -s "$THE_FILE" ~/.bashrc
-fi
-################################
-# bin/
-THE_FOLDER="$DBPF"/machines/Common
-if [ -d "$THE_FOLDER" ]; then
-  rm -rf ~/bin/Shellsrc ~/bin/update-mydomain ~/bin/recents0
-  rm -rf ~/bin/Archive.S1.External ~/bin/cleanAssetFolder ~/bin/bulk-heif
-  rm -rf ~/bin/makegist ~/bin/workLog
-  mkdir -p ~/bin
-  ln -s "$THE_FOLDER"/Shellsrc ~/bin/
-  ln -s "$THE_FOLDER"/update-mydomain ~/bin/
-  ln -s "$THE_FOLDER"/recents0 ~/bin/
-  ln -s "$THE_FOLDER"/Archive.S1.External ~/bin/
-  ln -s "$THE_FOLDER"/cleanAssetFolder ~/bin/
-  ln -s "$THE_FOLDER"/bulk-heif ~/bin/
-  ln -s "$THE_FOLDER"/makegist ~/bin/
-  ln -s "$THE_FOLDER"/workLog ~/bin/
-fi
-################################
-# Newer linux installations use .config subdirectory for dotfiles
-# DoubleCmd- Linux, Windows differ
-THE_FILE="$DBPF"/DoubleCmd-Linux
-if [ -f "$THE_FILE" ]; then
-	rm -rf ~/.config/doublecmd
-	mkdir -p ~/.config
-  ln -s "$THE_FILE" ~/.config/doublecmd
-fi
-################################
-# Fonts
-THE_FILE="$DBNF"/machines/Linux/fonts
-if [ -d "$THE_FILE" ]; then
-  rm -rf ~/.fonts
-  ln -s "$THE_FILE" ~/.fonts
-  if command -v fc-cache &> /dev/null; then
-    fc-cache -f -v
-  fi
-fi
-################################
-# git
-THE_FILE="$DBPF"/Config/gitconfig
-if [ -f "$THE_FILE" ]; then
-  rm -rf ~/.gitconfig
-  ln -s "$THE_FILE" ~/.gitconfig
-fi
-################################
-# LibreOffice
-THE_FILE="$DBNF"/Config/libreoffice
-if [ -f "$THE_FILE" ]; then
-  rm -rf ~/.config/libreoffice
-  ln -s "$THE_FILE" ~/.config/libreoffice
-fi
-################################
-# Obsidian
-# Obsidian has a lot of cache baggage; just leave everything local
-# to .config or %LOCALAPPDATA% in each machine
-# ln -s "$DBNF"/Config/Obsidian-Linux ~/.config/obsidian
-# However, pinnablity on ChromeOS>Linux is needed for Low Density
-# So make it pinnable
-THE_FOLDER="~/.local/share/applications"
-mkdir -p "$THE_FOLDER"
-ln -s "$DBPF"/machines/Linux/desktop/obsidian.desktop "$THE_FOLDER"/
+source ./05-llinks-inside-init
 
-################################
-# R I will take libraries specific to each machine, so
-# link just these dotfiles
-if [ -d "$DBNF"/R ]; then
-  rm -rf ~/.Renviron ~/.Rprofile
-  ln -s "$DBNF"/R/Renviron-Linux ~/.Renviron
-  ln -s "$DBNF"/R/Rprofile-Linux ~/.Rprofile
-fi
-################################
-# Vim
-rm -rf ~/.vim ~/.vimrc ~/.gvimrc
-ln -s "$DBPF"/Vim        ~/.vim
-ln -s "$DBPF"/Vim/Vimrc  ~/.vimrc
-ln -s "$DBPF"/Vim/Gvimrc ~/.gvimrc
-# Not typically needed but sometimes (e.g., ChromeOS > Linux)
-# mkdir -p ~/.local/share/applications
-# cd ~/.local/share/applications
-# ln -s ${DBPF}/machines/Linux/desktop/vim.desktop . 
-################################
-# Pandoc
-# Is this needed? I can find no Windows counterpart
-if [ -d "$DBNF"/Pandoc ]; then
-  rm -rf ~/.pandoc
-  ln -s "$DBNF"/Pandoc ~/.pandoc
-fi
-################################
-# texmf
-if [ -d "$DBNF"/texmf ]; then
-  rm -rf ~/texmf
-  ln -s "$DBNF"/texmf ~/texmf
-fi
-MAKEF="$DWMK"/Makefile
-if [ -f "$MAKEF" ]; then 
-	mkdir -p ~/tmp/
-  rm -f ~/tmp/Makefile
-	ln -s "$MAKEF" ~/tmp/Makefile
-fi
-################################
-# OneDrive
-if [ -f "$DBPF"/Config/OneDrive/config ]; then
-  rm -rf ~/.config/onedrive/config
-  mkdir -p ~/.config/onedrive
-  ln -s "$DBPF"/Config/OneDrive/config ~/.config/onedrive/config
-fi
-################################
-# OneDrive, Ssh
-if [ -f "$DBPF"/machines/Ssh/config ]; then
-  rm -rf ~/.ssh/config
-  mkdir -p ~/.ssh
-  ln -s "$DBPF"/machines/Ssh/config ~/.ssh/config
-fi
-################################
-# gtk
-# v ~/.config/gtk-3.0/bookmarks ~/.config/gtk-3.0/bookmarks-hold
-# ln -s "$DBPF"/machines/Linux/Config/gtk-3.0/bookmarks ~/.config/gtk-3.0/bookmarks
-################################
-# X
-THE_XFILE="$DBPF"/machines/Linux/src/Xmodmap-swapctrlcaps
-if [ -f "$THE_XFILE" ]; then
-  rm -rf ~/.Xmodmap-swapctrlcaps
-  ln -s "$THE_XFILE" ~/.Xmodmap-swapctrlcaps
-fi
-THE_XFILE="$DBPF"/machines/Linux/src/Xresources
-if [ -f "$THE_XFILE" ]; then
-  rm -rf ~/.Xresources
-  ln -s "$THE_XFILE" ~/.Xresources
-fi
 ################################
 
 
-
-################################
-# Below no longer in use
-################################
-# Typora
-# No longer using Typora
-# mkdir -p ~/.config/Typora/themes
-# cd ~/.config/Typora/themes
-# rm -rf ./base.user.css
-# ln -s ~/0/Scene/1/db//Typora/base.user.css ./base.user.css
-################################
-# Atom should just use ~/.atom specific to each machine
-# So we don't need this any more (also, no longer using atom)
-# rm -rf ~/.atom
-# ln -s ~/0/Scene/1/db/machines/Editors/Atom ~/.atom
-# cd .atom
-# ln -s ~/0/Scene/1/db/Atom/keymap.cson .
-################################
-# Zsh - I don't use this any more  
-# if [ -f "$DBPF"/machines/Zsh/Zshrc ]; then
-#   rm -rf ~/.zshrc
-#   ln -s "$DBPF"/machines/Zsh/Zshrc ~/.zshrc
-# Each machine now has its own oh-my-zsh
-# rm -rf ~/.local/share/oh-my-zsh 
-# mkdir -p ~/.local/share/oh-my-zsh
-# ln -s "$DBPF"/machines/Zsh/oh-my-zsh ~/.local/share/oh-my-zsh
-# fi
-#
 # eof 05-linux-links-init

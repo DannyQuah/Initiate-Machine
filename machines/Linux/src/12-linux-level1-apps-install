@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) 12-linux-level1-apps-install
-# Last-edited: 2022.02.27.1339.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.10.11.1732.Tue -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % 2022.02.23.1626.Wed -- Danny Quah (me@DannyQuah.com)
@@ -15,10 +15,17 @@ installLevelOneApps() {
     compizconfig-settings-manager \
     dos2unix \
     fonts-powerline \
+    fortune \
+    goobook \
+    gnome-tweaks \
+    gnome-shell-extension-prefs \
     gnupg \
     gconf2 gconf-service gvfs-bin libxkbfile1 \
+    htop \
     jpegoptim \
     libheif-examples \
+    mutt \
+    offlineimap \
 #    okular \
     pandoc \
     powerline \
@@ -27,8 +34,9 @@ installLevelOneApps() {
     software-properties-common \
     thunderbird \
     variety \
+    w3m 
 #    xournal \
-    zsh
+#    zsh
 #
 # Touchpad management
 # https://github.com/atareao/Touchpad-Indicator

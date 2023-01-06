@@ -1,10 +1,13 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2022.09.06.2119.Tue -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2023.01.02.0725.Mon -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
+
+"  % 2022.09.24.1132.Sat -- Danny Quah (me@DannyQuah.com)  
+"    Comment out vimwiki  
 "  % Thu 2022.01.13.1150 -- Danny Quah (me@DannyQuah.com)
-"    Winding down VimWiki control as I'm OK using Obsidian and FZF
-"    instead
+"    Winding down VimWiki control as I'm OK using Obsidian and
+"    FZF instead
 "  % Sun 2022.01.02.0846 -- Danny Quah (me@DannyQuah.com)
 "    Reorganize Templates/Plaintext
 "  % Sat 2021.12.11.1701 -- Danny Quah (me@DannyQuah.com)
@@ -44,13 +47,11 @@ endif
 
 execute pathogen#infect()
 
-"                              "VimWiki
+" https://www.vim.org/scripts/script.php?script_id=2226
 set nocompatible
-
 if has("syntax")
   syntax on                    "Syntax highlighting
 endif
-
 if has("autocmd")
   filetype indent on
   filetype plugin on
@@ -80,30 +81,32 @@ set confirm
 let mapleader=' '
 "nnoremap <Leader>sov :source $MYVIMRC"
 "                              "copy/delete/paste system clipboard
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-vmap <Leader>p "+p
-vmap <Leader>P "+P
-"                              "easy-motion 
+vnoremap <Leader>y "+y
+vnoremap <Leader>d "+d
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+vnoremap <Leader>p "+p
+vnoremap <Leader>P "+P
+"                              "easy-motion
+" lh to continue to next/previous line
+set whichwrap=lh
 "beginning withi https://vimawesome.com/plugin/easymotion suggestions
 "let g:EasyMotion_do_mapping=0 " Disable default mappings
 
 " Jump to anywhere you want with minimal keystrokes,
 " with just one key binding
 " `f{char}{label}`
-nmap <Leader><Leader>f <Plug>(easymotion-overwin-f)
-map  <Leader><Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
+nnoremap <Leader><Leader>f <Plug>(easymotion-overwin-f)
+noremap  <Leader><Leader>w <Plug>(easymotion-bd-w)
+nnoremap <Leader><Leader>w <Plug>(easymotion-overwin-w)
 
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase=1
 
 " JK motions: Line motions
-map <Leader><Leader>j <Plug>(easymotion-j)
-map <Leader><Leader>k <Plug>(easymotion-k)
-map <Leader><Leader>l <Plug>(easymotion-bd-jk)
+noremap <Leader><Leader>j <Plug>(easymotion-j)
+noremap <Leader><Leader>k <Plug>(easymotion-k)
+noremap <Leader><Leader>l <Plug>(easymotion-bd-jk)
 
 "                              "cycle through a, b registers
 nnoremap <Leader>Rr :let @x=@" \| let @"=@a \| let @a=@b \| let @b=@x<CR>
@@ -150,8 +153,8 @@ if has('gui_running')
   set list listchars+=space:·,tab:»·,trail:_,extends:>,precedes:<,nbsp:~
   set termguicolors
 else
-                               " for instance iSH on iOS
-  set list listchars+=space:·,tab:>·,trail:_,extends:>,precedes:<,nbsp:~
+                               " e.g., iSH, blink.sh on iOS
+  set list listchars+=space:·,tab:»·,trail:_,extends:>,precedes:<,nbsp:~
 endif
 "https://stackoverflow.com/questions/15904758/how-can-i-make-vim-show-spaces/49656087
 "set list listchars+=space:·
@@ -186,9 +189,13 @@ endif
 
 "let g:thematic#theme_name='plain'
                                " Activate above or keep splashscreen
-															 " Have taken this out in any case
+                               " Have taken this out in any case
 
 "Editing ---------------------------------------------------------
+"nnoremap <C-d> :ToggleCheckbox<CR>
+"                              | extant <Leader>x  
+
+
 "                              |"Keep dropping into ex mode
 "https://vi.stackexchange.com/questions/457/does-ex-mode-have-any-practical-use
 nnoremap Q <nop>
@@ -236,6 +243,7 @@ iabbrev ltpp15 Lenovo-ltpp15-Thinkpad-P15s-2022.04
 iabbrev ipad2 Apple-iPad-Pro-2G-10.5-2017.08
 iabbrev ipad5 Apple-iPad-Pro-5G-12.9-2022.08
 iabbrev xbook Dell-xbook-XPS-13-9350-2016.03
+iabbrev smpost Facebook \| FB Wall \| Insta \| Twitter \| LinkedIn \| Mastodon  
 
 "  macros ------------------------------------------------------
 let @h='j0i| f:ls | A |'
@@ -249,12 +257,15 @@ let @a='jA  '
 " Time, templates ----------------------------------------------
 iabbrev iDQ@ -- Danny Quah (me@DannyQuah.com)
                                "Insert-my-email-signature
+
 nnoremap <Leader>t i<C-R>=strftime('%Y.%m.%d.%H%M.%a')<CR><ESC>
-iabbrev <expr> ddt@ strftime('%Y.%m.%d.%H%M.%a')
+iabbrev <expr> t@ strftime('%Y.%m.%d.%H%M.%a')
                                "Insert day-datetime
+
 " Other things I tried:
 "nnoremap <Leader>ddt :put=strftime('%a %Y.%2m.%2d.%H%M')<CR>
 "nnoremap <Leader>ddt "=strftime('%a %Y.%m.%d.%H%M')<CR>P
+nnoremap <Leader>dyd i<C-R>=strftime('%Y.%m.%d.%a')<CR><ESC>
 iabbrev <expr> dyd@ strftime('%Y.%m.%d.%a')
                                "Insert date-day
 "iabbrev <expr> dd@ strftime('%a %Y.%m.%d')
@@ -279,10 +290,11 @@ source ~/.vim/timeauto.vim
 "inoremap ies :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-sign-email.txt<CR>
 "nnoremap <Leader>ies :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-sign-email.txt<CR>
 
-" I don't really use these templates enough to remember them but 
-" likely good to keep them around so I know where the templates are
-" or in case my workflow changes.
+" I use these templates when I don't fire up Obsidian.
+" These are not as complete and as automated as on Obsidian but
+" in a pinch they do fine.  
                                "Insert templates
+nnoremap <Leader>imd :0r ~/0/Scene/1/db0/Templates/Plaintext/Markdown-Template-DQ.md<CR>
 nnoremap <Leader>iss :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-shell-script-template<CR>
 nnoremap <Leader>iht :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header-general.txt<CR>
 nnoremap <Leader>ily :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-latex-yaml.md<CR>
@@ -290,6 +302,17 @@ nnoremap <Leader>ilsr :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-latex-short-repo
 nnoremap <Leader>itt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-tex-template.tex
 nnoremap <Leader>ipt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-python-template.py
 nnoremap <Leader>ibt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-bat-template.bat
+
+" hard to remember all these so I'm just placing these here commented out
+" and with the source clearly indicated  
+                               "Read templates in by own favourite way
+" (hash driver) db0/Templates/latex/Paper/00-hash-2021.10.11-driver.tex
+" (titlepage) db0/Templates/latex/Paper/code/00-titlepage-data.tex
+" (typical section) db0/Templates/latex/Paper/code/01-Introduction.tex
+
+
+
+
 
                                "Insert-header-yaml
 "Template file replaced by python script, for dynamic insertion
@@ -394,6 +417,7 @@ augroup dqFilesFoldersGrp
 "First, as usual, remove all dqFilesFoldersGrp autocommands
   autocmd!
 " https://www.tecmint.com/create-custom-header-template-for-shell-scripts-in-vim/
+  autocmd BufNewFile *.md  0r ~/0/Scene/1/db0/Templates/Plaintext/Markdown-Template-DQ.md
   autocmd BufNewFile *.txt 0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-custom-header.txt
   autocmd BufNewFile *.R   0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-R-template.R
   autocmd BufNewFile *.py  0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header.py
@@ -415,7 +439,9 @@ augroup dqFilesFoldersGrp
 " current directory.
 " Can also get fancier and not change lcd for certain places:
 " autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
+
   autocmd BufNewFile,BufEnter *.md  set list
+  autocmd BufNewFile,BufEnter,BufRead *.md  set iskeyword-=-
   autocmd BufNewFile,BufEnter *.tex set list
   autocmd BufNewFile,BufEnter *.tex setlocal expandtab
   autocmd BufNewFile,BufEnter *.R   set list
@@ -430,11 +456,11 @@ augroup END
 "nnoremap <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 " Use instead netrw https://shapeshed.com/vim-netrw/
 " Open with :Explore, :Sexplore (or :Sex, snicker), :Vexplore
-"let g:netrw_liststyle=3
-"let g:netrw_banner=0           "Remove directory banner
+let g:netrw_liststyle=3
+let g:netrw_banner=0           "Remove directory banner
 "let g:netrw_browse_split=3     "Open file in new tab
 "let g:netrw_browse_split=4     "Open file in previous window
-"let g:netrw_winsize=26       "In percent, not cols; gives 30 with 110
+let g:netrw_winsize=26       "In percent, not cols; gives 30 with 110
 "let g:netrw_altv=1
 " But can achieve NERDtree likeness with:
 " let g:netrw_banner=0
@@ -451,59 +477,103 @@ augroup END
 
 "Otherwise you get asked to save every single netrw listing 
 "https://github.com/tpope/vim-vinegar/issues/13
-"augroup netrwBuffers
-"  autocmd!
-"  autocmd FileType netrw setlocal bufhidden=delete 
+augroup netrwBuffers
+  autocmd!
+  autocmd FileType netrw setlocal bufhidden=delete 
   " or else try replacing delete with wipe
-"augroup end 
+augroup end 
 "let g:netrw_fastbrowse=-1
 "
 " Syntax and modes ----------------------------------------------
 "
+                               "mail - ---------------------------
+let g:VimMailStartFlags={
+  \'blank': 'TAi',
+  \'nosubject': 'SAi',
+  \'default' : "rtoi"}
+
+" Add format option 'w' to add trailing white space,
+" indicating that paragraph continues on next line.
+" Use with mutt's 'text_flowed' option // no longer recommended
+" Modified https://brianbuccola.com/line-breaks-in-mutt-and-vim/
+" augroup mail_trailing_whitespace " {
+"     autocmd!
+"     autocmd FileType mail setlocal formatoptions+=w
+"     autocmd FileType mail setlocal textwidth=72
+"     autocmd FileType mail setlocal colorcolumn=73
+" augroup END " }
+
+augroup mailDQ
+	autocmd!
+	autocmd FileType mail setlocal textwidth=0
+augroup END
+
                                "pencil ---------------------------
 
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd,*.md call pencil#init()
+  autocmd Filetype markdown,mkd,*.md set iskeyword-=-
+  autocmd FileType text         call pencil#init()
+augroup END
 let g:pencil#wrapModeDefault='soft'
                                "default, hard
 let g:pencil#textwidth=80
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,mkd  call pencil#init()
-  autocmd FileType text          call pencil#init()
-augroup END
+                               " 0=one space; 1=two spaces sentences
+let g:pencil#joinspaces=1
+                               " 0=to next line; 1=no
+let g:pencil#cursorwrap=0
 " Pencil - initialise pencil
 " NoPencil - restore to global settings
 " TogglePencil or PencilToggle
 " PencilSoft / PencilHard
 
+
+
                                "lightline ------------------------
 set laststatus=2
 set noshowmode                 "Get rid of redundant INSERT
 set t_Co=256                   "Have to do this by hand
-let g:lightline={
-\   'colorscheme': 'powerline',
-\   'active': {
-\     'left': [ [ 'mode', 'paste' ],
-\               [ 'readonly', 'filename', 'modified', 'charvaluehex' ] ]
-\     },
-\ 'component': {
-\   'charvaluehex': '0x%B'
-\   },
-\ }
+" let g:lightline={
+" \   'colorscheme': 'powerline',
+" \   'active': {
+" \     'left': [ [ 'mode', 'paste' ],
+" \               [ 'readonly', 'filename', 'modified', 'charvaluehex' ] ]
+" \     },
+" \ 'component': {
+" \   'charvaluehex': '0x%B'
+" \   },
+" \ }
+"
+                               "python3 ------------------------
+if WINDOWS()
+" From
+" https://vi.stackexchange.com/questions/18734/getting-python-support-for-gvim-8-1-windows-10  
+  set pythonthreedll=python311.dll
+endif
 
-"                              "VimWiki -------------------------- 
+" silent! as otherwise warning message about imp deprecated for importlib
+" something over which I have no control  
+silent! python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
+"                              " Instead of open default wiki
+nnoremap <Leader>ww :e ~/0/Sound/1/Wp/index.md<CR>
+"VimWiki -------------------------- 
 "Multiple Wikis 
 " https://opensource.com/article/18/6/vimwiki-gitlab-notes 
 " 
 " Use wiki names via :h vimwiki-option-name
 " https://github.com/vimwiki/vimwiki/blob/master/doc/vimwiki.txt // Interwiki~  
-" Clone off a default https://github.com/vimwiki/vimwiki/issues/365 
-let myWikiDefault={}
-let myWikiDefault.syntax='markdown'
-let myWikiDefault.ext='md'
+" Clone off a default https://github.com/vimwiki/vimwiki/issues/365  
+"-ACTIVATE let myWikiDefault={}
+"-ACTIVATE let myWikiDefault.syntax='markdown'
+"-ACTIVATE let myWikiDefault.ext='md'
 
-let myWikiWork=copy(myWikiDefault)
-let myWikiWork.path='~/0/Board/1/Ww/'
-let myWikiWork.name='myWikiWork'
+"-ACTIVATE let myWikiWork=copy(myWikiDefault)
+"-ACTIVATE let myWikiWork.path='~/0/Board/1/Ww/'
+"-ACTIVATE let myWikiWork.name='myWikiWork'
 
 "I can't get VimWiki to work in OneDrive under W10: 
 "1. With markdown syntax, links in markdown format will not activate,
@@ -516,26 +586,29 @@ let myWikiWork.name='myWikiWork'
 " This is for greater consistency in itemization among other " things;
 " wiki link management is better done and more widely in my workflow
 " in Obsidian in any case, and markdown format is more generally used.
-let myWikiDean=copy(myWikiDefault)
-let myWikiDean.path='~/0/Props/1/LKYSPP-Deans-Office/Wd'
-let myWikiDean.name='myWikiDean'
-let myWikiPrsn=copy(myWikiDefault)
-let myWikiPrsn.path='~/0/Sound/1/Wp/'
-let myWikiPrsn.name='myWikiPrsn'
+"-ACTIVATE let myWikiDean=copy(myWikiDefault)
+"-ACTIVATE let myWikiDean.path='~/0/Props/1/LKYSPP-Deans-Office/Wd'
+"-ACTIVATE let myWikiDean.name='myWikiDean'
+"let myWikiDean.syntax='markdown'
+"let myWikiDean.ext='.md'
+"-ACTIVATE let myWikiPrsn=copy(myWikiDefault)
+"-ACTIVATE let myWikiPrsn.path='~/0/Sound/1/Wp/'
+"-ACTIVATE let myWikiPrsn.name='myWikiPrsn'
 
-let g:vimwiki_list=[myWikiPrsn, myWikiDean, myWikiWork]
+"-ACTIVATE let g:vimwiki_list=[myWikiPrsn, myWikiDean, myWikiWork]
                                "  So VimWiki knows what to control
-let g:vimwiki_markdown_link_ext=0 
+
+"-ACTIVATE let g:vimwiki_markdown_link_ext=0 
                                "0 - Do not append Wiki file extension
                                "to Markdown files
 
-let g:vimwiki_global_ext=0 
+"-ACTIVATE let g:vimwiki_global_ext=0 
                                " Keep markdown not under
                                " vimwiki control as markdown,
                                " not vimwiki 
 
-let g:vimwiki_ext2syntax={'.md': 'markdown'} 
-let g:vimwiki_autowriteall=1
+"-ACTIVATE let g:vimwiki_ext2syntax={'.md': 'markdown'} 
+"-ACTIVATE let g:vimwiki_autowriteall=1
 " Turn onautowrite when switching across wiki pages
 "
 "From Marcus Kazmierczak https://mkaz.blog/working-with-vim/vimwiki/
@@ -557,6 +630,10 @@ let g:vimwiki_autowriteall=1
 "
 "                              "goyo, limelight ------------------
 " http://www.bit-101.com/techtips/2018/02/24/Editing-text-with-Vim-Goyo-and-Limelight/
+let g:limelight_default_coefficient=0.5
+let g:limelight_priority=-1
+let g:goyo_width=80
+let g:goyo_height="75%"
 nnoremap <Leader>gy :Goyo<CR>
 augroup goyogroup
   autocmd!
@@ -579,6 +656,7 @@ augroup END
 " set conceallevel=2
 
 "                              "vim markdown ---------------------
+let vim_markdown_preview_hotkey='<C-m>'
 let g:markdown_fenced_languages=['html', 'python', 'bash=sh']
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_frontmatter=1
@@ -588,13 +666,19 @@ let g:vim_markdown_frontmatter=1
 let g:vim_markdown_strikethrough=1
 let g:vim_markdown_no_extensions_in_markdown=1
 
-"iamccor/markdown-preview-nvim ----------------------------------- 
+"iamcco/markdown-preview-nvim ------------------------------- 
 " :MarkdownPreview // :MarkdownPreviewStop
-" This mkdp install has to be run just once; it's a no-op afterwards
+" This mkdp install has to be run just one-time; it's a no-op afterwards
 " call mkdp#util#install()
 let g:mkdp_auto_close=0
                                "1 autoclose window when done; 0 otherwise
 let g:mkdp_refresh_slow=0
+
+" set to 1, the MarkdownPreview command can be used for all files,
+" by default it can be used only in markdown file
+" default: 0
+let g:mkdp_command_for_global=1  
+
                                "0 autorefresh as editing; 1 otherwise 
 let g:mkdp_preview_options={
     \ 'mkit': {},

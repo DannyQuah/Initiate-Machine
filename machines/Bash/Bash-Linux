@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 # @(#) $HOMESCENE/1/db0/machines/Bash/Bash-Linux -> .bashrc
-# Last-edited: 2022.09.05.0746.Mon -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2022.11.12.1551.Sat -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Fri 2016.02.26.1457 -- Danny Quah (dquah@LSE039102)
@@ -39,6 +39,6 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# Local Variables:
-# end:
+# 
+# vim: filetype=sh
 # eof Bash-Linux

@@ -61,3 +61,26 @@ Unhandled exception: EAccessViolation: Access violation
   $00000000005D4344 line 913, column 7 of include/speedbutton.inc in /usr/lib/doublecmd/doublecmd
   $000000000043334F in /usr/lib/doublecmd/doublecmd
 
+--------------- 08-11-2022, 15:55:48 ---------------
+| DC v1.0.5 beta Rev. 104 -- x86_64-Linux-gtk2
+| Ubuntu 22.04.1 LTS -- GTK 2.24.33 | PID 47382
+Unhandled exception: EMaskError: The char set in mask "t[*" is not valid!
+  Stack trace:
+  $00000000006FE87D line 233, column 3 of masks.pas in /usr/lib/doublecmd/doublecmd
+  $00000000006FE624 line 332, column 8 of masks.pas in /usr/lib/doublecmd/doublecmd
+  $00000000006FE023 line 377, column 16 of masks.pas in /usr/lib/doublecmd/doublecmd
+  $00000000006FE9E7 line 399, column 3 of masks.pas in /usr/lib/doublecmd/doublecmd
+  $00000000006FEB29 line 406, column 5 of masks.pas in /usr/lib/doublecmd/doublecmd
+  $0000000000AD9B2D line 210, column 57 of kaspathedit.pas in /usr/lib/doublecmd/doublecmd
+  $0000000000ADA9CA line 386, column 24 of kaspathedit.pas in /usr/lib/doublecmd/doublecmd
+  $00000000005F62EF line 5976, column 25 of include/wincontrol.inc in /usr/lib/doublecmd/doublecmd
+  $00000000005F9531 line 7430, column 30 of include/wincontrol.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000433DDA in /usr/lib/doublecmd/doublecmd
+  $00000000005F50F5 line 5429, column 28 of include/wincontrol.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000648EFD line 500, column 28 of include/customedit.inc in /usr/lib/doublecmd/doublecmd
+  $000000000079A108 line 112, column 36 of lclmessageglue.pas in /usr/lib/doublecmd/doublecmd
+  $0000000000779005 line 3777, column 68 of gtk2proc.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000776835 line 1915, column 43 of gtk2proc.inc in /usr/lib/doublecmd/doublecmd
+  $000000000077571F line 2404, column 12 of gtk2proc.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000785C95 line 817, column 13 of gtk2callback.inc in /usr/lib/doublecmd/doublecmd
+
