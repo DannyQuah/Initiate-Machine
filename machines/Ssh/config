@@ -1,5 +1,5 @@
 # @(#) DQ's ssh config ~/.ssh/config
-# Last-edited: 2022.09.15.1657.Thu -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2023.04.02.1620.Sun -- Danny Quah (me@DannyQuah.com)
 # Needs to be copied (not linked) on lbook; chmod 644 config
 # whether Ubuntu or MSY but ok to link on Ubuntu or iSH (make sure 644)
 # Created: 2019.05.18 1519.Sat -- Danny Quah (me@DannyQuah.com)
@@ -23,6 +23,26 @@
 #    Retired tbook
 # -------------------------------------------------------------------- 
 
+# 2023.04.02.1619.Sun -- Danny Quah (me@DannyQuah.com)  
+# https://askubuntu.com/questions/344863/ssh-new-connection-begins-to-hang-not-reject-or-terminate-after-a-day-or-so-on
+# Directive to overcome TOS issue with our NAT router. 
+# During session setup,
+# OpenSSH sets the TOS (type of service) field after the user 
+# has submitted the password.  
+# # Some routers are known to choke on this, with the result
+# that the session hangs during buildup. 
+# As workaround we send our traffic
+# via netcat which doesn't set the TOS field.
+ProxyCommand nc %h %p
+# Test command is ssh -o "ProxyCommand nc %h %p" xbook
+
+Host ttd
+   Hostname 192.168.0.150
+   User dq
+   Port 8800
+   ForwardAgent yes
+   ForwardX11 yes
+
 # When xbook sits in OTH DO, use for hostname the value
 # that "ip a" returns, not whatsmyip.org; use for Port 
 # what I placed in /etc/ssh/sshd_config
@@ -35,6 +55,21 @@ Host xbook
    Port 8801
    ForwardAgent yes
    ForwardX11 yes
+
+Host kvb-ttd
+   Hostname 116.88.195.147
+   User dq
+   Port 8800
+   ForwardAgent yes
+   ForwardX11 yes
+
+Host kvb-xbook
+   Hostname 116.88.195.147
+   User dq
+   Port 8801
+   ForwardAgent yes
+   ForwardX11 yes
+
 
 Host xbook-ext
    Hostname 116.88.228.20

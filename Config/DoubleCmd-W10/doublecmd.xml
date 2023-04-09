@@ -405,10 +405,10 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>425</Left>
-      <Top>48</Top>
-      <Width>1321</Width>
-      <Height>782</Height>
+      <Left>119</Left>
+      <Top>65</Top>
+      <Width>1397</Width>
+      <Height>956</Height>
       <PixelsPerInch>96</PixelsPerInch>
       <Maximized>False</Maximized>
       <Splitter>52.1768251841929</Splitter>
@@ -723,8 +723,8 @@
           <FileView Type="columns">
             <Sortings>
               <Sorting>
-                <Direction>2</Direction>
-                <Function>7</Function>
+                <Direction>1</Direction>
+                <Function>0</Function>
               </Sorting>
             </Sortings>
             <History>
@@ -792,53 +792,56 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="LifePINs">D:\home\dq\0\Sound\1\Wp\</Path>
-                  <Path Filename="Health-2014.06">D:\home\dq\0\Sound\1\Wp\LifePINs\</Path>
-                  <Path Filename="2022.11.11.Fri-SG-MOH-COVID-Vaccination-Report-DQ-covvaccine.pdf">D:\home\dq\0\Sound\1\Wp\LifePINs\Health-2014.06\</Path>
-                  <Path Filename="2022">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\</Path>
-                  <Path Filename="2022.12.03.1000.Sat-AAPA-Conference-Keynote-SDG-inconsistent-Zoom">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\</Path>
-                  <Path Filename="SDG-Sustainable-Development-Goals-2015.png">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\2022.12.03.1000.Sat-AAPA-Conference-Keynote-SDG-inconsistent-Zoom\</Path>
-                  <Path Filename="2021">D:\home\dq\0\Stage\Photos\Photos-Work\</Path>
-                  <Path Filename="Time">D:\home\dq\0\Stage\Photos\Photos-Personal\</Path>
-                  <Path Filename="2022">D:\home\dq\0\Stage\Photos\Photos-Personal\Time\</Path>
-                  <Path Filename="2022.H2-Southeast-Asia">D:\home\dq\0\Stage\Photos\Photos-Personal\Time\2022\</Path>
-                  <Path Filename="2022.11.20.1000.Sun-KVB0907-DQ-selfie.jpg">D:\home\dq\0\Stage\Photos\Photos-Personal\Time\2022\2022.H2-Southeast-Asia\</Path>
-                  <Path Filename="Screenshot 2022-12-08 055717.png">D:\home\dq\0\0-Holding-Area\</Path>
-                  <Path Filename="LifePINs">D:\home\dq\0\Sound\1\Wp\</Path>
-                  <Path Filename="Utilities-2016.07">D:\home\dq\0\Sound\1\Wp\LifePINs\</Path>
-                  <Path Filename="KV-HBO-2019.05">D:\home\dq\0\Sound\1\Wp\LifePINs\Utilities-2016.07\</Path>
-                  <Path Filename="..">D:\home\dq\0\Sound\1\Wp\LifePINs\Utilities-2016.07\KV-HBO-2019.05\</Path>
-                  <Path Filename="KV-StarHub-SNG-2016.07">D:\home\dq\0\Sound\1\Wp\LifePINs\Utilities-2016.07\</Path>
-                  <Path Filename="210201155005246.pdf">D:\home\dq\0\Sound\1\Wp\LifePINs\Utilities-2016.07\KV-StarHub-SNG-2016.07\</Path>
-                  <Path Filename="KV-Amazon-Prime-2022.12">D:\home\dq\0\Sound\1\Wp\LifePINs\Utilities-2016.07\</Path>
-                  <Path Filename="..">D:\home\dq\0\Sound\1\Wp\LifePINs\Utilities-2016.07\KV-Amazon-Prime-2022.12\</Path>
-                  <Path Filename="WEF-GFC-Geopolitics-2019.09">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Projects\</Path>
-                  <Path Filename="2022.12-WEF-GFC-Geopolitics-2022-2023">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Projects\WEF-GFC-Geopolitics-2019.09\</Path>
-                  <Path Filename="2022.12.09-WEF-GFC-Invitation-letter-DQ.pdf">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Projects\WEF-GFC-Geopolitics-2019.09\2022.12-WEF-GFC-Geopolitics-2022-2023\</Path>
-                  <Path Filename="2022">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\</Path>
-                  <Path Filename="2022.12.04.Sun-07.Wed-Seoul">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\</Path>
-                  <Path Filename="2022.12.07.2250.Wed-Go-Jek-Changi-T2-KVB-receipt.pdf">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\2022.12.04.Sun-07.Wed-Seoul\</Path>
-                  <Path Filename="Archive">D:\home\dq\1\Store\</Path>
-                  <Path Filename="1">D:\home\dq\1\Store\Archive\</Path>
-                  <Path Filename="dq">D:\home\</Path>
-                  <Path Filename="1">D:\home\dq\</Path>
-                  <Path Filename="Downloads">D:\home\dq\1\</Path>
-                  <Path Filename="..">D:\home\dq\1\Downloads\</Path>
-                  <Path Filename="2022">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\</Path>
-                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\</Path>
-                  <Path Filename="LKYSPP-Deans-Office">D:\home\dq\0\Props\1\</Path>
-                  <Path Filename="Wd">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\</Path>
-                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\</Path>
-                  <Path Filename="R">D:\home\dq\0\Board\1\Ww\References\</Path>
-                  <Path Filename="Rudd-K-2022-The-Avoidable-War-Public-Affairs">D:\home\dq\0\Board\1\Ww\References\R\</Path>
-                  <Path Filename="2022">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\</Path>
-                  <Path Filename="2022.12.03.1000.Sat-AAPA-Conference-Keynote-SDG-inconsistent-Zoom">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\</Path>
-                  <Path Filename="2022.12.03.1000.Sat-AAPA-Conference-Keynote-SDG-inconsistent.odp">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\2022.12.03.1000.Sat-AAPA-Conference-Keynote-SDG-inconsistent-Zoom\</Path>
-                  <Path Filename="Quah-D-0-Notes">D:\home\dq\0\Board\1\Ww\References\Q\</Path>
-                  <Path Filename="China-US-Western-Conflict-2018.10">D:\home\dq\0\Board\1\Ww\References\Q\Quah-D-0-Notes\</Path>
-                  <Path Filename="China-US-Western-Conflict-Summary-Presentation-2018.10.md">D:\home\dq\0\Board\1\Ww\References\Q\Quah-D-0-Notes\China-US-Western-Conflict-2018.10\</Path>
-                  <Path Filename="2023.01.01.Sun-to-04.Wed-MPA-in-Asia-Lombok">C:\Users\sppdqlsh\OneDrive\iPad-OneDrive-Synced-Documents\</Path>
-                  <Path Filename="2022 Invitation to Danny Quah as a Guest Speaker.pdf">C:\Users\sppdqlsh\OneDrive\iPad-OneDrive-Synced-Documents\2023.01.01.Sun-to-04.Wed-MPA-in-Asia-Lombok\</Path>
+                  <Path Filename="I">D:\home\dq\0\Wrk\1\People-Gr-Conf\</Path>
+                  <Path Filename="ISEAS-2023.03">D:\home\dq\0\Wrk\1\People-Gr-Conf\I\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\People-Gr-Conf\I\ISEAS-2023.03\</Path>
+                  <Path Filename="LifePINs">D:\home\dq\0\OneDrive\1\Wp\</Path>
+                  <Path Filename="Finances-2014.07">D:\home\dq\0\OneDrive\1\Wp\LifePINs\</Path>
+                  <Path Filename="Amex-2014.10">D:\home\dq\0\OneDrive\1\Wp\LifePINs\Finances-2014.07\</Path>
+                  <Path Filename="..">D:\home\dq\0\OneDrive\1\Wp\LifePINs\Finances-2014.07\Amex-2014.10\</Path>
+                  <Path Filename="Screenshot 2023-01-31 145134.png">D:\home\dq\0\0-Holding-Area\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\Lookups-2023.02\</Path>
+                  <Path Filename="index.md">D:\home\dq\0\Props\1\</Path>
+                  <Path Filename="2023.02.27.Mon-Oxford-Annual.Hicks-Lecture-poster.jpg">D:\home\dq\0\0-Holding-Area\</Path>
+                  <Path Filename="..">D:\home\dq\0\Scene\1\db0\</Path>
+                  <Path Filename="Wrk">D:\home\dq\0\</Path>
+                  <Path Filename="Templates">D:\home\dq\0\Wrk\</Path>
+                  <Path Filename="Email-2022.02">D:\home\dq\0\Wrk\Templates\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\</Path>
+                  <Path Filename="Townhall-2017">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\</Path>
+                  <Path Filename="2023.03.15.1200.Wed-LKYSPP-Townhall-OTH.L-Block.B">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Townhall-2017\</Path>
+                  <Path Filename="2023">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\</Path>
+                  <Path Filename="2023.03.03.Fri-05.Sun-CSEP-India-Asia-Neemrana">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\2023\</Path>
+                  <Path Filename="2023.03.03.Fri-05.Sun-CSEP-India-Asia-Oceania-Delhi-Neemrana-travel.md">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\2023\2023.03.03.Fri-05.Sun-CSEP-India-Asia-Neemrana\</Path>
+                  <Path Filename="2023.03.24.1900.Fri-Deans-List-Dinner-Bali-Thai-NgeeAnn">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\</Path>
+                  <Path Filename="Dean&apos;s List Dinner - 24 March - Student Profile.xlsx">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\2023.03.24.1900.Fri-Deans-List-Dinner-Bali-Thai-NgeeAnn\</Path>
+                  <Path Filename="1">D:\home\dq\0\Wrk\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\</Path>
+                  <Path Filename="Throw.obsidian">D:\home\dq\0\Wrk\</Path>
+                  <Path Filename="..">D:\home\dq\0\Scene\1\db0\</Path>
+                  <Path Filename="db1">D:\home\dq\0\Scene\1\</Path>
+                  <Path Filename="..">D:\home\dq\0\Scene\1\db1\</Path>
+                  <Path Filename="vpns.txt">D:\home\dq\0\Scene\1\</Path>
+                  <Path Active="True" Filename="2023.04.04.Tue.md">D:\home\dq\0\OneDrive\1\Wp\diary\</Path>
+                  <Path Filename="2023">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\2023\</Path>
+                  <Path Filename="LKY100-RD-2022.08.14.Mon">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Projects\</Path>
+                  <Path Filename="LKY100_Draft Programme_2022-12-07.docx">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Projects\LKY100-RD-2022.08.14.Mon\</Path>
+                  <Path Filename="desktop.ini">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="Governing-Board-2018.04">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Governing-Board-2018.04\</Path>
+                  <Path Filename="2023">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\</Path>
+                  <Path Filename="2023.03.03.Fri-05.Sun-CSEP-India-Asia-Neemrana">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\2023\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\2023\2023.03.03.Fri-05.Sun-CSEP-India-Asia-Neemrana\</Path>
+                  <Path Filename="2023.02.24.Fri-03.01.Wed-London-Oxford">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\2023\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\2023\2023.02.24.Fri-03.01.Wed-London-Oxford\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\</Path>
+                  <Path Filename="H">D:\home\dq\0\Wrk\1\People-Gr-Conf\</Path>
+                  <Path Filename="Ho.Peter-2020.12">D:\home\dq\0\Wrk\1\People-Gr-Conf\H\</Path>
+                  <Path Filename="2014-10-14 Peter Ho - CSC Games Exchange (for Circulation).pdf">D:\home\dq\0\Wrk\1\People-Gr-Conf\H\Ho.Peter-2020.12\</Path>
+                  <Path Filename="E">D:\home\dq\0\Wrk\1\References\</Path>
+                  <Path Filename="East-Asia-Forum-2022.10-Comprehensive-Regional-Security">D:\home\dq\0\Wrk\1\References\E\</Path>
+                  <Path Filename="2022.10-Comprehensive-Regional-Security-East-Asia-Forum.pdf">D:\home\dq\0\Wrk\1\References\E\East-Asia-Forum-2022.10-Comprehensive-Regional-Security\</Path>
                 </Paths>
               </Entry>
             </History>
@@ -920,26 +923,56 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="2022.12.07.0930.Wed-NRC-KDI-Conference-Seoul">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022.12.04.Sun-07.Wed-Seoul\</Path>
-                  <Path Filename="2022.12.07.0930.Wed-NRC-KDI-Conference-Seoul.md">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022.12.04.Sun-07.Wed-Seoul\2022.12.07.0930.Wed-NRC-KDI-Conference-Seoul\</Path>
-                  <Path Filename="2022.12.06.1130.Tue-SNU-Seoul">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022.12.04.Sun-07.Wed-Seoul\</Path>
-                  <Path Filename="2022.12.06.1130.Tue-SNU-Seoul.md">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022.12.04.Sun-07.Wed-Seoul\2022.12.06.1130.Tue-SNU-Seoul\</Path>
-                  <Path Filename="Logistics">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022.12.04.Sun-07.Wed-Seoul\</Path>
-                  <Path Filename="2022.12.04.0800.Sun-SQ-SIN-ICN-QUAHDANNY e-ticket.pdf">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022.12.04.Sun-07.Wed-Seoul\Logistics\</Path>
-                  <Path Filename="2022.12.07.0930.Wed-NRC-KDI-Conference-Seoul">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022.12.04.Sun-07.Wed-Seoul\</Path>
-                  <Path Filename="lu5848hqb8r.tmp">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022.12.04.Sun-07.Wed-Seoul\2022.12.07.0930.Wed-NRC-KDI-Conference-Seoul\</Path>
-                  <Path Filename="2022.12.05.Mon-KDI-25th-Anniversary-Conference-Geongju">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022.12.04.Sun-07.Wed-Seoul\</Path>
-                  <Path Filename="KDIS 25th Anniversary Conference.docx">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022.12.04.Sun-07.Wed-Seoul\2022.12.05.Mon-KDI-25th-Anniversary-Conference-Geongju\</Path>
-                  <Path Filename="2022">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\</Path>
-                  <Path Filename="2022.12.04.Sun-07.Wed-Seoul">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\</Path>
-                  <Path Filename="2022.12.07.0930.Wed-NRC-KDI-Conference-Seoul">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\2022.12.04.Sun-07.Wed-Seoul\</Path>
-                  <Path Filename="2022.12.04.Sun-07.Wed-Seoul">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\</Path>
-                  <Path Filename="2022.12.05.Mon-KDI-25th-Anniversary-Sejong">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\2022.12.04.Sun-07.Wed-Seoul\</Path>
-                  <Path Filename="KDIS 25th Anniversary Conference.docx">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2022\2022.12.04.Sun-07.Wed-Seoul\2022.12.05.Mon-KDI-25th-Anniversary-Sejong\</Path>
-                  <Path Filename="diary">D:\home\dq\0\Sound\1\Wp\</Path>
-                  <Path Filename="2022">D:\home\dq\0\Sound\1\Wp\diary\</Path>
-                  <Path Filename="2022.03.16.Wed.md">D:\home\dq\0\Sound\1\Wp\diary\2022\</Path>
-                  <Path Filename="2023.01.03.Tue-DQ-lecture-title-page.png">D:\home\dq\0\Sound\1\Wp\</Path>
+                  <Path Filename="Faculty-2017.05">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\</Path>
+                  <Path Filename="3. Nomination Template for FLIA Prog_for Dean&apos;s Inputs.xlsx">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="2023.03.31.1000.Fri-GB-OTH.Conf">D:\home\dq\0\Props\1\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\2023.03.31.1000.Fri-GB-OTH.Conf\</Path>
+                  <Path Filename="index.md">D:\home\dq\0\Props\1\</Path>
+                  <Path Filename="2023-David.Milliband-Group-Atlas-of-Impunity-2023.pdf">D:\home\dq\0\OneDrive\iPad-OneDrive-Synced-Documents\</Path>
+                  <Path Filename="2023-David.Milliband-Group-Atlas-of-Impunity-2023.pdf">D:\home\dq\0\Wrk\Today\</Path>
+                  <Path Filename="2023">D:\home\dq\0\Stage\Photos\Photos-Work\</Path>
+                  <Path Filename="2023.03.29.0955.Wed-SCMP-China-Conference-Panel-Four-Seasons">D:\home\dq\0\Stage\Photos\Photos-Work\2023\</Path>
+                  <Path Filename="20230329_122527_450-via-Yuxin.Hou.jpg">D:\home\dq\0\Stage\Photos\Photos-Work\2023\2023.03.29.0955.Wed-SCMP-China-Conference-Panel-Four-Seasons\</Path>
+                  <Path Filename="Time">D:\home\dq\0\Stage\Photos\Photos-Personal\</Path>
+                  <Path Filename="LAL">D:\home\dq\0\Stage\Photos\Photos-Personal\Time\</Path>
+                  <Path Filename="..">D:\home\dq\0\Stage\Photos\Photos-Personal\Time\LAL\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\</Path>
+                  <Path Filename="Machines">D:\home\dq\0\Wrk\1\</Path>
+                  <Path Filename="Internet-Services">D:\home\dq\0\Wrk\1\Machines\</Path>
+                  <Path Filename="My-GitHub-2020.08">D:\home\dq\0\Wrk\1\Machines\Internet-Services\</Path>
+                  <Path Filename="Pages-2021.07">D:\home\dq\0\Wrk\1\Machines\Internet-Services\My-GitHub-2020.08\</Path>
+                  <Path Filename="DannyQuah.github.io">D:\home\dq\0\Wrk\1\Machines\Internet-Services\My-GitHub-2020.08\Pages-2021.07\</Path>
+                  <Path Filename="docs">D:\home\dq\0\Wrk\1\Machines\Internet-Services\My-GitHub-2020.08\Pages-2021.07\DannyQuah.github.io\</Path>
+                  <Path Filename="_posts">D:\home\dq\0\Wrk\1\Machines\Internet-Services\My-GitHub-2020.08\Pages-2021.07\DannyQuah.github.io\docs\</Path>
+                  <Path Filename="2023-03-25-Weiming-Future-History.md">D:\home\dq\0\Wrk\1\Machines\Internet-Services\My-GitHub-2020.08\Pages-2021.07\DannyQuah.github.io\docs\_posts\</Path>
+                  <Path Filename="Storage">D:\home\dq\0\Wrk\1\Machines\Internet-Services\My-GitHub-2020.08\Pages-2021.07\DannyQuah.github.io\docs\</Path>
+                  <Path Filename="Posts">D:\home\dq\0\Wrk\1\Machines\Internet-Services\My-GitHub-2020.08\Pages-2021.07\DannyQuah.github.io\docs\Storage\</Path>
+                  <Path Filename="2023-03-31-How-Was-the-Change-00-Penang-Monthly-DQ-interview.png">D:\home\dq\0\Wrk\1\Machines\Internet-Services\My-GitHub-2020.08\Pages-2021.07\DannyQuah.github.io\docs\Storage\Posts\</Path>
+                  <Path Filename="2023">D:\home\dq\0\Stage\Photos\Photos-Work\</Path>
+                  <Path Filename="2023.03.29.0955.Wed-SCMP-China-Conference-Panel-Four-Seasons">D:\home\dq\0\Stage\Photos\Photos-Work\2023\</Path>
+                  <Path Filename="2023.03.29.122558.Wed-SCMP-China-651-via-Yuxin.Hou.jpg">D:\home\dq\0\Stage\Photos\Photos-Work\2023\2023.03.29.0955.Wed-SCMP-China-Conference-Panel-Four-Seasons\</Path>
+                  <Path Filename="index.md">D:\home\dq\0\Props\1\</Path>
+                  <Path Filename="Screenshot 2023-02-03 142442.png">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="syncth-excludes.txt">D:\home\dq\0\Props\1\</Path>
+                  <Path Filename="F">D:\home\dq\0\Wrk\1\People-Gr-Conf\</Path>
+                  <Path Filename="Francis-Tan.Andrew-2018.10">D:\home\dq\0\Wrk\1\People-Gr-Conf\F\</Path>
+                  <Path Filename="2023.01-Andrew.Francis-Tan-PnT">D:\home\dq\0\Wrk\1\People-Gr-Conf\F\Francis-Tan.Andrew-2018.10\</Path>
+                  <Path Filename="Andrew Francis-Tan_FPTC report.final.docx">D:\home\dq\0\Wrk\1\People-Gr-Conf\F\Francis-Tan.Andrew-2018.10\2023.01-Andrew.Francis-Tan-PnT\</Path>
+                  <Path Filename="2023.01-Andrew.Francis-Tan-PnT">D:\home\dq\0\Wrk\1\People-Gr-Conf\F\Francis-Tan.Andrew-2018.10\</Path>
+                  <Path Filename="Francis-Tan.Andrew-2018.10">D:\home\dq\0\Wrk\1\People-Gr-Conf\F\</Path>
+                  <Path Filename="R">D:\home\dq\0\Wrk\1\People-Gr-Conf\</Path>
+                  <Path Filename="Ryu.Yongwook-2018.03">D:\home\dq\0\Wrk\1\People-Gr-Conf\R\</Path>
+                  <Path Filename="2022.08.15.1600.Mon-FAR-Ryu.Yongwook-OTH.DO">D:\home\dq\0\Wrk\1\People-Gr-Conf\R\Ryu.Yongwook-2018.03\</Path>
+                  <Path Filename="Screenshot 2023-02-03 142442.png">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\Today\</Path>
+                  <Path Filename="Advancement-LKYSPP">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Advancement-LKYSPP\</Path>
+                  <Path Filename="ILG-2023.04">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Projects\</Path>
+                  <Path Filename="06a. GB 1-2023 - Better Governance Institute.doc">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Projects\ILG-2023.04\</Path>
+                  <Path Filename="2023.04.05.1730.Wed-Ambassador-Designate-Constance.See-briefing-OTH.DO">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\2023.04.05.1730.Wed-Ambassador-Designate-Constance.See-briefing-OTH.DO\</Path>
+                  <Path Filename="Low.TK-2022.10">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Advancement-LKYSPP\</Path>
+                  <Path Filename="2023.04.05.Wed-Straits-Times-David.Fogarty-LKYSPP-LTKF-highlights-via-Monica.Khoo.pdf">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Advancement-LKYSPP\Low.TK-2022.10\</Path>
                 </Paths>
               </Entry>
             </History>
@@ -950,7 +983,7 @@
         </Tab>
       </Left>
       <Right>
-        <ActiveTab>0</ActiveTab>
+        <ActiveTab>1</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -1024,9 +1057,53 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\LKYSPP\Townhall-2017\</Path>
-                  <Path Filename="2023.01.01.Sun-to-04.Wed-MPA-in-Asia-Lombok">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\</Path>
-                  <Path Filename="E-tix 6689781992471_BSJFPQ_QUAH DANNYLIMSENGHINPROF.pdf">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2023.01.01.Sun-to-04.Wed-MPA-in-Asia-Lombok\</Path>
+                  <Path Filename="2017">d:\OneDrive - National University of Singapore\Wrk\Events\</Path>
+                  <Path Filename="2017.11.27.0900.Mon-LKYSPP-Polaris-Arts-Camp-TJPC-Globalisation">d:\OneDrive - National University of Singapore\Wrk\Events\2017\</Path>
+                  <Path Filename="1">d:\OneDrive - National University of Singapore\</Path>
+                  <Path Filename="..">D:\home\dq\0\Scene\1\db0\</Path>
+                  <Path Filename="Wrk">D:\home\dq\0\</Path>
+                  <Path Filename="Wrk">D:\home\dq\0\Wrk\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\Wrk\</Path>
+                  <Path Filename="Wrk">D:\home\dq\0\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\</Path>
+                  <Path Filename="2023.03.03.Fri-05.Sun-CSEP-India-Asia-Oceania-Delhi-Neemrana">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\</Path>
+                  <Path Filename="Sessions">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\2023.03.03.Fri-05.Sun-CSEP-India-Asia-Oceania-Delhi-Neemrana\</Path>
+                  <Path Filename="2023.03.04.0930.Sat-Session 1 Geopolitics and Impact on Asian Economic Options.pdf">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\2023.03.03.Fri-05.Sun-CSEP-India-Asia-Oceania-Delhi-Neemrana\Sessions\</Path>
+                  <Path Filename="Projects">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="Boxes.odt">D:\home\dq\0\OneDrive\iPad-OneDrive-Synced-Documents\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="Wd">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">D:\home\dq\0\Props\1\</Path>
+                  <Path Filename="1">D:\home\dq\0\Props\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">D:\home\dq\0\Props\1\</Path>
+                  <Path Filename="Wd">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Lookups-2023.02">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="Posts-Archive-2020.11.md">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Lookups-2023.02\</Path>
+                  <Path Filename="Quah-D-0-Notes">D:\home\dq\0\Wrk\1\References\Q\</Path>
+                  <Path Filename="Quotes-2016.06">D:\home\dq\0\Wrk\1\References\Q\Quah-D-0-Notes\</Path>
+                  <Path Filename="Terry.Pratchett-Known-Criminal-Going-Postal.jpg">D:\home\dq\0\Wrk\1\References\Q\Quah-D-0-Notes\Quotes-2016.06\</Path>
+                  <Path Filename="F">D:\home\dq\0\Wrk\1\References\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\References\F\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">D:\home\dq\0\Wrk\1\</Path>
+                  <Path Filename="Faculty-2017.05">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\</Path>
+                  <Path Filename="2023.01.27.1200.Fri-Faculty-Meeting-FM-MM-SR2-1">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Faculty-2017.05\</Path>
+                  <Path Filename="2023.01.27-FM-minutes-draft-incl-small-revisions.docx">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Faculty-2017.05\2023.01.27.1200.Fri-Faculty-Meeting-FM-MM-SR2-1\</Path>
+                  <Path Filename="2023">D:\home\dq\0\Stage\Photos\Photos-Work\</Path>
+                  <Path Filename="2023.03.16.1230.Thu-DO-SPGR-lunch-Lei-Garden-Chijmes">D:\home\dq\0\Stage\Photos\Photos-Work\2023\</Path>
+                  <Path Filename="2023.03.16.1424.Thu-DO-SPGR-1.jpg">D:\home\dq\0\Stage\Photos\Photos-Work\2023\2023.03.16.1230.Thu-DO-SPGR-lunch-Lei-Garden-Chijmes\</Path>
+                  <Path Filename="2016.10-LKYSPP-Startup-Economic-Principles">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Projects\</Path>
+                  <Path Filename="2023.04.04.1600.Tue-Suzaina-Naniek-FDE-BTCHR-Roles-OTH.DO">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\</Path>
+                  <Path Filename="FDE Restructuring Proposal 4Apr2023 v2.pptx">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\2023.04.04.1600.Tue-Suzaina-Naniek-FDE-BTCHR-Roles-OTH.DO\</Path>
+                  <Path Filename="2023.04.05.1530.Wed-Laura.Lim-FDE-restructuring-OTH.DO">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events\</Path>
+                  <Path Filename="2023.04.05.Wed 2023-04-05 02_43_35.md">D:\home\dq\0\Wrk\Today\</Path>
+                  <Path Filename="L">D:\home\dq\0\Wrk\1\People-Gr-Conf\</Path>
+                  <Path Filename="Lim.Laura-2015.05">D:\home\dq\0\Wrk\1\People-Gr-Conf\L\</Path>
+                  <Path Filename="2023.04.05.1530.Wed-Laura.Lim-FDE-restructuring-OTH.DO">D:\home\dq\0\Wrk\1\People-Gr-Conf\L\Lim.Laura-2015.05\</Path>
+                  <Path Filename="S">D:\home\dq\0\Wrk\1\People-Gr-Conf\</Path>
+                  <Path Filename="See.Constance-2016.11">D:\home\dq\0\Wrk\1\People-Gr-Conf\S\</Path>
+                  <Path Filename="Low.TK-2022.10">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Advancement-LKYSPP\</Path>
+                  <Path Filename="Archives">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Advancement-LKYSPP\Low.TK-2022.10\</Path>
+                  <Path Filename="2023.04.05.Wed-Straits-Times-David.Fogarty-LKYSPP-LTKF.pdf">C:\Users\sppdqlsh\Downloads\</Path>
                 </Paths>
               </Entry>
             </History>
@@ -1036,7 +1113,7 @@
           </FileView>
         </Tab>
         <Tab>
-          <FileView Type="thumbnails">
+          <FileView Type="columns">
             <Sortings>
               <Sorting>
                 <Direction>1</Direction>
@@ -1108,44 +1185,41 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">D:\home\dq\0\Scene\1\db0\Templates\Plaintext\</Path>
+                  <Path Filename="2023.03.04.192725.Sat-CSEP-Neemrana-Rasika.Khanna-Kirida.B-wefie.jpg">D:\home\dq\0\Stage\Photos\Photos-Work\2023\2023.03.03.Fri-05.Sun-CSEP-India-Asia-Neemrana\</Path>
+                  <Path Filename="..">D:\home\dq\0\Scene\1\db0\</Path>
                   <Path Filename="db1">D:\home\dq\0\Scene\1\</Path>
-                  <Path Filename="Templates">D:\home\dq\0\Scene\1\db1\</Path>
-                  <Path Filename="MS-Office">D:\home\dq\0\Scene\1\db1\Templates\</Path>
-                  <Path Filename="2022">D:\home\dq\0\Stage\Photos\Photos-Work\</Path>
-                  <Path Filename="2022.H2-Rest-of-World">D:\home\dq\0\Stage\Photos\Photos-Work\2022\</Path>
-                  <Path Filename="2022.07.10-Japan-economic-security-Global-Compliance-News.png">D:\home\dq\0\Stage\Photos\Photos-Work\2022\2022.H2-Rest-of-World\</Path>
-                  <Path Filename="Provost-PVO-2016.12">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\LKYSPP\</Path>
-                  <Path Filename="2022.12.01.1400.Thu-LKYSPP-Budget-Provost-UHall">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\LKYSPP\Provost-PVO-2016.12\</Path>
-                  <Path Filename="2022.12.01.1400.Thu-LKYSPP-Budget-Provost-UHall.md">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\LKYSPP\Provost-PVO-2016.12\2022.12.01.1400.Thu-LKYSPP-Budget-Provost-UHall\</Path>
+                  <Path Filename="Internet-Services">D:\home\dq\0\Wrk\1\Machines\</Path>
+                  <Path Filename="Syncthing-2018.08">D:\home\dq\0\Wrk\1\Machines\Internet-Services\</Path>
+                  <Path Filename="syncthing@.service-ttd">D:\home\dq\0\Wrk\1\Machines\Internet-Services\Syncthing-2018.08\</Path>
+                  <Path Filename="index.md">D:\home\dq\0\Props\1\</Path>
                   <Path Filename="Config">D:\home\dq\0\Scene\1\db0\</Path>
                   <Path Filename="db1">D:\home\dq\0\Scene\1\</Path>
                   <Path Filename="Config">D:\home\dq\0\Scene\1\db1\</Path>
-                  <Path Filename="DavMail">D:\home\dq\0\Scene\1\db1\Config\</Path>
-                  <Path Filename="2022.10.18.Tue-SG-MOH-Vaccination-Certificate.pdf">D:\home\dq\0\Sound\1\Wp\</Path>
-                  <Path Filename="A">D:\home\dq\0\Board\1\Ww\References\</Path>
-                  <Path Filename="Ackerman-E-Stavridis-J-2021-2034-Penguin">D:\home\dq\0\Board\1\Ww\References\A\</Path>
-                  <Path Filename="..">D:\home\dq\0\Board\1\Ww\References\A\Ackerman-E-Stavridis-J-2021-2034-Penguin\</Path>
-                  <Path Filename="LifePINs">D:\home\dq\0\Sound\1\Wp\</Path>
-                  <Path Filename="Utilities-2016.07">D:\home\dq\0\Sound\1\Wp\LifePINs\</Path>
-                  <Path Filename="Vehicles-2019.02">D:\home\dq\0\Sound\1\Wp\LifePINs\Utilities-2016.07\</Path>
-                  <Path Filename="Kia-Stonic-SMK4168L-2019.04">D:\home\dq\0\Sound\1\Wp\LifePINs\Utilities-2016.07\Vehicles-2019.02\</Path>
-                  <Path Filename="Kia-Stonic-SMK4168L-2019.04.md">D:\home\dq\0\Sound\1\Wp\LifePINs\Utilities-2016.07\Vehicles-2019.02\Kia-Stonic-SMK4168L-2019.04\</Path>
-                  <Path Filename="Internet-Services">D:\home\dq\0\Board\1\Ww\Machines\</Path>
-                  <Path Filename="Email-2014.10">D:\home\dq\0\Board\1\Ww\Machines\Internet-Services\</Path>
-                  <Path Filename="2022.12.27-NUS-email-Thunderbird">D:\home\dq\0\Board\1\Ww\Machines\Internet-Services\Email-2014.10\</Path>
-                  <Path Filename="Setting up NUSmail on Thunderbird.pdf">D:\home\dq\0\Board\1\Ww\Machines\Internet-Services\Email-2014.10\2022.12.27-NUS-email-Thunderbird\</Path>
-                  <Path Filename="Official-Documents">D:\home\dq\0\Floor\1\t\Personal\</Path>
-                  <Path Filename="DQ">D:\home\dq\0\Floor\1\t\Personal\Official-Documents\</Path>
-                  <Path Filename="2018.07.16-Danny.Quah-UK-Passport-Facepage.jpg">D:\home\dq\0\Floor\1\t\Personal\Official-Documents\DQ\</Path>
-                  <Path Filename="..">D:\home\dq\0\0-Holding-Area\</Path>
-                  <Path Filename="LifePINs">D:\home\dq\0\Sound\1\Wp\</Path>
-                  <Path Filename="2023">D:\home\dq\0\Stage\Photos\Photos-Work\</Path>
-                  <Path Filename="2023.01.01.Sun-to-04.Wed-MPA-in-Asia-Lombok">D:\home\dq\0\Stage\Photos\Photos-Work\2023\</Path>
-                  <Path Filename="2023.01.03.121521-Roemah-Langko.jpg">D:\home\dq\0\Stage\Photos\Photos-Work\2023\2023.01.01.Sun-to-04.Wed-MPA-in-Asia-Lombok\</Path>
+                  <Path Filename="Yearbooks-2018.11">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Students-Degrees-Alum-2018.02\</Path>
+                  <Path Filename="2022.04-LKYSPP-Yearbook">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Students-Degrees-Alum-2018.02\Yearbooks-2018.11\</Path>
+                  <Path Filename="2022.04-Yearbook-Message-Danny.Quah.md">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Students-Degrees-Alum-2018.02\Yearbooks-2018.11\2022.04-LKYSPP-Yearbook\</Path>
+                  <Path Filename="Finance">D:\home\dq\0\OneDrive\1\Wp\Personal\</Path>
+                  <Path Filename="FinancePrsn.ods">D:\home\dq\0\OneDrive\1\Wp\Personal\Finance\</Path>
+                  <Path Filename="..">D:\home\dq\0\OneDrive\1\Wp\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\</Path>
+                  <Path Filename="2023.04.05.Wed 2023-04-05 02_43_35.md">D:\home\dq\0\Wrk\Today\</Path>
+                  <Path Filename="Governing-Board-2018.04">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\</Path>
+                  <Path Filename="2023.03.31.1000.Fri-GB-OTH.Conf">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Governing-Board-2018.04\</Path>
+                  <Path Filename="06a. GB 1-2023 - Better Governance Institute.doc">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Governing-Board-2018.04\2023.03.31.1000.Fri-GB-OTH.Conf\</Path>
+                  <Path Filename="Low.TK-2022.10">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Advancement-LKYSPP\</Path>
+                  <Path Filename="2023.04.05.Wed-Straits-Times-David.Fogarty-LKYSPP-LTKF.pdf">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Advancement-LKYSPP\Low.TK-2022.10\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\Work-Text\Corr\</Path>
+                  <Path Filename="Config">D:\home\dq\0\Scene\1\db0\</Path>
+                  <Path Filename="Config">D:\home\dq\0\Scene\1\db1\</Path>
+                  <Path Filename="Mutt">D:\home\dq\0\Scene\1\db1\Config\</Path>
+                  <Path Filename="signatures">D:\home\dq\0\Scene\1\db1\Config\Mutt\</Path>
+                  <Path Filename="work-DQ.sig">D:\home\dq\0\Scene\1\db1\Config\Mutt\signatures\</Path>
                 </Paths>
               </Entry>
             </History>
+            <ColumnsView>
+              <ColumnsSet>Default-DQ</ColumnsSet>
+            </ColumnsView>
           </FileView>
         </Tab>
       </Right>
@@ -1228,60 +1302,81 @@
   <DirectoryHotList>
     <HotDir Name="Desktop" Path="C:\Users\sppdqlsh\Desktop"/>
     <HotDir Name="Downloads" Path="C:\Users\sppdqlsh/Downloads"/>
-    <HotDir Name="0-Holding-Area" Path="D:\home\dq\0\0-Holding-Area"/>
     <HotDir Name="-" Path=""/>
-    <HotDir Name="-Wiki-Personal" Path=""/>
-    <HotDir Name="Wp" Path="d:/home/dq/0/Sound/1/Wp"/>
-    <HotDir Name="diary" Path="d:/home/dq\0\Sound\1\Wp\diary"/>
-    <HotDir Name="Portable-2021.12" Path="d:/home/dq\0\Sound\1\Wp\Portable-2021.12"/>
+    <HotDir Name="-Prsn" Path=""/>
+    <HotDir Name="Wp" Path="d:/home/dq/0/OneDrive/1/Wp"/>
+    <HotDir Name="diary" Path="d:/home/dq\0\OneDrive\1\Wp\diary"/>
+    <HotDir Name="Personal" Path="D:/home/dq/0/OneDrive/1/Wp/Personal"/>
     <HotDir Name="--" Path=""/>
-    <HotDir Name="-Wiki-Deans-Office" Path=""/>
-    <HotDir Name="Wd" Path="d:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd"/>
-    <HotDir Name="Events" Path="D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events"/>
-    <HotDir Name="LKYSPP" Path="d:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\LKYSPP"/>
-    <HotDir Name="Projects" Path="d:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Projects"/>
+    <HotDir Name="-Wrk" Path=""/>
+    <HotDir Name="Events" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Events"/>
+    <HotDir Name="-LKYSPP" Path=""/>
+    <HotDir Name="LKYSPP" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP"/>
+    <HotDir Name="Faculty-2017.05" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Faculty-2017.05"/>
+    <HotDir Name="Advancement-LKYSPP" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Advancement-LKYSPP\"/>
+    <HotDir Name="Students-Degrees-Alum-2018.02" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\LKYSPP\Students-Degrees-Alum-2018.02"/>
     <HotDir Name="--" Path=""/>
-    <HotDir Name="-Wiki-Work" Path=""/>
-    <HotDir Name="Ww" Path="d:/home/dq/0/Board/1/Ww"/>
-    <HotDir Name="Machines" Path="d:/home/dq\0\Board\1\Ww\Machines"/>
-    <HotDir Name="People-Gr-Conf" Path="d:/home/dq\0\Board\1\Ww\People-Gr-Conf"/>
-    <HotDir Name="References" Path="d:/home/dq\0\Board\1\Ww\References"/>
-    <HotDir Name="Q" Path="d:/home/dq\0\Board\1\Ww\References\Q"/>
+    <HotDir Name="-Projects" Path=""/>
+    <HotDir Name="Projects" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Projects"/>
+    <HotDir Name="SMF-Social-Mobility-Foundation-2021.03" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Projects\SMF-Social-Mobility-Foundation-2021.03"/>
     <HotDir Name="--" Path=""/>
-    <HotDir Name="db0" Path="d:/home/dq/0/Scene/1/db0"/>
-    <HotDir Name="Personal" Path="D:/home/dq/0/Floor/1/t/Personal"/>
+    <HotDir Name="-Machines" Path=""/>
+    <HotDir Name="Machines" Path="D:\home\dq\0\Wrk\1\Machines"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-People-Gr-Conf" Path=""/>
+    <HotDir Name="People-Gr-Conf" Path="D:\home\dq\0\Wrk\1\People-Gr-Conf"/>
+    <HotDir Name="Embassies-SG-2022.11" Path="D:\home\dq\0\Wrk\1\People-Gr-Conf\E\Embassies-SG-2022.11"/>
+    <HotDir Name="Quah.Danny" Path="D:\home\dq\0\Wrk\1\People-Gr-Conf\Q\Quah.Danny"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-References" Path=""/>
+    <HotDir Name="References" Path="D:\home\dq\0\Wrk\1\References"/>
+    <HotDir Name="Q" Path="D:\home\dq\0\Wrk\1\References\Q"/>
+    <HotDir Name="Quah-D-0-Notes" Path="D:\home\dq\0\Wrk\1\References\Q\Quah-D-0-Notes"/>
+    <HotDir Name="--" Path=""/>
     <HotDir Name="-Technicals" Path=""/>
-    <HotDir Name="Presentations-Marketplace-World-Order" Path="D:\home\dq/0/Board/1/Ww/Work-Text/Writings/Quah-D-2019.08-Marketplace-World-Order/P-Marketplace-World-Order"/>
-    <HotDir Name="Research-Resources-Marketplace-World-Order" Path="D:\home\dq/0/Board/1/Ww/Work-Text/Writings/Quah-D-2019.08-Marketplace-World-Order/RR-Marketplace-World-Order"/>
-    <HotDir Name="Presentations-Mobility-Inequality" Path="D:\home\dq/0/Board/1/Ww/Work-Text/Writings/Quah-D-2020-Mobility-Inequality/P-Mobility-Inequality"/>
-    <HotDir Name="Research-Resources-Mobility-Inequality" Path="D:\home\dq/0/Board/1/Ww/Work-Text/Writings/Quah-D-2020-Mobility-Inequality/RR-Mobility-Inequality"/>
-    <HotDir Name="Writings" Path="D:\home\dq\0\Board/1/Ww/Work-Text\Writings"/>
-    <HotDir Name="Corr" Path="D:\home\dq\0\Board\1\Ww\Work-Text\Corr"/>
-    <HotDir Name="Reference-Library" Path="D:\home\dq\0\Scene\1\t\Reference-Library"/>
-    <HotDir Name="j" Path="D:\home\dq\0\Light\1\j"/>
+    <HotDir Name="Presentations-Marketplace-World-Order" Path="D:\home\dq/0/Wrk/1/Work-Text/Writings/Quah-D-2019.08-Marketplace-World-Order/P-Marketplace-World-Order"/>
+    <HotDir Name="Research-Resources-Marketplace-World-Order" Path="D:\home\dq/0/Wrk/1/Work-Text/Writings/Quah-D-2019.08-Marketplace-World-Order/RR-Marketplace-World-Order"/>
+    <HotDir Name="Presentations-Mobility-Inequality" Path="D:\home\dq/0/Wrk/1/Work-Text/Writings/Quah-D-2020-Mobility-Inequality/P-Mobility-Inequality"/>
+    <HotDir Name="Research-Resources-Mobility-Inequality" Path="D:\home\dq/0/Wrk/1/Work-Text/Writings/Quah-D-2020-Mobility-Inequality/RR-Mobility-Inequality"/>
+    <HotDir Name="Writings" Path="D:\home\dq\0\Wrk\1\Work-Text\Writings"/>
+    <HotDir Name="Corr" Path="D:\home\dq\0\Wrk\1\Work-Text\Corr"/>
+    <HotDir Name="Reference-Library" Path="D:\home\dq\0\Wrk\1\References\0-Refs\Reference-Library"/>
+    <HotDir Name="j" Path="D:\home\dq\0\Wrk\1\j"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-Offbrain" Path=""/>
+    <HotDir Name="db0" Path="d:/home/dq/0/Scene/1/db0"/>
+    <HotDir Name="db1" Path="D:\home\dq\0\Scene\1\db1"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-My-Onlines" Path=""/>
-    <HotDir Name="GitHub-My-Pages-2021.07" Path="D:\home\dq\0\Light\1\j\GitHub-My-Pages-2021.07"/>
+    <HotDir Name="-My-GitHub" Path=""/>
+    <HotDir Name="My-GitHub-2020.08" Path="D:\home\dq\0\Wrk\1\Machines\Internet-Services\My-GitHub-2020.08"/>
+    <HotDir Name="DannyQuah.github.io" Path="D:\home\dq\0\Wrk\1\Machines\Internet-Services\My-GitHub-2020.08\Pages-2021.07\DannyQuah.github.io"/>
+    <HotDir Name="_posts" Path="D:\home\dq\0\Wrk\1\Machines\Internet-Services\My-GitHub-2020.08\Pages-2021.07\DannyQuah.github.io\docs\_posts"/>
+    <HotDir Name="--" Path=""/>
     <HotDir Name="mydomain-www" Path="d:/home/dq/0/Floor/1/db/mydomain-www"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Images" Path=""/>
+    <HotDir Name="Work-Photos" Path="D:\home\dq\0\Scene\Photos\Work-Photos"/>
     <HotDir Name="Work-Images" Path="D:\home\dq\0\Scene\1\i\Work-Images"/>
+    <HotDir Name="Work-Photos-DQ" Path="D:\home\dq\0\Scene\1\i\Work-Images\Work-Photos-DQ"/>
     <HotDir Name="Photos-Work" Path="D:\home\dq\0/Stage/Photos/Photos-Work"/>
     <HotDir Name="Photos-Personal" Path="D:\home\dq\0/Stage/Photos/Photos-Personal"/>
-    <HotDir Name="Profile-Pictures" Path="D:\home\dq\0\Light\1\db\Commons\Profile-Pictures"/>
-    <HotDir Name="Cover-Photos" Path="D:\home\dq\0\Light\1\db\Commons\Cover-Photos"/>
-    <HotDir Name="Wallpapers" Path="D:\home\dq\0\Light\1\db\Commons\Wallpapers"/>
+    <HotDir Name="Profile-Pictures" Path="D:\home\dq\0\Wrk\1\db\Commons\Profile-Pictures"/>
+    <HotDir Name="Cover-Photos" Path="D:\home\dq\0\Wrk\1\db\Commons\Cover-Photos"/>
+    <HotDir Name="Wallpapers" Path="D:\home\dq\0\Wrk\1\db\Commons\Wallpapers"/>
     <HotDir Name="--" Path=""/>
-    <HotDir Name="Commons" Path="d:\home\dq\0\Light\1\db\Commons"/>
     <HotDir Name="-Externals" Path=""/>
+    <HotDir Name="Props-1" Path="D:\home\dq\0\Props\1"/>
+    <HotDir Name="iPad-OneDrive-Synced-Documents" Path="D:\home\dq\0\OneDrive\iPad-OneDrive-Synced-Documents"/>
+    <HotDir Name="Today" Path="D:\home\dq\0\Wrk\Today"/>
+    <HotDir Name="-" Path=""/>
     <HotDir Name="Dropbox Comms" Path="C:\Users\sppdqlsh\Dropbox\Public\Comms"/>
     <HotDir Name="edu-princeton-dq" Path="D:\home\dq\0\Board\1\Ww\Work-Text\Corr\Email\edu-princeton-dq"/>
-    <HotDir Name="iPad-OneDrive-Synced-Documents" Path="C:\Users\sppdqlsh\OneDrive\iPad-OneDrive-Synced-Documents"/>
+    <HotDir Name="Box Thunderbird Attachments" Path="C:\Users\sppdqlsh\Box\Thunderbird"/>
     <HotDir Name="Store" Path="D:\home\dq\1\Store"/>
     <HotDir Name="nBox" Path="C:\Users\sppdqlsh\Documents\nBox"/>
-    <HotDir Name="OneDrive" Path="C:\Users\sppdqlsh\OneDrive"/>
     <HotDir Name="pCloud Sync" Path="P:\pCloud Sync"/>
-    <HotDir Name="Box Thunderbird Attachments" Path="C:\Users\sppdqlsh\Box\Thunderbird"/>
     <HotDir Name="D-Home Tmp" Path="D:\home\tmp"/>
     <HotDir Name="--" Path=""/>
   </DirectoryHotList>
@@ -1448,7 +1543,7 @@
         <Column>
           <Title>Name</Title>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>380</Width>
+          <Width>445</Width>
           <Align>0</Align>
           <Font>
             <Name>Consolas</Name>
@@ -1817,9 +1912,9 @@
         <Extension>[E]</Extension>
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
-        <Find>^a</Find>
-        <Replace>a0</Replace>
-        <RegExp>True</RegExp>
+        <Find>20230329_</Find>
+        <Replace>2023.03.29.</Replace>
+        <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
         <Counter>1</Counter>
         <Interval>1</Interval>

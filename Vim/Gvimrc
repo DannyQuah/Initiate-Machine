@@ -1,5 +1,5 @@
 " @(#) Vim/Gvimrc <- ~/.gvimrc
-" Last-edited: 2022.11.13.0701.Sun -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2023.01.24.1748.Tue -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 "  % Sun 2020.07.19.0745 -- Danny Quah (me@DannyQuah.com)
@@ -75,7 +75,8 @@ set t_vb=
 "  Colorscheme ---------------------------------------------------
 "  gvim only // If all commented out, Vimrc sets
   "colorscheme torte           "this came with GVim, but I like as well
-  "colorscheme industry
+  colorscheme industry
+	"colorscheme koehler
 
 
 

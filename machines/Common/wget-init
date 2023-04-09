@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+trap 'exit 0' 2 15
+wget -O - https://raw.githubusercontent.com/DannyQuah/Initiate-Machine/main/machines/Linux/src/01-barebones-new-setup | bash

@@ -1,0 +1,286 @@
+#!/usr/bin/env sh
+# @(#) 55-llinks-inside-init // Core links as
+# e.g., on Windows>VMware.  This is called by 05-linux-links-init
+# on a normal linux install.  
+# Last-edited: 2023.04.08.0959.Sat -- Danny Quah (me@DannyQuah.com)
+# Normal, compliant systems use that:
+# - `$XDG_CONFIG_HOME/` defaults to `$HOME/.config/`
+# - `$XDG_DATA_HOME/` defaults to `$HOME/.local/share/`
+# - `$XDG_CACHE_HOME/` defaults to `$HOME/.cache/`
+# ****************************************************************
+# Revision History:
+#  % 2020.05.25.0620.Mon -- Danny Quah (me@DannyQuah.com)
+#    First draft: Initialise with symbolic links to $HOME/
+#    This assumes my ~/0 filesystem is already in place
+#    Fonts under $DBNF rather than $DBPF as the latter often
+#    starts out from github, and I don't want font binaries up
+#    there
+# ****************************************************************
+#
+################################
+# No check on 0/ folders; either do that by hand or
+# use 05-linux-links-init
+cd ~
+mkdir -p ~/tmp
+################################
+#
+DBPF="$HOME"/0/Scene/1/db0
+DBNF="$HOME"/0/Scene/1/db1
+DWT="$HOME"/0/Wrk/1/Work-Text
+# Newer linux installations use .config subdirectory for dotfiles
+MYDOTCONF="$HOME"/.config
+export DBPF DBNF DWT MYDOTCONF
+
+################################
+# Bash
+THE_FILE="$DBPF"/machines/Bash/Bash-Linux
+if [ -f "$THE_FILE" ]; then
+	## rm -rf ~/.bashrc
+  ## ln -s "$THE_FILE" ~/.bashrc
+  rm -rf ~/.bashrc
+  ln -s "$THE_FILE" ~/.bashrc
+fi
+################################
+# bin/
+THE_FOLDER="$DBPF"/machines/Common
+if [ -d "$THE_FOLDER" ]; then
+  rm -rf ~/bin/Shellsrc ~/bin/update-mydomain ~/bin/recents0
+  rm -rf ~/bin/Archive.S1.External ~/bin/cleanAssetFolder
+  rm -rf ~/bin/makegist ~/bin/sync-qfs
+#  rm -rf ~/bin/bulk-heif ~/bin/workLog
+  mkdir -p ~/bin
+  ln -s "$THE_FOLDER"/Shellsrc ~/bin/
+  ln -s "$THE_FOLDER"/update-mydomain ~/bin/
+  ln -s "$THE_FOLDER"/recents0 ~/bin/
+  ln -s "$THE_FOLDER"/Archive.S1.External ~/bin/
+  ln -s "$THE_FOLDER"/cleanAssetFolder ~/bin/
+  ln -s "$THE_FOLDER"/makegist ~/bin/
+  ln -s "$THE_FOLDER"/sync-qfs ~/bin/
+#  ln -s "$THE_FOLDER"/bulk-heif ~/bin/
+#  ln -s "$THE_FOLDER"/workLog ~/bin/
+fi
+################################
+# Newer linux installations use .config subdirectory for dotfiles
+# DoubleCmd- Linux, Windows differ
+THE_FOLDER="$DBPF"/Config/DoubleCmd-Linux
+if [ -d "$THE_FOLDER" ]; then
+  rm -rf "$MYDOTCONF"/doublecmd
+  mkdir -p "$MYDOTCONF"
+  ln -s "$THE_FOLDER" "$MYDOTCONF"/doublecmd
+fi
+################################
+# Fonts
+# As needed, drag fonts TTF or entire folders to
+# `db1/machines/Linux/fonts/` (which is symlinked to `~/.fonts`).  
+# The fonts I have collected and typically use are in
+# `db1/fonts/`.  
+# Then `fc-cache -f -v`. 
+THE_FILE="$DBNF"/machines/Linux/fonts
+if [ -d "$THE_FILE" ]; then
+  rm -rf ~/.fonts
+  ln -s "$THE_FILE" ~/.fonts
+  if command -v fc-cache &> /dev/null; then
+    fc-cache -f -v
+  fi
+fi
+################################
+# git
+THE_FILE="$DBPF"/Config/gitconfig
+if [ -f "$THE_FILE" ]; then
+  rm -rf ~/.gitconfig
+  ln -s "$THE_FILE" ~/.gitconfig
+fi
+#################################
+# Gnupg
+THE_FOLDER="$DBNF"/Gnupg
+if [ -d $THE_FOLDER ]; then
+  rm -rf $HOME/.gnupg
+  ln -s $THE_FOLDER $HOME/.gnupg
+fi
+###############################
+# goobook
+THE_FILE="$DBNF"/Config/GooBook/goobookrc
+if [ -f "$THE_FILE" ]; then
+  mkdir -p $HOME/.cache
+  rm -rf $HOME/.cache/goobookrc
+  ln -s "$THE_FILE" $HOME/.cache
+fi
+################################
+# gtk
+# v "$HOME"/gtk-3.0/bookmarks "$HOME"/gtk-3.0/bookmarks-hold
+# ln -s "$DBPF"/machines/Linux/Config/gtk-3.0/bookmarks "$HOME"/gtk-3.0/bookmarks
+################################
+# LibreOffice
+THE_FILE="$DBNF"/Config/libreoffice
+if [ -f "$THE_FILE" ]; then
+  rm -rf "$MYDOTCONF"/libreoffice
+  ln -s "$THE_FILE" "$MYDOTCONF"/libreoffice
+fi
+################################
+# .mail // This folder not synced (for now) by syncthing  
+#  mutt or any other email client, via either imap or offlineimap
+#  keeps updated its folders on each separate machine  
+THE_FOLDER="$DWT"/Corr/Email
+if [ -d $THE_FOLDER ]; then
+  rm -rf $HOME/.mail
+  ln -s $THE_FOLDER $HOME/.mail
+fi
+################################
+# Mutt
+THE_FOLDER="$DBNF"/Config/Mutt
+if [ -d $THE_FOLDER ]; then
+  rm -rf $HOME/.mutt
+  ln -s $THE_FOLDER $HOME/.mutt
+fi
+
+################################
+# Obsidian // Switched to AppImage  
+THE_FILE="$HOME"/0/Wrk/1/db/Commons/obsidian-big-sur-NoBG-small.png
+THE_FOLDER="$HOME"/Apps/obsidian
+if [ -f "$THE_FILE" ]; then
+  mkdir -p "$THE_FOLDER"
+  rm -rf "$THE_FOLDER"/obsidian-big-sur-NoBG-small.png
+  ln -s "$THE_FILE" "$THE_FOLDER"/Obsidian.png
+fi
+################################
+# offlineimap
+THE_FILE="$DBNF"/Config/Offlineimap/offlineimaprc
+if [ -f "$THEFILE" ]; then
+  mkdir -p "$MYDOTCONF"/offlineimap
+  rm-rf "$MYDOTCONF"/offlineimap/config
+  ln -s "$THEFILE" "$MYDOTCONF"/offlinemap/config
+fi
+################################
+# OneDrive
+if [ -f "$DBPF"/Config/OneDrive/1D-Personal/config ]; then
+  rm -rf "$MYDOTCONF"/onedrive/1D-Personal/config
+  mkdir -p "$MYDOTCONF"/onedrive
+  ln -s "$DBPF"/Config/OneDrive/1D-Personal "$MYDOTCONF"/onedrive
+fi
+if [ -f "$DBPF"/Config/OneDrive/1D-Work/config ]; then
+  rm -rf "$MYDOTCONF"/onedrive/1D-Work/config
+  mkdir -p "$MYDOTCONF"/onedrive
+  ln -s "$DBPF"/Config/OneDrive/1D-Work "$MYDOTCONF"/onedrive
+fi
+
+################################
+# Pandoc
+# Is this needed? I can find no Windows counterpart
+if [ -d "$DBNF"/Pandoc ]; then
+  rm -rf ~/.pandoc
+  ln -s "$DBNF"/Pandoc ~/.pandoc
+fi
+################################
+# R I will take libraries specific to each machine, so
+# link just these dotfiles
+if [ -d "$DBNF"/R ]; then
+  rm -rf ~/.Renviron ~/.Rprofile
+  ln -s "$DBNF"/R/Renviron-Linux ~/.Renviron
+  ln -s "$DBNF"/R/Rprofile-Linux ~/.Rprofile
+fi
+################################
+# RSync
+THE_FILE="$DPBF"/Config/Rsync/qrsync-excludes.txt
+if [ -f "$THE_FILE" ]; then
+  rm -rf "$MYDOTCONF"/Rsync/qrsync-excludes.txt
+  mkdir -p "$MYDOTCONF"/Rsync
+  ln -s "$THE_FILE" "$MYDOTCONF"/Rsync
+fi
+################################
+# Ssh
+if [ -f "$DBPF"/machines/Ssh/config ]; then
+  rm -rf ~/.ssh/config
+  mkdir -p ~/.ssh
+  ln -s "$DBPF"/machines/Ssh/config ~/.ssh/config
+fi
+################################
+# texmf
+if [ -d "$DBNF"/texmf ]; then
+  rm -rf ~/texmf
+  ln -s "$DBNF"/texmf ~/texmf
+fi
+MAKEF="$DWT"/Writings/Makefile-pandoc
+if [ -f "$MAKEF" ]; then 
+  mkdir -p ~/tmp/
+  rm -f ~/tmp/Makefile
+  ln -s "$MAKEF" ~/tmp/Makefile
+fi
+################################
+# tmux
+THE_FILE="$DBPF"/Config/Tmux/tmux.conf
+if [ -f "$THE_FILE" ]; then
+  rm -rf "$MYDOTCONF"/tmux
+  mkdir -p "$MYDOTCONF"/tmux
+  ln -s "$THE_FILE" "$MYDOTCONF"/tmux/tmux.conf
+fi
+################################
+# tmux-powerline
+THE_FILE="$DBPF"/Config/Tmux-Powerline/config.sh
+if [ -f "$THE_FILE" ]; then
+  rm -rf  "$MYDOTCONF"/tmux-powerline
+  mkdir -p "$MYDOTCONF"/tmux-powerline
+  ln -s "$THE_FILE" "$MYDOTCONF"/tmux-powerline/
+fi
+
+################################
+# Vim
+rm -rf ~/.vim ~/.vimrc ~/.gvimrc
+ln -s "$DBPF"/Vim        ~/.vim
+ln -s "$DBPF"/Vim/Vimrc  ~/.vimrc
+ln -s "$DBPF"/Vim/Gvimrc ~/.gvimrc
+# Not typically needed but sometimes (e.g., ChromeOS > Linux)
+# mkdir -p ~/.local/share/applications
+# cd ~/.local/share/applications
+# ln -s ${DBPF}/machines/Linux/desktop/vim.desktop . 
+################################
+# X
+THE_XFILE="$DBPF"/machines/Linux/src/Xmodmap-swapctrlcaps
+if [ -f "$THE_XFILE" ]; then
+  rm -rf ~/.Xmodmap-swapctrlcaps
+  ln -s "$THE_XFILE" ~/.Xmodmap-swapctrlcaps
+fi
+THE_XFILE="$DBPF"/machines/Linux/src/Xresources
+if [ -f "$THE_XFILE" ]; then
+  rm -rf ~/.Xresources
+  ln -s "$THE_XFILE" ~/.Xresources
+fi
+################################
+# Below no longer in use
+################################
+# Atom should just use ~/.atom specific to each machine
+# So we don't need this any more (also, no longer using atom)
+# rm -rf ~/.atom
+# ln -s ~/0/Scene/1/db/machines/Editors/Atom ~/.atom
+# cd .atom
+# ln -s ~/0/Scene/1/db/Atom/keymap.cson .
+################################
+# Obsidian
+# Obsidian has a lot of cache baggage; just leave everything local
+# to .config or %LOCALAPPDATA% in each machine
+# ln -s "$DBNF"/Config/Obsidian-Linux "$HOME"/obsidian
+# However, pinnablity on ChromeOS>Linux is needed for Low Density
+# So make it pinnable
+# THE_FOLDER="$HOME/.local/share/applications"
+# mkdir -p "$THE_FOLDER"
+# if [ -f "$DPBF"/machines/Linux/desktop/obsidian.desktop ]; then
+#   rm -rf "$THE_FOLDER"/obsidian.desktop
+#   ln -s "$DBPF"/machines/Linux/desktop/obsidian.desktop "$THE_FOLDER"/
+# fi
+################################
+# Typora
+# No longer using Typora
+# mkdir -p "$MYDOTCONF"/Typora/themes
+# cd "$MYDOTCONF"/Typora/themes
+# rm -rf ./base.user.css
+# ln -s ~/0/Scene/1/db//Typora/base.user.css ./base.user.css
+################################
+# Zsh - I don't use this any more  
+# if [ -f "$DBPF"/machines/Zsh/Zshrc ]; then
+#   rm -rf ~/.zshrc
+#   ln -s "$DBPF"/machines/Zsh/Zshrc ~/.zshrc
+# Each machine now has its own oh-my-zsh
+# rm -rf ~/.local/share/oh-my-zsh 
+# mkdir -p ~/.local/share/oh-my-zsh
+# ln -s "$DBPF"/machines/Zsh/oh-my-zsh ~/.local/share/oh-my-zsh
+# fi 
+# eof 55-llinks-inside-init

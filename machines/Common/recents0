@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) recents0
-# Last-edited: Sat 2020.10.17.1234 -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2023.03.24.2319.Fri -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2020.10.17.1118 -- Danny Quah (me@DannyQuah.com)
@@ -11,7 +11,7 @@
 cd ~/0
 
 # Names of folders to look into
-# theFolders="./Board ./Drape ./Floor ./Light ./Scene ./Sound ./Stage"
+# theFolders="./Wrk ./OneDrive ./Scene ./Stage"
 
 # for thisFolder in $theFolders ; do
 #	echo $thisFolder

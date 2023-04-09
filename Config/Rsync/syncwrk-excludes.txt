@@ -1,0 +1,6 @@
+.git
+.obsidian
+.*#
+libreoffice
+desktop.ini
+.netrwhist

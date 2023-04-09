@@ -1,0 +1,1874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd DCVersion="1.0.9" ConfigVersion="13">
+  <Configuration Save="True" SortOrder="0" TreeType="0">
+    <FolderTabs Save="True"/>
+  </Configuration>
+  <Colors>
+    <FileFilters>
+      <Filter>
+        <Name>Pascal sources</Name>
+        <FileMasks>*.pas;*.pp</FileMasks>
+        <Color>32768</Color>
+        <Attributes/>
+      </Filter>
+      <Filter>
+        <Name>Pascal binaries</Name>
+        <FileMasks>*.ppu;*.o;*.dcu</FileMasks>
+        <Color>16711680</Color>
+        <Attributes/>
+      </Filter>
+      <Filter>
+        <Name>Specified Executables</Name>
+        <FileMasks>*</FileMasks>
+        <Color>55758</Color>
+        <Attributes>-rwxrwxr*x</Attributes>
+      </Filter>
+      <Filter>
+        <Name>Executables</Name>
+        <FileMasks>*</FileMasks>
+        <Color>32768</Color>
+        <Attributes>-*x*</Attributes>
+      </Filter>
+    </FileFilters>
+    <UseCursorBorder>False</UseCursorBorder>
+    <CursorBorderColor>-2147483635</CursorBorderColor>
+    <UseFrameCursor>False</UseFrameCursor>
+    <Foreground>16777215</Foreground>
+    <Background>0</Background>
+    <Background2>0</Background2>
+    <Cursor>-2147483635</Cursor>
+    <CursorText>-2147483634</CursorText>
+    <Mark>255</Mark>
+    <InactiveCursor>-2147483645</InactiveCursor>
+    <InactiveMark>128</InactiveMark>
+    <UseInvertedSelection>False</UseInvertedSelection>
+    <UseInactiveSelColor>False</UseInactiveSelColor>
+    <AllowOverColor>True</AllowOverColor>
+    <gBorderFrameWidth>1</gBorderFrameWidth>
+    <InactivePanelBrightness>96</InactivePanelBrightness>
+    <FreeSpaceIndicator>
+      <UseGradient>True</UseGradient>
+      <ForeColor>0</ForeColor>
+      <BackColor>16777215</BackColor>
+    </FreeSpaceIndicator>
+    <PathLabel>
+      <ActiveColor>-2147483635</ActiveColor>
+      <ActiveFontColor>-2147483634</ActiveFontColor>
+      <InactiveColor>-2147483633</InactiveColor>
+      <InactiveFontColor>-2147483630</InactiveFontColor>
+    </PathLabel>
+    <LogWindow>
+      <Info>8388608</Info>
+      <Error>255</Error>
+      <Success>32768</Success>
+    </LogWindow>
+  </Colors>
+  <Plugins>
+    <WlxPlugins>
+      <WlxPlugin Enabled="True">
+        <Name>wlxMplayer</Name>
+        <Path>%COMMANDER_PATH%/plugins/wlx/wlxmplayer/wlxmplayer.wlx</Path>
+        <DetectString>(EXT="MPG")|(EXT="AVI")|(EXT="MPEG")|(EXT="FLV")</DetectString>
+      </WlxPlugin>
+      <WlxPlugin Enabled="True">
+        <Name>preview</Name>
+        <Path>%commander_path%\plugins\wlx\preview\preview.wlx</Path>
+        <DetectString>(EXT="HTM")|(EXT="HTML")|(EXT="MHT")|(EXT="MHTML")</DetectString>
+      </WlxPlugin>
+      <WlxPlugin Enabled="True">
+        <Name>wmp</Name>
+        <Path>%commander_path%\plugins\wlx\wmp\wmp.wlx</Path>
+        <DetectString>(EXT="WAV")|(EXT="MP3")|(EXT="MP4")|(EXT="AVI")</DetectString>
+      </WlxPlugin>
+    </WlxPlugins>
+    <DsxPlugins/>
+    <WcxPlugins>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>zip</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>735</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>jar</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>990</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>tar</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>223</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>bz2</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Flags>91</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>tbz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>95</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>gz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>91</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>tgz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>95</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>lzma</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Flags>1</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>tlz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>95</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>xz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>91</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>txz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>95</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>zipx</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>223</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>cpio</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>deb</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>rpm</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/rpm/rpm.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>rar</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/unrar/unrar.wcx</Path>
+        <Flags>607</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>7z</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>607</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>zst</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Flags>91</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>arj</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>cab</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>cramfs</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>dmg</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>fat</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>hfs</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>iso</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>lha</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>lzh</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>ntfs</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>squashfs</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>taz</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>vhd</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>wim</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>85</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>xar</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>z</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\sevenzip\sevenzip.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+    </WcxPlugins>
+    <WdxPlugins>
+      <WdxPlugin>
+        <Name>deb_wdx</Name>
+        <Path>%COMMANDER_PATH%/plugins/wdx/deb_wdx/deb_wdx.wdx</Path>
+        <DetectString>EXT="DEB"</DetectString>
+      </WdxPlugin>
+      <WdxPlugin>
+        <Name>rpm_wdx</Name>
+        <Path>%COMMANDER_PATH%/plugins/wdx/rpm_wdx/rpm_wdx.wdx</Path>
+        <DetectString>EXT="RPM"</DetectString>
+      </WdxPlugin>
+      <WdxPlugin>
+        <Name>audioinfo</Name>
+        <Path>%COMMANDER_PATH%/plugins/wdx/audioinfo/audioinfo.wdx</Path>
+        <DetectString>(EXT="MP3") | (EXT="MP2") | (EXT="MP1") | (EXT="OGG") | (EXT="WMA") | (EXT="WAV") | (EXT="VQF") | (EXT="AAC") | (EXT="APE") | (EXT="MPC") | (EXT="FLAC") | (EXT="CDA") | (EXT="TTA") | (EXT="AC3") | (EXT="DTS") | (EXT="WV") | (EXT="WVC") | (EXT="OFR") | (EXT="OFS") | (EXT="M4A") | (EXT="MP4")</DetectString>
+      </WdxPlugin>
+    </WdxPlugins>
+    <WfxPlugins>
+      <WfxPlugin Enabled="True">
+        <Name>FTP</Name>
+        <Path>%commander_path%/plugins/wfx/ftp/ftp.wfx</Path>
+      </WfxPlugin>
+      <WfxPlugin Enabled="True">
+        <Name>Windows Network</Name>
+        <Path>%commander_path%/plugins/wfx/samba/samba.wfx</Path>
+      </WfxPlugin>
+    </WfxPlugins>
+    <TweakPluginWidth0>0</TweakPluginWidth0>
+    <TweakPluginHeight0>0</TweakPluginHeight0>
+    <TweakPluginWidth1>0</TweakPluginWidth1>
+    <TweakPluginHeight1>0</TweakPluginHeight1>
+    <TweakPluginWidth2>0</TweakPluginWidth2>
+    <TweakPluginHeight2>0</TweakPluginHeight2>
+    <TweakPluginWidth3>0</TweakPluginWidth3>
+    <TweakPluginHeight3>0</TweakPluginHeight3>
+    <TweakPluginWidth4>0</TweakPluginWidth4>
+    <TweakPluginHeight4>0</TweakPluginHeight4>
+    <AutoTweak>False</AutoTweak>
+    <WCXConfigViewMode>0</WCXConfigViewMode>
+    <PluginFilenameStyle>0</PluginFilenameStyle>
+    <PluginPathToBeRelativeTo>%COMMANDER_PATH%</PluginPathToBeRelativeTo>
+  </Plugins>
+  <Toolbars>
+    <MainToolbar>
+      <Row>
+        <Command>
+          <ID>{43C0EF91-AF29-4329-9348-F56BE9A0075A}</ID>
+          <Icon>cm_copypathoffilestoclip</Icon>
+          <Command>cm_CopyPathOfFilesToClip</Command>
+        </Command>
+        <Command>
+          <ID>{A5988C2A-B700-4FE8-9172-0E8A186DA5B4}</ID>
+          <Icon>cm_copynamestoclip</Icon>
+          <Command>cm_CopyNamesToClip</Command>
+        </Command>
+        <Command>
+          <ID>{1B25FEA5-43D7-474A-AD1C-46E93D6E6F9E}</ID>
+          <Icon>cm_makedir</Icon>
+          <Command>cm_MakeDir</Command>
+        </Command>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
+        <Command>
+          <ID>{7734BC65-0CEE-4559-AA41-CC3A6A632616}</ID>
+          <Icon>cm_viewhistoryprev</Icon>
+          <Command>cm_ViewHistoryPrev</Command>
+        </Command>
+        <Command>
+          <ID>{C55AB045-0FC2-4F9E-879A-E057B14E46AB}</ID>
+          <Icon>cm_viewhistorynext</Icon>
+          <Command>cm_ViewHistoryNext</Command>
+        </Command>
+        <Command>
+          <ID>{080F303E-FE67-405F-864E-40827E3B2A75}</ID>
+          <Icon>cm_viewhistory</Icon>
+          <Command>cm_ViewHistory</Command>
+        </Command>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
+        <Command>
+          <ID>{7B742844-E0EF-420A-85B4-EA9EC19B64D2}</ID>
+          <Icon>cm_columnsview</Icon>
+          <Command>cm_ColumnsView</Command>
+        </Command>
+        <Command>
+          <ID>{1C71370B-C614-46E6-9771-0A4B47A48F6F}</ID>
+          <Icon>cm_briefview</Icon>
+          <Command>cm_BriefView</Command>
+        </Command>
+        <Command>
+          <ID>{2F5E6070-1660-485F-A8F7-20D13815B483}</ID>
+          <Icon>cm_thumbnailsview</Icon>
+          <Command>cm_ThumbnailsView</Command>
+        </Command>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
+        <Command>
+          <ID>{CC8176EE-CE4C-4B96-BC1C-4CCE162CC247}</ID>
+          <Icon>cm_refresh</Icon>
+          <Command>cm_Refresh</Command>
+        </Command>
+        <Command>
+          <ID>{B0C20EAE-9C5A-467F-ADE1-8446229F3D64}</ID>
+          <Icon>cm_search</Icon>
+          <Command>cm_Search</Command>
+        </Command>
+      </Row>
+    </MainToolbar>
+    <MiddleToolbar>
+      <Row>
+        <Command>
+          <ID>{F9057CAB-32F9-4531-AE48-210EBEE2BC23}</ID>
+          <Icon>cm_view</Icon>
+          <Command>cm_View</Command>
+        </Command>
+        <Command>
+          <ID>{DEACAE0B-2599-41E0-8D7C-26C93F955EB3}</ID>
+          <Icon>cm_edit</Icon>
+          <Command>cm_Edit</Command>
+        </Command>
+        <Command>
+          <ID>{81DB9473-5EFF-4401-8423-33F05B559AD8}</ID>
+          <Icon>cm_copy</Icon>
+          <Command>cm_Copy</Command>
+        </Command>
+        <Command>
+          <ID>{89C51EED-545E-488E-BABB-BF880B4C98AC}</ID>
+          <Icon>cm_rename</Icon>
+          <Command>cm_Rename</Command>
+        </Command>
+        <Separator>
+          <Style>True</Style>
+        </Separator>
+        <Command>
+          <ID>{DD83C7BA-E8C9-44E8-A86E-2700E6D71FA4}</ID>
+          <Icon>cm_packfiles</Icon>
+          <Command>cm_PackFiles</Command>
+        </Command>
+        <Command>
+          <ID>{9C648CDE-12AC-4658-AD26-99D2CA60394C}</ID>
+          <Icon>cm_makedir</Icon>
+          <Command>cm_MakeDir</Command>
+        </Command>
+      </Row>
+    </MiddleToolbar>
+  </Toolbars>
+  <MainWindow>
+    <Position Save="True">
+      <Left>445</Left>
+      <Top>15</Top>
+      <Width>1397</Width>
+      <Height>957</Height>
+      <PixelsPerInch>96</PixelsPerInch>
+      <Maximized>False</Maximized>
+      <Splitter>52.1768251841929</Splitter>
+    </Position>
+  </MainWindow>
+  <Language>
+    <POFileName>doublecmd.en.po</POFileName>
+  </Language>
+  <Behaviours>
+    <GoToRoot>False</GoToRoot>
+    <ShowCurDirTitleBar>False</ShowCurDirTitleBar>
+    <ActiveRight>False</ActiveRight>
+    <RunInTerminalStayOpenCmd>x-terminal-emulator</RunInTerminalStayOpenCmd>
+    <RunInTerminalStayOpenParams>-e sh -c '{command}; echo -n Press ENTER to exit... ; read a'</RunInTerminalStayOpenParams>
+    <RunInTerminalCloseCmd>x-terminal-emulator</RunInTerminalCloseCmd>
+    <RunInTerminalCloseParams>-e sh -c {command}</RunInTerminalCloseParams>
+    <JustRunTerminal>x-terminal-emulator</JustRunTerminal>
+    <JustRunTermParams/>
+    <OnlyOneAppInstance>True</OnlyOneAppInstance>
+    <LynxLike>True</LynxLike>
+    <FileSizeFormat>0</FileSizeFormat>
+    <OperationSizeFormat>0</OperationSizeFormat>
+    <HeaderSizeFormat>0</HeaderSizeFormat>
+    <FooterSizeFormat>0</FooterSizeFormat>
+    <FileSizeDigits>1</FileSizeDigits>
+    <HeaderDigits>1</HeaderDigits>
+    <FooterDigits>1</FooterDigits>
+    <OperationSizeDigits>1</OperationSizeDigits>
+    <PersonalizedByte>B</PersonalizedByte>
+    <PersonalizedKilo>KB</PersonalizedKilo>
+    <PersonalizedMega>MB</PersonalizedMega>
+    <PersonalizedGiga>GB</PersonalizedGiga>
+    <PersonalizedTera>TB</PersonalizedTera>
+    <MinimizeToTray>False</MinimizeToTray>
+    <AlwaysShowTrayIcon>False</AlwaysShowTrayIcon>
+    <Mouse>
+      <Selection Enabled="True">
+        <Button>0</Button>
+        <IconClick>0</IconClick>
+      </Selection>
+      <SingleClickStart>0</SingleClickStart>
+      <ScrollMode>1</ScrollMode>
+      <WheelScrollLines>3</WheelScrollLines>
+    </Mouse>
+    <AutoFillColumns>False</AutoFillColumns>
+    <AutoSizeColumn>1</AutoSizeColumn>
+    <CustomColumnsChangeAllColumns>False</CustomColumnsChangeAllColumns>
+    <BriefViewFileExtAligned>False</BriefViewFileExtAligned>
+    <DateTimeFormat>yyyy.mm.dd hh:nn</DateTimeFormat>
+    <CutTextToColumnWidth>True</CutTextToColumnWidth>
+    <ExtendCellWidth>False</ExtendCellWidth>
+    <ShowSystemFiles>True</ShowSystemFiles>
+    <ListFilesInThread>True</ListFilesInThread>
+    <LoadIconsSeparately>True</LoadIconsSeparately>
+    <DelayLoadingTabs>True</DelayLoadingTabs>
+    <HighlightUpdatedFiles>True</HighlightUpdatedFiles>
+    <DriveBlackList/>
+    <DriveBlackListUnmounted>False</DriveBlackListUnmounted>
+  </Behaviours>
+  <Tools>
+    <Viewer Enabled="False">
+      <Path/>
+      <Parameters/>
+      <RunInTerminal>False</RunInTerminal>
+      <KeepTerminalOpen>False</KeepTerminalOpen>
+    </Viewer>
+    <Editor Enabled="True">
+      <Path>d:/home/dq/0/Scene/1\db0/machines/W/src/gvim-remote.bat</Path>
+      <Parameters/>
+      <RunInTerminal>False</RunInTerminal>
+      <KeepTerminalOpen>False</KeepTerminalOpen>
+    </Editor>
+    <Differ Enabled="False">
+      <Path/>
+      <Parameters/>
+      <RunInTerminal>False</RunInTerminal>
+      <KeepTerminalOpen>False</KeepTerminalOpen>
+      <FramePosAfterComp>0</FramePosAfterComp>
+    </Differ>
+  </Tools>
+  <Fonts>
+    <Main>
+      <Name>Consolas</Name>
+      <Size>9</Size>
+      <Style>0</Style>
+      <Quality>1</Quality>
+    </Main>
+    <Editor>
+      <Name>Monospace</Name>
+      <Size>9</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </Editor>
+    <Viewer>
+      <Name>Monospace</Name>
+      <Size>9</Size>
+      <Style>0</Style>
+      <Quality>1</Quality>
+    </Viewer>
+    <OptionsTree>
+      <Name>default</Name>
+      <Size>10</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </OptionsTree>
+    <OptionsMain>
+      <Name>default</Name>
+      <Size>10</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </OptionsMain>
+    <SearchResults>
+      <Name>default</Name>
+      <Size>9</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </SearchResults>
+    <PathEdit>
+      <Name>default</Name>
+      <Size>9</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </PathEdit>
+    <FunctionButtons>
+      <Name>default</Name>
+      <Size>8</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </FunctionButtons>
+    <Log>
+      <Name>Monospace</Name>
+      <Size>9</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </Log>
+    <ViewerBook>
+      <Name>default</Name>
+      <Size>9</Size>
+      <Style>0</Style>
+      <Quality>1</Quality>
+    </ViewerBook>
+    <Console>
+      <Name>Monospace</Name>
+      <Size>9</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </Console>
+    <TreeViewMenu>
+      <Name>default</Name>
+      <Size>9</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </TreeViewMenu>
+  </Fonts>
+  <ToolTips>
+    <ShowToolTipMode>True</ShowToolTipMode>
+    <CustomFields/>
+    <ActualToolTipMode>0</ActualToolTipMode>
+    <ToolTipHideTimeOut>0</ToolTipHideTimeOut>
+  </ToolTips>
+  <Layout>
+    <MainMenu>True</MainMenu>
+    <ButtonBar Enabled="True">
+      <FlatIcons>True</FlatIcons>
+      <ButtonHeight>24</ButtonHeight>
+      <IconSize>16</IconSize>
+      <ShowCaptions>False</ShowCaptions>
+      <ReportErrorWithCommands>True</ReportErrorWithCommands>
+      <FilenameStyle>0</FilenameStyle>
+      <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
+      <PathModifierElements>0</PathModifierElements>
+    </ButtonBar>
+    <MiddleBar Enabled="False">
+      <FlatIcons>True</FlatIcons>
+      <ButtonHeight>24</ButtonHeight>
+      <IconSize>16</IconSize>
+      <ShowCaptions>False</ShowCaptions>
+      <ReportErrorWithCommands>False</ReportErrorWithCommands>
+    </MiddleBar>
+    <DriveBar1>False</DriveBar1>
+    <DriveBar2>True</DriveBar2>
+    <DriveBarFlat>True</DriveBarFlat>
+    <DrivesListButton Enabled="True">
+      <ShowLabel>True</ShowLabel>
+      <ShowFileSystem>True</ShowFileSystem>
+      <ShowFreeSpace>True</ShowFreeSpace>
+    </DrivesListButton>
+    <SeparateTree>False</SeparateTree>
+    <DirectoryTabs>True</DirectoryTabs>
+    <CurrentDirectory>True</CurrentDirectory>
+    <TabHeader>True</TabHeader>
+    <StatusBar>True</StatusBar>
+    <CmdLine>True</CmdLine>
+    <LogWindow>False</LogWindow>
+    <TermWindow>False</TermWindow>
+    <KeyButtons>True</KeyButtons>
+    <InterfaceFlat>True</InterfaceFlat>
+    <DriveFreeSpace>True</DriveFreeSpace>
+    <DriveIndicator>False</DriveIndicator>
+    <ProgressInMenuBar>False</ProgressInMenuBar>
+    <PanelOfOperationsInBackground>True</PanelOfOperationsInBackground>
+    <HorizontalFilePanels>False</HorizontalFilePanels>
+    <ShortFormatDriveInfo>True</ShortFormatDriveInfo>
+    <UppercaseDriveLetter>False</UppercaseDriveLetter>
+    <ShowColonAfterDrive>False</ShowColonAfterDrive>
+  </Layout>
+  <FilesViews>
+    <Sorting>
+      <CaseSensitivity>0</CaseSensitivity>
+      <NaturalSorting>False</NaturalSorting>
+      <SortFolderMode>2</SortFolderMode>
+      <NewFilesPosition>2</NewFilesPosition>
+      <UpdatedFilesPosition>2</UpdatedFilesPosition>
+      <SpecialSorting>False</SpecialSorting>
+    </Sorting>
+    <ColumnsView>
+      <AutoSaveWidth>True</AutoSaveWidth>
+      <TitleStyle>1</TitleStyle>
+    </ColumnsView>
+    <BriefView>
+      <FileExtAligned>False</FileExtAligned>
+      <Columns>
+        <FixedWidth>100</FixedWidth>
+        <FixedCount>2</FixedCount>
+        <AutoSize>2</AutoSize>
+      </Columns>
+    </BriefView>
+    <ExtraLineSpan>2</ExtraLineSpan>
+    <FolderPrefix>[</FolderPrefix>
+    <FolderPostfix>]</FolderPostfix>
+  </FilesViews>
+  <Keyboard>
+    <Typing>
+      <Actions>
+        <NoModifier>2</NoModifier>
+        <Alt>0</Alt>
+        <CtrlAlt>3</CtrlAlt>
+      </Actions>
+    </Typing>
+  </Keyboard>
+  <FileOperations>
+    <BufferSize>524288</BufferSize>
+    <HashBufferSize>8388608</HashBufferSize>
+    <UseMmapInSearch>False</UseMmapInSearch>
+    <PartialNameSearch>True</PartialNameSearch>
+    <InitiallyClearFileMask>True</InitiallyClearFileMask>
+    <NewSearchClearFiltersAction>0</NewSearchClearFiltersAction>
+    <ShowMenuBarInFindFiles>True</ShowMenuBarInFindFiles>
+    <WipePassNumber>1</WipePassNumber>
+    <DropReadOnlyFlag>False</DropReadOnlyFlag>
+    <ProcessComments>False</ProcessComments>
+    <RenameSelOnlyName>True</RenameSelOnlyName>
+    <ShowCopyTabSelectPanel>False</ShowCopyTabSelectPanel>
+    <UseTrash>True</UseTrash>
+    <SkipFileOpError>False</SkipFileOpError>
+    <TypeOfDuplicatedRename>0</TypeOfDuplicatedRename>
+    <ShowDialogOnDragDrop>False</ShowDialogOnDragDrop>
+    <DragAndDropTextRichtextDesireLevel>0</DragAndDropTextRichtextDesireLevel>
+    <DragAndDropTextHtmlDesireLevel>1</DragAndDropTextHtmlDesireLevel>
+    <DragAndDropTextUnicodeDesireLevel>2</DragAndDropTextUnicodeDesireLevel>
+    <DragAndDropTextSimpletextDesireLevel>3</DragAndDropTextSimpletextDesireLevel>
+    <DragAndDropAskFormatEachTime>False</DragAndDropAskFormatEachTime>
+    <DragAndDropTextAutoFilename>False</DragAndDropTextAutoFilename>
+    <DragAndDropSaveUnicodeTextInUFT8>True</DragAndDropSaveUnicodeTextInUFT8>
+    <NtfsHourTimeDelay>False</NtfsHourTimeDelay>
+    <AutoExtractOpenMask/>
+    <SearchDefaultTemplate/>
+    <ProgressKind>0</ProgressKind>
+    <Confirmations>4</Confirmations>
+    <Options>
+      <Symlink>0</Symlink>
+      <CorrectLinks>False</CorrectLinks>
+      <FileExists>0</FileExists>
+      <DirectoryExists>0</DirectoryExists>
+      <SetPropertyError>0</SetPropertyError>
+      <ReserveSpace>False</ReserveSpace>
+      <CheckFreeSpace>True</CheckFreeSpace>
+      <CopyAttributes>True</CopyAttributes>
+      <Verify>False</Verify>
+      <CopyTime>True</CopyTime>
+      <CopyOwnership>False</CopyOwnership>
+      <CopyPermissions>False</CopyPermissions>
+      <ExcludeEmptyTemplateDirectories>True</ExcludeEmptyTemplateDirectories>
+      <CopyOnWrite>2</CopyOnWrite>
+      <CopyXattributes>True</CopyXattributes>
+    </Options>
+    <LongNameAlert>True</LongNameAlert>
+    <Extract>
+      <Overwrite>False</Overwrite>
+    </Extract>
+    <MultiRename>
+      <MulRenShowMenuBarOnTop>True</MulRenShowMenuBarOnTop>
+      <MulRenInvalidCharReplacement>.</MulRenInvalidCharReplacement>
+      <MulRenLaunchBehavor>0</MulRenLaunchBehavor>
+      <MulRenExitModifiedPreset>0</MulRenExitModifiedPreset>
+      <MulRenSaveRenamingLog>0</MulRenSaveRenamingLog>
+      <MulRenLogFilename>%DC_CONFIG_PATH%\multirename.log</MulRenLogFilename>
+      <MultRenDailyIndividualDirLog>True</MultRenDailyIndividualDirLog>
+      <MulRenFilenameWithFullPathInLog>False</MulRenFilenameWithFullPathInLog>
+      <MulRenPathRangeSeparator>- </MulRenPathRangeSeparator>
+    </MultiRename>
+  </FileOperations>
+  <Tabs>
+    <Options>49937</Options>
+    <CharacterLimit>32</CharacterLimit>
+    <Position>0</Position>
+    <ActionOnDoubleClick>2</ActionOnDoubleClick>
+    <OpenedTabs>
+      <Left>
+        <ActiveTab>0</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>0</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry>
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="Wp">C:\Users\sppdqlsh\0\Sound\1\</Path>
+                  <Path Filename="1">C:\Users\sppdqlsh\0\Sound\</Path>
+                  <Path Filename="Light">C:\Users\sppdqlsh\0\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="Obsidian">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obsidian\</Path>
+                  <Path Filename="Obsidian">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obsidian\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="1">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Writings\</Path>
+                  <Path Filename="Corr">C:\Users\sppdqlsh\0\Light\1\t\</Path>
+                  <Path Filename="archive">C:\Users\sppdqlsh\0\Light\1\t\Corr\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2022\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2022\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="2021.10-Zhijia.Yap">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\2021.10-Zhijia.Yap\</Path>
+                  <Path Filename="Templates">C:\Users\sppdqlsh\0\Scene\1\db0\</Path>
+                  <Path Filename="Plaintext">C:\Users\sppdqlsh\0\Scene\1\db0\Templates\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Scene\1\db0\Templates\Plaintext\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Writings\</Path>
+                  <Path Filename="Writings">C:\Users\sppdqlsh\0\Light\1\t\</Path>
+                  <Path Filename="t">C:\Users\sppdqlsh\0\Light\1\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="2022.01.12.1700-Bernard.Yeung-ABFER-WA-voice.md">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\2022\</Path>
+                </Paths>
+              </Entry>
+              <Entry>
+                <FileSource Type="TWinNetFileSource"/>
+                <Paths>
+                  <Path Filename="">\</Path>
+                </Paths>
+              </Entry>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="LKYSPP-Deans-Office">D:\home\dq\0\Wrk\1\</Path>
+                  <Path Filename="Wd">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Events">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="Quah-D-0-Notes">D:\home\dq\0\Board\1\Ww\References\Q\</Path>
+                  <Path Filename="Third-Nations-2023.02">D:\home\dq\0\Board\1\Ww\References\Q\Quah-D-0-Notes\</Path>
+                  <Path Filename="..">D:\home\dq\0\Board\1\Ww\References\Q\Quah-D-0-Notes\Third-Nations-2023.02\</Path>
+                  <Path Filename="0-Holding-Area">D:\home\dq\0\</Path>
+                  <Path Filename="2023.01-Junior-Hiring.md">D:\home\dq\0\0-Holding-Area\</Path>
+                  <Path Filename="2021.02.03-IQ-Income-Inequality-Panel-key-points-Sanchita.Sathish.docx">D:\home\dq\0\Board\1\Ww\Work-Text\Writings\Quah-D-2020-Mobility-Inequality\RR-Mobility-Inequality\</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default-DQ</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>0</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry>
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="Wp">C:\Users\sppdqlsh\0\Sound\1\</Path>
+                  <Path Filename="1">C:\Users\sppdqlsh\0\Sound\</Path>
+                  <Path Filename="Light">C:\Users\sppdqlsh\0\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="Obsidian">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obsidian\</Path>
+                  <Path Filename="Obsidian">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obsidian\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="1">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Writings\</Path>
+                  <Path Filename="Corr">C:\Users\sppdqlsh\0\Light\1\t\</Path>
+                  <Path Filename="archive">C:\Users\sppdqlsh\0\Light\1\t\Corr\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2022\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2022\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="2021.10-Zhijia.Yap">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\2021.10-Zhijia.Yap\</Path>
+                  <Path Filename="Templates">C:\Users\sppdqlsh\0\Scene\1\db0\</Path>
+                  <Path Filename="Plaintext">C:\Users\sppdqlsh\0\Scene\1\db0\Templates\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Scene\1\db0\Templates\Plaintext\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Writings\</Path>
+                  <Path Filename="Writings">C:\Users\sppdqlsh\0\Light\1\t\</Path>
+                  <Path Filename="t">C:\Users\sppdqlsh\0\Light\1\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="2022.01.12.1700-Bernard.Yeung-ABFER-WA-voice.md">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\2022\</Path>
+                </Paths>
+              </Entry>
+              <Entry>
+                <FileSource Type="TWinNetFileSource"/>
+                <Paths>
+                  <Path Filename="">\</Path>
+                </Paths>
+              </Entry>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="Projects">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="SSRC-Social-Science-Research-Council-SG-2020.01">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Projects\</Path>
+                  <Path Filename="2021.02.24-SSRC-Fellowships">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Projects\SSRC-Social-Science-Research-Council-SG-2020.01\</Path>
+                  <Path Filename="MOE2020-SSHR-001_NUS_Ong Pinchuan">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Projects\SSRC-Social-Science-Research-Council-SG-2020.01\2021.02.24-SSRC-Fellowships\</Path>
+                  <Path Filename="3. CVs and Letter of Committment">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Projects\SSRC-Social-Science-Research-Council-SG-2020.01\2021.02.24-SSRC-Fellowships\MOE2020-SSHR-001_NUS_Ong Pinchuan\</Path>
+                  <Path Filename="MOE2020-SSHR-004_NUS_Yogita Shamdasani">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Projects\SSRC-Social-Science-Research-Council-SG-2020.01\2021.02.24-SSRC-Fellowships\</Path>
+                  <Path Filename="2. MOE2020-SSHR-004_NUS_Yogita Shamdasani_Proposal.pdf">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Projects\SSRC-Social-Science-Research-Council-SG-2020.01\2021.02.24-SSRC-Fellowships\MOE2020-SSHR-004_NUS_Yogita Shamdasani\</Path>
+                  <Path Filename="Wrk">D:\home\dq\0\</Path>
+                  <Path Filename="1">D:\home\dq\0\Wrk\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">D:\home\dq\0\Wrk\1\</Path>
+                  <Path Filename="Wd">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="LKYSPP">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="Provost-PVO-2016.12">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\</Path>
+                  <Path Filename="2021.01.07.0830-LKYSPP-Budget-Provost-Zoom">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Provost-PVO-2016.12\</Path>
+                  <Path Filename="2020.12.18.1030-Finance-Team-Provost-Budget-Meeting-slides-Zoom">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Provost-PVO-2016.12\2021.01.07.0830-LKYSPP-Budget-Provost-Zoom\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Provost-PVO-2016.12\2021.01.07.0830-LKYSPP-Budget-Provost-Zoom\2020.12.18.1030-Finance-Team-Provost-Budget-Meeting-slides-Zoom\</Path>
+                  <Path Filename="1">D:\home\dq\0\Wrk\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">D:\home\dq\0\Wrk\1\</Path>
+                  <Path Filename="Wd">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Physical-Data-DQ.ods">D:\home\dq\0\Floor\1\t\Personal\</Path>
+                  <Path Filename="2023.02.23.0900.Thu-SSRC-MOE">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\</Path>
+                  <Path Filename="2023">D:\home\dq\0\Stage\Photos\Photos-Work\</Path>
+                  <Path Filename="2023.02.21.1600.Tue-Thammasat-SGS-Dean-Prapaporn-Thai-Embassy">D:\home\dq\0\Stage\Photos\Photos-Work\2023\</Path>
+                  <Path Filename="..">D:\home\dq\0\Stage\Photos\Photos-Work\2023\2023.02.21.1600.Tue-Thammasat-SGS-Dean-Prapaporn-Thai-Embassy\</Path>
+                  <Path Filename="L">D:\home\dq\0\Board\1\Ww\People-Gr-Conf\</Path>
+                  <Path Filename="Loewen.Peter-2018.04">D:\home\dq\0\Board\1\Ww\People-Gr-Conf\L\</Path>
+                  <Path Filename="2023.02.21.1230.Tue-Peter.Loewen-lunch-Table-at-7">D:\home\dq\0\Board\1\Ww\People-Gr-Conf\L\Loewen.Peter-2018.04\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="diary">D:\home\dq\0\OneDrive\1\Wp\</Path>
+                  <Path Filename="2023.02.10.Fri.md">D:\home\dq\0\OneDrive\1\Wp\diary\</Path>
+                  <Path Filename="1.docx">D:\home\dq\0\0-Holding-Area\</Path>
+                  <Path Filename="Today">D:\home\dq\0\OneDrive\1\Wp\</Path>
+                  <Path Filename="Donors-2021.05.md">D:\home\dq\0\OneDrive\1\Wp\Today\</Path>
+                  <Path Filename="..">D:\home\dq\0\0-Holding-Area\</Path>
+                  <Path Filename="Quah-D-2023.02-Platform-Workers">D:\home\dq\0\Board\1\Ww\References\Q\</Path>
+                  <Path Filename="2023.02-Quah-D-Platform-Workers.md">D:\home\dq\0\Board\1\Ww\References\Q\Quah-D-2023.02-Platform-Workers\</Path>
+                  <Path Filename="Students-Degrees-Alum-2018.02">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\</Path>
+                  <Path Filename="LKYSPP-in-Asia-2023.01">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Students-Degrees-Alum-2018.02\</Path>
+                  <Path Filename="2023.02.19.Sun-to-20.Mon-MIA-in-Asia-Bangkok">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Students-Degrees-Alum-2018.02\LKYSPP-in-Asia-2023.01\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Students-Degrees-Alum-2018.02\LKYSPP-in-Asia-2023.01\2023.02.19.Sun-to-20.Mon-MIA-in-Asia-Bangkok\</Path>
+                  <Path Filename="2023.02.24.Fri-03.01.Wed-London-Oxford">D:\home\dq\0\OneDrive\iPad-OneDrive-Synced-Documents\</Path>
+                  <Path Filename="2023.02.27.Mon-Oxford-Annual.Hicks-Lecture">D:\home\dq\0\OneDrive\iPad-OneDrive-Synced-Documents\2023.02.24.Fri-03.01.Wed-London-Oxford\</Path>
+                  <Path Filename="B">D:\home\dq\0\Board\1\Ww\References\</Path>
+                  <Path Filename="Barrett-Philip-et-al-2020.07-Measuring-Social-Unrest-Using-Media-Reports-IMF">D:\home\dq\0\Board\1\Ww\References\B\</Path>
+                  <Path Filename="2020.07-Philip.Barrett-et-al-Measuring-Social-Unrest-Using-Media-Reports-IMF-WP-20-129.pdf">D:\home\dq\0\Board\1\Ww\References\B\Barrett-Philip-et-al-2020.07-Measuring-Social-Unrest-Using-Media-Reports-IMF\</Path>
+                  <Path Filename="..">D:\home\dq\0\Scene\1\db0\</Path>
+                  <Path Filename="1">D:\home\dq\0\Scene\</Path>
+                  <Path Filename="t">D:\home\dq\0\Scene\1\</Path>
+                  <Path Filename="Reference-Library">D:\home\dq\0\Scene\1\t\</Path>
+                  <Path Filename="2020.03-Danny.Quah-Singapore-Policy-Response-COVID-19-Ch11-in-eds-Richard.Baldwin-Beatrice.Weder-di-Mauro-CEPR.pdf">D:\home\dq\0\Scene\1\t\Reference-Library\</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default-DQ</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Left>
+      <Right>
+        <ActiveTab>1</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>0</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry>
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="Wp">C:\Users\sppdqlsh\0\Sound\1\</Path>
+                  <Path Filename="1">C:\Users\sppdqlsh\0\Sound\</Path>
+                  <Path Filename="Light">C:\Users\sppdqlsh\0\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="Obsidian">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obsidian\</Path>
+                  <Path Filename="Obsidian">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obsidian\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="1">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Writings\</Path>
+                  <Path Filename="Corr">C:\Users\sppdqlsh\0\Light\1\t\</Path>
+                  <Path Filename="archive">C:\Users\sppdqlsh\0\Light\1\t\Corr\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2022\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2022\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="2021.10-Zhijia.Yap">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\2021.10-Zhijia.Yap\</Path>
+                  <Path Filename="Templates">C:\Users\sppdqlsh\0\Scene\1\db0\</Path>
+                  <Path Filename="Plaintext">C:\Users\sppdqlsh\0\Scene\1\db0\Templates\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Scene\1\db0\Templates\Plaintext\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Writings\</Path>
+                  <Path Filename="Writings">C:\Users\sppdqlsh\0\Light\1\t\</Path>
+                  <Path Filename="t">C:\Users\sppdqlsh\0\Light\1\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="2022.01.12.1700-Bernard.Yeung-ABFER-WA-voice.md">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\2022\</Path>
+                </Paths>
+              </Entry>
+              <Entry>
+                <FileSource Type="TWinNetFileSource"/>
+                <Paths>
+                  <Path Filename="">\</Path>
+                </Paths>
+              </Entry>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Projects\APSIA-2018.01\2023.02.08.2230.Wed-APSIA-Exco-Zoom\</Path>
+                  <Path Filename="1">D:\home\dq\0\Props\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">D:\home\dq\0\Props\1\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\Dropbox\Public\Comms\</Path>
+                  <Path Filename="My Documents">C:\Users\sppdqlsh\</Path>
+                  <Path Filename="nBox">C:\Users\sppdqlsh\Documents\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">C:\Users\sppdqlsh\Documents\nBox\</Path>
+                  <Path Filename="Wd">C:\Users\sppdqlsh\Documents\nBox\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="2023.02.14.Tue-17.Fri-Tokyo-Regional-Security-Symposium">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\2023.02.14.Tue-17.Fri-Tokyo-Regional-Security-Symposium\</Path>
+                  <Path Filename="H">D:\home\dq\0\Board\1\Ww\People-Gr-Conf\</Path>
+                  <Path Filename="Hew.Denis-2021.10">D:\home\dq\0\Board\1\Ww\People-Gr-Conf\H\</Path>
+                  <Path Filename="DenisHew-CV2021.pdf">D:\home\dq\0\Board\1\Ww\People-Gr-Conf\H\Hew.Denis-2021.10\</Path>
+                  <Path Filename="Screenshot 2023-02-03 142442.png">D:\home\dq\0\0-Holding-Area\</Path>
+                  <Path Filename="2023.01-Junior-Hiring">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\LKYSPP\Faculty-2017.05\Hiring-2017.12\</Path>
+                  <Path Filename="2023.01-Junior-Hiring.md">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\LKYSPP\Faculty-2017.05\Hiring-2017.12\2023.01-Junior-Hiring\</Path>
+                  <Path Filename="Wrk">D:\home\dq\0\</Path>
+                  <Path Filename="1">D:\home\dq\0\Wrk\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">D:\home\dq\0\Wrk\1\</Path>
+                  <Path Filename="Wd">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Faculty-2017.05\Hiring-2017.12\2023.01-Junior-Hiring\</Path>
+                  <Path Filename="2022.03-Hiring">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Faculty-2017.05\Hiring-2017.12\</Path>
+                  <Path Filename="2022.03.02-Tan.Shin_Bin-OGS">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Faculty-2017.05\Hiring-2017.12\2022.03-Hiring\</Path>
+                  <Path Filename="Re_ Our LKYSPP junior hiring.eml">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Faculty-2017.05\Hiring-2017.12\2022.03-Hiring\2022.03.02-Tan.Shin_Bin-OGS\</Path>
+                  <Path Filename="2023.02.23.0900.Thu-SSRC-MOE">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\</Path>
+                  <Path Filename="MOE2022-SSRTG-029">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\2023.02.23.0900.Thu-SSRC-MOE\</Path>
+                  <Path Filename="2023.02.24.Fri-03.01.Wed-London-Oxford">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\</Path>
+                  <Path Filename="2023.02.24.Fri-03.01.Wed-London-Oxford-travel.md">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\2023.02.24.Fri-03.01.Wed-London-Oxford\</Path>
+                  <Path Filename="2023.03.09,16,30.1830.Thu-TBC-GB-Dinner">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\</Path>
+                  <Path Filename="Students-Degrees-Alum-2018.02">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\</Path>
+                  <Path Filename="LKYSPP-in-Asia-2023.01">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Students-Degrees-Alum-2018.02\</Path>
+                  <Path Filename="2023.02.19.Sun-to-20.Mon-MIA-in-Asia-Bangkok">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Students-Degrees-Alum-2018.02\LKYSPP-in-Asia-2023.01\</Path>
+                  <Path Filename="2023.02.19.1800.Sun-ASEAN-Centrality-US-China-Rivalry-panel-Makkasan.md">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Students-Degrees-Alum-2018.02\LKYSPP-in-Asia-2023.01\2023.02.19.Sun-to-20.Mon-MIA-in-Asia-Bangkok\</Path>
+                  <Path Filename="W">D:\home\dq\0\Board\1\Ww\References\</Path>
+                  <Path Filename="World-Economic-Forum-2020.01-Global-Social-Mobility-Index-2020">D:\home\dq\0\Board\1\Ww\References\W\</Path>
+                  <Path Filename="2020.01-WEF-Global-Social-Mobility-Report.pdf">D:\home\dq\0\Board\1\Ww\References\W\World-Economic-Forum-2020.01-Global-Social-Mobility-Index-2020\</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default-DQ</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>0</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry>
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="Wp">C:\Users\sppdqlsh\0\Sound\1\</Path>
+                  <Path Filename="1">C:\Users\sppdqlsh\0\Sound\</Path>
+                  <Path Filename="Light">C:\Users\sppdqlsh\0\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="Obsidian">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obsidian\</Path>
+                  <Path Filename="Obsidian">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obsidian\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="1">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Writings\</Path>
+                  <Path Filename="Corr">C:\Users\sppdqlsh\0\Light\1\t\</Path>
+                  <Path Filename="archive">C:\Users\sppdqlsh\0\Light\1\t\Corr\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2022\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2022\</Path>
+                  <Path Filename="2021">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\</Path>
+                  <Path Filename="2021.10-Zhijia.Yap">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Corr\archive\2021\2021.10-Zhijia.Yap\</Path>
+                  <Path Filename="Templates">C:\Users\sppdqlsh\0\Scene\1\db0\</Path>
+                  <Path Filename="Plaintext">C:\Users\sppdqlsh\0\Scene\1\db0\Templates\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Scene\1\db0\Templates\Plaintext\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\Downloads\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\1\t\Writings\</Path>
+                  <Path Filename="Writings">C:\Users\sppdqlsh\0\Light\1\t\</Path>
+                  <Path Filename="t">C:\Users\sppdqlsh\0\Light\1\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">C:\Users\sppdqlsh\0\Light\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="..">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Obs-LDO">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Dean-Office-Work-Share">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\</Path>
+                  <Path Filename="Events">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\</Path>
+                  <Path Filename="2022">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\</Path>
+                  <Path Filename="2022.01.12.1700-Bernard.Yeung-ABFER-WA-voice.md">C:\Users\sppdqlsh\0\Light\LKYSPP-Deans-Office\Obs-LDO\Dean-Office-Work-Share\Events\2022\</Path>
+                </Paths>
+              </Entry>
+              <Entry>
+                <FileSource Type="TWinNetFileSource"/>
+                <Paths>
+                  <Path Filename="">\</Path>
+                </Paths>
+              </Entry>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="Wd">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="Work-Details">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\</Path>
+                  <Path Filename="machines">D:\home\dq\0\Scene\1\db0\</Path>
+                  <Path Filename="Common">D:\home\dq\0\Scene\1\db0\machines\</Path>
+                  <Path Filename="update-mydomain">D:\home\dq\0\Scene\1\db0\machines\Common\</Path>
+                  <Path Filename="B">D:\home\dq\0\Board\1\Ww\People-Gr-Conf\</Path>
+                  <Path Filename="Basu.Kaushik-2023.02">D:\home\dq\0\Board\1\Ww\People-Gr-Conf\B\</Path>
+                  <Path Filename="2023.02.13.1230.Mon-Kaushik.Basu-lunch-Table-at-7">D:\home\dq\0\Board\1\Ww\People-Gr-Conf\B\Basu.Kaushik-2023.02\</Path>
+                  <Path Filename="..">D:\home\dq\0\Board\1\Ww\People-Gr-Conf\B\Basu.Kaushik-2023.02\2023.02.13.1230.Mon-Kaushik.Basu-lunch-Table-at-7\</Path>
+                  <Path Filename="B">D:\home\dq\0\Board\1\Ww\People-Gr-Conf\</Path>
+                  <Path Filename="home">D:\</Path>
+                  <Path Filename="$Recycle.Bin">c:\</Path>
+                  <Path Filename="..">D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events\</Path>
+                  <Path Filename="OneDrive - National University of Singapore">D:\</Path>
+                  <Path Filename="1">D:\OneDrive - National University of Singapore\</Path>
+                  <Path Filename="LKYSPP-Deans-Office">D:\OneDrive - National University of Singapore\1\</Path>
+                  <Path Filename="Wd">D:\OneDrive - National University of Singapore\1\LKYSPP-Deans-Office\</Path>
+                  <Path Filename="E">D:\home\dq\0\Board\1\Ww\References\</Path>
+                  <Path Filename="East-Asia-Forum-2022.10-Comprehensive-Regional-Security">D:\home\dq\0\Board\1\Ww\References\E\</Path>
+                  <Path Filename="..">D:\home\dq\0\Board\1\Ww\References\E\East-Asia-Forum-2022.10-Comprehensive-Regional-Security\</Path>
+                  <Path Filename="Screenshot 2023-01-31 145134.png">D:\home\dq\0\0-Holding-Area\</Path>
+                  <Path Filename="2023.02.24.Fri-03.01.Wed-London-Oxford">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\</Path>
+                  <Path Filename="2023.02.25.1030.Sat-LSE-China-Development-IR-Forum-LSE">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\2023.02.24.Fri-03.01.Wed-London-Oxford\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\2023.02.24.Fri-03.01.Wed-London-Oxford\2023.02.25.1030.Sat-LSE-China-Development-IR-Forum-LSE\</Path>
+                  <Path Filename="Apps">D:\home\dq\0\Board\1\Ww\Machines\</Path>
+                  <Path Filename="Pandoc-2020.08">D:\home\dq\0\Board\1\Ww\Machines\Apps\</Path>
+                  <Path Filename="..">D:\home\dq\0\Board\1\Ww\Machines\Apps\Pandoc-2020.08\</Path>
+                  <Path Filename="2023.02.21.1600.Tue-Thammasat-SGS-Dean-Prapaporn-Thai-Embassy">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\</Path>
+                  <Path Filename="Students-Degrees-Alum-2018.02">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\</Path>
+                  <Path Filename="LKYSPP-in-Asia-2023.01">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Students-Degrees-Alum-2018.02\</Path>
+                  <Path Filename="2023.02.19.Sun-to-20.Mon-MIA-in-Asia-Bangkok">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Students-Degrees-Alum-2018.02\LKYSPP-in-Asia-2023.01\</Path>
+                  <Path Filename="diary">D:\home\dq\0\OneDrive\1\Wp\</Path>
+                  <Path Filename="2023.02.24.Fri-03.01.Wed-London-Oxford">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\</Path>
+                  <Path Filename="2023.02.27.Mon-Oxford-Annual.Hicks-Lecture">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\2023.02.24.Fri-03.01.Wed-London-Oxford\</Path>
+                  <Path Filename="..">D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events\2023.02.24.Fri-03.01.Wed-London-Oxford\2023.02.27.Mon-Oxford-Annual.Hicks-Lecture\</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default-DQ</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Right>
+    </OpenedTabs>
+  </Tabs>
+  <Log Enabled="False" LogFileWithDateInName="False" Count="0">
+    <FileName>%DC_CONFIG_PATH%/doublecmd.log</FileName>
+    <Options>1023</Options>
+  </Log>
+  <History>
+    <SearchReplaceHistory Save="True"/>
+    <DirHistory Save="True"/>
+    <CmdLineHistory Save="True"/>
+    <FileMaskHistory Save="True"/>
+  </History>
+  <QuickSearch>
+    <MatchBeginning>True</MatchBeginning>
+    <MatchEnding>True</MatchEnding>
+    <Case>1</Case>
+    <Items>2</Items>
+  </QuickSearch>
+  <QuickFilter>
+    <AutoHide>True</AutoHide>
+    <SaveSessionModifications>False</SaveSessionModifications>
+  </QuickFilter>
+  <Miscellaneous>
+    <GridVertLine>False</GridVertLine>
+    <GridHorzLine>False</GridHorzLine>
+    <ShowWarningMessages>True</ShowWarningMessages>
+    <SpaceMovesDown>False</SpaceMovesDown>
+    <DirBrackets>False</DirBrackets>
+    <InplaceRename>False</InplaceRename>
+    <DblClickToParent>False</DblClickToParent>
+    <HotDirAddTargetOrNot>False</HotDirAddTargetOrNot>
+    <HotDirFullExpandOrNot>False</HotDirFullExpandOrNot>
+    <ShowPathInPopup>True</ShowPathInPopup>
+    <ShowOnlyValidEnv>True</ShowOnlyValidEnv>
+    <WhereToAddNewHotDir>1</WhereToAddNewHotDir>
+    <InplaceRenameButton>True</InplaceRenameButton>
+    <FilenameStyle>0</FilenameStyle>
+    <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
+    <PathModifierElements>0</PathModifierElements>
+    <DefaultTextEncoding>none</DefaultTextEncoding>
+  </Miscellaneous>
+  <Thumbnails Save="True">
+    <Width>128</Width>
+    <Height>128</Height>
+  </Thumbnails>
+  <Description>
+    <CreateNewUnicode>True</CreateNewUnicode>
+    <DefaultEncoding>2</DefaultEncoding>
+    <CreateNewEncoding>3</CreateNewEncoding>
+  </Description>
+  <AutoRefresh>
+    <Options>3</Options>
+    <ExcludeDirs/>
+    <Mode>1</Mode>
+  </AutoRefresh>
+  <Icons>
+    <Theme>dctheme</Theme>
+    <ShowMode>3</ShowMode>
+    <ShowOverlays>False</ShowOverlays>
+    <Size>32</Size>
+    <DiskSize>16</DiskSize>
+    <DiskAlpha>50</DiskAlpha>
+    <Exclude>False</Exclude>
+    <ExcludeDirs/>
+    <CustomIcons>0</CustomIcons>
+    <PixelsPerInch>96</PixelsPerInch>
+    <ShowInMenus Enabled="False">
+      <Size>16</Size>
+    </ShowInMenus>
+    <ShowButtonGlyphs>0</ShowButtonGlyphs>
+    <ShowHiddenDimmed>False</ShowHiddenDimmed>
+    <ToolSize>24</ToolSize>
+  </Icons>
+  <IgnoreList Enabled="False">
+    <IgnoreListFile>%DC_CONFIG_PATH%/ignorelist.txt</IgnoreListFile>
+  </IgnoreList>
+  <DirectoryHotList>
+    <HotDir Name="Desktop" Path="C:\Users\sppdqlsh\Desktop"/>
+    <HotDir Name="Downloads" Path="C:\Users\sppdqlsh/Downloads"/>
+    <HotDir Name="0-Holding-Area" Path="D:\home\dq\0\0-Holding-Area"/>
+    <HotDir Name="-" Path=""/>
+    <HotDir Name="-Wiki-Personal" Path=""/>
+    <HotDir Name="Wp" Path="d:/home/dq/0/OneDrive/1/Wp"/>
+    <HotDir Name="diary" Path="d:/home/dq\0\OneDrive\1\Wp\diary"/>
+    <HotDir Name="Portable-2021.12" Path="d:/home/dq\0\OneDrive\1\Wp\Portable-2021.12"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-Wrk" Path=""/>
+    <HotDir Name="Wd" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd"/>
+    <HotDir Name="Events" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Events"/>
+    <HotDir Name="LKYSPP" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP"/>
+    <HotDir Name="Projects" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\Projects"/>
+    <HotDir Name="2023.01-Junior-Hiring" Path="D:\home\dq\0\Wrk\1\LKYSPP-Deans-Office\Wd\LKYSPP\Faculty-2017.05\Hiring-2017.12\2023.01-Junior-Hiring"/>
+    <HotDir Name="Q" Path="D:\home\dq\0\Wrk\1\References\Q\"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-Wiki-Work" Path=""/>
+    <HotDir Name="Ww" Path="d:/home/dq/0/Board/1/Ww"/>
+    <HotDir Name="Machines" Path="d:/home/dq\0\Board\1\Ww\Machines"/>
+    <HotDir Name="People-Gr-Conf" Path="d:/home/dq\0\Board\1\Ww\People-Gr-Conf"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="db0" Path="d:/home/dq/0/Scene/1/db0"/>
+    <HotDir Name="Personal" Path="D:/home/dq/0/Floor/1/t/Personal"/>
+    <HotDir Name="-Technicals" Path=""/>
+    <HotDir Name="Presentations-Marketplace-World-Order" Path="D:\home\dq/0/Board/1/Ww/Work-Text/Writings/Quah-D-2019.08-Marketplace-World-Order/P-Marketplace-World-Order"/>
+    <HotDir Name="Research-Resources-Marketplace-World-Order" Path="D:\home\dq/0/Board/1/Ww/Work-Text/Writings/Quah-D-2019.08-Marketplace-World-Order/RR-Marketplace-World-Order"/>
+    <HotDir Name="Presentations-Mobility-Inequality" Path="D:\home\dq/0/Board/1/Ww/Work-Text/Writings/Quah-D-2020-Mobility-Inequality/P-Mobility-Inequality"/>
+    <HotDir Name="Research-Resources-Mobility-Inequality" Path="D:\home\dq/0/Board/1/Ww/Work-Text/Writings/Quah-D-2020-Mobility-Inequality/RR-Mobility-Inequality"/>
+    <HotDir Name="Writings" Path="D:\home\dq\0\Board/1/Ww/Work-Text\Writings"/>
+    <HotDir Name="Corr" Path="D:\home\dq\0\Board\1\Ww\Work-Text\Corr"/>
+    <HotDir Name="Reference-Library" Path="D:\home\dq\0\Scene\1\t\Reference-Library"/>
+    <HotDir Name="j" Path="D:\home\dq\0\Light\1\j"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-My-Onlines" Path=""/>
+    <HotDir Name="GitHub-My-Pages-2021.07" Path="D:\home\dq\0\Light\1\j\GitHub-My-Pages-2021.07"/>
+    <HotDir Name="mydomain-www" Path="d:/home/dq/0/Floor/1/db/mydomain-www"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-Images" Path=""/>
+    <HotDir Name="Work-Photos" Path="D:\home\dq\0\Scene\Photos\Work-Photos"/>
+    <HotDir Name="Work-Images" Path="D:\home\dq\0\Scene\1\i\Work-Images"/>
+    <HotDir Name="Work-Photos-DQ" Path="D:\home\dq\0\Scene\1\i\Work-Images\Work-Photos-DQ"/>
+    <HotDir Name="Photos-Work" Path="D:\home\dq\0/Stage/Photos/Photos-Work"/>
+    <HotDir Name="Photos-Personal" Path="D:\home\dq\0/Stage/Photos/Photos-Personal"/>
+    <HotDir Name="Profile-Pictures" Path="D:\home\dq\0\Light\1\db\Commons\Profile-Pictures"/>
+    <HotDir Name="Cover-Photos" Path="D:\home\dq\0\Light\1\db\Commons\Cover-Photos"/>
+    <HotDir Name="Wallpapers" Path="D:\home\dq\0\Light\1\db\Commons\Wallpapers"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="Commons" Path="d:\home\dq\0\Light\1\db\Commons"/>
+    <HotDir Name="-Externals" Path=""/>
+    <HotDir Name="Dropbox Comms" Path="C:\Users\sppdqlsh\Dropbox\Public\Comms"/>
+    <HotDir Name="edu-princeton-dq" Path="D:\home\dq\0\Board\1\Ww\Work-Text\Corr\Email\edu-princeton-dq"/>
+    <HotDir Name="iPad-OneDrive-Synced-Documents" Path="D:\home\dq\0\OneDrive\iPad-OneDrive-Synced-Documents"/>
+    <HotDir Name="Store" Path="D:\home\dq\1\Store"/>
+    <HotDir Name="nBox" Path="C:\Users\sppdqlsh\Documents\nBox"/>
+    <HotDir Name="OneDrive" Path="C:\Users\sppdqlsh\OneDrive"/>
+    <HotDir Name="pCloud Sync" Path="P:\pCloud Sync"/>
+    <HotDir Name="Box Thunderbird Attachments" Path="C:\Users\sppdqlsh\Box\Thunderbird"/>
+    <HotDir Name="D-Home Tmp" Path="D:\home\tmp"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-W-DO-Props" Path=""/>
+    <HotDir Name="Wd" Path="d:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd"/>
+    <HotDir Name="Events" Path="D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Events"/>
+    <HotDir Name="LKYSPP" Path="d:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\LKYSPP"/>
+    <HotDir Name="Hiring-2017.12" Path="D:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\LKYSPP\Faculty-2017.05\Hiring-2017.12"/>
+    <HotDir Name="Projects" Path="d:\home\dq\0\Props\1\LKYSPP-Deans-Office\Wd\Projects"/>
+    <HotDir Name="--" Path=""/>
+  </DirectoryHotList>
+  <Viewer>
+    <PreviewVisible>False</PreviewVisible>
+    <ImageStretch>False</ImageStretch>
+    <ImageExifRotate>True</ImageExifRotate>
+    <ImageStretchLargeOnly>False</ImageStretchLargeOnly>
+    <ImageCenter>True</ImageCenter>
+    <CopyMovePath1/>
+    <CopyMovePath2/>
+    <CopyMovePath3/>
+    <CopyMovePath4/>
+    <CopyMovePath5/>
+    <PaintMode>0</PaintMode>
+    <PaintWidth>5</PaintWidth>
+    <NumberOfColumns>1</NumberOfColumns>
+    <ViewerMode>1</ViewerMode>
+    <PaintColor>255</PaintColor>
+    <BackgroundColor>0</BackgroundColor>
+    <FontColor>16777215</FontColor>
+    <TextPosition>0</TextPosition>
+    <TabSpaces>8</TabSpaces>
+    <MaxTextWidth>1024</MaxTextWidth>
+    <PrintMargins>200|200|200|200</PrintMargins>
+    <ShowCaret>False</ShowCaret>
+    <LeftMargin>4</LeftMargin>
+    <ExtraLineSpan>0</ExtraLineSpan>
+  </Viewer>
+  <Editor>
+    <EditWaitTime>2000</EditWaitTime>
+    <SynEditOptions>856075</SynEditOptions>
+    <SynEditTabWidth>8</SynEditTabWidth>
+    <SynEditRightEdge>80</SynEditRightEdge>
+  </Editor>
+  <SyncDirs>
+    <Subdirs>False</Subdirs>
+    <ByContent>False</ByContent>
+    <IgnoreDate>False</IgnoreDate>
+    <FilterCopyRight>True</FilterCopyRight>
+    <FilterEqual>True</FilterEqual>
+    <FilterNotEqual>True</FilterNotEqual>
+    <FilterCopyLeft>True</FilterCopyLeft>
+    <FilterDuplicates>True</FilterDuplicates>
+    <FilterSingles>True</FilterSingles>
+    <FileMask>*</FileMask>
+    <Asymmetric Save="False">False</Asymmetric>
+    <Colors>
+      <Left>32768</Left>
+      <Right>16711680</Right>
+      <Unknown>255</Unknown>
+    </Colors>
+  </SyncDirs>
+  <InternalAssociations>
+    <OfferToAddNewFileType>False</OfferToAddNewFileType>
+    <LastCustomAction>Custom action</LastCustomAction>
+    <ExpandedContextMenu>False</ExpandedContextMenu>
+    <ExecuteViaShell>False</ExecuteViaShell>
+    <OpenSystemWithTerminalClose>False</OpenSystemWithTerminalClose>
+    <OpenSystemWithTerminalStayOpen>False</OpenSystemWithTerminalStayOpen>
+    <IncludeFileAssociation>False</IncludeFileAssociation>
+    <FilenameStyle>0</FilenameStyle>
+    <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
+    <PathModifierElements>0</PathModifierElements>
+  </InternalAssociations>
+  <TreeViewMenu>
+    <UseTVMDirectoryHotlistFMC>False</UseTVMDirectoryHotlistFMC>
+    <UseTVMDirectoryHotlistFDC>False</UseTVMDirectoryHotlistFDC>
+    <UseTVMFavoriteTabsFMC>False</UseTVMFavoriteTabsFMC>
+    <UseTVMFavoriteTabsFDC>False</UseTVMFavoriteTabsFDC>
+    <UseTVMDirHistory>True</UseTVMDirHistory>
+    <UseTVMViewHistory>True</UseTVMViewHistory>
+    <UseTVMCommandLineHistory>False</UseTVMCommandLineHistory>
+    <TreeViewMenuShortcutExit>True</TreeViewMenuShortcutExit>
+    <TreeViewMenuSingleClickExit>True</TreeViewMenuSingleClickExit>
+    <TreeViewMenuDoubleClickExit>True</TreeViewMenuDoubleClickExit>
+    <Context00>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context00>
+    <Context01>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context01>
+    <Context02>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context02>
+    <Context03>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>False</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context03>
+    <Context04>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context04>
+    <Context05>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context05>
+    <Context06>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context06>
+    <TreeViewMenuUseKeyboardShortcut>True</TreeViewMenuUseKeyboardShortcut>
+    <BackgroundColor>-2147483617</BackgroundColor>
+    <ShortcutColor>255</ShortcutColor>
+    <NormalTextColor>-2147483640</NormalTextColor>
+    <SecondaryTextColor>-2147483642</SecondaryTextColor>
+    <FoundTextColor>-2147483635</FoundTextColor>
+    <UnselectableTextColor>-2147483631</UnselectableTextColor>
+    <CursorColor>-2147483635</CursorColor>
+    <ShortcutUnderCursor>-2147483634</ShortcutUnderCursor>
+    <NormalTextUnderCursor>-2147483634</NormalTextUnderCursor>
+    <SecondaryTextUnderCursor>-2147483628</SecondaryTextUnderCursor>
+    <FoundTextUnderCursor>65535</FoundTextUnderCursor>
+    <UnselectableUnderCursor>-2147483631</UnselectableUnderCursor>
+  </TreeViewMenu>
+  <FavoriteTabsOptions>
+    <FavoriteTabsUseRestoreExtraOptions>False</FavoriteTabsUseRestoreExtraOptions>
+    <WhereToAdd>1</WhereToAdd>
+    <Expand>True</Expand>
+    <GotoConfigAftSav>False</GotoConfigAftSav>
+    <GotoConfigAftReSav>False</GotoConfigAftReSav>
+    <DfltLeftGoTo>0</DfltLeftGoTo>
+    <DfltRightGoTo>1</DfltRightGoTo>
+    <DfltKeep>5</DfltKeep>
+    <DfltSaveDirHistory>False</DfltSaveDirHistory>
+    <FavTabsLastUniqueID>{7B17134A-04A1-4A91-AD12-7AA4B34A23ED}</FavTabsLastUniqueID>
+  </FavoriteTabsOptions>
+  <Lua>
+    <PathToLibrary>liblua5.1.so.0</PathToLibrary>
+  </Lua>
+  <NameShortcutFile>shortcuts.scf</NameShortcutFile>
+  <HotKeySortOrder>0</HotKeySortOrder>
+  <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
+  <LastUsedPacker>zip</LastUsedPacker>
+  <UseShellForFileOperations>False</UseShellForFileOperations>
+  <LastDoAnyCommand>cm_Refresh</LastDoAnyCommand>
+  <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
+  <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
+  <MarkMaskFilterWindows>False</MarkMaskFilterWindows>
+  <MarkShowWantedAttribute>False</MarkShowWantedAttribute>
+  <MarkDefaultWantedAttribute/>
+  <MarkLastWantedAttribute/>
+  <SearchTemplates/>
+  <ColumnsSets DefaultTitleHash="540805403">
+    <ColumnsSet UseFrameCursor="False">
+      <Name>Default-DQ</Name>
+      <CustomView>False</CustomView>
+      <FileSystem>&lt;General&gt;</FileSystem>
+      <PixelsPerInch>96</PixelsPerInch>
+      <CursorBorder Enabled="False">
+        <Color>-2147483635</Color>
+      </CursorBorder>
+      <Columns>
+        <Column>
+          <Title>Name</Title>
+          <FuncString>[DC().GETFILENAME{}]</FuncString>
+          <Width>503</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>Consolas</Name>
+            <Size>10</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Date</Title>
+          <FuncString>[DC().GETFILETIME{}]</FuncString>
+          <Width>140</Width>
+          <Align>1</Align>
+          <Font>
+            <Name>Consolas</Name>
+            <Size>10</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Size</Title>
+          <FuncString>[DC().GETFILESIZE{}]</FuncString>
+          <Width>70</Width>
+          <Align>1</Align>
+          <Font>
+            <Name>Consolas</Name>
+            <Size>10</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Attr</Title>
+          <FuncString>[DC().GETFILEATTR{}]</FuncString>
+          <Width>100</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>Consolas</Name>
+            <Size>10</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title/>
+          <FuncString/>
+          <Width>50</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>Consolas</Name>
+            <Size>10</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+      </Columns>
+    </ColumnsSet>
+    <ColumnsSet UseFrameCursor="False">
+      <Name>Default</Name>
+      <CustomView>True</CustomView>
+      <FileSystem>&lt;General&gt;</FileSystem>
+      <PixelsPerInch>96</PixelsPerInch>
+      <CursorBorder Enabled="False">
+        <Color>-2147483635</Color>
+      </CursorBorder>
+      <Columns>
+        <Column>
+          <Title>Name</Title>
+          <FuncString>[DC().GETFILENAME{}]</FuncString>
+          <Width>250</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>default</Name>
+            <Size>10</Size>
+            <Style>1</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Size</Title>
+          <FuncString>[DC().GETFILESIZE{}]</FuncString>
+          <Width>70</Width>
+          <Align>1</Align>
+          <Font>
+            <Name>default</Name>
+            <Size>10</Size>
+            <Style>1</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Date</Title>
+          <FuncString>[DC().GETFILETIME{}]</FuncString>
+          <Width>140</Width>
+          <Align>1</Align>
+          <Font>
+            <Name>default</Name>
+            <Size>10</Size>
+            <Style>1</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Attr</Title>
+          <FuncString>[DC().GETFILEATTR{}]</FuncString>
+          <Width>100</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>default</Name>
+            <Size>10</Size>
+            <Style>1</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+      </Columns>
+    </ColumnsSet>
+    <ColumnsSet UseFrameCursor="False">
+      <Name>Default-DQ-W10</Name>
+      <CustomView>False</CustomView>
+      <FileSystem>&lt;General&gt;</FileSystem>
+      <PixelsPerInch>96</PixelsPerInch>
+      <CursorBorder Enabled="False">
+        <Color>-2147483635</Color>
+      </CursorBorder>
+      <Columns>
+        <Column>
+          <Title>Name</Title>
+          <FuncString>[DC().GETFILENAME{}]</FuncString>
+          <Width>416</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>Consolas</Name>
+            <Size>10</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Size</Title>
+          <FuncString>[DC().GETFILESIZE{}]</FuncString>
+          <Width>70</Width>
+          <Align>1</Align>
+          <Font>
+            <Name>Consolas</Name>
+            <Size>10</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Date</Title>
+          <FuncString>[DC().GETFILETIME{}]</FuncString>
+          <Width>140</Width>
+          <Align>1</Align>
+          <Font>
+            <Name>Consolas</Name>
+            <Size>10</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Attr</Title>
+          <FuncString>[DC().GETFILEATTR{}]</FuncString>
+          <Width>100</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>Consolas</Name>
+            <Size>10</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title/>
+          <FuncString/>
+          <Width>50</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>Consolas</Name>
+            <Size>10</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>-2147483640</TextColor>
+          <Background>-2147483643</Background>
+          <Background2>-2147483643</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>-2147483635</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+      </Columns>
+    </ColumnsSet>
+  </ColumnsSets>
+  <Differ>
+    <IgnoreCase>False</IgnoreCase>
+    <KeepScrolling>True</KeepScrolling>
+    <PaintBackground>True</PaintBackground>
+    <LineDifferences>False</LineDifferences>
+    <IgnoreWhiteSpace>False</IgnoreWhiteSpace>
+    <Colors>
+      <Added>11206570</Added>
+      <Deleted>11184895</Deleted>
+      <Modified>16755370</Modified>
+      <Binary>
+        <Modified>255</Modified>
+      </Binary>
+    </Colors>
+    <AutoCompare>True</AutoCompare>
+  </Differ>
+  <MultiRenamePresets>
+    <LastPreset>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</LastPreset>
+    <Presets>
+      <Preset>
+        <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
+        <Filename>[N]</Filename>
+        <Extension>[E]</Extension>
+        <FilenameStyle>0</FilenameStyle>
+        <ExtensionStyle>0</ExtensionStyle>
+        <Find>IMF-</Find>
+        <Replace>IMF-Pierre-Olivier.Gourinchas-</Replace>
+        <RegExp>False</RegExp>
+        <UseSubs>False</UseSubs>
+        <Counter>1</Counter>
+        <Interval>1</Interval>
+        <Width>0</Width>
+        <Log>
+          <Enabled>False</Enabled>
+          <Append>False</Append>
+          <File>C:\Users\sppdqlsh\0\Stage\Photos\Photos-Work\2021\2021.10.27-11.05-SF3-International-Economics\2021.10.27-Lectures-Parkroyal-Collection\default.log</File>
+        </Log>
+      </Preset>
+    </Presets>
+  </MultiRenamePresets>
+</doublecmd>

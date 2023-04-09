@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+# @(#) update-os
+# Last-edited: 2023.03.25.0623.Sat -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2023.03.25.0613.Sat -- Danny Quah (me@DannyQuah.com)
+#    First draft: sh script to clean apt database and then update 
+#    Ubuntu.  
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+
+sudo rm -rf /var/lib/dpkg/lock-frontend
+sudo rm -rf /var/lib/dpkg/lock
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
+sudo apt-get autoremove -y
+sudo apt-get autoclean -y
+
+# vim: filetype=sh
+# eof update-os
+

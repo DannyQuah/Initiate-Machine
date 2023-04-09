@@ -1,0 +1,13 @@
+.obsidian
+libreoffice
+history.xml
+session.ini
+items.sqlite3*
+refresh_token*
+.*lock*
+*.sync-conflict*
+pixmaps.cache
+.netrwhist
+com-gmail-dqp
+edu-princeton-dq
+cache-certs

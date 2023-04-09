@@ -1,0 +1,224 @@
+#!/usr/bin/env bash
+# @(#) qrsync
+# Last-edited: 2023.04.08.1917.Sat -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2023.02.17.1835.Fri -- Danny Quah (me@DannyQuah.com)
+#    --with-delete means delete files in target that are not in source;
+#    (otherwise those files are not deleted).  This is useful when 
+#    seeking to synchronize files and I've created something in target
+#    that is not yet in source.  
+#  % 2023.02.14.0614.Tue -- Danny Quah (me@DannyQuah.com)
+#    Add --force option
+#  % 2022.09.12.2112.Mon -- Danny Quah (me@DannyQuah.com)
+#    Add --dry-run option
+#  % 2022.09.09.1037.Fri -- Danny Quah (me@DannyQuah.com)
+#    First draft: sh script to rsync set of directories  
+#    Arg logic https://stackoverflow.com/questions/192249/how-do-i-parse-command-line-arguments-in-bash  
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+USAGE_MESSAGE="Usage: `basename $0` --machine xbook|kvb-xbook|ttd|kvb-ttd|ipad5-ish --action pull|push --folder all|db0|wrk|wp|onedrive --force --with-delete --dry-run "
+
+if test $# -le 0 ; then
+  echo $USAGE_MESSAGE
+  exit 1
+fi
+
+OTHER_MACHINE=""
+THE_ACTION=""
+THE_FOLDER=""
+ADD_FLAG=""
+DEL_FLAG=""
+FORCE_FLAG="--update"
+
+# ####################################################################
+# Process command line
+# ####################################################################
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -dr|--dry-run)
+      ADD_FLAG="--dry-run"
+      shift 1 # go past arg
+      ;;
+    -wd|--with-delete)
+      DEL_FLAG="--delete"
+      shift 1 # go past arg
+      ;;
+    -f|--force)
+      FORCE_FLAG="--ignore-times"
+      shift 1 # past arg
+      ;;
+    -m|--machine)
+      if [[ "$2" = "xbook" ]] || [[ "$2" = "kvb-xbook" ]] ||
+        [[ "$2" = "ttd" ]] || [[ "$2" = "kvb-ttd" ]] || [[ "$2" = "ipad5-ish" ]]; then
+        OTHER_MACHINE="$2"
+      else
+        echo "Invalid arg $1 $2 // unrecognized machine"
+        echo $USAGE_MESSAGE
+        exit 1
+      fi
+      shift 2 # go past arg and value
+      ;;
+    -a|--action)
+      if [[ "$2" = "pull" ]] || [[ "$2" = "push" ]]; then
+        THE_ACTION="$2"
+      else
+        echo "Invalid $1 $2 // unrecognized action"
+        echo $USAGE_MESSAGE
+        exit 1
+      fi
+      shift 2 # go past arg and value
+      ;;
+    -f|--folder)
+      if [[ "$2" = "all" ]] || 
+        [[ "$2" = "db0" ]] ||
+        [[ "$2" = "wrk" ]] ||
+        [[ "$2" = "wp" ]] ||
+        [[ "$2" = "onedrive" ]]; then
+        THE_FOLDER="$2"
+      else
+        echo "Invalid $1 $2 // unrecognized folder"
+        echo $USAGE_MESSAGE
+        exit 1
+      fi
+      shift 2 # go past-arg and value
+      ;;
+    *)
+      echo "Invalid $1 // Unrecognized flag"
+      echo $USAGE_MESSAGE
+      exit 1
+  esac
+done
+
+# Keep this here but it's now redundant.  Previously, I'd thought about
+# doing multiple specified folders.  Not worth the effort.  
+# Drop all other folders if "all"  
+if [[ "${THE_FOLDER}" =~ .*"all".* ]]; then
+  THE_FOLDER="all"
+fi
+
+# ####################################################################
+# Simple sanity checks 
+# ####################################################################
+if [[ "${OTHER_MACHINE}" = "" ]]; then
+  echo "--machine required"  
+  exit 1
+fi
+if [[ "${THE_FOLDER}" = "" ]]; then
+  echo "--folder required"  
+  exit 1
+fi
+if [[ "${THE_ACTION}" = "" ]]; then
+  echo "--action required"  
+  exit 1
+fi
+
+# ####################################################################
+#  Set values and options  
+# ####################################################################
+TRAIL_db0="0/Scene/1"
+TRAIL_wrk="0/Wrk"
+TRAIL_wp="0/OneDrive/1"
+TRAIL_one="."
+DIR_db0="db0"
+DIR_wrk="1"
+DIR_wp="Wp"
+DIR_one="1"
+
+# For all, but not under individual control
+TRAIL_scene="0/Scene"
+TRAIL_stage="0/Stage"
+TRAIL_props="0/Props"
+DIR_scene="1"
+DIR_stage="Photos"
+DIR_props="1"
+
+HEAD_OTHER="${OTHER_MACHINE}"
+HEAD_THIS="${HOME}"
+
+MY_RSYNC_FLAGS="--archive -P --verbose --progress --human-readable --no-perms --no-links --no-group --no-owner --no-devices --executability --times --omit-dir-times --compress"
+EXCLUDE_FLAGS="--exclude-from=${HOME}/.config/Rsync/qrsync-excludes.txt"
+RSYNC_SYNC="rsync ${MY_RSYNC_FLAGS} ${FORCE_FLAG} ${EXCLUDE_FLAGS} ${ADD_FLAG} ${DEL_FLAG}"
+
+# ####################################################################
+# Functions
+# ####################################################################
+pullFolder () {
+  local trailPath="$1"
+  local theFolder="$2"
+  echo ${trailPath}/${theFolder}
+  ${RSYNC_SYNC} ${HEAD_OTHER}:${trailPath}/${theFolder} ${HEAD_THIS}/${trailPath}
+  echo "----"
+}
+
+pushFolder () {
+  local trailPath="$1"
+  local theFolder="$2"
+  echo ${trailPath}/${theFolder}
+  ${RSYNC_SYNC} ${HEAD_THIS}/${trailPath}/${theFolder} ${HEAD_OTHER}:${trailPath}
+  echo "----"
+}
+
+# ####################################################################
+# Execution
+# ####################################################################
+if [[ "${THE_ACTION}" = "pull" ]]; then
+  if [[ "${THE_FOLDER}" = "all" ]]; then
+    pullFolder ${TRAIL_scene} ${DIR_scene}
+    pullFolder ${TRAIL_stage} ${DIR_stage}
+    pullFolder ${TRAIL_props} ${DIR_props}
+    pullFolder ${TRAIL_wrk} ${DIR_wrk}
+    pullFolder ${TRAIL_wp} ${DIR_wp}
+    pullFolder ${TRAIL_one} ${DIR_one}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" =~ .*"onedrive".* ]]; then
+    pullFolder ${TRAIL_wp} ${DIR_wp}
+    pullFolder ${TRAIL_wrk} ${DIR_wrk}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" =~ .*"db0".* ]]; then
+    pullFolder ${TRAIL_db0} ${DIR_db0}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" =~ .*"wrk".* ]]; then
+    pullFolder ${TRAIL_wrk} ${DIR_wrk}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" =~ .*"wp".* ]]; then
+    pullFolder ${TRAIL_wp} ${DIR_wp}
+    exit 0
+  fi
+
+elif [[ "${THE_ACTION}" = "push" ]]; then
+  if [[ "${THE_FOLDER}" = "all" ]]; then
+    pushFolder ${TRAIL_scene} ${DIR_scene}
+    pushFolder ${TRAIL_stage} ${DIR_stage}
+    pushFolder ${TRAIL_props} ${DIR_props}
+    pushFolder ${TRAIL_wrk} ${DIR_wrk}
+    pushFolder ${TRAIL_wp} ${DIR_wp}
+    pushFolder ${TRAIL_one} ${DIR_one}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" =~ .*"onedrive".* ]]; then
+    pushFolder ${TRAIL_wp} ${DIR_wp}
+    pushFolder ${TRAIL_wrk} ${DIR_wrk}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" =~ .*"db0".* ]]; then
+    pushFolder $TRAIL_db0 ${DIR_db0}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" =~ .*"wrk".* ]]; then
+    pushFolder $TRAIL_wrk ${DIR_wrk}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" =~ .*"wp".* ]]; then
+    pushFolder $TRAIL_wp ${DIR_wp}
+    exit 0
+  fi
+fi
+
+# vim: filetype=bash
+# eof qrsync
+

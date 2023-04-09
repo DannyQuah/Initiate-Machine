@@ -84,3 +84,23 @@ Unhandled exception: EMaskError: The char set in mask "t[*" is not valid!
   $000000000077571F line 2404, column 12 of gtk2proc.inc in /usr/lib/doublecmd/doublecmd
   $0000000000785C95 line 817, column 13 of gtk2callback.inc in /usr/lib/doublecmd/doublecmd
 
+--------------- 18-02-2023, 06:56:51 ---------------
+| DC v1.0.5 beta Rev. 104 -- x86_64-Linux-gtk2
+| Ubuntu 22.04.1 LTS -- GTK 2.24.33 | PID 13927
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $0000000000757457 line 467, column 24 of include/treeview.inc in /usr/lib/doublecmd/doublecmd
+  $000000000075807E line 769, column 13 of include/treeview.inc in /usr/lib/doublecmd/doublecmd
+  $00000000007580DD line 779, column 13 of include/treeview.inc in /usr/lib/doublecmd/doublecmd
+  $000000000075C2B8 line 2172, column 5 of include/treeview.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000767AC4 line 5830, column 11 of include/treeview.inc in /usr/lib/doublecmd/doublecmd
+  $00000000006032D4 line 2347, column 38 of include/control.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000604055 line 2829, column 20 of include/control.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000433DDA in /usr/lib/doublecmd/doublecmd
+  $00000000005F50F5 line 5429, column 28 of include/wincontrol.inc in /usr/lib/doublecmd/doublecmd
+  $000000000079A108 line 112, column 36 of lclmessageglue.pas in /usr/lib/doublecmd/doublecmd
+  $0000000000779005 line 3777, column 68 of gtk2proc.inc in /usr/lib/doublecmd/doublecmd
+  $0000000000788663 line 2249, column 5 of gtk2callback.inc in /usr/lib/doublecmd/doublecmd
+  $000000000078883B line 2326, column 6 of gtk2callback.inc in /usr/lib/doublecmd/doublecmd
+  $00007F9C5936D4D7 in /lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0
+

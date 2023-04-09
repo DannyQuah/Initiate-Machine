@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # (@) linux-largeapps-install
-# Last-edited: 2022.10.23.0844.Sun -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2023.03.24.2328.Fri -- Danny Quah (me@DannyQuah.com)
 # Created:     Sat 2018.07.21 1200h -- Danny Quah (dq@pbook)
 # ****************************************************************
 # Revision History:
@@ -14,7 +14,7 @@ installLargeApps() {
 # you choose to run this
 ##############################
 # LibreOffice
-  sudo add-apt-repository ppa:libreoffice/ppa
+#  sudo add-apt-repository ppa:libreoffice/ppa
   sudo apt update && sudo apt upgrade
   sudo apt install -y libreoffice
 # R

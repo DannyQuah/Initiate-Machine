@@ -1,0 +1,174 @@
+#!/usr/bin/env bash
+# @(#) sync-ext
+# Run from (iPad iSh) Obsidian/ or (Linux) "External HD"/~
+# Last-edited: 2023.04.08.2124.Sat -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2023.04.07.1439.Fri -- Danny Quah (me@DannyQuah.com)
+#    First draft: script to sync external folders with my ~/0 files
+#      - sync Obsidian vaults (Wp, Wrk, Props)
+#         on iPadOS,in place of the git step in 
+#         2022.01-D.Quah-Obsidian-iPad-syncing-via-iSH-git
+#      - sync external storage (i.e., backup)
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+USAGE_MESSAGE="Usage: `basename $0` --action pull|push --folder all|Wp|Wrk|Props --with-delete --force --dry-run"
+
+if test $# -le 0 ; then
+  echo $USAGE_MESSAGE
+  exit 1
+fi
+
+OTHER_MACHINE=""
+THE_ACTION=""
+THE_FOLDER=""
+DEL_FLAG=""
+ADD_FLAG=""
+FORCE_FLAG="--update"
+
+# ####################################################################
+# Process command line
+# ####################################################################
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -dr|--dry-run)
+      ADD_FLAG="--dry-run"
+      shift 1 # go past arg
+      ;;
+    -wd|--with-delete)
+      DEL_FLAG="--delete"
+      shift 1 # go past arg
+      ;;
+    -f|--force)
+      FORCE_FLAG="--ignore-times"
+      shift 1 # go past arg
+      ;;
+    -a|--action)
+      if [[ "$2" = "pull" ]] || [[ "$2" = "push" ]]; then
+        THE_ACTION="$2"
+      else 
+        echo "Invalid $1 $2 // unrecognized action"
+        echo $USAGE_MESSAGE
+        exit 1
+      fi
+      shift 2 # go past arg and value
+      ;;
+    -f|--folder)
+      if [[ "$2" = "all" ]] ||
+        [[ "$2" = "Wp" ]] ||
+        [[ "$2" = "Wrk" ]] || 
+        [[ "$2" = "Props" ]]; then
+        THE_FOLDER="$2"
+      else
+        echo "Invalid $1 $2 // unrecognized folder"
+        echo $USAGE_MESSAGE
+        exit 1
+      fi
+      shift 2 # go past arg and values
+      ;;
+    *)
+      echo "Invalid $1 // unrecognized flag"
+      echo $USAGE_MESSAGE
+      exit 1
+  esac
+done
+
+# ####################################################################
+# Simple sanity checks 
+# ####################################################################
+if [[ "${THE_FOLDER}" = "" ]]; then
+  echo "--folder required"  
+  exit 1
+fi
+if [[ "${THE_ACTION}" = "" ]]; then
+  echo "--action required"  
+  exit 1
+fi
+
+# ####################################################################
+#  Set values and options  
+# ####################################################################
+MY_RSYNC_FLAGS="--archive -P --verbose --progress --human-readable --no-perms --no-links --no-group --no-owner --no-devices --executability --times --omit-dir-times --compress"
+EXCLUDE_FLAGS="--exclude-from=${HOME}/.config/Rsync/qrsync-excludes.txt"
+RSYNC_SYNC="rsync ${MY_RSYNC_FLAGS} ${FORCE_FLAG} ${EXCLUDE_FLAGS} ${ADD_FLAG} ${DEL_FLAG}"
+
+FOLDER_Wp="0/OneDrive/1/Wp"
+FOLDER_Wrk="0/Wrk"
+FOLDER_Props="0/Props"
+FOLDER_Scene="0/Scene"
+FOLDER_Stage="0/Stage"
+FOLDER_Store="1/Store"
+
+# ####################################################################
+# Functions
+# pull, push here assume my ~/0/ file structure  
+# ####################################################################
+pullFolder () {
+  local theFolder="$1"
+  echo ${theFolder}
+  mkdir -p ${theFolder}
+  ${RSYNC_SYNC} ${HOME}/${theFolder}/ ./${theFolder}
+  # echo Syncing from $HOME/${theFolder}/ to ./${theFolder}
+  echo "----"
+}
+
+pushFolder () {
+  local theFolder="$1"
+  echo ${theFolder}
+  ${RSYNC_SYNC} ./${theFolder}/ ${HOME}/${theFolder}
+  # echo Syncing from ./${theFolder}/ to ${HOME}/${theFolder}
+  echo "----"
+}
+
+# ####################################################################
+# Execution
+# ####################################################################
+if [[ "${THE_ACTION}" = "pull" ]]; then
+  if [[ "${THE_FOLDER}" = "all" ]]; then
+    pullFolder ${FOLDER_Wp}
+    pullFolder ${FOLDER_Wrk}
+    pullFolder ${FOLDER_Props}
+    pullFolder ${FOLDER_Scene}
+    pullFolder ${FOLDER_Stage}
+    pullFolder ${FOLDER_Store}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" = "Wp" ]]; then
+    pullFolder ${FOLDER_Wp}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" = "Wrk" ]]; then
+    pullFolder ${FOLDER_Wrk}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" = "Props" ]]; then
+    pullFolder ${FOLDER_Props}
+    exit 0
+  fi
+elif [[ "${THE_ACTION}" = "push" ]]; then
+  if [[ "${THE_FOLDER}" = "all" ]]; then
+    pushFolder ${FOLDER_Wp}
+    pushFolder ${FOLDER_Wrk}
+    pushFolder ${FOLDER_Props}
+    pushFolder ${FOLDER_Scene}
+    pushFolder ${FOLDER_Stage}
+    pushFolder ${FOLDER_Store}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" = "Wp" ]]; then
+    pushFolder ${FOLDER_Wp}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" = "Wrk" ]]; then
+    pushFolder ${FOLDER_Wrk}
+    exit 0
+  fi
+  if [[ "${THE_FOLDER}" = "Props" ]]; then
+    pushFolder ${FOLDER_Props}
+    exit 0
+  fi
+fi
+
+# vim: filetype=bash
+# eof sync-ext
+

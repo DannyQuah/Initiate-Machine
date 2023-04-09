@@ -1,5 +1,5 @@
 " @(#) db0/Vim/Vimrc <- .vimrc
-" Last-edited: 2023.01.02.0725.Mon -- Danny Quah (me@DannyQuah.com)
+" Last-edited: 2023.04.09.0456.Sun -- Danny Quah (me@DannyQuah.com)
 " ----------------------------------------------------------------
 " Revision History:
 
@@ -44,7 +44,7 @@ call SourceIfExists("$HOME/.vim/platform-identify.vim")
 if WINDOWS()
   set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
-
+let g:CSApprox_loaded = 1
 execute pathogen#infect()
 
 " https://www.vim.org/scripts/script.php?script_id=2226
@@ -174,10 +174,13 @@ nnoremap <Leader>Qr :set number relativenumber!<CR>
 set smarttab
 set tabstop=2                  "Width of TAB
 set softtabstop=2              "Number columns for a TAB
-"set expandtab                 |"Tabs to spaces //
-"                               "Makefile and ssheet paste fail 
-set noexpandtab
 set shiftwidth=2               "Indents have this width
+
+"                               "Tabs to spaces //
+set expandtab
+"                               "Makefile and ssheet paste fail; use ^V<tab>
+"set noexpandtab
+
 "
 
 "  Appearance ----------------------------------------------------
@@ -243,7 +246,8 @@ iabbrev ltpp15 Lenovo-ltpp15-Thinkpad-P15s-2022.04
 iabbrev ipad2 Apple-iPad-Pro-2G-10.5-2017.08
 iabbrev ipad5 Apple-iPad-Pro-5G-12.9-2022.08
 iabbrev xbook Dell-xbook-XPS-13-9350-2016.03
-iabbrev smpost Facebook \| FB Wall \| Insta \| Twitter \| LinkedIn \| Mastodon  
+iabbrev ttd Toshiba-ttd-Tecra-Dynabook-2023.03
+iabbrev smpost Facebook \| FB Wall \| Insta \| Twitter \| LinkedIn \| Mastodon 
 
 "  macros ------------------------------------------------------
 let @h='j0i| f:ls | A |'
@@ -294,25 +298,20 @@ source ~/.vim/timeauto.vim
 " These are not as complete and as automated as on Obsidian but
 " in a pinch they do fine.  
                                "Insert templates
-nnoremap <Leader>imd :0r ~/0/Scene/1/db0/Templates/Plaintext/Markdown-Template-DQ.md<CR>
-nnoremap <Leader>iss :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-shell-script-template<CR>
-nnoremap <Leader>iht :0r ~/0/Scene/1/db0/Templates/Plaintext/DQ-header-general.txt<CR>
-nnoremap <Leader>ily :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-latex-yaml.md<CR>
-nnoremap <Leader>ilsr :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-latex-short-report-yaml.md<CR>
-nnoremap <Leader>itt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-tex-template.tex
-nnoremap <Leader>ipt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-python-template.py
-nnoremap <Leader>ibt :r ~/0/Scene/1/db0/Templates/Plaintext/DQ-bat-template.bat
+nnoremap <Leader>imd :0r ~/0/Wrk/1/Templates/Obsidian/Plaintext/Markdown-Template-DQ.md<CR>
+nnoremap <Leader>iss :0r ~/0/Wrk/1/Templates/Obsidian/Plaintext/shell-script-template<CR>
+nnoremap <Leader>iht :0r ~/0/Wrk/1/Templates/Obsidian/Plaintext/header-general.txt<CR>
+nnoremap <Leader>ily :r ~/0/Wrk/1/Templates/Obsidian/Plaintext/latex-yaml.md<CR>
+nnoremap <Leader>ilsr :r ~/0/Wrk/1/Templates/Obsidian/Plaintext/latex-short-report-yaml.md<CR>
+nnoremap <Leader>ipt :r ~/0/Wrk/1/Templates/Obsidian/Plaintext/python-template.py<CR>
+nnoremap <Leader>ibt :r ~/0/Wrk/1/Templates/Obsidian/Plaintext/bat-template.bat<CR>
 
 " hard to remember all these so I'm just placing these here commented out
 " and with the source clearly indicated  
                                "Read templates in by own favourite way
-" (hash driver) db0/Templates/latex/Paper/00-hash-2021.10.11-driver.tex
-" (titlepage) db0/Templates/latex/Paper/code/00-titlepage-data.tex
-" (typical section) db0/Templates/latex/Paper/code/01-Introduction.tex
-
-
-
-
+" (hash driver) Wrk/Templates/tex-00-hash-driver.tex
+" (titlepage) Wrk/Templates/latex/code/tex-00-titlepage-data.tex
+" (typical section) Wrk/Templates/latex/code/tex-01-Introduction.tex
 
                                "Insert-header-yaml
 "Template file replaced by python script, for dynamic insertion
@@ -455,12 +454,22 @@ augroup END
 "
 "nnoremap <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 " Use instead netrw https://shapeshed.com/vim-netrw/
-" Open with :Explore, :Sexplore (or :Sex, snicker), :Vexplore
+" Open with :Vexplore, :Explore, :Sexplore (or :Sex, snicker)  
+" :Lexplore is like :Vexplore except that it's a toggle, and it changes the
+" open command so that files appear in the originating (file) window,
+" rather than the current (folder) window.  
+" With dc, open Netrw in directory of current file; dw in current working
+" directory
+nnoremap <Leader>dc :Lexplore %:p:h<CR>
+nnoremap <Leader>dw :Lexplore<CR>
 let g:netrw_liststyle=3
 let g:netrw_banner=0           "Remove directory banner
-"let g:netrw_browse_split=3     "Open file in new tab
-"let g:netrw_browse_split=4     "Open file in previous window
-let g:netrw_winsize=26       "In percent, not cols; gives 30 with 110
+let g:netrw_keepdir=0          "Match always the current folder (in the buffer) and the browsing folder  
+"let g:netrw_browse_split=3    "Open file in new tab
+"let g:netrw_browse_split=4    "Open file in previous window
+let g:netrw_winsize=26         "In percent, not cols; gives 30 with 110
+let g:netrw_localcopydircmd='cp -rp'  "Make copy recursive  
+highlight! link netrwMarkFile Search  
 "let g:netrw_altv=1
 " But can achieve NERDtree likeness with:
 " let g:netrw_banner=0
@@ -552,11 +561,13 @@ if WINDOWS()
   set pythonthreedll=python311.dll
 endif
 
+if has('python3')
 " silent! as otherwise warning message about imp deprecated for importlib
 " something over which I have no control  
-silent! python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+  silent! python3 from powerline.vim import setup as powerline_setup
+  python3 powerline_setup()
+  python3 del powerline_setup
+endif
 
 "                              " Instead of open default wiki
 nnoremap <Leader>ww :e ~/0/Sound/1/Wp/index.md<CR>

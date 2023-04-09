@@ -1,0 +1,106 @@
+#!/usr/bin/env bash
+# @(#) syncwrk // Previously for syncing Wrk and Props  
+# Last-edited: 2023.03.10.0012.Fri -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2023.02.15.1309.Wed -- Danny Quah (me@DannyQuah.com)
+#    First draft: sh script to rsync working directory NUS nBox and
+#    DQ Internet-Cloud:  pull to DQ Internet-Cloud, push from DQ Internet-Cloud 
+#    Only one folder LKYSPP-Deans-Office  
+#    --with-delete means delete files in target that are not in source;
+#    (otherwise those files are not deleted).  This is useful when 
+#    seeking to synchronize files and I've created something in target
+#    that is not yet in source.  
+#    Arg logic https://stackoverflow.com/questions/192249/how-do-i-parse-command-line-arguments-in-bash  
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+USAGE_MESSAGE="Usage: `basename $0` --action [pull|push] [--with-delete] [--dry-run|--force]"
+
+if test $# -le 0 ; then
+  echo $USAGE_MESSAGE
+  exit 1
+fi
+
+OTHER_LOC=""
+THE_ACTION=""
+THE_FOLDERS=""
+ADD_FLAGS=""
+DEL_FLAGS=""
+FORCE_FLAGS="--update"
+
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -dr|--dry-run)
+      ADD_FLAGS="$ADD_FLAGS --dry-run"
+      shift 1 # past arg
+      ;;
+    -f|--force)
+      FORCE_FLAGS="--ignore-times"
+      shift 1 # past arg
+      ;;
+    -wd|--with-delete)
+      DEL_FLAGS="--delete"
+      shift 1 # past arg
+      ;;
+    -a|--action)
+      if [[ "$2" = "pull" ]] || [[ "$2" = "push" ]]; then
+        THE_ACTION="$2"
+      else
+        echo "Invalid arg $1 $2 // Unrecognized action"
+        echo $USAGE_MESSAGE
+        exit 1
+      fi
+      shift 2 # past arg and value
+      ;;
+    *)
+      echo "Invalid $1 // Unrecognized flag"
+      echo $USAGE_MESSAGE
+      exit 1
+  esac
+done
+
+# echo "${THE_ACTION} ${OTHER_MACHINE} ${THE_FOLDERS}" ; exit 0
+
+
+# ####################################################################
+# Simply sanity checks 
+# ####################################################################
+if [[ "${THE_ACTION}" = "" ]]; then
+  echo "--action required"  
+  exit 1
+fi
+
+
+# ####################################################################
+#  Execution
+# ####################################################################
+
+OTHER_path="0/Props/1"
+HOME_path="0/Wrk/1"
+DIR_folder="LKYSPP-Deans-Office"
+
+
+# EXCLUDE_FLAGS="--exclude=.git --exclude=.obsidian --exclude=libreoffice --exclude=desktop.ini"
+# cd ${HOME}/${HOME_path}/${DIR_folder}
+EXCLUDE_FLAGS="--exclude-from=${HOME}/.config/Rsync/syncwrk-excludes.txt"
+
+HEAD_OTHER="${OTHER_MACHINE}"
+HEAD_THIS="${HOME}"
+
+# --dry-run as needed  
+RSYNC_SYNC="rsync --archive -P --verbose --progress --human-readable --no-perms --no-links --no-group --no-owner --no-devices --executability --times --omit-dir-times --compress ${FORCE_FLAGS} ${EXCLUDE_FLAGS} ${ADD_FLAGS} ${DEL_FLAGS}"
+
+cd ${HOME}  
+
+if [[ "${THE_ACTION}" = "pull" ]]; then
+		echo Pulling ${OTHER_path}/${DIR_folder} to ${HOME_path}/${DIR_folder}
+		${RSYNC_SYNC} ${OTHER_path}/${DIR_folder}/ ${HOME_path}/${DIR_folder}
+
+elif [[ "${THE_ACTION}" = "push" ]]; then
+		echo Pushing ${HOME_path}/${DIR_folder} to ${OTHER_path}/${DIR_folder}
+		 ${RSYNC_SYNC} ${HOME_path}/${DIR_folder}/ ${OTHER_path}/${DIR_folder}
+fi
+
+# vim: filetype=bash
+# eof syncwrk
+

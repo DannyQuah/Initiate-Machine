@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) $HOME/0/Scene/1/db0/machines/Common/Shellsrc
-# Last-edited: 2022.11.23.1000.Wed -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2023.04.03.0534.Mon -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % Sat 2021.12.11.1706 -- Danny Quah (me@DannyQuah.com)
@@ -34,6 +34,8 @@ case "$HOSTNAME" in
 			# ~/00-VMw-connect-fs-hack
 			# no-op
 		# fi
+		;;
+	ttd*)
 		;;
 	xbook*)
 		;;
@@ -110,12 +112,12 @@ export PATH=$PATH
 TMPDIR=${HOME}/tmp
 FSROOT=${HOME}/0
 CDPATH=\
+${FSROOT}/Wrk/1/:\
 ${FSROOT}/Scene/1/db0:\
-${FSROOT}/Sound/1/Wp:\
-${FSROOT}/Props/1/LKYSPP-Deans-Office/Wd/:\
-${FSROOT}/Board/1/Ww:\
-${FSROOT}/Board/1/Ww/People-Groups-Confidential:\
-${FSROOT}/Light/1/j:\
+${FSROOT}/OneDrive/1/Wp:\
+${FSROOT}/Wrk/1/LKYSPP-Deans-Office:\
+${FSROOT}/Wrk/1/People-Gr-Conf:\
+${FSROOT}/Wrk/1/j:\
 ${FSROOT}/Stage/Photos:
 
 for windir in $( echo "$WIN_DIRS" ) ; do
@@ -144,25 +146,49 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 	fi
 fi
 
-#
+# ###############################
+# GNOME Terminal management
+# https://makandracards.com/makandra/494001-linux-how-to-make-a-terminal-window-title-reflect-the-current-path
+# ###############################
+set-window-title() {
+  echo -en "\033]0;$(pwd | sed -e "s;^$HOME;~;")\a"
+}
+
+if [[ "$PROMPT_COMMAND" ]]; then
+  export PROMPT_COMMAND="$PROMPT_COMMAND;set-window-title"
+else
+  export PROMPT_COMMAND=set-window-title
+fi
 # ###############################
 # tmux is now my terminal multiplexer
 # if [ -d "/tmp/tmux-1000" ]; then
 #   set ...
 # fi
 
-# on Dell-xbook-XPS-13-9350-2016.03 console  
-alias tmnxc="tmux -u new-session -s xbConsole"
-alias tmaxc="tmux -u attach -t xbConsole"  
+# on Toshiba-ttd-Tecra-Dynabook-2023.03 
+alias tmntt="tmux -u new-session -s ttd"
+alias tmatt="tmux -u attach -t ttd"
+# ... ttd mosh/ssh-logged into xbook
+alias tmnxttd="tmux -u new-session -s xttd"
+alias tmaxttd="tmux -u attach -t xttd"
+
+# on Dell-xbook-XPS-13-9350-2016.03  
+alias tmnx="tmux -u new-session -s xb"
+alias tmax="tmux -u attach -t xb"  
+
 # on Apple-iPad-Pro-5G-12.9-2022.08 over mosh or similar  
 alias tmnxi5="tmux -u new-session -s xbook-ip5"
 alias tmaxi5="tmux -u attach -t xbook-ip5"
+
 # on Apple-iPad-Pro-5G-12.9-2022.08 // iSH  
-alias tmni5="tmux -u new-session -s i5Console"
-alias tmai5="tmux -u attach -t i5Console"
-# on Lenovo-ltpp15-Thinkpad-P15s-2022.04 > ltpp15u  
-alias tmnlt="tmux -u new-session -s ltConsole"
-alias tmalt="tmux -u attach -t ltConsole"
+alias tmni5="tmux -u new-session -s i5"
+alias tmai5="tmux -u attach -t i5"
+
+# on Lenovo-ltpp15-Thinkpad-P15s-2022.04 // ltpp15u  
+alias tmnlt="tmux -u new-session -s lt"
+alias tmalt="tmux -u attach -t lt"
+alias tmntlt="tmux -u new-session -s ttd-lt"
+alias tmatlt="tmux -u attach -t ttd-lt"
 alias tmnxlt="tmux -u new-session -s xbook-lt"
 alias tmaxlt="tmux -u attach -t xbook-lt"
 #
@@ -214,9 +240,8 @@ alias ls='/bin/ls' # since many systems set this elsewhere to '/bin/ls --color=a
 alias ll='/bin/ls -lF'
 alias lt='/bin/ls -ltF'
 alias lf='/bin/ls -F'
-alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+# alias l='ls -CF'
 
 # largest files recursively from here
 # alias Largest='find -L . -type f -printf "%s %p\n" | sort -nr | head -20'
@@ -234,7 +259,7 @@ alias find-longfn='find ./ -regextype posix-extended -regex '.{249,}''
 # grep md files recursively from current directory
 alias grepmd='find -L . -type d ! -readable -prune -o -type f -name "*.md" ! -path "*/Trash/*" -print0 | xargs -0 grep $@ '
 # grep Deans-Office wiki recursively
-alias grepwd='grep --include=\*.md --colour=never -rnw ~/0/Props/1/LKYSPP-Deans-Office/Wd -e $@'
+alias grepwd='grep --include=\*.md --colour=never -rnw ~/0/Wrk/1/LKYSPP-Deans-Office/Wd -e $@'
 # grep personal wiki recursively
 alias grepwp='grep --include=\*.md --colour=never -rnw ~/0/Sound/1/Wp -e $@'
 # grep work wiki recursively
@@ -242,11 +267,17 @@ alias grepww='grep --include=\*.md --colour=never -rnw ~/0/Board/1/Ww -e $@'
 # alias grep1n='find -L ~/0/Board/1/1-Notes -type f -name "*.md" -exec grep -EH $@ {} ";"'
 # alias dollmd-dq="sed -ie 's/ \$/ \\$/g' $@"
 # alias starmd-dq="sed -ie 's/ \*/ \\*/g' $@"
+
+alias synclog='grep $@ /var/log/syslog'
+#  for onedrive, syncthing
+
 alias syncconf-find='find -L ~/0 -type f -name "*sync-conflict*"'
 alias syncconf-trash='find -L ~/0 -type f -name "*sync-conflict*" | zip -m9@ ${TMPDIR}/dq-trash'
 alias texcln='zip -m9o ${TMPDIR}/dq-trash *.blg *.log *.aux *.nav *.out *.snm *.synctex.gz *.toc *.tex~'
 
-# Below just archive; all commented out --------------------------
+#---------------------------------------------------------------------# 
+# Below just archive; all commented out ------------------------------
+#---------------------------------------------------------------------# 
 # Aliases for scaling on Pixelbook - also through .desktop in
 # ~/.local/share/applications/
 # alias atomqpb="atom --force-device-scale-factor=1.8"
@@ -301,4 +332,5 @@ alias texcln='zip -m9o ${TMPDIR}/dq-trash *.blg *.log *.aux *.nav *.out *.snm *.
 # This below is yet the most hopeful but it's still not working
 # alias backup-DQ='wget --mirror -p --html-extension --convert-links -e robots=off -P . http://www.DannyQuah.com/writings/'
 
+# vim: filetype=bash
 # eof Shellsrc

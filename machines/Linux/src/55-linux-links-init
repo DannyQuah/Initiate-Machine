@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+# @(#) 55-linux-links-init // NOT on Windows>VMware
+# as ~/0 will connect elsewhere.
+# This calls 05-llinks-inside-init; this last can
+# be used on Windows>VMware
+# Last-edited: 2023.03.25.1103.Sat -- Danny Quah (me@DannyQuah.com)
+# ****************************************************************
+# Revision History:
+#  % 2020.05.25.0620.Mon -- Danny Quah (me@DannyQuah.com)
+#    First draft: Initialise with symbolic links to $HOME/
+#    This assumes my ~/0 filesystem is already in place
+#    Fonts under $DBNF rather than $DBPF as the latter often
+#    starts out from github, and I don't want font binaries up
+#    there
+# ****************************************************************
+#
+################################
+# One-time check on 0/ folders (for path and cleanliness generally)
+cd ~
+#                              # Other Obsidian vaults' parent folders
+mkdir -p 0/Wrk
+mkdir -p 0/OneDrive/1
+mkdir -p 0/Props
+#                              # Referents
+mkdir -p 0/Scene/1
+mkdir -p ~/tmp
+################################
+#
+cd ~/0/Scene/1/db0/machines/Linux/src
+source ./55-llinks-inside-init
+
+################################
+
+
+# eof 05-linux-links-init

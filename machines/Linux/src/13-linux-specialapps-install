@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @(#) 13-linux-specialapps-install
-# Last-edited: 2022.08.25.0622.Thu -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2023.04.05.2112.Wed -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % 2022.02.27.1313.Sun -- Danny Quah (me@DannyQuah.com)
@@ -36,34 +36,42 @@ installSpecialApps() {
 #  wget -O - "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US" | sudo tar xJ -C /opt/
 #  sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
 ################################
+## Google Chrome
+  cd ~
+  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  sudo dpkg -i google-chrome-stable_current_amd64.deb
+  rm -rf google-chrome-stable_current_amd64.deb
+################################
 # joplin 2019.10.13 1400h
 ##  wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
 ################################
 # mendeley
-  cd ~
-  sudo wget -O mendeley.deb "https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest"
-  sudo dpkg -i mendeley.deb
-  rm -rf mendeley.deb
+#  cd ~
+#  sudo wget -O mendeley.deb "https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest"
+#  sudo dpkg -i mendeley.deb
+#  rm -rf mendeley.deb
 ################################
 # panwriter 2021.11
 # sudo snap install panwriter
 ################################
 # shotcut video editing
-  sudo snap install -y shotcut --classic
+  sudo snap install shotcut --classic
 ################################
 # spotify
-  cd ~
+  sudo snap install spotify
+### Older method below
+##  cd ~
 # 1. Add the Spotify repository signing keys to be able to verify downloaded packages
-  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+##  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 
 # 2. Add the Spotify repository
-  echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+##  echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
 # 3. Update list of available packages
-  sudo apt update
+##  sudo apt update
 
 # 4. Install Spotify
-  sudo apt install -y spotify-client
+##  sudo apt install -y spotify-client
 ################################
 ## syncthing
 # Add the release PGP keys:
@@ -75,27 +83,27 @@ installSpecialApps() {
   sudo apt install -y syncthing
 ################################
 # onenote 2019.11
-#  sudo snap install -y p3x-onenote
+#  sudo snap install p3x-onenote
 ################################
 # wechat
-#  sudo snap install -y electronic-wechat
+#  sudo snap install electronic-wechat
 ################################
 # signal-desktop 2021.01
-  sudo snap install -y signal-desktop
+  sudo snap install signal-desktop
 ################################
 ## Telegram // now can use snap instead, so take out
 #  cd ~
 #  wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
 #  sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
 # telegram-desktop 2020.02
-  sudo snap install -y telegram-desktop
+  sudo snap install telegram-desktop
 ################################
 # termius
 #  sudo snap install termius
 ################################
 ################################
 # typeapp email
-  sudo snap install typeapp-mail 
+#  sudo snap install typeapp-mail 
 ################################
 # typora 2019.05
 #  wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add
@@ -116,7 +124,11 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 # sudo apt install -y zsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ################################
-
+# zoom 2023.04
+################################
+sudo apt install -y libgl1-mesa-glx libegl1-mesa libxcb-xtest0 libxcb-cursor0  
+## Download zoom_amd64.deb from zoom.us
+# sudo dpkg --install zoom_amd64.deb  
 # installSpecialApps()
 }
 

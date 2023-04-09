@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+# @(#) cpsync
+# Last-edited: 2023.03.09.2358.Thu -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2023.03.09.2313.Thu -- Danny Quah (me@DannyQuah.com)
+#    First draft: sh script to cp like rsync 
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+USAGE_MESSAGE="Usage: `basename $0` folderSource folderDestin [--with-delete] [--dry-run]"
+
+if test $# -le 0 ; then
+  echo $USAGE_MESSAGE
+  exit 1
+fi
+
+FOLDER_SRC=""
+FOLDER_DST=""
+ADD_FLAGS=""
+DEL_FLAGS=""
+FORCE_FLAGS="--update"
+
+
+FOLDER_SRC="$1"
+FOLDER_DST="$2"
+
+if [ ! -d "$1" ]; then
+  echo $1 'not a directory'
+  exit 1
+fi
+
+if [ ! -d "$2" ]; then
+  echo $2 'not a directory'
+  exit 1
+fi
+
+shift 2 # past first two args
+
+
+# Flags? 
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -dr|--dry-run)
+      ADD_FLAGS="$ADD_FLAGS --dry-run"
+      shift 1 # past arg
+      ;;
+    -wd|--with-delete)
+      DEL_FLAGS="--delete"
+      shift 1 # past arg
+      ;;
+    *)
+      echo "Invalid $1 // Unrecognized flag"
+      echo $USAGE_MESSAGE
+      exit 1
+  esac
+done
+
+# echo "From ${FOLDER_SRC} to ${FOLDER_DST} with ${ADD_FLAGS} ${DEL_FLAGS}" ; exit 0
+
+
+# ####################################################################
+# Simply sanity checks 
+# ####################################################################
+
+# Nothing
+
+# ####################################################################
+#  Execution
+# ####################################################################
+
+
+# EXCLUDE_FLAGS="--exclude=.git --exclude=.obsidian --exclude=libreoffice --exclude=desktop.ini"
+# cd ${HOME}/${HOME_path}/${DIR_folder}
+# EXCLUDE_FLAGS="--exclude-from=${HOME}/.config/Rsync/cpsync-excludes.txt"
+
+RSYNC_SYNC="rsync --archive -P --verbose --progress --human-readable --no-perms --no-links --no-group --no-owner --no-devices --executability --times --omit-dir-times --compress ${FORCE_FLAGS} ${ADD_FLAGS} ${DEL_FLAGS}"
+
+# Tack on "/" so that the folder isn't copied over, just its contents
+${RSYNC_SYNC} ${FOLDER_SRC}/ ${FOLDER_DST}
+
+# vim: filetype=bash
+# eof cpsync
+

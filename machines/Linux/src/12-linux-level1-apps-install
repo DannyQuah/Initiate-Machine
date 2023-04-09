@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # @(#) 12-linux-level1-apps-install
-# Last-edited: 2022.10.11.1732.Tue -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2023.04.01.1445.Sat -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
+#  % 2023.04.01.1317.Sat -- Danny Quah (me@DannyQuah.com)  
+#    AppImageLauncher  
 #  % 2022.02.23.1626.Wed -- Danny Quah (me@DannyQuah.com)
 #    extract out of linux-baseapps, as these are (level 1) fancier
 # ----------------------------------------------------------------
@@ -15,18 +17,21 @@ installLevelOneApps() {
     compizconfig-settings-manager \
     dos2unix \
     fonts-powerline \
-    fortune \
+    fortune-mod \
     goobook \
     gnome-tweaks \
     gnome-shell-extension-prefs \
     gnupg \
-    gconf2 gconf-service gvfs-bin libxkbfile1 \
+    gconf2 gconf-service \
+    libxkbfile1 \
     htop \
+    jabref \
     jpegoptim \
     libheif-examples \
     mutt \
+    neofetch \
     offlineimap \
-#    okular \
+    openssh-server \
     pandoc \
     powerline \
     qpdf \
@@ -35,9 +40,18 @@ installLevelOneApps() {
     thunderbird \
     variety \
     w3m 
+#    gvfs-bin \
+#    okular \
 #    xournal \
 #    zsh
-#
+}
+
+#################################
+# AppImageLauncher
+sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo apt update && sudo apt upgrade
+sudo apt install -y appimagelauncher
+#################################
 # Touchpad management
 # https://github.com/atareao/Touchpad-Indicator
 #  sudo add-apt-repository ppa:atareao/atareao
@@ -54,20 +68,20 @@ installLevelOneApps() {
 #  sudo apt install -y jupyter
 ###############################
 # Pulse Secure client // need to source deb from somewhere but then
-  sudo apt install -y lib32z1 libwebkitgtk-1.0 \
-    libproxy1v5 libproxy1-plugin-gsettings libproxy1-plugin-webkit \
-    libdconf1 dconf-gsettings-backend
+#  sudo apt install -y lib32z1 libwebkitgtk-1.0 \
+#    libproxy1v5 libproxy1-plugin-gsettings libproxy1-plugin-webkit \
+#    libdconf1 dconf-gsettings-backend
 ###############################
 # Fonts
 # Remembering that linux-links-install will symlink
 # ~/0/Scene/1/db0/machines/Linux/fonts to ~/.fonts
 # (https://gist.github.com/marcora/cb37b2432c072e8e9d77)
-  mkdir -p ~/0/Scene/1/db0/machines/Linux/fonts/adobe-fonts/source-code-pro
-  git clone https://github.com/adobe-fonts/source-code-pro.git ~/0/Scene/1/db0/machines/Linux/fonts/adobe-fonts/source-code-pro
+##  This is already copied over when setting up ~/0/ filesystem  
+#  mkdir -p ~/0/Scene/1/db1/machines/Linux/fonts/adobe-fonts/source-code-pro
+#  git clone https://github.com/adobe-fonts/source-code-pro.git ~/0/Scene/1/db1/machines/Linux/fonts/adobe-fonts/source-code-pro
 #  fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
 ###############################
 # end installLevelOneApps()
-}
 
 ## Begin execution here
 sudo apt update

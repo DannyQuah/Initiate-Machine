@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # (@) 00-linux-new-setup
-# Last-edited: 2022.03.04.1021.Fri -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2023.03.25.1048.Sat -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------  
 # Revision History:
 #  % Sun 2018.09.28.0500 - Danny Quah (me@DannyQuah.com)
@@ -27,9 +27,6 @@ sudo apt upgrade -y
 ## If needed
 source ./00-linux-prelims-install
 
-## This assumes the filesystem has already initialised, following syncthing
-# Initialise links
-source ./05-linux-links-init
 
 # installBaseApps
 source ./11-linux-baseapps-install
@@ -42,8 +39,18 @@ source ./15-linux-appimage-install
 # installLargeApps
 source ./21-linux-largeapps-install
 sudo apt-get update
+
+source ./30-linux-onedrive-prep
+
+# Reboot the system before continuing  
+
+source ./31-linux-onedrive-install-22.04  
+
+## This assumes the filesystem has already initialised, following syncthing
+# Initialise links
+source ./55-linux-links-init
 # initialise Desktop
-source ./linux-desktop-init
+# source ./linux-desktop-init
 #
 # EOF 00-linux-new-setup
 #

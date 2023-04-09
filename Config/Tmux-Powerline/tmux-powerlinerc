@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # @(#) Tmux-Powerline/tmux-powerlinerc
-# Last-edited: 2022.10.11.1503.Tue -- Danny Quah (me@DannyQuah.com)
+# Last-edited: 2023.04.06.1814.Thu -- Danny Quah (me@DannyQuah.com)
 # ----------------------------------------------------------------
 # Revision History:
 #  % 2022.10.09.0932.Sun -- Danny Quah (me@DannyQuah.com)
@@ -84,11 +84,11 @@
 
 # mailcount.sh {
 	# Mailbox type to use. Can be any of {apple_mail, gmail, maildir, mbox, mailcheck}
-	export TMUX_POWERLINE_SEG_MAILCOUNT_MAILBOX_TYPE=""
+	export TMUX_POWERLINE_SEG_MAILCOUNT_MAILBOX_TYPE="maildir"
 	
 	## Gmail
 	# Enter your Gmail username here WITH OUT @gmail.com.( OR @domain)
-	export TMUX_POWERLINE_SEG_MAILCOUNT_GMAIL_USERNAME=""
+	export TMUX_POWERLINE_SEG_MAILCOUNT_GMAIL_USERNAME="dq"
 	# Google password. Recomenned to use application specific password (https://accounts.google.com/b/0/IssuedAuthSubTokens) Leave this empty to get password from OS X keychain.
 	# For OSX users : MAKE SURE that you add a key to the keychain in the format as follows
 	# Keychain Item name : http://<value-you-fill-in-server-variable-below>
@@ -103,46 +103,46 @@
 	
 	## Maildir
 	# Path to the maildir to check.
-	export TMUX_POWERLINE_SEG_MAILCOUNT_MAILDIR_INBOX="/home/dq/.mail/inbox/new"
+	export TMUX_POWERLINE_SEG_MAILCOUNT_MAILDIR_INBOX="/home/dq/.mail/edu-princeton-dq/Work-flagged/new"
 	
 	## mbox
 	# Path to the mbox to check.
-	export TMUX_POWERLINE_SEG_MAILCOUNT_MBOX_INBOX=""
+# export TMUX_POWERLINE_SEG_MAILCOUNT_MBOX_INBOX=""
 	
 	## mailcheck
 	# Optional path to mailcheckrc
-	export TMUX_POWERLINE_SEG_MAILCOUNT_MAILCHECKRC="/home/dq/.mailcheckrc"
+# export TMUX_POWERLINE_SEG_MAILCOUNT_MAILCHECKRC="/home/dq/.mailcheckrc"
 # }
 
 # now_playing.sh {
 	# Music player to use. Can be any of {audacious, banshee, cmus, itunes, lastfm, mocp, mpd, mpd_simple, pithos, playerctl, rdio, rhythmbox, spotify, spotify_wine, file}.
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_MUSIC_PLAYER="spotify"
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_MUSIC_PLAYER="spotify"
 	# File to be read in case the song is being read from a file
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_FILE_NAME=""
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_FILE_NAME=""
 	# Maximum output length.
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_MAX_LEN="40"
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_MAX_LEN="40"
 	# How to handle too long strings. Can be {trim, roll}.
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_TRIM_METHOD="trim"
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_TRIM_METHOD="trim"
 	# Charcters per second to roll if rolling trim method is used.
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_ROLL_SPEED="2"
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_ROLL_SPEED="2"
 	
 	# Hostname for MPD server in the format "[password@]host"
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_MPD_HOST="localhost"
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_MPD_HOST="localhost"
 	# Port the MPD server is running on.
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_MPD_PORT="6600"
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_MPD_PORT="6600"
 	# Song display format for mpd_simple. See mpc(1) for delimiters.
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_MPD_SIMPLE_FORMAT="%artist% - %title%"
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_MPD_SIMPLE_FORMAT="%artist% - %title%"
 	# Song display format for playerctl. see "Format Strings" in playerctl(1).
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_PLAYERCTL_FORMAT="{{ artist }} - {{ title }}"
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_PLAYERCTL_FORMAT="{{ artist }} - {{ title }}"
 	# Song display format for rhythmbox. see "FORMATS" in rhythmbox-client(1).
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_RHYTHMBOX_FORMAT="%aa - %tt"
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_RHYTHMBOX_FORMAT="%aa - %tt"
 	
 	# Username for Last.fm if that music player is used.
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_LASTFM_USERNAME=""
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_LASTFM_USERNAME=""
 	# How often in seconds to update the data from last.fm.
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_LASTFM_UPDATE_PERIOD="30"
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_LASTFM_UPDATE_PERIOD="30"
 	# Fancy char to display before now playing track
-	export TMUX_POWERLINE_SEG_NOW_PLAYING_NOTE_CHAR="♫"
+# export TMUX_POWERLINE_SEG_NOW_PLAYING_NOTE_CHAR="♫"
 # }
 
 # pwd.sh {
@@ -152,12 +152,12 @@
 
 # time.sh {
 	# date(1) format for the time. Americans might want to have "%I:%M %p".
-	export TMUX_POWERLINE_SEG_TIME_FORMAT="%H:%M"
+	export TMUX_POWERLINE_SEG_TIME_FORMAT="%H%M"
 # }
 
 # utc_time.sh {
 	# date(1) format for the UTC time.
-	export TMUX_POWERLINE_SEG_UTC_TIME_FORMAT="%H:%M %Z"
+	export TMUX_POWERLINE_SEG_UTC_TIME_FORMAT="%H%M%Z"
 # }
 
 # weather.sh {
@@ -173,8 +173,8 @@
 	export TMUX_POWERLINE_SEG_WEATHER_JSON="jq"
 	# Your location
 	# Latitude and Longtitude for use with yr.no
-	TMUX_POWERLINE_SEG_WEATHER_LAT=""
-	TMUX_POWERLINE_SEG_WEATHER_LON=""
+ export TMUX_POWERLINE_SEG_WEATHER_LAT="1.4"
+ export TMUX_POWERLINE_SEG_WEATHER_LON="103.8"
 # }
 
 # eof tmux-Powerline/tmux-powerlinerc

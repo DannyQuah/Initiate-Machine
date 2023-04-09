@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+# @(#) 31-linux-onedrive-install-22.04
+# Last-edited: 2023.03.25.1101.Sat -- Danny Quah (me@DannyQuah.com)
+# ----------------------------------------------------------------
+# Revision History:
+#  % 2023.03.25.1026.Sat -- Danny Quah (me@DannyQuah.com)
+#    First draft: install OneDrive following instructions in  
+#    github.com/abraunegg/onedrive for Ubuntu 22.04  
+# ----------------------------------------------------------------
+trap 'exit 0' 2 15 
+
+# Run update-os and reboot  
+
+# Add the OpenSuSE Build Service repository release key
+wget -qO - https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /usr/share/keyrings/obs-onedrive.gpg > /dev/null
+
+# Add the OpenSuSE Build Service repository
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/obs-onedrive.gpg] https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/xUbuntu_22.04/ ./" | sudo tee /etc/apt/sources.list.d/onedrive.list  
+
+sudo apt update  
+sudo apt install -y --no-install-recommends --no-install-suggests onedrive  
+
+# vim: filetype=sh
+# eof 31-linux-onedrive-install-22.04
+
